@@ -135,6 +135,9 @@ Step 5: 批量生成 + batch_create 写入
 1. ❌ **正文不写具体金额**（不用具体价格数字，只说「打折优惠」「限时优惠」「有活动」）
 2. ✅ 每品类针对一家酒店写一篇，形成 品类×酒店 内容矩阵
 3. ✅ 结合「地区文旅符号调研」的8维度数据：金招牌+市井风情+季节限定+避坑槽点+商业闭环
+4. ✅ **自动合规校验**：每条正文生成后自动过 xiaohongshu_compliance.py 模块扫描
+5. ✅ 违禁词自动替换为合规替代表达，替换项输出日志
+6. ✅ 标题/正文/话题标签三关全检
 4. ✅ 引用话题15-20个，覆盖精准标签+泛流量标签
 5. ✅ 正文用 emoji 小标题分段（表情符号增强可读性）
 6. ✅ 每个地点选1-2家主推酒店（优先资源表中「已入库」的）
@@ -181,7 +184,8 @@ Step 5: 批量生成 + batch_create 写入
 │  9. 结合文旅调研数据生成8品类笔记内容                   │
 │ 10. batch_create写入→验证酒店名称非空                   │
 │ 11. 扩展到所有覆盖地区（每家酒店8篇）                   │
-│ 12. 输出链接给永乐                                     │
+│ 12. 自动合规校验 → 违禁词替换                          │
+│ 13. 输出链接给永乐                                     │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -298,7 +302,29 @@ curl -s -X POST 'https://open.feishu.cn/open-apis/bitable/v1/apps' \
 
 ```
 hotspot-bitable-analysis/
-  SKILL.md                  # 主文档（完整工作流）
+  SKILL.md                               # 主文档（完整工作流）
+  references/
+    xiaohongshu-forbidden-words.md       # 小红书违禁词/合规替换速查表
   scripts/
-    insert_records.py       # 主表记录插入模板
+    insert_records.py                    # 主表记录插入模板
+    xiaohongshu_compliance.py            # 小红书内容合规自动校验模块
 ```
+
+### 合规校验模块用法
+
+```python
+# 在笔记生成脚本中引入
+import sys
+sys.path.append('skills/hotspot-bitable-analysis/scripts')
+from xiaohongshu_compliance import audit_and_fix
+
+# 每条正文产出后自动校验
+for record in records:
+    body = record["正文文案"]
+    clean_body, violations = audit_and_fix(body)
+    if violations:
+        print(f'[合规] {record["笔记标题"][:20]} - {len(violations)}处替换')
+    record["正文文案"] = clean_body
+```
+
+违禁词涵盖7大类：绝对化用语/夸大效果/医疗健康/营销引流/标题标签/私信评论/平台红线。详细替换表见 `references/xiaohongshu-forbidden-words.md`。
