@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>热点商机 · 多维分析</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #0f1923; color: #e0e6ed; min-height: 100vh;
+}
+.page { display: none; max-width: 1600px; margin: 0 auto; padding: 20px; }
+.page.active { display: block; }
+.header {
+  text-align: center; padding: 20px 0 30px;
+  border-bottom: 1px solid #1e3a5f; margin-bottom: 30px;
+}
+.header h1 {
+  font-size: 2em;
+  background: linear-gradient(135deg, #00d4ff, #7b2ff7);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+.header .subtitle { color: #8b9dc3; font-size: 0.95em; }
+/* Nav */
+.nav-bar {
+  display: flex; gap: 4px; margin-bottom: 20px;
+  background: #1a2332; border-radius: 12px; padding: 4px;
+}
+.nav-btn {
+  flex: 1; padding: 10px 20px; text-align: center;
+  border-radius: 8px; cursor: pointer; transition: all 0.2s;
+  background: transparent; color: #8b9dc3; border: none; font-size: 0.9em;
+}
+.nav-btn:hover { background: #1e3a5f44; }
+.nav-btn.active { background: #00d4ff22; color: #00d4ff; font-weight: 600; }
+.back-btn {
+  display: inline-block; padding: 8px 16px; margin-bottom: 16px;
+  background: #1e3a5f; border: none; border-radius: 8px; color: #00d4ff;
+  cursor: pointer; font-size: 0.85em; transition: all 0.2s;
+}
+.back-btn:hover { background: #1e3a5f; transform: translateX(-2px); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: linear-gradient(135deg, #1a2332 0%, #1e2d44 100%);
+  border: 1px solid #1e3a5f; border-radius: 16px; padding: 20px;
+  position: relative; overflow: hidden;
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, #00d4ff, #7b2ff7);
+}
+.card h2 {
+  font-size: 1.1em; color: #00d4ff; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 8px;
+}
+.chart-container { height: 260px; position: relative; }
+.full-width { grid-column: 1 / -1; }
+.card-wide { grid-column: span 2; }
+/* Topic List */
+.topic-list { max-height: 500px; overflow-y: auto; }
+.topic-item {
+  display: flex; align-items: center; padding: 12px 14px;
+  margin-bottom: 6px; border-radius: 8px;
+  background: #0f192366; cursor: pointer; transition: all 0.2s; gap: 10px;
+}
+.topic-item:hover { background: #0f1923aa; transform: translateX(4px); }
+.topic-item.no-research { opacity: 0.6; border-left: 3px solid #4a5568; }
+.topic-item.has-research { border-left: 3px solid #00d4ff; }
+.priority-badge {
+  padding: 2px 10px; border-radius: 12px; font-size: 0.75em;
+  font-weight: 600; min-width: 32px; text-align: center;
+}
+.priority-高 { background: #ff444433; color: #ff4444; }
+.priority-中 { background: #ffaa0033; color: #ffaa00; }
+.priority-低 { background: #4488ff33; color: #4488ff; }
+.topic-title { flex: 1; font-size: 0.9em; }
+.topic-source { color: #6d8ca8; font-size: 0.75em; white-space: nowrap; }
+.topic-hot { color: #f0b429; font-size: 0.8em; font-weight: 600; }
+.topic-action {
+  color: #00d4ff; padding: 4px 10px; border: 1px solid #00d4ff44;
+  border-radius: 6px; font-size: 0.75em; transition: all 0.2s;
+}
+.topic-action:hover { background: #00d4ff22; }
+/* Stats */
+.stats-bar { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.stat-item {
+  flex: 1; min-width: 120px; text-align: center;
+  padding: 16px; background: #1a2332; border-radius: 12px;
+  border: 1px solid #1e3a5f;
+}
+.stat-item .num { font-size: 2em; font-weight: 700; }
+.stat-item .label { color: #6d8ca8; font-size: 0.8em; margin-top: 4px; }
+/* Detail Page */
+.detail-hero {
+  background: linear-gradient(135deg, #1a2332, #1e2d44);
+  border: 1px solid #1e3a5f; border-radius: 16px; padding: 30px;
+  margin-bottom: 20px;
+}
+.detail-hero h2 { font-size: 1.5em; margin-bottom: 8px; }
+.detail-hero .meta { color: #6d8ca8; font-size: 0.9em; margin-bottom: 12px; }
+.detail-hero .analysis-box {
+  background: #0f192366; border-radius: 8px; padding: 16px;
+  line-height: 1.6; font-size: 0.9em;
+}
+.research-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.research-card {
+  background: #0f192366; border-radius: 10px; padding: 14px;
+  border: 1px solid #1e3a5f44; transition: all 0.2s;
+}
+.research-card:hover { border-color: #00d4ff44; transform: translateY(-2px); }
+.research-card .dimension { color: #00d4ff; font-size: 0.85em; font-weight: 600; margin-bottom: 6px; }
+.research-card .content { font-size: 0.8em; color: #8b9dc3; line-height: 1.5; }
+.research-card .hotel-tag {
+  display: inline-block; padding: 2px 8px; margin-top: 6px;
+  background: #1e3a5f; border-radius: 4px; font-size: 0.7em; color: #6d8ca8;
+}
+.no-research-banner {
+  text-align: center; padding: 60px 20px;
+  background: #1a2332; border-radius: 16px; border: 1px solid #4a5568;
+}
+.no-research-banner .icon { font-size: 3em; margin-bottom: 12px; }
+.no-research-banner p { color: #6d8ca8; }
+/* === TREE STYLE for Notes === */
+.notes-layout {
+  display: flex; gap: 20px; min-height: 500px;
+}
+.notes-tree {
+  width: 300px; min-width: 280px;
+  background: #1a2332; border-radius: 12px; border: 1px solid #1e3a5f;
+  padding: 12px; overflow-y: auto; max-height: 600px;
+}
+.notes-content {
+  flex: 1;
+  background: #1a2332; border-radius: 12px; border: 1px solid #1e3a5f;
+  padding: 20px; overflow-y: auto; max-height: 600px;
+}
+.tree-region { margin-bottom: 4px; }
+.tree-region-header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 12px; border-radius: 8px;
+  background: #0f192366; cursor: pointer;
+  color: #00d4ff; font-weight: 600; font-size: 0.9em;
+  transition: all 0.2s;
+}
+.tree-region-header:hover { background: #0f192388; }
+.tree-region-header .arrow {
+  transition: transform 0.2s; font-size: 0.7em;
+}
+.tree-region-header .arrow.open { transform: rotate(90deg); }
+.tree-region-header .count {
+  margin-left: auto; color: #6d8ca8; font-weight: 400; font-size: 0.8em;
+}
+.tree-region-body { display: none; padding-left: 12px; }
+.tree-region-body.open { display: block; }
+.tree-hotel {
+  margin: 4px 0; border-left: 2px solid #1e3a5f; padding-left: 12px;
+}
+.tree-hotel-header {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 10px; border-radius: 6px; cursor: pointer;
+  color: #b388ff; font-size: 0.85em; font-weight: 500;
+  transition: all 0.2s;
+}
+.tree-hotel-header:hover { background: #7b2ff711; }
+.tree-hotel-header .arrow { font-size: 0.65em; transition: transform 0.2s; }
+.tree-hotel-header .arrow.open { transform: rotate(90deg); }
+.tree-hotel-header .count { margin-left: auto; color: #6d8ca8; font-size: 0.8em; font-weight: 400; }
+.tree-hotel-body { display: none; padding-left: 12px; }
+.tree-hotel-body.open { display: block; }
+.tree-note {
+  padding: 6px 8px; border-radius: 4px; cursor: pointer;
+  font-size: 0.78em; color: #8b9dc3; transition: all 0.2s;
+  margin: 2px 0; border-left: 2px solid transparent;
+}
+.tree-note:hover { background: #0f1923; color: #e0e6ed; border-left-color: #7b2ff7; }
+.tree-note.active { background: #0f1923; color: #e0e6ed; border-left-color: #00d4ff; }
+.tree-note .cat-tag {
+  display: inline-block; font-size: 0.7em; padding: 1px 6px;
+  border-radius: 3px; background: #7b2ff722; color: #b388ff; margin-right: 4px;
+}
+/* Note detail inside content panel */
+.note-view-card { }
+.note-view-card .meta-tag {
+  display: inline-block; padding: 4px 12px; border-radius: 16px;
+  font-size: 0.75em; margin-right: 6px; margin-bottom: 8px;
+}
+.note-view-card .body-text {
+  background: #0f192366; border-radius: 8px; padding: 20px;
+  line-height: 1.8; font-size: 0.85em; white-space: pre-wrap;
+  margin: 12px 0;
+}
+.note-view-card .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.note-view-card .tag {
+  padding: 4px 10px; background: #1e3a5f; border-radius: 12px;
+  font-size: 0.75em; color: #6d8ca8;
+}
+/* No selection */
+.note-empty {
+  display: flex; align-items: center; justify-content: center;
+  height: 100%; color: #4a5568; font-size: 1.1em;
+}
+/* Filter */
+.filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.filter-btn {
+  padding: 6px 14px; border-radius: 20px; border: 1px solid #1e3a5f;
+  background: transparent; color: #8b9dc3; cursor: pointer;
+  font-size: 0.8em; transition: all 0.2s;
+}
+.filter-btn:hover { border-color: #00d4ff44; color: #00d4ff; }
+.filter-btn.active { background: #00d4ff22; border-color: #00d4ff; color: #00d4ff; }
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0f1923; }
+::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 2px; }
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .card-wide { grid-column: span 1; }
+  .header h1 { font-size: 1.4em; }
+  .notes-layout { flex-direction: column; }
+  .notes-tree { width: 100%; min-width: auto; max-height: 300px; }
+  .notes-content { max-height: 500px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<div style="max-width:1600px;margin:0 auto;padding:20px 20px 0;">
+  <div class="nav-bar" id="navBar">
+    <button class="nav-btn active" data-page="dashboard">📊 总览看板</button>
+    <button class="nav-btn" data-page="notes">🗂️ 笔记裂变库</button>
+  </div>
+</div>
+
+<!-- ===== PAGE: DASHBOARD ===== -->
+<div class="page active" id="page-dashboard">
+  <div class="header">
+    <h1>🔥 热点商机多维分析</h1>
+    <div class="subtitle">旅游商机决策看板 · 2026-05-28 11时</div>
+  </div>
+  <div class="stats-bar" id="statsBar"></div>
+  <div class="grid">
+    <div class="card"><h2>🎯 优先级分布</h2><div class="chart-container"><canvas id="priorityChart"></canvas></div></div>
+    <div class="card"><h2>📡 来源渠道</h2><div class="chart-container"><canvas id="sourceChart"></canvas></div></div>
+    <div class="card"><h2>🏷️ 话题类别</h2><div class="chart-container"><canvas id="categoryChart"></canvas></div></div>
+    <div class="card card-wide"><h2>📊 热度排名</h2><div class="chart-container" style="height:320px;"><canvas id="rankChart"></canvas></div></div>
+    <div class="card full-width"><h2>📍 热点清单 <span id="topicCount" style="color:#6d8ca8;font-size:0.7em;"></span></h2>
+      <p style="color:#6d8ca8;font-size:0.8em;margin:-10px 0 12px;">🟦 有地点调研 · ⬜ 无地点调研 | 点击查看详情</p>
+      <div class="topic-list" id="topicList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE: LOCATION DETAIL ===== -->
+<div class="page" id="page-location">
+  <button class="back-btn" onclick="navigate('dashboard')">← 返回总览</button>
+  <div id="locationContent"></div>
+</div>
+
+<!-- ===== PAGE: NOTES ===== -->
+<div class="page" id="page-notes">
+  <div class="header">
+    <h1>📝 笔记裂变内容库</h1>
+    <div class="subtitle">按地区 → 酒店 → 内容品类 树状浏览</div>
+  </div>
+  <div class="notes-layout">
+    <div class="notes-tree" id="notesTree"></div>
+    <div class="notes-content" id="notesContent">
+      <div class="note-empty">← 从左侧树中选择一篇笔记</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== DATA =====
+const DATA = {
+  topics: [
+    { id:'am', title:'给阿嬷的情书（电影热映）', priority:'高', category:'文旅美食', sources:['微博热搜','抖音'], hotValue:100, location:'全国影院', locationKey:null, spots:'电影院、旅游打卡点', link:'https://s.weibo.com/weibo?q=%25E7%25BB%2599%25E9%2598%25BF%25E5%25AC%25B7%25E7%259A%2584%25E6%2583%2585%25E4%25B9%25A6', analysis:'亲情题材爆款电影，可借势做「带爸妈去旅行」主题内容，适合推家庭团/亲子游/孝心游线路' },
+    { id:'fire', title:'这烟火气把我香迷糊了', priority:'高', category:'文旅美食', sources:['抖音'], hotValue:95, location:'全国夜市', locationKey:null, spots:'各地夜市区、美食街', link:'https://www.douyin.com/hot', analysis:'美食+夜经济话题爆火，可做XX城市夜市美食攻略系列，适合推城市酒店+美食体验套餐' },
+    { id:'europe', title:'欧洲热到失控 / 印度极端高温', priority:'高', category:'天气灾害', sources:['百度热搜','今日头条','贴吧'], hotValue:90, location:'瑞士/挪威/冰岛', locationKey:'europe_cool', spots:'阿尔卑斯山区、北欧', link:'https://www.baidu.com/s?wd=%25E6%25AC%25A7%25E6%25B4%25B2%25E7%2583%25AD%25E5%2588%25B0%25E5%25A4%25B1%25E6%258E%25A7', analysis:'欧洲高温催化避暑游需求，可推瑞士/挪威/冰岛等清凉目的地，与端午小长假联动' },
+    { id:'gaokao1', title:'用自己的故事给高考学子们加油', priority:'高', category:'社会民生', sources:['抖音'], hotValue:88, location:'全国高校', locationKey:'graduation', spots:'各大高校', link:'https://www.douyin.com/hot', analysis:'高考加油话题情感共鸣强，可联动推出高考后毕业旅行线路，提前种草暑期旅游目的地' },
+    { id:'foreign', title:'外国网红中国搭便车的视频火到国外', priority:'高', category:'文旅美食', sources:['微博热搜'], hotValue:85, location:'中国各地', locationKey:null, spots:'沿途城市景点', link:'https://s.weibo.com/weibo?q=%25E5%25A4%2596%25E5%259B%25BD%25E7%25BD%2591%25E7%25BA%25A2', analysis:'正面国际传播案例，可做「外国人在中国旅游」系列内容，借势推入境游产品' },
+    { id:'serbia', title:'塞尔维亚总统武契奇访华', priority:'高', category:'国际外交', sources:['百度热搜'], hotValue:85, location:'塞尔维亚/北京', locationKey:'serbia', spots:'贝尔格莱德、北京', link:'https://www.baidu.com/s?wd=%25E5%25A1%259E%25E5%25B0%2594%25E7%25BB%25B4%25E4%25BA%259A', analysis:'塞尔维亚总统访华热度高，免签热门出境游目的地，可做塞尔维亚旅行攻略借势' },
+    { id:'dragon', title:'广东猎德龙舟队勇闯乌龙滩', priority:'高', category:'文旅美食', sources:['抖音'], hotValue:82, location:'广州', locationKey:'guangzhou', spots:'猎德村、珠江', link:'https://www.douyin.com/hot', analysis:'端午前龙舟文化热度飙升，可做广州端午龙舟观赛攻略，联动广东酒店/民宿推端午假期' },
+    { id:'gaokao2', title:'2026高考倒计时', priority:'高', category:'教育', sources:['微博热搜'], hotValue:75, location:'全国高考城市', locationKey:'graduation', spots:'高校周边、大学城', link:'https://s.weibo.com/weibo?q=2026%25E9%25AB%2598%25E8%2580%2583', analysis:'毕业旅行是每年最大一波旅游刚需，可提前布局毕业旅行线路，联动酒店做毕业季促销' },
+    { id:'daocheng', title:'稻城亚丁景区强制省道收费', priority:'中', category:'文旅美食', sources:['知乎'], hotValue:80, location:'四川稻城亚丁', locationKey:null, spots:'稻城亚丁景区、川西', link:'https://www.zhihu.com/question/2042634299527140707', analysis:'景区收费争议引发全网讨论，带火稻城亚丁知名度，可做川西旅游攻略借势' },
+    { id:'rain', title:'南方暴雨/防潮指南', priority:'中', category:'天气灾害', sources:['百度热搜','微博热搜'], hotValue:78, location:'南方多省', locationKey:null, spots:'室内景点、温泉、商场', link:'https://www.baidu.com/s?wd=%25E9%259B%25A8%25E9%259B%25A8%25E9%259B%25A8', analysis:'暴雨天气影响出游计划，可推雨季室内游攻略或三亚/云南等晴好目的地替代方案' },
+    { id:'space', title:'欢迎航天员张陆武飞张洪章回家', priority:'中', category:'航天科技', sources:['微博热搜'], hotValue:70, location:'酒泉', locationKey:null, spots:'酒泉卫星发射中心', link:'https://s.weibo.com/weibo?q=%25E8%2588%25AA%25E5%25A4%25A9%25E5%2591%2598', analysis:'航天热点可借势做航天主题游，适合推酒泉/文昌等航天城旅游，高净值客群' },
+    { id:'pangdonglai', title:'胖东来探店/逛吃', priority:'中', category:'文旅美食', sources:['B站'], hotValue:60, location:'河南许昌', locationKey:null, spots:'胖东来超市、许昌周边', link:'https://www.bilibili.com/video/BV153Gm6sEWo', analysis:'胖东来持续出圈带火许昌小众旅游，可做许昌胖东来+周边旅游攻略，推省内短途周末游' },
+    { id:'laser', title:"中国造'激光灭蚊神器'海外爆单", priority:'低', category:'科技AI', sources:['百度热搜'], hotValue:78, location:'常州', locationKey:null, spots:'户外景区、民宿', link:'https://www.baidu.com/s?wd=%25E6%25BF%2580%25E5%2585%2589%25E7%2581%25AD%25E8%259A%258A', analysis:'户外灭蚊神器话题热，可推户外防蚊攻略，旅游关联度一般' },
+  ],
+  locations: {
+    guangzhou: { name:'广州', tag:'文旅美食', hotels:['广州花园酒店'], dimensions:[
+      { dim:'🏛️ 金字招牌', content:'广州塔（小蛮腰）、珠江夜游、早茶文化、粤菜发源地、沙面建筑群、猎德龙舟文化' },
+      { dim:'🌆 市井风情', content:'西关大屋、上下九骑楼、东山口文艺区、荔湾湖公园、广州老街、宝华路美食' },
+      { dim:'📸 视觉资产', content:'广州塔夜景、珠江两岸灯光秀、猎德大桥、骑楼街、花城广场、白云山日落' },
+      { dim:'🌸 季节限定', content:'端午龙舟赛（5-6月）、荔枝季（6月）、荷花季（6-7月）、暑期水上乐园' },
+      { dim:'⚠️ 避坑槽点', content:'夏季高温多雨、端午期间人流密集、龙舟赛区交通管制、暑期酒店涨价' },
+      { dim:'💡 商业闭环', content:'广州花园酒店+珠江夜游+龙舟观赛+早茶体验一体化，端午假期套餐产品' },
+    ]},
+    serbia: { name:'塞尔维亚', tag:'国际外交', hotels:['贝尔格莱德凯悦'], dimensions:[
+      { dim:'🏛️ 金字招牌', content:'多瑙河风光、贝尔格莱德要塞、EXIT音乐节、红酒文化、东正教教堂、免签政策' },
+      { dim:'🌆 市井风情', content:'斯卡达利亚老街、Knez Mihailova步行街、贝尔格莱德夜生活（欧洲TOP）、露天咖啡馆' },
+      { dim:'📸 视觉资产', content:'萨瓦河与多瑙河交汇、圣萨瓦教堂、卡莱梅格丹要塞日落、彩色老城建筑' },
+      { dim:'🌸 季节限定', content:'夏季EXIT音乐节（7月）、葡萄丰收季（9月）、秋季多瑙河游船、冬季滑雪' },
+      { dim:'⚠️ 避坑槽点', content:'部分出租车乱收费、英语普及率不高、换汇需谨慎、部分餐厅加收服务费' },
+      { dim:'💡 商业闭环', content:'免签政策+直飞航线+欧洲性价比之王，适合打包定制游产品' },
+    ]},
+    europe_cool: { name:'欧洲避暑', tag:'天气灾害', hotels:['瑞士少女峰酒店'], dimensions:[
+      { dim:'🏛️ 金字招牌', content:'瑞士阿尔卑斯山、挪威峡湾、冰岛极光+蓝湖温泉、南法薰衣草田' },
+      { dim:'🌆 市井风情', content:'瑞士因特拉肯小镇、挪威卑尔根渔村、冰岛雷克雅未克彩色房子' },
+      { dim:'📸 视觉资产', content:'马特洪峰倒影、挪威峡湾云雾、蓝冰洞、普罗旺斯薰衣草田、极光' },
+      { dim:'🌸 季节限定', content:'欧洲高温催生避暑刚需（5-8月）、薰衣草花期（6-7月）、极昼体验' },
+      { dim:'⚠️ 避坑槽点', content:'南欧高温体感极热、避暑地酒店价格飙升需提前预订、旺季排队严重' },
+      { dim:'💡 商业闭环', content:'欧洲避暑=高端定制游，客单价高，适合推精品小团+奢华酒店套餐' },
+    ]},
+    graduation: { name:'毕业旅行', tag:'教育', hotels:['成都W酒店','丽江悦榕庄','上海浦东丽思卡尔顿'], dimensions:[
+      { dim:'🏛️ 金字招牌', content:'成都（火锅熊猫）、上海（迪士尼）、西安（兵马俑小吃）、大理（风花雪月）' },
+      { dim:'🌆 市井风情', content:'成都建设巷夜市、上海外滩、西安回民街、大理古城人民路、丽江四方街' },
+      { dim:'📸 视觉资产', content:'成都IFS熊猫、上海迪士尼城堡、西安大唐不夜城、大理苍山洱海' },
+      { dim:'🌸 季节限定', content:'6-8月毕业季黄金窗口、暑期旅游旺季、各地音乐节/活动密集' },
+      { dim:'⚠️ 避坑槽点', content:'暑期价格上浮30-50%、景区人流密集、学生预算有限需性价比方案' },
+      { dim:'💡 商业闭环', content:'「毕业旅行+酒店套餐」模式，适合推经济型+体验感产品，成都W酒店已入库' },
+    ]},
+  },
+  regions: [
+    { name:'🏔️ 西南地区', emoji:'🏔️', hotels:['成都W酒店','丽江悦榕庄','腾冲石头纪'] },
+    { name:'🏛️ 华北地区', emoji:'🏛️', hotels:['北京国贸大酒店'] },
+    { name:'🌺 华南地区', emoji:'🌺', hotels:['广州花园酒店'] },
+    { name:'🌃 华东地区', emoji:'🌃', hotels:['上海浦东丽思卡尔顿'] },
+    { name:'🌍 欧洲地区', emoji:'🌍', hotels:['贝尔格莱德凯悦','瑞士少女峰酒店'] },
+  ],
+  CATEGORIES: ['💎 高净值','💼 商务','⚡ 截流','🌿 种草','📖 干货','🛠️ 教程','⚠️ 避坑','🏢 行业'],
+  notes: [
+    { hotel:'成都W酒店', cat:'💎 高净值度假客/蜜月', title:'✨成都W酒店｜在潮流之都睡进艺术馆是什么体验', body:'在成都太古里旁边，藏着一座会发光的「潮流宫殿」\n走进大堂的瞬间就被漫天的霓虹光影击中\n\n🛁 房间亮点\n每一间都是设计鬼才的杰作\n落地窗外是成都的天际线\n浴缸正对着城市景观，泡澡看落日\n\n📸 打卡机位\n大堂旋转楼梯｜光影走廊｜泳池天台\n每一帧都是杂志大片\n\n🍽️ 美食体验\n全日制餐厅的川味brunch\n居然把火锅做进了早餐\n\n打折优惠期间值得冲', tags:'#成都W酒店 #成都旅行 #网红酒店 #酒店控 #设计酒店' },
+    { hotel:'成都W酒店', cat:'💼 商务实效型', title:'成都W酒店｜商务出差也能很酷｜打工人实测', body:'出差成都住了三晚W酒店，说点真实的\n\n📋 商务核心体验\n📶 网速实测：下载300Mbps，视频会议无压力\n办公桌配置齐全\n\n💼 商务配套\n· 行政酒廊：下午茶+欢乐时光，适合约客户\n· 会议室：设计感十足，比传统商务酒店更有话题\n\n🎯 出差加分项\n· 晚间接待客户去顶楼酒吧\n· 健身房24小时\n· 早餐中西式都有', tags:'#成都W酒店 #商务出差 #酒店测评 #打工人出差' },
+    { hotel:'成都W酒店', cat:'⚡ 实时红利截流型', title:'⚠️成都W酒店限时优惠！手慢无🔥', body:'抢到就是赚到💥\n成都W酒店最近有活动\n折扣力度前所未有\n\n✅ 隐藏福利清单\n✔️ 连住两晚有额外优惠\n✔️ 含双人早餐\n✔️ 延迟退房到下午2点\n✔️ 免费升级房型（视房态）\n\n👇想了解具体优惠的评论区扣1\n我私你详情\n\n⚠️ 建议先收藏\n随时可能结束', tags:'#成都W酒店 #酒店特价 #限时优惠 #成都旅游攻略' },
+    { hotel:'成都W酒店', cat:'🌿 种草型范流量号', title:'🌅在成都W酒店醒来 窗外是整座城市的心跳', body:'在成都的某天早上\n窗帘缓缓打开的时候\n阳光洒在整个房间\n城市在脚下慢慢醒来\n\n这不是电影\n是成都W酒店的日常\n\n下午去泳池游了个泳\n人很少 水面倒映着天光\n好像漂浮在城市上空\n\n晚上去酒吧喝了一杯\n调酒师推荐了特调\n说这杯叫「成都一夜」\n\n如果有一天\n你想找个地方\n什么都不做 只是待着\n\n或许可以来这里', tags:'#成都旅行 #周末去哪儿 #生活美学 #慢生活 #治愈系' },
+    { hotel:'成都W酒店', cat:'📖 干货价值类', title:'成都W酒店全攻略｜一篇讲透值不值', body:'🏨 成都W酒店入住全体验\n\n🏠 房型推荐\n· 奇妙大床房（性价比之选，45㎡起）\n· 套房（适合拍照，有独立客厅）\n\n🍽️ 餐饮评分\n· ZING餐厅 ⭐⭐⭐⭐⭐ 川味brunch绝了\n· 燎屋顶酒吧 ⭐⭐⭐⭐ 夜景一流\n\n🎯 酒店设施\n· 室内泳池 ⭐⭐⭐⭐⭐\n· 健身房 ⭐⭐⭐⭐ 24小时\n\n💡 省钱Tips\n· 工作日比周末便宜30%\n· 提前14天预订有早鸟价', tags:'#成都W酒店测评 #酒店攻略 #旅行攻略 #酒店控' },
+    { hotel:'成都W酒店', cat:'🛠️ 教程攻略类', title:'手把手教你用zui低成本住成都W酒店🔥', body:'学会这招省下一半房费💡\n\nStep 1️⃣ 选对时间\n· 周二周三入住最便宜\n· 提前2周锁定早鸟价\n\nStep 2️⃣ 渠道选择\n· 官方渠道：积分累计和升级\n· 第三方平台：价格更低\n\n💡 终极省钱方案\n和朋友拼房摊费用\n人均成本直降50%\n\n收藏这篇 出发前看一眼', tags:'#成都W酒店 #省钱攻略 #旅行省钱 #自由行攻略' },
+    { hotel:'成都W酒店', cat:'⚠️ 避坑类', title:'拔草帖｜成都W酒店的真实体验｜有好有坏', body:'住了三晚说点真心话\n\n✅ 优点\n· 设计感无敌 拍照出片率100%\n· 位置绝了 太古里步行就到\n· 床品很舒服\n\n❌ 槽点\n· 隔音一般 走廊声音能听到\n· 网红太多 大堂经常有人拍照\n· 价格浮动大\n\n整体评分：⭐⭐⭐⭐（4/5）', tags:'#成都W酒店 #酒店避坑 #真实测评 #拔草' },
+    { hotel:'成都W酒店', cat:'🏢 行业垂直类', title:'拆解成都W酒店：潮牌酒店的产品逻辑', body:'🏗️ 产品定位分析\n成都W酒店是万豪旗下潮牌酒店在西部旗舰。核心策略是「在地文化+国际潮牌」双重叙事。\n\n🎯 客群画像\n· 主力客群：25-40岁潮流消费者\n· 次级客群：商务创意行业\n\n💰 商业模式\n· 单房收入：成都五星酒店TOP3\n· 非房收入占比35%\n· 社交媒体免费曝光价值超千万', tags:'#成都W酒店 #商业分析 #酒店品牌 #行业观察' },
+    { hotel:'北京国贸大酒店', cat:'💎 高净值度假客/蜜月', title:'🏙️北京国贸大酒店｜在首都之巅俯瞰长安街', body:'在北京，有一座酒店能让你在云端看紫禁城\n北京国贸大酒店\n330米高空\n北京的天际线尽收眼底\n\n🌅 傍晚\n在79层的酒吧\n看着夕阳把北京染成金色\n长安街的车流像一条光河\n\n🍽️ 餐饮\n国贸79西餐厅 景观位置需要提前预定\n早餐有老北京特色\n\n打折优惠期间值得体验', tags:'#北京国贸大酒店 #北京酒店 #CBD #高空酒店' },
+    { hotel:'北京国贸大酒店', cat:'💼 商务实效型', title:'北京国贸大酒店｜商务出差的天花板', body:'在北京出差住国贸大酒店\n说点真实体验\n\n📋 商务硬核数据\n· 网速：下载500Mbps 上传200Mbps\n· 行政酒廊：一天五顿 适合约客户\n\n🎯 商务配套\n· 会议室20间 最大容纳400人\n· 管家服务24小时\n\n🚗 交通\n· 地铁1/10号线国贸站\n· 到首都机场30分钟', tags:'#北京国贸大酒店 #商务出差 #CBD #打工人出差' },
+    { hotel:'北京国贸大酒店', cat:'⚡ 实时红利截流型', title:'🔥北京国贸大酒店限时活动！国贸C位好价', body:'计划去北京的看过来\n北京国贸大酒店有活动了\n位置绝佳 现在订划算\n\n✅ 活动内容\n✔️ 含双人早餐\n✔️ 赠送行政酒廊待遇\n✔️ 延迟退房到下午4点\n\n👇想知道具体价格\n评论区扣「北京」', tags:'#北京国贸大酒店 #限时活动 #北京旅游 #酒店折扣' },
+    { hotel:'北京国贸大酒店', cat:'🌿 种草型范流量号', title:'🏙️在北京最高的酒店里 我终于看清了这座城市', body:'来北京很多次了\n但这次不一样\n\n住在国贸大酒店\n330米的高空\n北京在脚下铺开\n\n傍晚的时候\n夕阳把故宫的屋顶染成金色\n景山的轮廓在远处\n长安街的车流像血管\n\n凌晨两点\n我还坐在窗边\n看着这座不夜城', tags:'#北京 #国贸大酒店 #城市夜景 #治愈系' },
+    { hotel:'北京国贸大酒店', cat:'📖 干货价值类', title:'北京国贸大酒店全攻略｜云端住宿值不值', body:'🏨 北京国贸大酒店全攻略\n\n🏠 房型推荐\n· 豪华CBD景观房（性价比之选）\n· 行政房（含行政酒廊）\n\n🍽️ 餐饮攻略\n· 国贸79西餐 ⭐⭐⭐⭐ 景观无敌\n· 滩万日料 ⭐⭐⭐⭐\n\n💡 省钱建议\n· 周末比工作日便宜\n· 提前21天预订有早鸟价', tags:'#北京国贸大酒店 #酒店攻略 #五星酒店 #旅行攻略' },
+    { hotel:'北京国贸大酒店', cat:'⚠️ 避坑类', title:'北京国贸大酒店拔草｜优缺点都说清楚', body:'真实入住体验分享\n\n✅ 优点\n· 国贸CBD中心位置\n· 高空景观震撼\n· 服务专业\n\n❌ 槽点\n· 大堂在64层需要换乘电梯\n· 周边吃饭偏贵\n· 旺季价格高\n\n评分：⭐⭐⭐⭐', tags:'#北京国贸大酒店 #酒店避坑 #真实测评' },
+    { hotel:'北京国贸大酒店', cat:'🏢 行业垂直类', title:'拆解北京国贸大酒店：CBD地标酒店的生存法则', body:'🏗️ 市场定位\n北京国贸大酒店是香格里拉集团在CBD的旗舰项目。核心策略是「商务+景观」双轮驱动。\n\n🎯 客群画像\n· 主力客群：世界500强高管\n· 次级客群：高端城市度假\n\n💡 行业启示\nCBD商务酒店的差异化不在于更高更奢华，而在于「位置即效率」。', tags:'#北京国贸大酒店 #商业分析 #酒店行业' },
+    { hotel:'丽江悦榕庄', cat:'💎 高净值度假客/蜜月', title:'🏔️丽江悦榕庄｜在玉龙雪山脚下醒来', body:'在丽江，有一处被雪山守护的地方\n丽江悦榕庄\n推开窗就是玉龙雪山\n\n🌅 清晨\n第一缕阳光照在雪山顶上\n金色的 温柔的\n你在房间里就能看到这一切\n\n🛁 别墅体验\n独栋别墅带独立庭院\n泡着热水看雪山\n\n打折优惠期间值得体验', tags:'#丽江悦榕庄 #云南旅行 #玉龙雪山 #蜜月酒店' },
+    { hotel:'丽江悦榕庄', cat:'💼 商务实效型', title:'丽江悦榕庄｜在雪山脚下开会的独特体验', body:'在雪山脚下开会是什么感觉？\n丽江悦榕庄的会议室\n落地窗外就是玉龙雪山\n\n📋 商务配套\n· 多功能厅可容纳80人\n· 高速WiFi\n\n🎯 团建优势\n· 户外拓展空间大\n· 纳西文化体验活动\n\n适合高端客户答谢会或创意团队会议', tags:'#丽江悦榕庄 #商务旅行 #会议酒店 #团建' },
+    { hotel:'丽江悦榕庄', cat:'🌿 种草型范流量号', title:'☁️在丽江的第三天 我好像学会了慢下来', body:'来丽江之前\n生活是2倍速的\n住进悦榕庄之后\n时间忽然慢了下来\n\n每天被阳光叫醒\n山就在那里\n安安静静的\n在庭院里喝咖啡\n看云飘过雪山\n\n这里的时间\n好像比别处慢一些\n大概是因为\n每一秒都值得认真过', tags:'#丽江 #慢生活 #旅行日记 #治愈系 #旅行的意义' },
+    { hotel:'丽江悦榕庄', cat:'📖 干货价值类', title:'丽江悦榕庄全攻略｜值不值看完这篇再决定', body:'🏨 丽江悦榕庄入住全攻略\n\n🏠 房型选择\n· 山景别墅（基础房型，看雪山）\n· 花园别墅（带庭院和按摩池）\n\n🍽️ 餐饮测评\n· 白云餐厅 ⭐⭐⭐⭐ 纳西菜正宗\n· 明月西餐厅 ⭐⭐⭐⭐\n\n💡 省钱Tips\n· 淡季价格是旺季的60%\n· 连住3晚以上有套餐优惠', tags:'#丽江悦榕庄攻略 #云南旅行 #酒店测评' },
+    { hotel:'丽江悦榕庄', cat:'⚠️ 避坑类', title:'丽江悦榕庄拔草｜真实优缺点分享', body:'住了三天丽江悦榕庄\n说点真话\n\n✅ 优点\n· 雪山景观确实一绝\n· 别墅私密性很好\n\n❌ 槽点\n· 装修有点年代感\n· 雨季蚊虫多\n· 离古城有些距离\n\n评分：⭐⭐⭐⭐', tags:'#丽江悦榕庄 #酒店避坑 #真实测评' },
+    { hotel:'腾冲石头纪', cat:'💎 高净值度假客/蜜月', title:'🏔️腾冲石头纪｜住进火山脚下的避世天堂', body:'在云南腾冲\n有一座用火山石建成的酒店\n石头纪 隈研吾设计\n隐在山谷里\n\n每块石头都是火山岩\n每间房都有自己的温泉泡池\n晚上泡着温泉看星星\n\n如果有一天\n你想从世界消失几天\n来这里准没错', tags:'#腾冲石头纪 #设计酒店 #温泉酒店 #秘境酒店' },
+    { hotel:'腾冲石头纪', cat:'🌿 种草型范流量号', title:'🏔️在腾冲石头纪 我找到了隐世的感觉', body:'有时候\n就想找一个地方\n把自己藏起来\n腾冲的石头纪就是这样的地方\n\n建在山谷里\n用火山石垒起来的房子\n每一块石头都有温度\n\n晚上泡在温泉里\n头顶是满天星光\n四周是虫鸣\n\n如果你也想\n从世界消失几天\n可以来这里试试', tags:'#腾冲石头纪 #腾冲旅游 #云南小众 #隐世酒店' },
+    { hotel:'腾冲石头纪', cat:'⚠️ 避坑类', title:'腾冲石头纪真实测评｜好看但有些坑你要知道', body:'在石头纪住了两天\n说点真实感受\n\n✅ 优点\n· 设计绝了 火山石建筑独一无二\n· 私汤泡池太舒服了\n\n❌ 槽点\n· 位置偏僻 周边没吃饭的地方\n· 晚餐价格偏高\n· WiFi信号不好\n\n评分：⭐⭐⭐⭐', tags:'#腾冲石头纪 #酒店避坑 #云南旅游 #真实测评' },
+    { hotel:'腾冲石头纪', cat:'⚡ 实时红利截流型', title:'🔥腾冲石头纪限时活动！火山温泉别墅体验', body:'想去腾冲的看过来\n石头纪最近有优惠活动\n火山岩别墅+私人温泉\n\n✅ 活动包含\n✔️ 独栋别墅住宿\n✔️ 独立庭院温泉泡池\n✔️ 双人早餐\n\n🎯 适合谁\n· 想找个地方安安静静待几天的\n· 情侣/蜜月出行\n\n👇想知道优惠详情的评论区留言', tags:'#腾冲石头纪 #酒店优惠 #温泉别墅 #限时活动' },
+    { hotel:'广州花园酒店', cat:'💎 高净值度假客/蜜月', title:'🌺广州花园酒店｜老钱风的天花板｜住进岭南花园里', body:'在广州这座烟火气十足的城市\n藏着一座真正的「城市花园」\n广州花园酒店\n老广心中的白月光\n\n🌿 步入酒店\n就像走进了岭南园林\n回廊、亭台、流水\n每一步都是风景\n\n🍽️ 美食攻略\n早茶是必体验的\n虾饺烧卖叉烧包\n每一口都是老广的味道', tags:'#广州花园酒店 #岭南文化 #广州早茶 #度假酒店' },
+    { hotel:'广州花园酒店', cat:'🌿 种草型范流量号', title:'🌺在广州花园酒店住了一晚 不想走了', body:'广州这座城市\n总是热热闹闹的\n但在花园酒店里\n时间忽然安静下来\n\n院子里有瀑布\n有锦鲤\n有喝茶的老人\n\n吃完早餐\n在花园里散步\n看花看水看云\n\n有些地方\n住的是情怀', tags:'#广州花园酒店 #广州旅行 #老广生活 #治愈系' },
+    { hotel:'广州花园酒店', cat:'⚡ 实时红利截流型', title:'🔥端午去广州看龙舟！这家酒店的位置绝了', body:'端午打算去广州看龙舟的\n这家酒店一定要提前订\n广州花园酒店\n距离猎德龙舟赛区超近\n\n🎯 端午期间特别提醒\n· 房间紧张 现在就要订\n· 可以关注是否有活动\n· 连住可能有折扣\n\n💬 评论区扣「端午」\n我发你具体方案', tags:'#广州端午 #端午龙舟 #广州花园酒店 #端午出行' },
+    { hotel:'广州花园酒店', cat:'📖 干货价值类', title:'广州花园酒店全攻略｜老牌五星到底值不值', body:'🏨 广州花园酒店入住攻略\n\n🏠 房型推荐\n· 园景房（性价比之选）\n· 行政房（含行政酒廊）\n\n🍽️ 餐饮推荐\n· 桃园馆 ⭐⭐⭐⭐⭐ 粤菜正宗\n· 凌璇阁 ⭐⭐⭐⭐⭐ 早茶必点\n\n💡 适合人群\n· 带父母出游\n· 商务接待\n· 体验老广文化', tags:'#广州花园酒店 #酒店攻略 #广州旅行 #五星酒店' },
+    { hotel:'上海浦东丽思卡尔顿', cat:'💎 高净值度假客/蜜月', title:'🌃上海浦东丽思卡尔顿｜在云端看外滩', body:'上海最迷人的风景\n不在街上\n在天上\n\n浦东丽思卡尔顿\n52层高空\n外滩和陆家嘴尽收眼底\n\n落地窗前就是黄浦江\n对面是万国建筑群\n夜景真的绝了\n\n📸 打卡点\n· 无边泳池\n· Flair酒吧\n· 大堂水晶吊灯', tags:'#上海浦东丽思卡尔顿 #外滩景观 #云端酒店 #奢华酒店' },
+    { hotel:'上海浦东丽思卡尔顿', cat:'📖 干货价值类', title:'上海浦东丽思卡尔顿全攻略｜外滩C位酒店值不值', body:'🏨 上海浦东丽思卡尔顿入住全攻略\n\n🏠 房型选择\n· 豪华外滩景观房：必选！\n· 行政套房：含行政酒廊\n\n📸 最佳拍照机位\n· 52层大堂日落时分\n· Flair露天吧台外滩全景\n· 无边泳池\n\n💡 省钱建议\n· 工作日比周末便宜40%\n· 提前一个月预订', tags:'#上海浦东丽思卡尔顿 #上海酒店攻略 #酒店测评' },
+    { hotel:'上海浦东丽思卡尔顿', cat:'💼 商务实效型', title:'上海浦东丽思卡尔顿｜陆家嘴商务出差的天花板', body:'在上海陆家嘴出差\n住了丽思卡尔顿\n\n📋 商务体验\n· 位置在国金中心楼上\n· 行政酒廊视野绝佳\n\n💼 出差加分项\n· 管家服务24小时\n· 早餐到10:30\n\n🎯 适合场景\n· 客户接待有排面\n· 董事会议首选', tags:'#上海浦东丽思卡尔顿 #商务出差 #陆家嘴' },
+    { hotel:'上海浦东丽思卡尔顿', cat:'🌿 种草型范流量号', title:'🌃在上海的云端 遇见外滩最美的夜晚', body:'住在浦东丽思卡尔顿的那晚\n我坐在52层的窗边\n看外滩的灯火一盏盏亮起\n\n黄浦江上\n游船缓缓驶过\n留下一道道光痕\n\n房间里很安静\n只有城市的灯光在闪烁\n\n那一刻\n觉得上海真美', tags:'#上海 #外滩夜景 #云端酒店 #旅行日记 #丽思卡尔顿' },
+    { hotel:'贝尔格莱德凯悦', cat:'💎 高净值度假客/蜜月', title:'🇷🇸贝尔格莱德凯悦｜多瑙河畔的浪漫', body:'塞尔维亚对中国免签\n这个欧洲小国正在悄悄变火\n\n贝尔格莱德凯悦\n坐落在多瑙河与萨瓦河交汇处\n打开窗帘就是多瑙河\n落日时分 金色洒满河面\n\n📍 位置优势\n距离贝尔格莱德要塞步行10分钟\n市中心商圈也很近\n\n欧洲五星级里性价比很高的选择', tags:'#塞尔维亚 #贝尔格莱德凯悦 #免签 #多瑙河' },
+    { hotel:'贝尔格莱德凯悦', cat:'🌿 种草型范流量号', title:'🪐在塞尔维亚的第四天 我好像住进了电影里', body:'来塞尔维亚之前\n没想到会这么喜欢这里\n\n住在凯悦的这几天\n每天早上都在多瑙河边喝咖啡\n看着河水流过\n时间变得很慢\n\n这里的物价大概是西欧的一半\n一杯咖啡不到20块\n\n如果你也在找一个\n不那么拥挤的欧洲\n或许可以来这里看看', tags:'#塞尔维亚 #贝尔格莱德 #欧洲小众 #旅行日记' },
+    { hotel:'贝尔格莱德凯悦', cat:'📖 干货价值类', title:'贝尔格莱德凯悦入住全攻略｜塞尔维亚免签旅行', body:'🏨 贝尔格莱德凯悦酒店全攻略\n\n🏠 房型推荐\n· 河景房（看多瑙河）\n· 城景房（看老城）\n\n📍 位置优势\n· 贝尔格莱德要塞步行10分钟\n· 斯卡达利亚美食街步行15分钟\n\n💡 省钱Tips\n· 提前通过官网预订\n· 周末价格通常更低', tags:'#贝尔格莱德凯悦 #塞尔维亚攻略 #免签旅行' },
+    { hotel:'贝尔格莱德凯悦', cat:'⚠️ 避坑类', title:'贝尔格莱德凯悦真实体验｜优缺点都说清楚', body:'在贝尔格莱德凯悦住了两晚\n说点真实感受\n\n✅ 优点\n· 位置好 去哪里都方便\n· 多瑙河景观房间很美\n\n❌ 槽点\n· 设施不是最新的\n· 早餐选择不算多\n· 泳池偏小\n\n评分：⭐⭐⭐⭐', tags:'#贝尔格莱德凯悦 #酒店测评 #塞尔维亚旅行' },
+    { hotel:'瑞士少女峰酒店', cat:'💎 高净值度假客/蜜月', title:'❄️瑞士少女峰｜住进阿尔卑斯山的童话里', body:'在欧洲最热的夏天\n逃到阿尔卑斯山\n\n瑞士少女峰地区\n夏季均温只有20度\n\n🌅 清晨\n被教堂钟声叫醒\n窗外是绿色的山坡\n牛铃声从远处传来\n\n这里不是童话\n但住在这里\n就像走进了童话', tags:'#瑞士 #少女峰 #欧洲避暑 #阿尔卑斯山' },
+    { hotel:'瑞士少女峰酒店', cat:'⚡ 实时红利截流型', title:'🔥欧洲热到失控！这个避暑地温度只有20度', body:'欧洲正在经历极端高温\n法国西班牙意大利热到40度+\n\n但瑞士少女峰\n现在只有20度！\n\n🏔️ 推荐玩法\n· 因特拉肯小镇住2晚\n· 少女峰火车一日游\n· 图恩湖游船\n\n⚠️ 暑期是瑞士旺季\n越早订越便宜', tags:'#瑞士 #少女峰 #欧洲避暑 #极端高温' },
+    { hotel:'瑞士少女峰酒店', cat:'🌿 种草型范流量号', title:'🌲在瑞士的第五天 我理解了什么叫做生活', body:'来瑞士之前\n以为瑞士的美是宣传片里那种\n来了之后才知道\n实景比宣传片好看一百倍\n\n每天在湖边散步\n湖水绿得像翡翠\n天鹅在旁边游过\n\n这里的时间\n好像比别处慢一些\n大概是因为\n每一秒都值得认真过', tags:'#瑞士 #少女峰 #瑞士旅行 #慢生活 #治愈系' },
+    { hotel:'瑞士少女峰酒店', cat:'📖 干货价值类', title:'瑞士少女峰全攻略｜欧洲避暑的终极答案', body:'🏔️ 瑞士少女峰地区旅游全攻略\n\n🚞 怎么去\n· 苏黎世机场→火车2.5小时→因特拉肯\n\n🏠 住宿推荐\n· 因特拉肯小镇（交通方便）\n· 格林德瓦（梦幻山坡）\n\n🍽️ 必体验\n· 瑞士芝士火锅\n· 少女峰铁路齿轮火车\n· 图恩湖游船', tags:'#瑞士攻略 #少女峰 #欧洲避暑 #旅行攻略' },
+  ]
+};
+
+// ===== NAV =====
+function navigate(page, params) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  const pg = document.getElementById('page-' + page);
+  if (pg) pg.classList.add('active');
+  const btn = document.querySelector(`.nav-btn[data-page="${page}"]`);
+  if (btn) btn.classList.add('active');
+  if (page === 'location') renderLocation(params);
+}
+document.querySelectorAll('.nav-btn').forEach(btn => {
+  btn.addEventListener('click', () => navigate(btn.dataset.page));
+});
+
+// ===== DASHBOARD =====
+function renderDashboard() { /* same as before */ location.reload(); }
+// Quick dashboard render
+(function initDash() {
+  const t = DATA.topics;
+  document.getElementById('topicCount').textContent = `(${t.length}条)`;
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat-item"><div class="num" style="background:linear-gradient(135deg,#00d4ff,#7b2ff7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">${t.length}</div><div class="label">热点总数</div></div>
+    <div class="stat-item"><div class="num" style="color:#ff4444;">${t.filter(x=>x.priority==='高').length}</div><div class="label">高优先级</div></div>
+    <div class="stat-item"><div class="num" style="color:#ffaa00;">${t.filter(x=>x.priority==='中').length}</div><div class="label">中优先级</div></div>
+    <div class="stat-item"><div class="num" style="color:#4488ff;">${t.filter(x=>x.priority==='低').length}</div><div class="label">低优先级</div></div>
+    <div class="stat-item"><div class="num">${new Set(t.flatMap(x=>x.sources)).size}</div><div class="label">信息来源</div></div>
+    <div class="stat-item"><div class="num">${DATA.notes.length}</div><div class="label">内容笔记</div></div>
+  `;
+  // Topic list
+  const sorted = [...t].sort((a,b)=>b.hotValue-a.hotValue);
+  const list = document.getElementById('topicList');
+  list.innerHTML = '';
+  sorted.forEach(top => {
+    const hasResearch = top.locationKey && DATA.locations[top.locationKey];
+    const item = document.createElement('div');
+    item.className = `topic-item ${hasResearch ? 'has-research' : 'no-research'}`;
+    item.innerHTML = `
+      <span class="priority-badge priority-${top.priority}">${top.priority}</span>
+      <span class="topic-title">${top.title}</span>
+      <span class="topic-source">${top.sources.join(', ')}</span>
+      <span class="topic-hot">🔥${top.hotValue}</span>
+      ${hasResearch ? `<span class="topic-action" data-id="${top.id}">📍调研</span>` : `<span style="color:#4a5568;font-size:0.7em;">无调研</span>`}
+    `;
+    item.querySelector('.topic-action')?.addEventListener('click', (e) => {
+      e.stopPropagation(); navigate('location', top.id);
+    });
+    item.addEventListener('click', () => { if (hasResearch) navigate('location', top.id); });
+    list.appendChild(item);
+  });
+  // Charts
+  setTimeout(() => {
+    new Chart(document.getElementById('priorityChart'), {
+      type:'doughnut',
+      data:{labels:['高优先级','中优先级','低优先级'],datasets:[{data:[t.filter(x=>x.priority==='高').length,t.filter(x=>x.priority==='中').length,t.filter(x=>x.priority==='低').length],backgroundColor:['#ff4444','#ffaa00','#4488ff'],borderColor:'#1a2332',borderWidth:3}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#e0e6ed',padding:16}}}}
+    });
+    const sc = {}; t.forEach(x => x.sources.forEach(s => sc[s]=(sc[s]||0)+1));
+    const ss = Object.entries(sc).sort((a,b)=>b[1]-a[1]);
+    new Chart(document.getElementById('sourceChart'), {
+      type:'polarArea',
+      data:{labels:ss.map(s=>s[0]),datasets:[{data:ss.map(s=>s[1]),backgroundColor:['#00d4ff88','#7b2ff788','#f0b42988','#00e67688','#e040fb88','#ff6d0088','#00bcd488'],borderColor:'#1a2332',borderWidth:2}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#e0e6ed',padding:12}}},scales:{r:{grid:{color:'#1e3a5f44'},ticks:{display:false}}}}
+    });
+    const cc = {}; t.forEach(x => cc[x.category]=(cc[x.category]||0)+1);
+    new Chart(document.getElementById('categoryChart'), {
+      type:'bar',
+      data:{labels:Object.keys(cc),datasets:[{data:Object.values(cc),backgroundColor:['#b388ff','#00d4ff','#f0b429','#00e676','#ff6d00','#e040fb','#00bcd4'],borderRadius:6}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#1e3a5f44'},ticks:{color:'#6d8ca8'}},y:{grid:{display:false},ticks:{color:'#e0e6ed'}}}}
+    });
+    const sorth = [...t].sort((a,b)=>b.hotValue-a.hotValue);
+    new Chart(document.getElementById('rankChart'), {
+      type:'bar',
+      data:{labels:sorth.map(x=>x.title.length>10?x.title.slice(0,10)+'..':x.title),datasets:[{data:sorth.map(x=>x.hotValue),backgroundColor:sorth.map(x=>x.priority==='高'?'#ff4444':x.priority==='中'?'#ffaa00':'#4488ff'),borderRadius:4}]},
+      options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#1e3a5f44'},ticks:{color:'#6d8ca8'}},y:{grid:{display:false},ticks:{color:'#e0e6ed',font:{size:11}}}}}
+    });
+  }, 100);
+})();
+
+// ===== LOCATION DETAIL =====
+function renderLocation(topicId) {
+  const top = DATA.topics.find(x => x.id === topicId);
+  if (!top) return;
+  const loc = top.locationKey ? DATA.locations[top.locationKey] : null;
+  const el = document.getElementById('locationContent');
+  if (!loc) {
+    el.innerHTML = `
+      <div class="no-research-banner">
+        <div class="icon">🗺️</div>
+        <h3 style="color:#e0e6ed;margin-bottom:8px;">${top.title}</h3>
+        <p>该热点暂无对应的地区调研数据</p>
+        <p style="margin-top:8px;font-size:0.85em;">关联地点：${top.location} | ${top.spots}</p>
+      </div>
+      <div style="margin-top:20px;padding:20px;background:#1a2332;border-radius:12px;border:1px solid #1e3a5f;">
+        <h3 style="color:#e0e6ed;margin-bottom:8px;">💡 商机分析</h3>
+        <p style="color:#8b9dc3;line-height:1.6;">${top.analysis}</p>
+      </div>`;
+    return;
+  }
+  el.innerHTML = `
+    <div class="detail-hero">
+      <span class="priority-badge priority-${top.priority}" style="margin-bottom:8px;display:inline-block;">${top.priority}优先级</span>
+      <h2>📍 ${loc.name}</h2>
+      <div class="meta">关联热点：${top.title} · 来源：${top.sources.join(', ')} · 热度：🔥${top.hotValue}</div>
+      <div class="analysis-box">💡 ${top.analysis}</div>
+    </div>
+    <div style="margin-bottom:12px;">
+      <span style="color:#6d8ca8;font-size:0.85em;">关联酒店：</span>
+      ${loc.hotels.map(h => `<span style="display:inline-block;padding:4px 12px;background:#00d4ff22;color:#00d4ff;border-radius:12px;font-size:0.8em;margin:2px;">🏨 ${h}</span>`).join('')}
+    </div>
+    <div class="research-grid">
+      ${loc.dimensions.map(d => `
+        <div class="research-card">
+          <div class="dimension">${d.dim}</div>
+          <div class="content">${d.content}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+// ===== NOTES TREE =====
+function buildNotesTree() {
+  const tree = document.getElementById('notesTree');
+  const content = document.getElementById('notesContent');
+  let html = '';
+  
+  DATA.regions.forEach(region => {
+    html += `<div class="tree-region">
+      <div class="tree-region-header" onclick="toggleRegion(this)">
+        <span class="arrow">▶</span> ${region.name}
+        <span class="count">${region.hotels.length}家酒店</span>
+      </div>
+      <div class="tree-region-body">`;
+    
+    region.hotels.forEach(hotel => {
+      const hotelNotes = DATA.notes.filter(n => n.hotel === hotel);
+      if (hotelNotes.length === 0) return;
+      // Group by category
+      const catGroups = {};
+      hotelNotes.forEach(n => {
+        const shortCat = n.cat.split('/')[0];
+        if (!catGroups[shortCat]) catGroups[shortCat] = [];
+        catGroups[shortCat].push(n);
+      });
+      
+      html += `<div class="tree-hotel">
+        <div class="tree-hotel-header" onclick="toggleHotel(this)">
+          <span class="arrow">▶</span> 🏨 ${hotel}
+          <span class="count">${hotelNotes.length}篇</span>
+        </div>
+        <div class="tree-hotel-body">`;
+      
+      Object.entries(catGroups).forEach(([cat, notes]) => {
+        html += `<div style="margin:4px 0;padding-left:8px;">
+          <div style="color:#6d8ca8;font-size:0.75em;margin:4px 0;">${cat}</div>`;
+        notes.forEach((n, ni) => {
+          const globalIdx = DATA.notes.indexOf(n);
+          html += `<div class="tree-note" onclick="showNote(${globalIdx})">
+            <span class="cat-tag">${n.cat.slice(0,2)}</span> ${n.title.length > 20 ? n.title.slice(0,20)+'..' : n.title}
+          </div>`;
+        });
+        html += `</div>`;
+      });
+      
+      html += `</div></div>`;
+    });
+    
+    html += `</div></div>`;
+  });
+  
+  tree.innerHTML = html;
+}
+
+function toggleRegion(el) {
+  el.querySelector('.arrow').classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+  // Scroll into view
+  el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function toggleHotel(el) {
+  el.querySelector('.arrow').classList.toggle('open');
+  el.nextElementSibling.classList.toggle('open');
+}
+
+function showNote(idx) {
+  const n = DATA.notes[idx];
+  if (!n) return;
+  const content = document.getElementById('notesContent');
+  // Highlight active
+  document.querySelectorAll('.tree-note').forEach(el => el.classList.remove('active'));
+  const allNotes = document.querySelectorAll('.tree-note');
+  if (allNotes[idx]) allNotes[idx].classList.add('active');
+  
+  content.innerHTML = `
+    <div class="note-view-card">
+      <div style="margin-bottom:12px;">
+        <span class="meta-tag" style="background:#00d4ff22;color:#00d4ff;">🏨 ${n.hotel}</span>
+        <span class="meta-tag" style="background:#7b2ff722;color:#b388ff;">${n.cat}</span>
+      </div>
+      <h2 style="font-size:1.3em;margin-bottom:16px;line-height:1.4;">${n.title}</h2>
+      <div class="body-text">${n.body}</div>
+      <div class="tags">${n.tags.split(' ').map(t => `<span class="tag">${t}</span>`).join('')}</div>
+    </div>
+  `;
+}
+
+// ===== INIT =====
+buildNotesTree();
+</script>
+</body>
+</html>

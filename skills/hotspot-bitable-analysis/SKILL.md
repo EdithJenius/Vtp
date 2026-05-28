@@ -27,13 +27,19 @@ description: "全网热点调研 → 旅游商机分析 → 笔记裂变内容�
 "优先级": "optcTwW4fI"
 ```
 
-### 原则2：备注链接必须URL编码
+### 原则2：备注链接格式规范
 
 ```python
 import urllib.parse
-# ✅ 正确
-url = 'https://s.weibo.com/weibo?q=' + urllib.parse.quote('#话题名#')
+# ✅ 微博：url = 'https://s.weibo.com/weibo?q=' + urllib.parse.quote('话题名')
+# ✅ 百度：url = 'https://www.baidu.com/s?wd=' + urllib.parse.quote('话题名')
+# ✅ 抖音热门(无具体视频)：url = 'https://www.douyin.com/hot'
+# ✅ 抖音热榜+具体视频：url = f'https://www.douyin.com/hot?modal_id={video_id}'
+# ✅ 知乎/头条/B站/贴吧：直接用opencli返回的url字段
 ```
+
+**核心原则：多平台话题只保留一条链接。**
+优先级：微博 > 知乎 > 百度 > 头条 > B站 > 抖音 > 贴吧 > 36氪
 
 ### 原则3：全部用Python，不要用Bash
 
@@ -51,6 +57,70 @@ code=0 不代表真写入！GET 再读一次确认。
 ### 原则6：每次拿新token
 
 脚本第一行就重新获取，不复用。
+
+### 原则7：Select字段选项先配好再写数据
+
+❌ 先写数据再PUT修改options → 已有记录字段变NULL
+✅ 创建字段时一次性配全所有选项，再写入数据
+
+### 原则8：笔记产出后必须过合规校验
+
+```python
+from xiaohongshu_compliance import audit_and_fix
+clean_body, violations = audit_and_fix(body)
+if violations:
+    print(f'[合规] {count}处替换')
+```
+
+### 原则9：每次写入链接必须做有效性检验
+
+```python
+# 写链接前验证是否可访问
+import urllib.request
+for link in all_links:
+    try:
+        req = urllib.request.Request(link, method='HEAD')
+        with urllib.request.urlopen(req, timeout=5) as f:
+            code = f.getcode()
+            if code >= 400:
+                print(f'[链接异常] {link[:50]}... HTTP {code}')
+    except Exception as e:
+        print(f'[链接异常] {link[:50]}... {str(e)[:30]}')
+```
+
+**已知链接坑和平台格式要求：**
+
+| 平台 | 链接格式 | 验证状态 |
+|------|---------|---------|
+| 微博 | `https://s.weibo.com/weibo?q={URL编码话题}` | ✅ 可靠 |
+| 百度 | `https://www.baidu.com/s?wd={URL编码话题}` | ✅ 可靠，HTTP 200 |
+| 知乎 | opencli 返回的 `url` 字段直接使用 | ✅ 可靠 |
+| 今日头条 | opencli 返回的 `url` 字段直接使用 | ✅ 可靠 |
+| B站 | opencli 返回的 `url` 字段直接使用 | ✅ 可靠 |
+| 贴吧 | opencli 返回的 `url` 字段直接使用 | ✅ 可靠 |
+| 36氪 | opencli 返回的 `url` 字段直接使用 | ✅ 可靠 |
+| **抖音** | **特殊处理**（见下方） | ⚠️ 需额外步骤 |
+
+**抖音链接特殊处理（最重要）：**
+
+抖音没有公开的Web话题/搜索页面，所有 `douyin.com` 下的深链接都有问题：
+- `hashtag/{id}` → 404 ❌ 平台封锁
+- `discover?keyword=` → 301跳转但不精准 ❌
+- `video/{id}` → 仅对已知视频ID有效
+
+**推荐的抖音链接方案：**
+1. 如果话题在抖音热榜上 → 用 `https://www.douyin.com/hot`（热榜首页）
+2. 如果需要指向具体视频 → `https://www.douyin.com/hot?modal_id={19位视频ID}`
+3. 视频ID从 `discover?keyword={URL编码话题}` 页面中用正则 `r'(\d{19})'` 提取
+4. 多个抖音话题可共用热榜首页 `hot` 链接
+
+**多平台话题规则：**
+- 用户要求：多平台话题只保留 **一条** 链接即可
+- 优先级：微博 > 知乎 > 百度 > 头条 > B站 > 抖音 > 贴吧 > 36氪
+- 抖音链接仅用于「抖音单源」话题（只有抖音一个来源的）
+- 百度热搜 HTML 解析不稳定，需确认有内容再提取
+- B站/知乎/头条/贴吧的 opencli 输出链接通常可靠
+- 多平台话题只保留一条链接即可
 
 ---
 
@@ -153,6 +223,19 @@ Step 5: 批量生成 + batch_create 写入
 | 上海 | 浦东丽思卡尔顿 | 8/8 | 酒店资源表⭐已入库 |
 | 张家界 | 禾田居度假酒店 | 8/8 | 文旅调研+本地推荐 |
 | 成都·乐山 | 成都W酒店 | 8/8 | 酒店资源表⭐已入库 |
+
+### 2026-05-28 扩张后覆盖酒店
+
+| 地区 | 主推酒店 | 品类覆盖 | 数据来源 |
+|------|---------|---------|---------|
+| 成都 | 成都W酒店 | 8/8 | 酒店资源表⭐已入库 |
+| 北京 | 北京国贸大酒店 | 8/8 | 塞尔维亚访华配套 |
+| 丽江 | 丽江悦榕庄 | 7/8 | 酒店资源表⭐已入库 |
+| 瑞士·少女峰 | 瑞士少女峰酒店 | 6/8 | 欧洲高温热点 |
+| 广州 | 广州花园酒店 | 4/8 | 端午龙舟配套 |
+| 腾冲 | 腾冲石头纪 | 4/8 | 酒店资源表⭐已入库 |
+| 上海 | 浦东丽思卡尔顿 | 4/8 | 酒店资源表⭐已入库 |
+| 塞尔维亚·贝尔格莱德 | 贝尔格莱德凯悦 | 4/8 | 文旅调研+酒店资源表 |
 
 ### 新增酒店扩展步骤
 
@@ -271,14 +354,14 @@ curl -s -X POST 'https://open.feishu.cn/open-apis/bitable/v1/apps' \
 **已验证稳定：**
 | 平台 | 命令 | 输出字段 |
 |------|------|---------|
-| 微博热搜 | `opencli weibo hot --limit 20 -f json` | word/category/hot_value/rank/url |
+| 微博热搜 | `opencli weibo hot --limit 20 -f json` | ⚠️ 2026-05-28发现HTTP 404，备选: `web_fetch tophub.today/n/KqndgxeLl9` |
 | 今日头条 | `opencli toutiao hot -f json --limit 15` | title/hot_value/rank/url |
 | 抖音热点 | `opencli douyin hashtag hot --limit 20 -f json` | name/view_count/id |
 | 知乎热榜 | `opencli zhihu hot --limit 15 -f json` | title/heat/answers/rank/url |
 | 贴吧热榜 | `opencli tieba hot --limit 15 -f json` | title/discussions/url |
 | 36氪热榜 | `opencli 36kr hot -f json --limit 15` | title/rank/url |
 | B站热门 | `opencli bilibili hot --limit 15 -f json` | title/play/danmaku/bvid/url |
-| 百度热搜 | `web_fetch https://top.baidu.com/board?tab=realtime` | readability 提取 |
+| 百度热搜 | `web_fetch https://top.baidu.com/board?tab=realtime` | ⚠️ readability 提取不稳定，有时返回空
 
 ---
 
@@ -296,6 +379,21 @@ curl -s -X POST 'https://open.feishu.cn/open-apis/bitable/v1/apps' \
 8. **Text→Select 字段数据丢失** → 更新选项后需要写脚本重新填充所有记录的酒店名称
 9. **PATCH 修改表名** → PUT 返回 404，要用 PATCH
 
+### 2026-05-28
+
+1. **每个脚本重复写 get_token()** → 抽取 feishu_utils.py 公共模块
+2. **先写数据后改Select字段选项 → 数据变NULL** → 先创建完所有字段+选项，再写入数据
+3. **微博 opencli 适配器404** → 需备选方案 Tophub 采集（`web_fetch tophub.today/n/KqndgxeLl9`）
+4. **百度热搜 HTML 解析不稳定** → `web_fetch` readability 有时返回空，考虑备用源
+5. **没有合规校验直接产出笔记** → 每条笔记产出后必须过 `xiaohongshu_compliance.audit_and_fix()`
+6. **笔记覆盖不均** → 至少保证每家酒店4篇核心品类（高净值+种草+干货+避坑）
+7. **Python heredoc 中 … 编码问题** → `json.l…())` 中 … 字符非法，必须写完整 `json.loads(f.read().decode())`
+8. **子表创建脚本挂起** → 添加 timeout 和重试机制，避免长时间无响应
+9. **抖音链接格式进化**：`hashtag/{id}`→404 → `discover?keyword=`→不准 → `video/{id}`→视频不对 → `hot?modal_id={id}`→终于正确
+10. **先写数据后改链接格式** → 确保每条记录的链接字段都有内容，不要留空
+11. **多平台只留一条链接** → 按优先级选一个平台的链接即可
+12. **新Bitable命名含小时** → 多次执行时加小时区分：`热点商机多维分析 YYYY-MM-DD HH时`
+
 ---
 
 ## 文件结构
@@ -306,8 +404,16 @@ hotspot-bitable-analysis/
   references/
     xiaohongshu-forbidden-words.md       # 小红书违禁词/合规替换速查表
   scripts/
+    feishu_utils.py                      # 飞书API公共模块（get_token/api/batch_insert 等）
     insert_records.py                    # 主表记录插入模板
     xiaohongshu_compliance.py            # 小红书内容合规自动校验模块
+    step1_3_analyze.py                   # 热搜采集+分析
+    step4_create_bitable.py              # 创建Bitable+字段
+    step5_subtables.py                   # 深度分析子表
+    step8_notes.py                       # 笔记裂变内容生成
+  data/
+    raw_data.json                        # 原始热搜数据
+    analysis_result.json                 # 商机分析结果
 ```
 
 ### 合规校验模块用法
