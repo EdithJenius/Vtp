@@ -5,7 +5,7 @@ description: "全网热点调研 → 旅游商机分析 → 笔记裂变内容�
 
 # 热点商机多维分析 Skill
 
-> 一条龙：抓热搜 → 交叉验 → 商机析 → 主表库 → 深挖子表 → 文旅调研 → 笔记裂变
+> 一条龙：抓热搜 → 交叉验 → 商机析 → 主表库 → 深挖子表 → 文旅调研 → 笔记裂变 → 上游产业链 → 每日简报
 
 ## 触发词
 
@@ -46,6 +46,29 @@ import urllib.parse
 ❌ Bash 不兼容：`declare -A` 在 zsh 报错、heredoc 变量空值、JSON 解析脆弱
 ✅ 统一 Python，token 在脚本内部获取
 
+### 原则3b：写脚本文件，不用 heredoc/内联 Python
+
+❌ `python3 -c "..."` 或 `python3 << 'EOF'` heredoc — 中文/特殊字符编码问题多
+✅ 用 `write` 工具写 .py 文件到 scripts/ 目录，再 `exec` 运行
+
+⚠️ 已知坑：heredoc 中 `json.l…())` 会被截断成含 `…` 字符的非法语法
+✅ 务必写完整：`json.loads(f.read().decode())`
+
+### 原则3c：Config解析用 configparser + strip 引号
+
+```python
+import configparser
+config = configparser.ConfigParser()
+config.read(os.path.expanduser('~/.openclaw/config.toml'))
+APP_ID = config['provider.feishu']['appId'].strip('"')
+APP_SECRET = config['provider.feishu']['appSecret'].strip('"')
+```
+
+configparser 读取 TOML 的 `key = "value"` 格式时，引号会作为值的一部分保留，必须 strip。
+
+❌ 用 `get_val()` 手写解析 — 遇到 `[section]` 头会失败
+✅ 用 configparser 自动处理 section
+
 ### 原则4：每次操作后验证
 
 code=0 不代表真写入！GET 再读一次确认。
@@ -57,6 +80,26 @@ code=0 不代表真写入！GET 再读一次确认。
 ### 原则6：每次拿新token
 
 脚本第一行就重新获取，不复用。
+
+### 原则6b：每个脚本独立获取 token
+
+脚本第一行就重新获取，不复用。
+
+```python
+def get_token():
+    config = configparser.ConfigParser()
+    config.read(os.path.expanduser('~/.openclaw/config.toml'))
+    app_id = config['provider.feishu']['appId'].strip('"')
+    app_secret = config['provider.feishu']['appSecret'].strip('"')
+    body = json.dumps({"app_id": app_id, "app_secret": app_secret}).encode()
+    req = urllib.request.Request(
+        'https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal',
+        data=body, headers={'Content-Type': 'application/json'})
+    with urllib.request.urlopen(req) as f:
+        return json.loads(f.read().decode())['tenant_access_token']
+```
+
+**⚠️ 重要：不要用 `***` 或 `json.l…()` 的省略写法，必须写完整！**
 
 ### 原则7：Select字段选项先配好再写数据
 
@@ -128,51 +171,92 @@ for link in all_links:
 
 ```mermaid
 flowchart TD
-  A[Step1: 多平台热搜采集] --> B[Step2: 交叉验证+合并]
+  A[Step0: 上游产业链采集] --> A1[Step1: 多平台热搜采集]
+  A1 --> B[Step2: 交叉验证+合并]
   B --> C[Step3: 旅游商机分析]
   C --> D[Step4: 创建主Bitable+字段+权限]
   D --> E[Step5: 深度分析子表×N]
   E --> F[Step6: 酒店资源匹配]
   F --> G[Step7: 地区文旅符号调研]
   G --> H[Step8: 创建“笔记裂变内容库”表]
-  H --> I[Step9: 生成8品类笔记内容]
+  H --> I[Step9: 生成笔记(10模板/对标克隆)]
   I --> J[Step10: 扩展到所有地区酒店]
-  J --> K[Step11: 验证+修复问题]
-  K --> L[Step12: 输出链接+更新Skill]
+  J --> J1[Step11: 上游数据入Bitable子表]
+  J1 --> K[Step12: 每日混合简报]
+  K --> L[Step13: 输出链接+更新Skill]
 ```
 
 ---
 
 ## Step 1-6: 热点分析流程（详见下方各节）
 
-| 步骤 | 核心内容 | 产出 |
-|------|---------|------|
-| **Step 1** | 8平台并行采集 | 微博/百度/头条/知乎/抖音/36氪/B站/贴吧 |
-| **Step 2** | 跨平台合并重复话题 | 去重后的热点集合 |
-| **Step 3** | 逐条分析地点/景点/商机/优先级 | 带 ⭐ 标记的商机清单 |
-| **Step 4** | 创建Bitable+字段+批量插入+公开权限 | 主数据表（15条） |
-| **Step 5** | 创建热点地区子表（酒店/景点/美食/活动） | 5个深度分析子表 |
-| **Step 6** | 飞书资源表读取+酒店匹配 | 已入库/待拓展标注 |
+| 步骤 | 核心内容 | 产出 | 脚本 |
+|------|---------|------|------|
+| **Step 0** | 上游产业链采集（航空/酒店/政策/会展） | 上游信息JSON | route-analysis/scripts/step1_upstream_collect.py |
+| **Step 1** | 8平台并行采集 | 微博/头条/知乎/抖音/B站/贴吧/36氪 | opencli命令 |
+| **Step 2** | 跨平台合并重复话题+上游信息融合 | 去重后的热点+上游集合 | step0_upstream_feeder.py |
+| **Step 3** | 逐条分析地点/景点/商机/优先级 | 带⭐商机清单 | 人工+AI |
+| **Step 4** | 创建Bitable+字段+批量插入+公开权限 | 主数据表(15条) | step1_4_full.py |
+| **Step 5** | 创建热点地区子表(酒店/景点/美食/活动) | 4+深度分析子表 | step5_subtables.py |
+| **Step 6** | 飞书资源表读取+酒店匹配 | 已入库/待拓展标注 | — |
 
 > 详细API参考下方「Step 4: 创建 Bitable」及后续章节
 
+### 步调规范：地区子表必须有酒店信息
+
+每个地区深度分析子表必须包含 **5-10家酒店信息**，记录：
+- 名称（官方准确名称）
+- 类别 =「酒店住宿」
+- 推荐理由
+- 参考价格（格式如 `800-2000/晚`）
+- 关联热度
+
+❌ 只放1-2家 → 用户一定会要求补全
+✅ 每个地区5-10家，覆盖经济型~高端
+
 ---
 
-## 笔记裂变内容库（新增核心模块）
+## 笔记裂变内容库（v2 — 10模板 + 对标克隆）
 
-这是2026-05-27实践落地的新模块。在完成热点分析后，对涉及的热点地区酒店，生成**8品类×每家酒店**的小红书风格笔记，形成内容矩阵。
+在完成热点分析后，对涉及的热点地区酒店，生成**10种风格模板×每家酒店**的小红书风格笔记。
 
-### 创建流程
+支持两种模式：
+- **基础模式**：运营从10个模板库选一个，AI按模板结构填充内容
+- **进阶模式**：运营给一条对标笔记链接/文案，AI拆解结构后套内容
 
-```
-Step 1: 创建子表"笔记裂变内容库"
-Step 2: 设计字段 → 笔记标题(主) | 酒店名称(Select) | 内容品类(Select 8项)
-          | 正文文案(Text/长) | 引用话题(Text) | 对标爆款风格(Text) | 备注(Text)
-Step 3: 更新酒店选项 → 加入所有要覆盖的酒店名称
-Step 4: 更新品类选项 → 8品类全量
-Step 5: 批量生成 + batch_create 写入
+### 10大风格模板
 
-⚠️ 注意：表名用 PATCH 修改，不是 PUT
+| # | 模板 | 定位 | 适用场景 |
+|:-:|:----|:------|:---------|
+| 1 | 📋 干货/清单流 | 信息密度高、收藏型 | 酒店攻略、必做清单 |
+| 2 | 🌿 情绪种草流 | 感性体验、散文体 | 治愈系、生活方式 |
+| 3 | ⚖️ 测评对比流 | 中立客观、优缺点 | 酒店测评、A vs B |
+| 4 | 🏗️ 行业分析流 | 专业深度、数据 | 高端酒店、行业解读 |
+| 5 | ⚡ 截流紧迫感流 | 促转化、限时感 | 限时优惠、节假日截流 |
+| 6 | 🎬 Vlog日程流 | 分镜头叙事+时间线 | 沉浸式体验、24h记录 |
+| 7 | 🔄 反差点评流 | 「去前vs去后」反差 | 反转剧情、流量钩子 |
+| 8 | 🔬 科普涨知识流 | 专业壁垒、涨知识 | 酒店冷知识、行业科普 |
+| 9 | 👤 真实UGC流 | 素人口吻、去营销感 | 像真人发的、接地气 |
+| 10 | ❓ 问答攻略流 | FAQ形式、解决焦虑 | 行前准备、注意事项 |
+
+### 对标克隆模式
+
+运营提供一条小红书对标笔记（链接或粘贴文案），系统自动拆解：
+- 标题模式（emoji规则、长度、钩子类型）
+- 段落编排（段长、分隔方式）
+- 语气调性（正式/口语/情绪）
+- Emoji密度和类型
+- 结构分段方式
+- 然后以同样结构填入目标酒店内容
+
+### 脚本调用
+
+```bash
+# 基础模式：选模板
+python3 note_generator.py --hotel "成都W酒店" --template "情绪种草流" --category "高净值"
+
+# 进阶模式：对标克隆
+python3 note_generator.py --hotel "丽江悦榕庄" --clone "https://..." --category "种草型"
 ```
 
 ### 字段结构
@@ -180,62 +264,31 @@ Step 5: 批量生成 + batch_create 写入
 | 字段名 | 类型 | 说明 |
 |--------|------|------|
 | 笔记标题 | Text(主) | 带情绪钩子的标题 |
-| 酒店名称 | Select | 6家(可扩展)：腾冲石头纪/丽江悦榕庄/塞尔维亚凯悦/上海丽思/张家界禾田居/成都W酒店 |
-| 内容品类 | Select | 8品类单选项 |
-| 正文文案 | Text(长) | ❌无具体金额，只说「打折优惠」 |
+| 酒店名称 | Select | 可扩展 |
+| 内容品类 | Select | 10模板单选项 |
+| 正文文案 | Text(长) | ❌无具体金额 |
 | 引用话题 | Text | 15-20个#话题标签 |
-| 对标爆款风格 | Text | 参考的小红书爆款风格说明 |
+| 对标爆款风格 | Text | 参考的风格说明 |
 | 备注 | Text | 核心卖点提炼 |
-
-### 8大内容品类总表
-
-| # | 品类 | 定位 | 标题风格 | 文案调性 | 对标对象 |
-|---|------|------|---------|---------|---------|
-| 1 | 💎 高净值度假客/蜜月 | 品质感·品牌溢价 | ✨/🌅 emoji·情绪 | 📸🍽️🛁分段·细节描写 | 酒店控类高赞笔记 |
-| 2 | 💼 商务实效型 | B端转化 | 标题含｜·结论前置 | 📋💼🎯📊数据化·客观 | 职场人实测类 |
-| 3 | ⚡ 实时红利截流型 | 急迫转化·引流 | ⚠️🔥⏰ 紧迫感 | ✅清单+⚠️+💬评论区钩子 | 限时优惠截流爆款 |
-| 4 | 🌿 种草型范流量号 | 泛流量拉新 | 散文式·情绪第一 | 短句留白·零广告感·情绪>信息 | 生活美学/治愈系大流量号 |
-| 5 | 📖 干货价值类 | 高信息密度·收藏 | 「全攻略」「一篇讲透」 | 🏠🍽️🎯🚗分段+评分 | 酒店测评高收藏笔记 |
-| 6 | 🛠️ 教程攻略类 | 实用教程·转发 | 「手把手」「秘籍公开」 | 📱💡🎁📝Step-by-step | 教程类爆款 |
-| 7 | ⚠️ 避坑类 | 中立可信·高信任 | 「拔草帖」「真心话」 | ✅❌对比·先说缺点再说优点 | 真实测评类 |
-| 8 | 🏢 行业垂直类 | 专业壁垒·深度 | 「产品拆解」「N年」 | 🏗️📐🎯行业视角 | 行业分析类 |
 
 ### 笔记生成原则
 
-1. ❌ **正文不写具体金额**（不用具体价格数字，只说「打折优惠」「限时优惠」「有活动」）
-2. ✅ 每品类针对一家酒店写一篇，形成 品类×酒店 内容矩阵
-3. ✅ 结合「地区文旅符号调研」的8维度数据：金招牌+市井风情+季节限定+避坑槽点+商业闭环
-4. ✅ **自动合规校验**：每条正文生成后自动过 xiaohongshu_compliance.py 模块扫描
-5. ✅ 违禁词自动替换为合规替代表达，替换项输出日志
-6. ✅ 标题/正文/话题标签三关全检
-4. ✅ 引用话题15-20个，覆盖精准标签+泛流量标签
-5. ✅ 正文用 emoji 小标题分段（表情符号增强可读性）
-6. ✅ 每个地点选1-2家主推酒店（优先资源表中「已入库」的）
-7. ✅ 种草型用散文体，不写商品感；截流型加评论区互动钩子
+1. ❌ **正文不写具体金额**（只说「打折优惠」「限时优惠」「有活动」）
+2. ✅ 每家酒店至少覆盖8品类
+3. ✅ **自动合规校验**：每条正文过后 xiaohongshu_compliance.py
+4. ✅ 引用话题15-20个，覆盖精准+泛流量标签
+5. ✅ 正文用emoji小标题分段
 
-### 2026-05-27 已覆盖酒店
+### 2026-05-29 已覆盖酒店（最新）
 
 | 地区 | 主推酒店 | 品类覆盖 | 数据来源 |
-|------|---------|---------|---------|
-| 腾冲 | 腾冲石头纪 | 8/8 | 酒店资源表⭐已入库 |
-| 丽江 | 丽江悦榕庄 | 8/8 | 酒店资源表⭐已入库 |
-| 塞尔维亚·贝尔格莱德 | 贝尔格莱德凯悦 | 8/8 | 文旅调研+酒店资源表 |
-| 上海 | 浦东丽思卡尔顿 | 8/8 | 酒店资源表⭐已入库 |
-| 张家界 | 禾田居度假酒店 | 8/8 | 文旅调研+本地推荐 |
-| 成都·乐山 | 成都W酒店 | 8/8 | 酒店资源表⭐已入库 |
-
-### 2026-05-28 扩张后覆盖酒店
-
-| 地区 | 主推酒店 | 品类覆盖 | 数据来源 |
-|------|---------|---------|---------|
-| 成都 | 成都W酒店 | 8/8 | 酒店资源表⭐已入库 |
-| 北京 | 北京国贸大酒店 | 8/8 | 塞尔维亚访华配套 |
-| 丽江 | 丽江悦榕庄 | 7/8 | 酒店资源表⭐已入库 |
-| 瑞士·少女峰 | 瑞士少女峰酒店 | 6/8 | 欧洲高温热点 |
-| 广州 | 广州花园酒店 | 4/8 | 端午龙舟配套 |
-| 腾冲 | 腾冲石头纪 | 4/8 | 酒店资源表⭐已入库 |
-| 上海 | 浦东丽思卡尔顿 | 4/8 | 酒店资源表⭐已入库 |
-| 塞尔维亚·贝尔格莱德 | 贝尔格莱德凯悦 | 4/8 | 文旅调研+酒店资源表 |
+|------|---------|:--------:|---------|
+| 成都 | 成都W酒店 | 8/8 | 外国人中国美食游热点 |
+| 丽江 | 丽江悦榕庄 | 8/8 | 夏季避暑热点 |
+| 稻城·亚丁 | 日松贡布酒店 | 8/8 | 亚丁景区事件热点 |
+| 广州 | 广州花园酒店 | 8/8 | 外国人美食+端午 |
+| 北京 | 北京国贸大酒店 | 8/8 | 暑期旅游热点 |
+| 黑河 | 黑河国际饭店 | 8/8 | 中俄跨境热点 |
 
 ### 新增酒店扩展步骤
 
@@ -247,15 +300,101 @@ Step 5: 批量生成 + batch_create 写入
 4. batch_create 批量插入
 5. 验证每篇的「酒店名称」字段非空
 
+### ⚠️ 地区子表必须有酒店信息
+
+每个地区深度分析子表（景点/美食/活动等）中，**必须包含 5-10 家酒店信息**，并记录：
+- 酒店名称（准确官方名称，如「稻城亚丁日松贡布酒店」不是「日松贡布」）
+- 类别标记为「酒店住宿」
+- 推荐理由
+- 参考价格（如`800-2000/晚`）
+- 关联热度
+
+❌ 只放1-2家酒店 → 用户会要求补全
+✅ 每个地区5-10家，覆盖不同价位
+
 ---
+
+## 上游产业链采集（新增模块）
+
+### 采集源
+
+| 优先级 | 源 | 覆盖内容 | 采集方式 |
+|:------:|:----|:---------|:---------|
+| 🔴 必选 | 环球旅讯 TravelDaily | 中文旅游行业新闻 | web_fetch |
+| 🔴 必选 | 新华网旅游频道 | 文旅政策/目的地新闻 | web_fetch |
+| 🔴 必选 | 文旅部官网 | 政策发布/统计数据 | web_fetch |
+| 🟡 进阶 | RoutesOnline | 全球航线动态 | web_fetch |
+| 🟡 进阶 | HotelNewsResource | 全球酒店行业新闻 | web_fetch |
+| 🟡 进阶 | FlightGlobal | 航空产业新闻 | web_fetch |
+
+### 脚本
+
+```bash
+# 上游采集
+python3 route-analysis/scripts/step1_upstream_collect.py
+# 上游数据转换为热点兼容格式（自动调用采集）
+python3 step0_upstream_feeder.py
+# 上游数据写入Bitable子表
+python3 upstream_to_bitable.py
+```
+
+### 分类体系
+
+上游信息分为4个类别：
+- 航空运力（新航线、航司运力、机场扩建）
+- 酒店供应链（品牌入驻、新开业、资产交易）
+- 政策签证（免签、签证政策、出入境管理）
+- 会展活动（大型展会、峰会排期）
+
+## 每日混合简报（新增模块）
+
+### 功能
+
+结合上游产业链情报 + 全网热搜，每日生成一份「文旅商机速报」。
+
+### 内容结构
+
+```
+📊 今日文旅商机速报 YYYY-MM-DD
+
+🏭 上游产业链情报
+  ▎航空运力 · N条
+  ▎酒店供应链 · N条
+  ▎政策签证 · N条
+
+🔥 今日热搜 TOP10
+  1. 📰 话题
+  ...
+
+💡 商机交叉分析
+  ✅ 签证利好
+  ✅ 运力增长
+  ✅ 供给信号
+📎 完整数据：https://...
+```
+
+### 脚本
+
+```bash
+python3 daily_briefing.py
+```
+
+### 自动化
+
+可通过 cron 设置每日自动执行：
+```
+时间：每天 09:00 Asia/Shanghai
+动作：采集上游+热搜 → 生成简报 → 发飞书
+```
 
 ## 完整流程速查
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  第一阶段：热点分析                                    │
+│  第一阶段：上游+热点分析                               │
+│  0. 上游产业链采集 (航空/酒店/政策/会展)               │
 │  1. 多平台热搜采集 (opencli / web_fetch)                │
-│  2. 交叉验证→去重→合并                                 │
+│  2. 交叉验证→去重→合并+上游融合                        │
 │  3. 旅游商机分析→优先级评定                            │
 │  4. 创建主Bitable→字段配置→批量插入→权限公开           │
 │  5. 创建深度分析子表 (高/中优先级热点地区)              │
@@ -263,11 +402,13 @@ Step 5: 批量生成 + batch_create 写入
 ├─────────────────────────────────────────────────────────┤
 │  第二阶段：笔记裂变                                    │
 │  7. 创建"笔记裂变内容库"子表                            │
-│  8. 配置字段：酒店名称(Select)+内容品类(Select 8项)    │
-│  9. 结合文旅调研数据生成8品类笔记内容                   │
-│ 10. batch_create写入→验证酒店名称非空                   │
-│ 11. 扩展到所有覆盖地区（每家酒店8篇）                   │
-│ 12. 自动合规校验 → 违禁词替换                          │
+│  8. 选模板/对标克隆 → 生成10模板笔记                   │
+│  9. batch_create写入→验证酒店名称非空                   │
+│ 10. 扩展到所有覆盖地区（每家酒店8+篇）                 │
+├─────────────────────────────────────────────────────────┤
+│  第三阶段：上游入库+每日简报                          │
+│ 11. 上游数据入Bitable子表                               │
+│ 12. 每日混合简报（上游+热搜）                          │
 │ 13. 输出链接给永乐                                     │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -279,22 +420,12 @@ Step 5: 批量生成 + batch_create 写入
 ### 4.1 获取 Token
 
 ```python
-import urllib.request, json, os, re
+import urllib.request, json, os, configparser
 
-# 解析 config.toml（注意：configparser 不能解析 TOML 格式，需手动 parse）
-with open(os.path.expanduser('~/.openclaw/config.toml')) as f:
-    lines = f.readlines()
-
-def get_val(key):
-    for line in lines:
-        s = line.strip()
-        if s.startswith(key):
-            eq = s.index('=')
-            return s[eq+1:].strip().strip('"').strip("'")
-    return None
-
-APP_ID = get_val('appId')
-APP_SECRET = get_val('appSecret')
+config = configparser.ConfigParser()
+config.read(os.path.expanduser('~/.openclaw/config.toml'))
+APP_ID = config['provider.feishu']['appId'].strip('"')  # TOML引号残留
+APP_SECRET = config['provider.feishu']['appSecret'].strip('"')
 
 body = json.dumps({"app_id": APP_ID, "app_secret": APP_SECRET}).encode()
 req = urllib.request.Request(
@@ -304,16 +435,36 @@ with urllib.request.urlopen(req) as f:
     TOKEN = json.loads(f.read().decode())['tenant_access_token']
 ```
 
+⚠️ **一定要 .strip('"') 去掉 TOML 引号**，否则 auth 失败。
+
 ### 4.2 创建 Bitable
 
-```bash
-curl -s -X POST 'https://open.feishu.cn/open-apis/bitable/v1/apps' \
-  -H "Authorization: Bearer $TOKEN" \
-  -H 'Content-Type: application/json' \
-  -d '{"name":"热点商机多维分析 YYYY-MM-DD"}'
+```python
+resp = json.loads(urllib.request.urlopen(
+    urllib.request.Request('https://open.feishu.cn/open-apis/bitable/v1/apps',
+        data=json.dumps({"name": "热点商机多维分析 YYYY-MM-DD HH时"}).encode(),
+        headers={'Authorization': f'Bearer {TOKEN}', 'Content-Type': 'application/json'})
+).read())
+APP_TOKEN = resp['data']['app']['app_token']
+TABLE_ID = resp['data']['app']['default_table_id']
 ```
 
-返回：`app_token` + `default_table_id`
+**返回格式：**
+```json
+{
+  "code": 0,
+  "data": {
+    "app": {
+      "app_token": "xxx",
+      "default_table_id": "xxx",
+      "name": "热点商机多维分析...",
+      "url": "https://..."
+    }
+  }
+}
+```
+
+⚠️ `default_table_id` 在 `data.app` 下，不是 `data.default_table`。
 
 ### 4.3 字段结构
 
@@ -330,22 +481,121 @@ curl -s -X POST 'https://open.feishu.cn/open-apis/bitable/v1/apps' \
 | 优先级 | 3(SingleSelect) | 高/中/低 |
 | 备注 | 1(Text) | 📎来源链接 |
 
-### 4.4 → 4.5 删除空记录 → 插入 → 验证 → 权限
+### 4.4 配置字段
 
-详见原文档 Step 4.4-6 部分。关键：
-- 默认10条空记录，逐个 DELETE
+新Bitable默认有「文本」「单选」「日期」「附件」四个字段。
+
+**重命名默认字段（用 PUT 不是 PATCH）：**
+```python
+fields_resp = json.loads(urllib.request.urlopen(
+    urllib.request.Request(f'https://open.feishu.cn/open-apis/bitable/v1/apps/{APP_TOKEN}/tables/{TABLE_ID}/fields',
+        headers={'Authorization': f'Bearer {TOKEN}'})
+).read())
+text_field = next((f for f in fields_resp['data']['items'] if f['field_name'] == '文本'), None)
+
+body = json.dumps({"field_name": "热点话题", "type": 1}).encode()
+req = urllib.request.Request(
+    f'https://open.feishu.cn/open-apis/bitable/v1/apps/{APP_TOKEN}/tables/{TABLE_ID}/fields/{text_field["field_id"]}',
+    data=body, method='PUT',
+    headers={'Authorization': f'Bearer {TOKEN}', 'Content-Type': 'application/json'})
+urllib.request.urlopen(req)
+```
+
+**删除不需要的默认字段：**
+```python
+for fname in ['单选', '日期', '附件']:
+    f = next((x for x in fields_resp['data']['items'] if x['field_name'] == fname), None)
+    if f:
+        req = urllib.request.Request(
+            f'https://open.feishu.cn/open-apis/bitable/v1/apps/{APP_TOKEN}/tables/{TABLE_ID}/fields/{f["field_id"]}',
+            method='DELETE', headers={'Authorization': f'Bearer {TOKEN}'})
+        urllib.request.urlopen(req)
+```
+
+**创建新字段时一次性配完选项：**
+```python
+body = json.dumps({
+    "field_name": "来源渠道", "type": 4,  # MultiSelect
+    "property": {"options": [
+        {"name": "微博热搜"}, {"name": "百度热搜"}, {"name": "知乎热榜"},
+        {"name": "抖音"}, {"name": "头条"}, {"name": "贴吧"}, {"name": "36氪"}
+    ]}
+}).encode()
+req = urllib.request.Request(
+    f'https://open.feishu.cn/open-apis/bitable/v1/apps/{APP_TOKEN}/tables/{TABLE_ID}/fields',
+    data=body, headers={'Authorization': f'Bearer {TOKEN}', 'Content-Type': 'application/json'})
+urllib.request.urlopen(req)
+```
+
+### 4.5 删除空记录 → 插入 → 验证 → 权限
+
+**关键：**
+- 默认10条空记录，逐个 DELETE（items可能为None，需加保护）
 - batch_create 每批≤10条
 - 验证用 GET 读取（不只看 code）
 - 权限：PATCH public + POST member
+- ❌ 删除字段后的表可能 items=null（非空列表），需加 `or []` 保护
+
+```python
+del_resp = json.loads(urllib.request.urlopen(
+    urllib.request.Request(f'https://open.feishu.cn/open-apis/bitable/v1/apps/{APP_TOKEN}/tables/{TABLE_ID}/records?page_size=50',
+        headers={'Authorization': f'Bearer {TOKEN}'})
+).read())
+for item in (del_resp.get('data', {}).get('items') or []):
+    rid = item['record_id']
+    req = urllib.request.Request(
+        f'https://open.feishu.cn/open-apis/bitable/v1/apps/{APP_TOKEN}/tables/{TABLE_ID}/records/{rid}',
+        method='DELETE', headers={'Authorization': f'Bearer {TOKEN}'})
+    urllib.request.urlopen(req)
+```
 
 ---
 
 ## 深度分析子表 / 文旅调研
 
-见原文档 Step 7-10。核心要点：
-- 子表名格式：`城市·热点关键词概括`
-- 子表字段：名称/类别(Select 6项)/推荐理由/参考价格/关联热度/详情链接/备注
-- 文旅调研8维度：基础信息/金字招牌/市井风情/视觉资产/季节限定/避坑槽点/商业闭环
+### 子表创建API（重要！）
+
+**创建子表时 body 必须包在 `table` 键下：**
+```python
+body = {"table": {
+    "name": "甘孜·稻城亚丁景区事件",
+    "fields": [{"field_name": "名称", "type": 1}]  # 初始字段
+}}
+resp = api('POST', f'https://open.feishu.cn/open-apis/bitable/v1/apps/{APP_TOKEN}/tables', body)
+tid = resp['data']['table_id']
+```
+❌ 错误：`{"name": "..."}` → 返回 `WrongRequestBody (code 1254001)`
+✅ 正确：必须包在 `{"table": {...}}` 中
+
+### 子表字段结构
+
+| 字段名 | 类型 | 说明 |
+|--------|------|------|
+| 名称 | Text(1) | 主字段 |
+| 类别 | Select(3) | 酒店住宿/景点景区/美食餐饮/文化活动/交通出行/旅行社·线路 |
+| 推荐理由 | Text(1) | 长文本 |
+| 参考价格 | Text(1) | 价格区间 |
+| 关联热度 | Text(1) | 热度描述 |
+| 详情链接 | Text(1) | URL |
+| 备注 | Text(1) | 补充信息 |
+
+### 文旅调研8维度
+
+1. 基础信息（位置/规模/地位）
+2. 金字招牌（核心吸引力）
+3. 市井风情（本地文化特色）
+4. 视觉资产（拍摄出片点）
+5. 季节限定（什么季节最值得去）
+6. 避坑槽点（常见投诉/坑）
+7. 商业闭环（消费场景/变现路径）
+
+### ⚠️ 新创建的表没有默认空记录
+
+如果用 `POST /tables` 带 `fields` 参数创建，新表可能 `items=null` 而不是空数组。
+在清理记录时必须加保护：
+```python
+items = del_resp.get('data', {}).get('items') or []
+```
 
 ---
 
@@ -394,6 +644,30 @@ curl -s -X POST 'https://open.feishu.cn/open-apis/bitable/v1/apps' \
 11. **多平台只留一条链接** → 按优先级选一个平台的链接即可
 12. **新Bitable命名含小时** → 多次执行时加小时区分：`热点商机多维分析 YYYY-MM-DD HH时`
 
+### 2026-05-29
+
+1. **Config解析方式升级** → 用 `configparser` 替代手写 `get_val()`，注意 `.strip('"')` 去 TOML 引号
+2. **Bitable创建响应格式** → `resp['data']['app']['default_table_id']` 不在 `data.default_table` 下
+3. **字段重命名用PUT不是PATCH** → PATCH `/bitable/v1/apps/{app}/tables/{table}/fields/{field}` 返回404，PUT才是正确方法
+4. **子表创建body必须包`table`键** → `{"table": {"name": "...", "fields": [...]}}` 不能直接传 `{"name": "..."}`
+5. **新表items可能为null** → 默认记录删除时需 `(resp.get('data', {}).get('items') or [])` 保护，否则 `TypeError: 'NoneType'`
+6. **创建子表时带fields则无默认空记录** → 不用删除空记录，但也需要保护性判断
+7. **表名不能重复** → 同名返回 `TableNameDuplicated (code 1254013)`，需加随机后缀处理
+8. **地区子表必须有5-10家酒店** → 每个子表只放1-2家酒店不够，用户会要求补全到5-10家（含价格）
+9. **笔记裂变库必须每个酒店8品类全覆蓋** → 只覆盖2-3品类不够，用户要求每家酒店8篇全品类
+10. **权限comment_entity值** → `"anyone"` 无效，必须用 `"anyone_can_view"` 或 `"anyone_can_edit"`
+
+### 2026-05-29（v2 重构）
+
+1. **上游源不可靠** → 6个信息源中3个可用（新华网/文旅部/RoutesOnline/HotelNewsResource/FlightGlobal），环球旅讯仅静态部分，携程趋势/Booking/民航局JS不可抓
+2. **上游数据入表** → 上游数据已格式化为热点兼容格式（step0_upstream_feeder.py），133条一次入Bitable子表成功
+3. **热搜热度解析** → 知乎热度格式「673万热度」含空格，需做清理再转int
+4. **飞书链接格式** → `[航线动态] Title (Source)` 会被飞书识别为笔记链接，需替换为 `✈️ 航线动态 · Title — Source`
+5. **10模板库** → 模板定义在note_templates.py，每个模板含description/title_style/structure/emoji_rule/tone
+6. **对标克隆** → clone_analyzer.py 支持链接输入和手动粘贴两种模式
+7. **简报格式** → 飞书输出避免使用 `[]()` 配对，用 emoji 前缀+中文分隔
+8. **grill-me** → 笔记裂变重构和上游信息拓宽的需求均通过grill-me流程确认后实施
+
 ---
 
 ## 文件结构
@@ -407,13 +681,29 @@ hotspot-bitable-analysis/
     feishu_utils.py                      # 飞书API公共模块（get_token/api/batch_insert 等）
     insert_records.py                    # 主表记录插入模板
     xiaohongshu_compliance.py            # 小红书内容合规自动校验模块
-    step1_3_analyze.py                   # 热搜采集+分析
-    step4_create_bitable.py              # 创建Bitable+字段
+    step1_4_full.py                      # 热搜采集+分析+创建Bitable+插入（全流程）
     step5_subtables.py                   # 深度分析子表
-    step8_notes.py                       # 笔记裂变内容生成
+    note_templates.py                    # 10个风格模板定义库【v2新增】
+    clone_analyzer.py                    # 对标克隆模块【v2新增】
+    note_generator.py                    # 核心生成引擎（选模板/对标克隆→输出笔记）【v2新增】
+    step8_notes.py                       # 笔记裂变内容生成（使用新引擎）【v2改造】
+    step0_upstream_feeder.py             # 上游数据→热点格式转换【v2新增】
+    upstream_to_bitable.py               # 上游数据写入Bitable子表【v2新增】
+    daily_briefing.py                    # 每日混合简报生成【v2新增】
   data/
     raw_data.json                        # 原始热搜数据
     analysis_result.json                 # 商机分析结果
+    upstream_feeder_{date}.json          # 上游格式化数据
+    upstream_feeder_{date}_dedup.csv     # 上游去重CSV
+    note_examples.json                   # 10模板示例笔记
+    briefing_{date}.md                   # 每日简报
+
+route-analysis/
+  SKILL.md                               # 上游产业链深度分析Skill
+  scripts/
+    step1_upstream_collect.py            # 上游信息采集（6个信息源）
+  data/
+    upstream_collected_{date}.json       # 上游原始数据
 ```
 
 ### 合规校验模块用法

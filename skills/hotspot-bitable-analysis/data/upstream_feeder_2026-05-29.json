@@ -1,0 +1,2138 @@
+{
+  "meta": {
+    "date": "2026-05-29",
+    "total_upstream_items": 133,
+    "total_hotspot_items": 133,
+    "_note": "此数据可与热点分析结果合并，先去重后写入Bitable"
+  },
+  "items": [
+    {
+      "热点话题": "科技赋能文旅IP点亮盛会——华强方特亮相第二十二届文博会",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260525/11183d27690f4e67903574c6a3835efc/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260525/11183d27690f4e67903574c6a3835efc/c.html"
+    },
+    {
+      "热点话题": "打造生态传播新路径 “秦小卫”数字IP入选新华社品牌工程",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260511/13931220848a4701b1c7cb6be440187f/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260511/13931220848a4701b1c7cb6be440187f/c.html"
+    },
+    {
+      "热点话题": "“创业宜居地 乐游生态城”武安市亮相《300秒看家乡》",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260509/976d3d01f37f4fd4bde5e6faafe12cdc/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260509/976d3d01f37f4fd4bde5e6faafe12cdc/c.html"
+    },
+    {
+      "热点话题": "300秒看家乡︱湖南省怀化市洪江区：千年商城 洪福洪江",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260508/67e0972f33b740db902be33b363f9deb/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260508/67e0972f33b740db902be33b363f9deb/c.html"
+    },
+    {
+      "热点话题": "“书法之乡 养生印江”印江土家族苗族自治县亮相《300秒看家乡》",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260430/66c97658b5b840a38c590860ad74306e/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260430/66c97658b5b840a38c590860ad74306e/c.html"
+    },
+    {
+      "热点话题": "300秒看家乡︱内蒙古自治区锡林郭勒盟乌拉盖管理区：“天边草原”乌拉盖",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260429/8a431f4b88e7408cb79d2cdcfdc64add/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260429/8a431f4b88e7408cb79d2cdcfdc64add/c.html"
+    },
+    {
+      "热点话题": "“天边草原”乌拉盖亮相《300秒看家乡》",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260424/17121e7b7f574b90af4a608b66186279/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260424/17121e7b7f574b90af4a608b66186279/c.html"
+    },
+    {
+      "热点话题": "300秒看家乡︱四川省雅安市荥经县：千年窑火映古县，绿水青山展新卷",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260417/a139be985f184b61aafb046e66a40d6a/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260417/a139be985f184b61aafb046e66a40d6a/c.html"
+    },
+    {
+      "热点话题": "300秒看家乡︱贵州省黔东南苗族侗族自治州镇远县：山水福地·千年镇远",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260413/7fac880269494d7cac4a9fde1fdc4473/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260413/7fac880269494d7cac4a9fde1fdc4473/c.html"
+    },
+    {
+      "热点话题": "江西婺源：一城更新万象生",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260410/d48c1270c697485db481c699bff7db35/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260410/d48c1270c697485db481c699bff7db35/c.html"
+    },
+    {
+      "热点话题": "新华视点｜透视景区NPC热潮",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260529/920096ca005145ae88ec9d039247c677/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260529/920096ca005145ae88ec9d039247c677/c.html"
+    },
+    {
+      "热点话题": "瞰中国｜内蒙古敕勒川草原：初夏时节绿意盎然",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260529/b8d9930d9b1340f9b2e6b3f33aa3f05e/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260529/b8d9930d9b1340f9b2e6b3f33aa3f05e/c.html"
+    },
+    {
+      "热点话题": "解码海淀，对话未来：“‘衣’脉相承”大秀绽放三山五园",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260529/0cd8c678dbc74e8c83cf8624a83da7ec/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260529/0cd8c678dbc74e8c83cf8624a83da7ec/c.html"
+    },
+    {
+      "热点话题": "黎平县亮相《300秒看家乡》：侗乡之窗展古韵 曙光之城启新程",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260528/9838062b94014f4fa6b4dea811d59481/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260528/9838062b94014f4fa6b4dea811d59481/c.html"
+    },
+    {
+      "热点话题": "聚人气汇人流：百余公里巢湖岸线激活文旅消费新场景",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260527/751a84a9d0ac4a9f8659f58eea9731f8/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260527/751a84a9d0ac4a9f8659f58eea9731f8/c.html"
+    },
+    {
+      "热点话题": "瞰中国｜广西龙胜：雨霁梯田润 人在画中耕",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260527/61afbe1c80b54d038f147212c73d37ed/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260527/61afbe1c80b54d038f147212c73d37ed/c.html"
+    },
+    {
+      "热点话题": "千城百县看中国｜河南济源：猴戏竞演展风采",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260527/48f75238492a43cc852a2f24605b8291/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260527/48f75238492a43cc852a2f24605b8291/c.html"
+    },
+    {
+      "热点话题": "“诗画草原 醉美达茂”达茂旗亮相《300秒看家乡》",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260526/19c421e6b4834461aefc1392442d2606/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260526/19c421e6b4834461aefc1392442d2606/c.html"
+    },
+    {
+      "热点话题": "新疆哈密：大海道邂逅雅丹之美",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "新疆",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260526/33f2ef4af25e4bb195d71ea06b55f067/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260526/33f2ef4af25e4bb195d71ea06b55f067/c.html"
+    },
+    {
+      "热点话题": "云南永善：石笋巍峨藏秀色",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "云南",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260526/30b64aae330e43f887123bbf5ea8b0b0/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260526/30b64aae330e43f887123bbf5ea8b0b0/c.html"
+    },
+    {
+      "热点话题": "文旅新探丨跟着“阿嬷”游潮汕",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260526/0b33dc035fda4084948d0a3e2f555334/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260526/0b33dc035fda4084948d0a3e2f555334/c.html"
+    },
+    {
+      "热点话题": "文旅新探 | 贵州石阡：寻觅“村味”中的乡土美食",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260526/6a1dde69d9e341dd86cf349fedecd70e/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260526/6a1dde69d9e341dd86cf349fedecd70e/c.html"
+    },
+    {
+      "热点话题": "从“舌尖”到“心头” 夜经济点亮消费新活力",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260526/346f4400d13e4bc595a02accc549e9b3/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260526/346f4400d13e4bc595a02accc549e9b3/c.html"
+    },
+    {
+      "热点话题": "长春净月高新区亮相《300秒看家乡》：低空经济蓄势起 科创生态筑新城",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260525/9aa243cbd29b429c8b010bd045f9ee09/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260525/9aa243cbd29b429c8b010bd045f9ee09/c.html"
+    },
+    {
+      "热点话题": "租赁式旅游，真能“减负”出行吗？",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260525/cfebba036bcb4522aa4cad4b56ad8b32/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260525/cfebba036bcb4522aa4cad4b56ad8b32/c.html"
+    },
+    {
+      "热点话题": "新华鲜报｜3.25亿人次出游 “五一”假期乐享文旅新风",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 宏观指标：反映旅游市场整体恢复程度 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260509/cd8d6149a9d346ddb9fec2241ca10b77/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260509/cd8d6149a9d346ddb9fec2241ca10b77/c.html"
+    },
+    {
+      "热点话题": "从“看景”到“入景”：民俗体验拓宽县域文旅新赛道",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260509/072e233a573849008272a4dacfb8528d/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260509/072e233a573849008272a4dacfb8528d/c.html"
+    },
+    {
+      "热点话题": "春日赴光谷 沉浸式打卡“文旅+科技”特色旅游线路",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20260325/d634ebdf035c4d94aed9437b7dd7076e/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20260325/d634ebdf035c4d94aed9437b7dd7076e/c.html"
+    },
+    {
+      "热点话题": "千城胜景｜吉林磐石：仙人湖公园荷花盛放",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 新华网旅游",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 新华网旅游 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 新华网旅游 | http://www.news.cn/travel/20250819/1ef9df14cae341919630dea7a1a49493/c.html",
+      "_upstream_source": "新华网旅游",
+      "_upstream_url": "http://www.news.cn/travel/20250819/1ef9df14cae341919630dea7a1a49493/c.html"
+    },
+    {
+      "热点话题": "第二届中国新疆民间艺术季在新疆乌鲁木齐启动",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "新疆",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202605/t20260522_965928.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260522_965928.htm"
+    },
+    {
+      "热点话题": "2026文化强国建设高峰论坛在深圳开幕 李书磊出席并发表主旨演讲",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "深圳",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 集中需求：大型活动将带来阶段性客流和住宿需求 | 类别: 会展活动",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202605/t20260522_965939.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260522_965939.htm"
+    },
+    {
+      "热点话题": "2026年文化和旅游部科技教育工作会议在安徽合肥召开",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 集中需求：大型活动将带来阶段性客流和住宿需求 | 类别: 会展活动",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202605/t20260522_965927.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260522_965927.htm"
+    },
+    {
+      "热点话题": "2026年“5·19中国旅游日”主会场活动在广东广州举行",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "广州",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202605/t20260519_965881.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260519_965881.htm"
+    },
+    {
+      "热点话题": "跟着品牌去旅行！首批体验地推荐名单发布",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202605/t20260509_965763.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260509_965763.htm"
+    },
+    {
+      "热点话题": "旅游市场强制消费问题典型案例（2026年第二批）",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 消费力指标：反映旅游消费趋势变化 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202605/t20260502_965683.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260502_965683.htm"
+    },
+    {
+      "热点话题": "2026年“五一”假期国内出游3.25亿人次",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 宏观需求信号：假期出行数据反映市场热度 | 类别: 政策签证",
+      "优先级": "高",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202605/t20260506_965708.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260506_965708.htm"
+    },
+    {
+      "热点话题": "文化和旅游部、中国气象局联合发布五一假期旅游气象提示",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202604/t20260429_965657.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260429_965657.htm"
+    },
+    {
+      "热点话题": "文化和旅游部五一假期出游提示",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202604/t20260428_965633.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260428_965633.htm"
+    },
+    {
+      "热点话题": "旅游市场秩序集中整治严重失信主体典型名单（2026年第一批）",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 行业合规：影响渠道合作与定价策略 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202604/t20260427_965618.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260427_965618.htm"
+    },
+    {
+      "热点话题": "2026年全国“四季村歌”示范活动在江西景德镇举行",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202604/t20260422_965537.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260422_965537.htm"
+    },
+    {
+      "热点话题": "2026年全国重点文化和旅游企业主要负责人安全生产培训举办",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202604/t20260422_965563.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260422_965563.htm"
+    },
+    {
+      "热点话题": "图书馆全民阅读论坛暨2026年公共图书馆服务宣传周主场活动在江西南昌举办",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 集中需求：大型活动将带来阶段性客流和住宿需求 | 类别: 会展活动",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202604/t20260421_965520.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260421_965520.htm"
+    },
+    {
+      "热点话题": "2026年全国“四季村晚”春季主场活动在重庆石柱举办",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202604/t20260416_965488.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260416_965488.htm"
+    },
+    {
+      "热点话题": "文化和旅游部深入学习贯彻习近平总书记关于树立和践行正确政绩观的重要论...",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202604/t20260416_965487.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260416_965487.htm"
+    },
+    {
+      "热点话题": "2026年清明节假期国内出游1.35亿人次",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 宏观需求信号：假期出行数据反映市场热度 | 类别: 政策签证",
+      "优先级": "高",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202604/t20260407_965316.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260407_965316.htm"
+    },
+    {
+      "热点话题": "文化和旅游部清明节假期出游提示",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202604/t20260402_965276.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260402_965276.htm"
+    },
+    {
+      "热点话题": "“中国和哈萨克斯坦文化交流年”开幕式在京举行",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202603/t20260331_965246.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202603/t20260331_965246.htm"
+    },
+    {
+      "热点话题": "中华人民共和国外交部、文化和旅游部与巴西联邦共和国外交部、文化部、旅...",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202603/t20260326_965174.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202603/t20260326_965174.htm"
+    },
+    {
+      "热点话题": "2026年驻华外交官“发现中国之美”活动在京启动",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 文旅部",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 文旅部 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 文旅部 | https://www.mct.gov.cn/whzx/whyw/202603/t20260320_965085.htm",
+      "_upstream_source": "文旅部",
+      "_upstream_url": "https://www.mct.gov.cn/whzx/whyw/202603/t20260320_965085.htm"
+    },
+    {
+      "热点话题": "[航线动态] Routes Europe 2026",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/9746/routes-europe-2026/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/9746/routes-europe-2026/"
+    },
+    {
+      "热点话题": "[航线动态] Wizz Air",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/908/wizz-air/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/908/wizz-air/"
+    },
+    {
+      "热点话题": "[航线动态] Rimini San Marino International Airport",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/4239/rimini-san-marino-international-airport/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/4239/rimini-san-marino-international-airport/"
+    },
+    {
+      "热点话题": "[航线动态] Icelandair",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/2066/icelandair-/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/2066/icelandair-/"
+    },
+    {
+      "热点话题": "[航线动态] TAV Airports",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/1201/tav-airports/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/1201/tav-airports/"
+    },
+    {
+      "热点话题": "[航线动态] Rimini",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/4750/rimini/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/4750/rimini/"
+    },
+    {
+      "热点话题": "[航线动态] Scandinavian Airlines System (SAS)",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/9548/scandinavian-airlines-system-sas/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/9548/scandinavian-airlines-system-sas/"
+    },
+    {
+      "热点话题": "[航线动态] Eurowings",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/4869/eurowings/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/4869/eurowings/"
+    },
+    {
+      "热点话题": "[航线动态] Porter Airlines Inc",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/4180/porter-airlines-inc/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/4180/porter-airlines-inc/"
+    },
+    {
+      "热点话题": "[航线动态] Air France",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/266/air-france/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/266/air-france/"
+    },
+    {
+      "热点话题": "[航线动态] Air Transat",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/1999/air-transat/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/1999/air-transat/"
+    },
+    {
+      "热点话题": "[航线动态] airBaltic",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/8681/airbaltic/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/8681/airbaltic/"
+    },
+    {
+      "热点话题": "[航线动态] Routes 360",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/6285/routes-360/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/6285/routes-360/"
+    },
+    {
+      "热点话题": "[航线动态] VietJet Air",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/834/vietjet-air/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/834/vietjet-air/"
+    },
+    {
+      "热点话题": "[航线动态] Aeroitalia",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/9513/aeroitalia/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/9513/aeroitalia/"
+    },
+    {
+      "热点话题": "[航线动态] Qatar Airways",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/393/qatar-airways/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/393/qatar-airways/"
+    },
+    {
+      "热点话题": "[航线动态] Alaska Airlines",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/2936/alaska-airlines/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/2936/alaska-airlines/"
+    },
+    {
+      "热点话题": "[航线动态] Tampa International Airport",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/219/tampa-international-airport/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/219/tampa-international-airport/"
+    },
+    {
+      "热点话题": "[航线动态] Finavia - Airports of Finland",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/4051/finavia-airports-of-finland/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/4051/finavia-airports-of-finland/"
+    },
+    {
+      "热点话题": "[航线动态] Boeing 757",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/9458/boeing-757/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/9458/boeing-757/"
+    },
+    {
+      "热点话题": "[航线动态] Press Releases",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - RoutesOnline",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: RoutesOnline | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 RoutesOnline | https://www.routesonline.com/news/tagged/2046/press-release/",
+      "_upstream_source": "RoutesOnline",
+      "_upstream_url": "https://www.routesonline.com/news/tagged/2046/press-release/"
+    },
+    {
+      "热点话题": "Technification Is Accelerating Commoditization - By Doug Kennedy",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141426.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141426.html"
+    },
+    {
+      "热点话题": "Global Air Passenger Demand Declines in April As Middle East Conflict Disrupts Aviation Markets",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141442.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141442.html"
+    },
+    {
+      "热点话题": "Google Business Profiles Just Got More Social",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141437.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141437.html"
+    },
+    {
+      "热点话题": "Pebblebrook Hotel Trust Completes $43.5 Million Sale of Chamberlain West Hollywood Hotel",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 资本动向：酒店资产交易，关注行业整合趋势 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141447.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141447.html"
+    },
+    {
+      "热点话题": "TownePlace Suites by Marriott Palmdale Opens in California",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 供给增加：新酒店/品牌入驻，关注竞争格局变化 | 类别: 酒店供应链",
+      "优先级": "高",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141448.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141448.html"
+    },
+    {
+      "热点话题": "Caesars Entertainment to Be Acquired by Fertitta Entertainment in $17.6 Billion All-Cash Deal",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 资本动向：酒店资产交易，关注行业整合趋势 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141446.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141446.html"
+    },
+    {
+      "热点话题": "Hilton to Launch Spark by Hilton Brand in Italy with Milan Linate Airport Hotel",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141445.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141445.html"
+    },
+    {
+      "热点话题": "AHLA Statement on Proposed Shut Down of Customs and Immigration Processing at Major Cities",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141444.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141444.html"
+    },
+    {
+      "热点话题": "Top 6 Travel Trends for 2026 the Fastest-growing Traveler Segments - By Femke Nollet",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141434.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141434.html"
+    },
+    {
+      "热点话题": "Leading Across Generations: Why Yesterday’s Leadership Alone No Longer Works - By Matthew Mascali",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141427.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141427.html"
+    },
+    {
+      "热点话题": "Why Human Agency Matters for Quantum AI - By Angie Basiouny",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141410.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141410.html"
+    },
+    {
+      "热点话题": "Redefining Caribbean Luxury: How Destinations Can Attract the Global One Percent - By Charley Baouamina",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141389.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141389.html"
+    },
+    {
+      "热点话题": "Cendyn Resets Hospitality Commitment with Leadership Reorientation",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141436.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141436.html"
+    },
+    {
+      "热点话题": "Performance Marketing for Resorts: Remove Barriers To Booking",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141435.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141435.html"
+    },
+    {
+      "热点话题": "Lighthouse Acquires Hotelrank.ai, Adding AI Visibility Intelligence to Connect AI",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 资本动向：酒店资产交易，关注行业整合趋势 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141425.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141425.html"
+    },
+    {
+      "热点话题": "Maestro PMS to Showcase Unified Hospitality Platform Driving the Next Guest Experience at HITEC San Antonio",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141406.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141406.html"
+    },
+    {
+      "热点话题": "IHG Signs Canary Riverside Plaza, Vignette Collection in London’s Canary Wharf",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141424.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141424.html"
+    },
+    {
+      "热点话题": "The Berkeley Richmond Joins Outset Collection by Hilton After Renovation",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141423.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141423.html"
+    },
+    {
+      "热点话题": "HVS Europe Hotel Transactions Bulletin Week Ending 22 May 2026",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141409.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141409.html"
+    },
+    {
+      "热点话题": "Toronto to Host Rendez-vous Canada, the country’s largest international tourism trade show",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141413.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141413.html"
+    },
+    {
+      "热点话题": "Mary Bowens Appointed General Manager at Four Seasons Safari Lodge Serengeti",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141422.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141422.html"
+    },
+    {
+      "热点话题": "Nobu to Rebrand Two Residential Towers in Downtown Bellevue, Washington",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - HotelNewsResource",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: HotelNewsResource | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 HotelNewsResource | https://www.hotelnewsresource.com/article141418.html",
+      "_upstream_source": "HotelNewsResource",
+      "_upstream_url": "https://www.hotelnewsresource.com/article141418.html"
+    },
+    {
+      "热点话题": "FIGHTERS Kyiv, Stockholm advance plans to equip Ukrainian air force with new and donated Gripens Latest proposal for Kyiv includes up to 36 secondhand and new-build fighters. 28 May 2026",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - FlightGlobal",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: FlightGlobal | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 FlightGlobal | https://www.flightglobal.com/defence/2026/05/kyiv-stockholm-advance-plans-to-equip-ukrainian-air-force-with-new-and-donated-gripens/",
+      "_upstream_source": "FlightGlobal",
+      "_upstream_url": "https://www.flightglobal.com/defence/2026/05/kyiv-stockholm-advance-plans-to-equip-ukrainian-air-force-with-new-and-donated-gripens/"
+    },
+    {
+      "热点话题": "[付费] Paid content Port Polska accelerates cargo ambitions as Warsaw prepares to host global air freight summit The development of Port Polska is increasingly shaping Poland’s role in European logistics, as the programme moves forward with plans to build a major multimodal transport hub combining air, rail and road infrastructure with advanced cargo capabilities. 11 May 2026",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - FlightGlobal",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: FlightGlobal | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 FlightGlobal | https://www.flightglobal.com/paid-content/2026/05/port-polska-accelerates-cargo-ambitions-as-warsaw-prepares-to-host-global-air-freight-summit/",
+      "_upstream_source": "FlightGlobal",
+      "_upstream_url": "https://www.flightglobal.com/paid-content/2026/05/port-polska-accelerates-cargo-ambitions-as-warsaw-prepares-to-host-global-air-freight-summit/"
+    },
+    {
+      "热点话题": "[付费] Paid content Viscom: advanced inspection technology enabling mission assurance For over 40 years, Viscom has pursued a singular and uncompromising objective: enabling manufacturers to achieve absolute product integrity through zero-defect production. Headquartered in Hanover, Germany, the company develops, engineers, and manufactures high-precision inspection systems designed to protect the functionality and reliability of the world’s most critical electronic systems.In today’s highly complex electronic environments, even… 30 April 2026",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - FlightGlobal",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: FlightGlobal | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 FlightGlobal | https://www.flightglobal.com/paid-content/2026/04/viscom-advanced-inspection-technology-enabling-mission-assurance/",
+      "_upstream_source": "FlightGlobal",
+      "_upstream_url": "https://www.flightglobal.com/paid-content/2026/04/viscom-advanced-inspection-technology-enabling-mission-assurance/"
+    },
+    {
+      "热点话题": "[付费] Paid content How airlines achieve more efficient ground operations with Jeppesen Smart Airport Maps The history of aviation – recent events included – highlights that some of the riskiest phases of any flight are not when the aircraft is in the air, but when it is on terra firma. Busy airports are complex and potentially hazardous workplaces for pilots, and plenty can go wrong between runway and gate. 9 April 2026",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - FlightGlobal",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: FlightGlobal | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 FlightGlobal | https://www.flightglobal.com/paid-content/2026/04/how-airlines-achieve-more-efficient-ground-operations-with-jeppesen-smart-airport-maps/",
+      "_upstream_source": "FlightGlobal",
+      "_upstream_url": "https://www.flightglobal.com/paid-content/2026/04/how-airlines-achieve-more-efficient-ground-operations-with-jeppesen-smart-airport-maps/"
+    },
+    {
+      "热点话题": "[付费] Paid content The next evolution of airports By Valentin Vizant 3 April 2026",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - FlightGlobal",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: FlightGlobal | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 FlightGlobal | https://www.flightglobal.com/paid-content/2026/04/the-next-evolution-of-airports/",
+      "_upstream_source": "FlightGlobal",
+      "_upstream_url": "https://www.flightglobal.com/paid-content/2026/04/the-next-evolution-of-airports/"
+    },
+    {
+      "热点话题": "NDC 在中国推了十多年，为什么没有上演“分销大战”",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190072/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190072/"
+    },
+    {
+      "热点话题": "贵州山里，正在长出旅游新爆款",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190067/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190067/"
+    },
+    {
+      "热点话题": "特朗普访华，没给美国人要到免签？",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "美国",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策红利：签证便利化将刺激出境游需求 | 类别: 政策签证",
+      "优先级": "高",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190064/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190064/"
+    },
+    {
+      "热点话题": "跳出低价内卷！2026中国商旅服务关系彻底变了共生2 天前评论推荐",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190062/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190062/"
+    },
+    {
+      "热点话题": "高德×亚朵：当酒店在地图上，重新定义自己的边界一本打开的书，一个上线的POI。2 天前评论推荐",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190058/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190058/"
+    },
+    {
+      "热点话题": "路客云海外版即将上线：直连海外OTA，首推AI Agent管店能力，现开放抢先体验名额Say to AI for all hosting,without App or PC.路客云海外版补齐境外住宿数字化空白。路客云18 分钟前企业动态",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190073/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190073/"
+    },
+    {
+      "热点话题": "OTA巨头重整投流玩法，酒店排名大变天？| TD内参春天来了2 天前住宿评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190057/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190057/"
+    },
+    {
+      "热点话题": "今年峰会，我们请来了这些头部企业的“王牌大咖”!不是所有行业会议都能让您听懂变化、找到方向、链接资源。3 天前商旅&MICE",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 集中需求：大型活动将带来阶段性客流和住宿需求 | 类别: 会展活动",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190054/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190054/"
+    },
+    {
+      "热点话题": "企业差旅，不能只比价格了从省钱到省心3 天前商旅&MICE评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190053/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190053/"
+    },
+    {
+      "热点话题": "八成老外不爱跟团，北京酒店悄悄拿捏流量实战干货3 天前住宿文旅&目的地评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "北京",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190051/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190051/"
+    },
+    {
+      "热点话题": "AI差旅，为什么多数企业都做错了？落地破局增效3 天前商旅&MICE评论AI+旅游",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190040/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190040/"
+    },
+    {
+      "热点话题": "从季度洞察到年度决策｜他们都在用这份报告3 天前商旅&MICE",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190049/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190049/"
+    },
+    {
+      "热点话题": "NDC 在中国推了十多年，为什么没有上演\"分销大战\"企业差旅各方现在该做什么4 天前评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190048/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190048/"
+    },
+    {
+      "热点话题": "2026虎啸盛典完整议程（含嘉宾阵容）首发 | 重磅4 天前旅游分销",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190039/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190039/"
+    },
+    {
+      "热点话题": "Booking财报解读：现金流神话背后的的三重风险模型依然成立，但边界正被试探4 天前OTA评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190037/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190037/"
+    },
+    {
+      "热点话题": "AI落地卡在数据，支付补齐履约短板 | 一周商旅动态商旅竞争正在从“前台预订体验”转向“全链路基础设施”。5 天前商旅&MICE精选",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 宏观指标：反映旅游市场整体恢复程度 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190018/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190018/"
+    },
+    {
+      "热点话题": "2026年5月航空创新观察：航司将旅客痛点做成产品5 天前出行航空",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190030/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190030/"
+    },
+    {
+      "热点话题": "AI能生成行程，但Airbnb想让你相信选择新故事，新挑战6 天前住宿OTA评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190028/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190028/"
+    },
+    {
+      "热点话题": "汉庭一出海，直接改变了酒店行业的投资逻辑品牌力、产品力和回报效率，正在改写投资算法。6 天前评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/189968/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/189968/"
+    },
+    {
+      "热点话题": "会后报告 | 2026环球旅讯数智论坛·北京站 圆满收官！下一站，7月2日，深圳见。7 天前商旅&MICE",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "北京",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 集中需求：大型活动将带来阶段性客流和住宿需求 | 类别: 会展活动",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190026/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190026/"
+    },
+    {
+      "热点话题": "激荡变革下，中国商旅与酒店行业如何重拾增长？新周期7 天前住宿商旅&MICE评论AI+旅游",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190019/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190019/"
+    },
+    {
+      "热点话题": "廉航CEO，将获天价奖金低票价航司，也能开出顶级激励05-21 15:30航空评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190010/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190010/"
+    },
+    {
+      "热点话题": "广州机场T1关闭，南航赢麻了？航站楼转场引发的竞争变局05-21 11:50航空评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "广州",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 运力信号：关注航线运力调整对票价和库存的影响 | 类别: 航空运力",
+      "优先级": "高",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/189984/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/189984/"
+    },
+    {
+      "热点话题": "泰国60天免签缩回30天，想筛掉“低质量游客”？重新平衡客流、治安与游客质量05-21 10:30文旅&目的地评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "泰国",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策红利：签证便利化将刺激出境游需求 | 类别: 政策签证",
+      "优先级": "高",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190009/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190009/"
+    },
+    {
+      "热点话题": "中方对俄免签延长；11万家酒店接入飞猪酒店“商家智能助理” | TD晚报今日还有泰国旅游业、波音等新动态。05-20 18:23TD日报",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "泰国",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190001/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190001/"
+    },
+    {
+      "热点话题": "同程旅行：520当天“旅行领证”火爆，新疆、海南、云南、福建、浙江等地热度居前浪漫经济带火短途微度假及长线跨省游05-20 15:54文旅&目的地",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "海南",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/189987/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/189987/"
+    },
+    {
+      "热点话题": "3.5亿背后的行业分水岭：携程门店519破纪录的深层逻辑门店不仅没有消失，反而成为各大OTA争夺的香饽饽。05-20 15:48OTA评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/189986/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/189986/"
+    },
+    {
+      "热点话题": "TikTok Go，让酒店直销很受伤替未来的LLM平台，提供了一种处理履约问题的方向05-20 09:51住宿评论",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/189978/",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/189978/"
+    },
+    {
+      "热点话题": "路客云海外版即将上线：直连海外OTA，首推AI Agent管店能力，现开放抢先体验名额",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190073",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190073"
+    },
+    {
+      "热点话题": "路客云新版「尾房置换」来了： 酒店盘活尾房，0元用系统还能增收",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190071",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190071"
+    },
+    {
+      "热点话题": "城市便捷正在重构酒店业的投入产出逻辑",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190066",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190066"
+    },
+    {
+      "热点话题": "柏曼酒店改造翻红湛江多年老店，开业后业绩与口碑“双开花”",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 供给增加：新酒店/品牌入驻，关注竞争格局变化 | 类别: 酒店供应链",
+      "优先级": "高",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190065",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190065"
+    },
+    {
+      "热点话题": "端午数千家酒店打8折，“住宿消费券”带动贵州酒店预订量同比增六成",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "文旅美食",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 酒店动态：关注供应链变化和品牌布局 | 类别: 酒店供应链",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190061",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190061"
+    },
+    {
+      "热点话题": "同程旅行与阿塞拜疆旅游局签署战略合作备忘录",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/190060",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/190060"
+    },
+    {
+      "热点话题": "中东冲突扰动全球旅游需求，中国入境游迎来新窗口",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/189889",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/189889"
+    },
+    {
+      "热点话题": "AI入口重构，谁来承接交易的最后一公里？ ｜ SiteMinder财报解读",
+      "来源渠道": [
+        "综合"
+      ],
+      "话题类别": "国际外交",
+      "热度指数": "上游产业信号 - 环球旅讯",
+      "热度指数数值": 80,
+      "关联地点": "",
+      "关联旅游景点": "",
+      "旅游商机分析": "📡 [上游信号] | 来源: 环球旅讯 | 影响: 政策变化：关注对业务合规和需求的影响 | 类别: 政策签证",
+      "优先级": "中",
+      "备注": "📎 环球旅讯 | https://www.traveldaily.cn/article/189674",
+      "_upstream_source": "环球旅讯",
+      "_upstream_url": "https://www.traveldaily.cn/article/189674"
+    }
+  ]
+}
