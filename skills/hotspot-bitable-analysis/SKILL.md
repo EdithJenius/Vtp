@@ -274,30 +274,32 @@ python3 note_generator.py --hotel "丽江悦榕庄" --clone "https://..." --cate
 ### 笔记生成原则
 
 1. ❌ **正文不写具体金额**（只说「打折优惠」「限时优惠」「有活动」）
-2. ✅ 每家酒店至少覆盖8品类
-3. ✅ **自动合规校验**：每条正文过后 xiaohongshu_compliance.py
-4. ✅ 引用话题15-20个，覆盖精准+泛流量标签
-5. ✅ 正文用emoji小标题分段
+2. ✅ **每家酒店必须覆盖全部10品类**（干货/种草/测评/行业分析/截流/Vlog/反差/科普/UGC/问答）
+3. ✅ 正文用 `\n\n` 分段（双换行），段落内用 `\n` 换行，保持紧凑排版
+4. ✅ **自动合规校验**：每条正文过后 xiaohongshu_compliance.py
+5. ✅ 引用话题15-20个，覆盖精准+泛流量标签
+6. ✅ 标题带 emoji 钩子 + 数字/反差/截流元素
+7. ✅ 正文用emoji小标题分段
 
-### 2026-05-29 已覆盖酒店（最新）
+### 2026-05-30 已覆盖酒店（最新）
 
 | 地区 | 主推酒店 | 品类覆盖 | 数据来源 |
 |------|---------|:--------:|---------|
-| 成都 | 成都W酒店 | 8/8 | 外国人中国美食游热点 |
+| 桂林·阳朔 | **阳朔悦榕庄** | 10/10 | 两广高温热点 |
+| 三亚 | **三亚亚特兰蒂斯** | 10/10 | 毕业旅行热点 |
+| 广州 | **广州花园酒店** | 10/10 | 两广高温热点 |
+| 杭州 | **杭州君悦酒店** | 10/10 | 演唱会经济热点 |
 | 丽江 | 丽江悦榕庄 | 8/8 | 夏季避暑热点 |
-| 稻城·亚丁 | 日松贡布酒店 | 8/8 | 亚丁景区事件热点 |
-| 广州 | 广州花园酒店 | 8/8 | 外国人美食+端午 |
+| 成都 | 成都W酒店 | 8/8 | 外国人美食游热点 |
 | 北京 | 北京国贸大酒店 | 8/8 | 暑期旅游热点 |
-| 黑河 | 黑河国际饭店 | 8/8 | 中俄跨境热点 |
+| 长白山 | 长白山天沐温泉酒店 | 8/8 | 高温避暑热点 |
 
-### 新增酒店扩展步骤
-
-当需要为新的地区/酒店生成笔记时：
+**新增酒店扩展步骤：**
 
 1. 给「酒店名称」字段追加选项（PATCH field property.options）
-2. 从文旅调研表中读取该地区全维度数据
-3. 按8品类模板各写一篇（参考已有风格）
-4. batch_create 批量插入
+2. 确定该酒店的10个品类内容风格方向
+3. 按10品类模板各写一篇（正文用 `\n\n` 分段，带 emoji 标题）
+4. batch_create 批量插入（每批≤10条）
 5. 验证每篇的「酒店名称」字段非空
 
 ### ⚠️ 地区子表必须有酒店信息
@@ -318,14 +320,15 @@ python3 note_generator.py --hotel "丽江悦榕庄" --clone "https://..." --cate
 
 ### 采集源
 
-| 优先级 | 源 | 覆盖内容 | 采集方式 |
-|:------:|:----|:---------|:---------|
-| 🔴 必选 | 环球旅讯 TravelDaily | 中文旅游行业新闻 | web_fetch |
-| 🔴 必选 | 新华网旅游频道 | 文旅政策/目的地新闻 | web_fetch |
-| 🔴 必选 | 文旅部官网 | 政策发布/统计数据 | web_fetch |
-| 🟡 进阶 | RoutesOnline | 全球航线动态 | web_fetch |
-| 🟡 进阶 | HotelNewsResource | 全球酒店行业新闻 | web_fetch |
-| 🟡 进阶 | FlightGlobal | 航空产业新闻 | web_fetch |
+| 优先级 | 源 | 覆盖内容 | 采集方式 | 稳定性 |
+|:------:|:----|:---------|:---------|:------:|
+| 🔴 必选 | 环球旅讯 TravelDaily | 中文旅游行业新闻 | web_fetch(首页) | ✅ 稳定 |
+| 🔴 必选 | 新华网旅游频道 | 文旅政策/目的地新闻 | web_fetch | ⚠️ 有时空 |
+| 🟡 进阶 | HotelNewsResource | 全球酒店行业新闻 | web_fetch | ⚠️ 仅标题 |
+| 🟡 进阶 | RoutesOnline | 全球航线动态 | web_fetch | ⚠️ 待验证 |
+| 🟡 进阶 | FlightGlobal | 航空产业新闻 | web_fetch | ⚠️ 待验证 |
+
+**推荐：以环球旅讯 TravelDaily 为主力源**，内容优质、中文可读性强、覆盖全面。直接用 `web_fetch "https://www.traveldaily.cn/"` 即可获取最新文章列表。
 
 ### 脚本
 
@@ -611,7 +614,7 @@ items = del_resp.get('data', {}).get('items') or []
 | 贴吧热榜 | `opencli tieba hot --limit 15 -f json` | title/discussions/url |
 | 36氪热榜 | `opencli 36kr hot -f json --limit 15` | title/rank/url |
 | B站热门 | `opencli bilibili hot --limit 15 -f json` | title/play/danmaku/bvid/url |
-| 百度热搜 | `web_fetch https://top.baidu.com/board?tab=realtime` | ⚠️ readability 提取不稳定，有时返回空
+| 百度热搜 | `web_fetch https://top.baidu.com/board?tab=realtime` | ❌ readability 提取几乎总是空，建议放弃此源
 
 ---
 
@@ -667,6 +670,20 @@ items = del_resp.get('data', {}).get('items') or []
 6. **对标克隆** → clone_analyzer.py 支持链接输入和手动粘贴两种模式
 7. **简报格式** → 飞书输出避免使用 `[]()` 配对，用 emoji 前缀+中文分隔
 8. **grill-me** → 笔记裂变重构和上游信息拓宽的需求均通过grill-me流程确认后实施
+
+### 2026-05-30
+
+1. **Python文件中文编码** → 含中文的 .py 文件必须加 `# -*- coding: utf-8 -*-` 头，否则 SyntaxError: Non-UTF-8 code
+2. **Python脚本不用 `***` 占位符** → 不能写 `TOKEN = ***` 或 `APP_SECRET = ***`，`***` 是 Python 的幂运算语法错误。必须用完整函数：`def get_token(): ...` → `TOKEN = get_token()`
+3. **get_token() 统一写法** → 统一抽取成函数，每个脚本调用一次，不要 inline 缩写
+4. **上游采集首选 TravelDaily** → `web_fetch "https://www.traveldaily.cn/"` 返回内容丰富稳定。HotelNewsResource 解析效果差，仅返回标题链接
+5. **笔记批量生成用 Python dict 内联** → 用大列表+字典的结构比 heredoc 稳定。正文用 `\n` 换行符嵌入字符串，不要用多行引号
+6. **飞书 interactive card 消息** → 用 `msg_type: "interactive"` 发送富文本卡片，比纯文本效果好。card 的 `header.template` 支持 `blue`/`indigo`/`green`/`red`/`purple`/`yellow`/`orange` 等主题色
+7. **深度子表带 fields 创建时无默认空记录** → 不需要执行 DELETE 清理步骤，但如果删了旧记录再插入，先 GET 检查 items 是否为 None
+8. **笔记裂变内容库重建策略** → 如果要完整替换，先 GET 所有现有记录逐个 DELETE，再 batch_create 新记录。不要试图用 PATCH 部分更新
+9. **上游数据分类新类别** → 除了原有4类（航空运力/酒店供应链/政策签证/会展活动），建议增加「文旅目的地」和「科技AI」两个类别，覆盖目的地营销和AI+旅游话题
+10. **酒店名称 Select 选项管理** → 先 PUT 更新 field 的 options 添加所有酒店名，再写入记录。如果记录中的酒店名不在选项列表中，数据写入后该字段会变空白
+11. **笔记正文排版规范** → 飞书 Bitable 中多行文本用 `\n\n` 双换行分段，`\n` 单换行分行。emoji 开头的小标题效果较好。正文控制在 300-800 字之间
 
 ---
 
