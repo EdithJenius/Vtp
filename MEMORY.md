@@ -56,6 +56,37 @@
 
 *记忆持续更新中...*
 
+#### 2026-06-02 视频全链路工坊大升级
+
+**素材匹配画面分割**
+- 对 YouTube 视频提取章节信息 → 英译中 → 写入「画面分割」字段
+- 剪辑师可直接按时间轴定位素材
+
+**抖音视频文案提取全链路（新增）**
+- 新建独立多维表格「视频文案库」：`JbfSbQjyXaA4vssVABNcm5AhnKh`
+- 完整流程：opencli browser 获取API → 下载视频 → ffmpeg提音频 → faster-whisper转写 → 写入Bitable
+- 默认转写模型：medium（faster-whisper），备选 small / tiny
+- 22条 Amber2.0「能谈吗」系列视频已全部处理入库
+- 每条视频附带标签分析（人物身份/性格/情感/文化梗等分类）
+
+**视频文案库表结构**
+- 主表「视频文案库」：视频标题/链接/口播文案/文案摘要/备注（含模型名）
+- 子表「人物标签分析」：标签名称/类别/关联视频/关联来源（完整上下文）/标签描述
+- 标签来自口播文案 AI 分析，附完整原文段落作为上下文
+
+**SKILL.md 升级 v1.2**
+- 双线结构：创作线（旅行视频） + 分析线（抖音文案）
+- 更新文档：`skills/video-generation/SKILL.md`
+- 新增工具：faster-whisper（语音转写）
+- 新增踩坑记录10条
+
+#### 2026-06-02 技术踩坑汇总
+- faster-whisper medium 模型 CPU 推理 OOM 风险，大批量用 small
+- opencli browser eval 用 var 避免跨调用 let 冲突
+- Django API 直链有时效性，获取后立即下载
+- json.l…()) 的 Unicode 污染问题，需用 `sed` 或 `python3 -c` 修复
+- `"Bearer " + TOKEN` 被错误转义为 `***`
+
 ## ⚠️ 重要行为规则
 
 ### Skill 文件操作权限
