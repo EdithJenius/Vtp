@@ -3,8 +3,8 @@ name: video-generation
 description: "视频全链路工坊：素材获取 → 脚本生成 → 文案提取 → 标签分析 → 素材匹配 → 无水印下载"
 metadata:
   author: "Jarvis 🦾"
-  version: "3.1"
-  tags: [视频制作, 脚本生成, yt-dlp, 素材匹配, 旅游视频, 小红书, 抖音, 素材采集, Mixkit]
+  version: "3.2"
+  tags: [视频制作, 脚本生成, yt-dlp, 素材匹配, 旅游视频, 小红书, 抖音, 素材采集, Mixkit, TikTok, Instagram, 微博]
 allowed-tools:
   - read
   - write
@@ -17,7 +17,7 @@ user-invocable: true
 # 视频全链路工坊
 
 > 三线流程：**旅行视频创作** + **抖音视频文案提取与分析** + **HeyGen AI数字人视频生成**
-> v3.1 新增：素材采集 -> 可用素材库 -> 人工选片替换
+> v3.2 更新：全竖屏9:16标准化，多源搜索策略（TikTok英译/抖音直链/Ins/微博），文案增强匹配
 
 ---
 
@@ -30,7 +30,7 @@ flowchart LR
     A2 --> A3[痛点分析]
     A3 --> A4[文案生成]
     A4 --> A5[素材匹配]
-    A5 ==> A6[可用素材库]
+    A5 ==> A6[素材清单]
     A6 -.->|人工选片替换| A5
     A6 -> A7[画面分割]
     A7 --> A8[素材下载]
@@ -42,6 +42,14 @@ flowchart LR
     B3 --> B4[文案入库]
     B4 --> B5[标签分析]
   end
+  
+  subgraph C[采集线：多平台竖屏搜索]
+    C1[Mixkit] --- C2[TikTok]
+    C2 --- C3[抖音/小红书]
+    C3 --- C4[Instagram/微博]
+  end
+  
+  C --> A6
 ```
 
 ---
@@ -245,7 +253,9 @@ yt-dlp --no-check-certificate -f "137+140" --merge-output-format mp4 \
 
 | 维度 | 标准 |
 |:----|:-----|
+| 画面比例 | **9:16 竖屏**，宽 < 高。禁止横屏素材 |
 | 清晰度 | 不低于1080p，尽量4K。避免模糊、压缩过度 |
+| 分辨率检测 | `ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 video.mp4` → 宽 < 高 = 竖屏通过 |
 | 曝光 | 不过曝、不欠曝，人脸和细节可辨认 |
 | 色彩 | 相对中性，不能偏色严重（如全屏偏绿/偏蓝） |
 | 水印 | 无平台水印（抖音/快手/小红书Logo需去掉） |
@@ -544,117 +554,161 @@ api_call("POST", f"https://open.feishu.cn/open-apis/bitable/v1/apps/{APP}/tables
 
 ---
 
-### 5.1 素材源速查表（Mixkit 采集）
+### 5.1 素材源速查表（多平台竖屏采集）
 
-> 运营/剪辑提供素材需求 → 搜 Mixkit 等免费源 → 建立可用素材索引
+> **核心原则：所有素材必须为 9:16 竖屏视频**，通过分辨率/画面比例字段筛选验收
 
-**需求分类 → Mixkit 映射：**
+**多平台搜索策略：**
 
-| 需求类型 | Mixkit 分类 | 说明 |
-|:---------|:------------|:-----|
-| 🏨 酒店素材 | hotel, hotel-room | 外观/客房/泳池/餐厅 |
-| 🦁 动物素材 | africa, safari, wildlife, elephant | 非洲/野生动物 |
-| 🏞️ 风景素材 | nature, sunset, beach, aerial/drone | 草原/湖泊/日落/航拍 |
-| 🔄 转场素材 | people, travel, hand, transitions(template) | 遮挡/过镜/模板 |
-| 👤 人物素材 | people, woman, couple, silhouette, tourism | 旅行/剪影/互动 |
-
-**Mixkit 直达链接速查表：**
-
-| 类别 | 横屏(16:9) | 竖屏(9:16) |
-|:----|:----------|:----------|
-| 🎬 全部素材 | https://mixkit.co/free-stock-video/ | https://mixkit.co/free-vertical-videos/ |
-| 🏨 酒店 | https://mixkit.co/free-stock-video/hotel/ | 横裁竖 / 搜beach竖屏 |
-| 🛏️ 酒店客房 | https://mixkit.co/free-stock-video/hotel-room/ | 横裁竖 |
-| 🌍 非洲 | https://mixkit.co/free-stock-video/africa/ | 横裁竖 |
-| 🦁 野生动物 | https://mixkit.co/free-stock-video/wildlife/ | 横裁竖 |
-| 🐆 Safari | https://mixkit.co/free-stock-video/safari/ | 横裁竖 |
-| 🏞️ 自然风景 | https://mixkit.co/free-stock-video/nature/ | `?orientation=vertical` |
-| 🏖️ 海滩 | https://mixkit.co/free-stock-video/beach/ | `?orientation=vertical` |
-| 🌅 日落 | https://mixkit.co/free-stock-video/sunset/ | `?orientation=vertical` |
-| 🧑 人物 | https://mixkit.co/free-stock-video/people/ | `?orientation=vertical` |
-| 🧳 旅游 | https://mixkit.co/free-stock-video/tourism/ | `?orientation=vertical` |
-| 🖐️ 手部动作 | https://mixkit.co/free-stock-video/hand/ | `?orientation=vertical` |
-| 🚁 航拍 | https://mixkit.co/free-drone-footage/ | 横屏为主 |
-| 🎞️ PR/AE转场模板 | https://mixkit.co/free-premiere-pro-templates/transitions/ | 模板 |
-
-> 💡 竖屏 URL 拼接：`https://mixkit.co/free-stock-video/discover/{category}/?orientation=vertical`
-
-**补充来源：**
-
-| 站点 | 竖屏 | 链接 |
-|:----|:----|:-----|
-| Pexels | `?orientation=portrait` | https://www.pexels.com/search/video/vertical/ |
-| Pixabay | `&orientation=vertical` | https://pixabay.com/videos/ |
-
-**竖屏素材现状说明：**
-
-| 类别 | 竖屏量 | 应对 |
-|:----|:------|:-----|
-| 🧑 人物/生活 | ✅ 2100+ | 竖屏站直接搜 |
-| 🎨 背景/纹理 | ✅ 661 | 竖屏分类 |
-| 🏞️ 自然/风景 | ⚠️ 149 | 竖屏分类 |
-| 🏨 酒店/动物 | ❌ 极少 | **横裁竖** |
-
-> **横裁竖**：Mixkit 非洲/酒店类基本只有横屏，在剪映/Premiere 里直接裁 9:16（保留主体），是最实用的竖屏方案
+| 平台 | 搜索方式 | 链接格式 | 竖屏支持 |
+|:----|:---------|:---------|:--------|
+| **Mixkit** | 加 `?orientation=vertical` 参数 | https://mixkit.co/free-stock-video/discover/{category}/?orientation=vertical | ✅ 竖屏分类页 |
+| **TikTok** | 关键词**先翻译成英文**（及其他语言），再用 `search/video/` | `https://www.tiktok.com/search/video/{英文关键词}` | ✅ 全部竖屏 |
+| **抖音** | 获取**具体视频 aweme_id**，构造播放页链接 | `https://www.douyin.com/video/{aweme_id}` | ✅ 全部竖屏 |
+| **小红书** | xhs CLI 指定 `--type video` | `https://www.xiaohongshu.com/explore/{id}` | ✅ 全部竖屏 |
+| **Instagram** | 搜 Reels 短视频 | `https://www.instagram.com/reels/search/?q={英文关键词}` | ✅ 全部竖屏 |
+| **微博** | 搜视频 + 筛选 | `https://s.weibo.com/weibo?q={URL编码关键词}&typeall=1&subtype=video` | ✅ 部分竖屏 |
 
 ---
 
-### 5.2 可用素材库（多维表格）
+#### TikTok 搜索规则（关键词翻译）
 
-建立独立的 **「⑦ 可用素材库」** 多维表格，展示所有已采集的素材源，供运营/剪辑师人工浏览、筛选、选片。
+中文关键词 → 必须先翻译为英文及其他语言，再拼接搜索链接：
 
-**表结构：**
+```
+# ❌ 错误
+琅勃拉邦布施 → https://www.tiktok.com/search/video/琅勃拉邦布施
+
+# ✅ 正确
+琅勃拉邦布施 → 英文: "Luang Prabang alms giving"
+  → https://www.tiktok.com/search/video/Luang%20Prabang%20alms%20giving
+
+曼谷大皇宫 → 英文: "Bangkok Grand Palace"
+  → https://www.tiktok.com/search/video/Bangkok%20Grand%20Palace
+
+# 多语言优先顺序：英文 > 目标国家语言 > 中文
+巴厘岛精灵沙滩 → 英文: "Bali Kelingking Beach"
+  → https://www.tiktok.com/search/video/Bali%20Kelingking%20Beach
+```
+
+**翻译对照表（常见东南亚关键词）：**
+
+| 中文 | 英文 | 印尼语/泰语/老挝语 |
+|:----|:----|:------------------|
+| 琅勃拉邦布施 | Luang Prabang alms giving | — |
+| 万荣独木舟 | Vang Vieng kayaking | — |
+| 曼谷大皇宫 | Bangkok Grand Palace | พระบรมมหาราชวัง |
+| 槟城乔治市壁画 | Penang George Town street art | — |
+| 吉隆坡双子塔 | KLCC Petronas Towers | — |
+| 巴厘岛精灵沙滩 | Bali Kelingking Beach | Pantai Kelingking |
+| 伊真火山蓝火 | Ijen volcano blue fire | Api biru Kawah Ijen |
+| 布罗莫火山日出 | Mount Bromo sunrise | Gunung Bromo |
+
+---
+
+#### 抖音搜索规则（具体视频链接）
+
+❌ 不要用抖音搜索链接：`https://www.douyin.com/search/{关键词}?type=video`
+✅ 必须用**具体视频播放页链接**：`https://www.douyin.com/video/{19位aweme_id}`
+
+获取方式：
+1. 用 opencli browser 打开抖音搜索页 → 获取视频列表
+2. 从页面中提取每个视频的 aweme_id（19位数字）
+3. 拼接为 `https://www.douyin.com/video/{aweme_id}`
+4. 或通过 xhs CLI 搜抖音内容获取直链
+
+```javascript
+// opencli browser 获取抖音视频ID
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://www.douyin.com/aweme/v1/web/search/item/?keyword=...&type=1', false);
+xhr.withCredentials = true;
+xhr.send(null);
+var data = JSON.parse(xhr.responseText);
+data.data.forEach(function(item) {
+  var aweme_id = item.aweme_info.aweme_id;
+  console.log('https://www.douyin.com/video/' + aweme_id);
+});
+```
+
+---
+
+#### Instagram 搜索规则
+
+```
+# 在 Instagram 搜 Reels
+https://www.instagram.com/reels/search/?q={英文关键词}
+
+# 或在站内 search 后选 Reels 标签
+```
+
+---
+
+#### 微博搜索规则
+
+```
+# 微博视频搜索
+https://s.weibo.com/weibo?q={URL编码关键词}&typeall=1&subtype=video
+
+# 示例（琅勃拉邦布施）
+https://s.weibo.com/weibo?q=%E7%90%85%E5%8B%83%E6%8B%89%E9%82%A6%E5%B8%83%E6%96%BD&typeall=1&subtype=video
+# 需要用 urllib.parse.quote() 编码关键词
+```
+
+---
+
+**素材验收标准（新增竖屏分辨率检测）：**
+
+| 验收项 | 标准 | 方法 |
+|:------|:-----|:-----|
+| 画面比例 | **9:16 竖屏** | ffprobe 检测分辨率，宽 < 高即为竖屏 |
+| 分辨率 | ≥1080×1920 | `ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 video.mp4` |
+| 帧率 | ≥30fps | `ffprobe -v error -select_streams v:0 -show_entries stream=r_frame_rate -of default=noprint_wrappers=1 video.mp4` |
+
+```bash
+# 竖屏检测命令
+ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 video.mp4
+# 输出示例: 1080,1920 → 竖屏(9:16)  ✓
+# 输出示例: 1920,1080 → 横屏(16:9)  ✗
+```
+
+---
+
+### 5.2 ⑥ 素材清单（多平台统一表结构）
+
+**表字段（v2）：**
 
 | 字段 | 类型 | 说明 |
 |:----|:----|:-----|
-| 类别 | Select(单选) | 🏨酒店 / 🦁动物 / 🏞️风景 / 🎬转场 / 👤人物 |
-| 素材名称 | Text | 合集名称 |
-| 链接 | Text(URL) | Mixkit 直达页 |
-| 可用数量 | Number | 该合集条数 |
-| 子分类 | Text | 细分标签（客房/Safari/航拍/竖屏） |
-| 画面比例 | Select | 16:9横屏 / 9:16竖屏 / 两者都有 |
-| 说明 | Text | 内容描述、筛选建议 |
-| 来源站 | Text | Mixkit / Pexels / 其他 |
-| 是否已用于项目 | Checkbox | 已选用的打勾标记 |
+| 镜头编号 | Number | 关联⑤素材匹配表 |
+| 画面描述 | Text | 精确的画面内容描述 |
+| 对应文案 | Text（长） | **完整对应文案段落**，不止片段，提升搜索匹配度 |
+| 素材链接 | Text(URL) | 具体视频直链 |
+| 来源平台 | Select | TikTok / 抖音 / 小红书 / Instagram / 微博 / Mixkit |
+| 画面比例 | Select | 9:16竖屏 ✅ |
+| 关键词(英) | Text | 搜索时使用的英文关键词，便于溯源和复用 |
+| 关键词(本地) | Text | 搜索时使用的本地语言关键词 |
+| 分辨率检测 | Text | 已检测/待检测 |
 
-**人工选片流程：**
+**对应文案字段（关键改进）：**
 
 ```
-运营/剪辑打开「⑦ 可用素材库」
-  → 按「类别」筛选所需类型
-  → 点「链接」跳转到 Mixkit 预览视频
-  → 人工选定合适的素材
-  → 在「⑥ 素材匹配」表中填入最终选定的素材链接
-  → 打勾「是否已用于项目」避免重复选
+# ❌ 之前：只有片段
+"下午去万荣划独木舟"
+
+# ✅ 现在：完整文案段落
+"第一站琅勃拉邦，4天慢节奏，清晨看布施，下午去万荣划独木舟。然后飞曼谷，虽然只待1天，但大皇宫+湄南河夜游一个不少。"
 ```
 
-**创建方法（飞书多维表格）：**
+完整文案段落 → 搜索时作为上下文 → 提高AI匹配准确度
 
-```bash
-# 1. 创建新 Base
-opencli lark-cli base +base-create --name "可用素材库 - {项目名}" --as bot
+**每个镜头至少3条链接且来源不重复：**
 
-# 2. 创建表带字段
-opencli lark-cli base +table-create \
-  --base-token "{base_token}" \
-  --name "素材索引" \
-  --fields '[{"field_name":"类别","type":"select"},{"field_name":"素材名称","type":"text"},{"field_name":"链接","type":"text"},{"field_name":"可用数量","type":"number"},{"field_name":"画面比例","type":"select"},{"field_name":"说明","type":"text"},{"field_name":"来源站","type":"text"}]' \
-  --as bot
-
-# 3. 批量写入（v1 API）
-opencli lark-cli api POST \
-  "/open-apis/bitable/v1/apps/{base_token}/tables/{table_id}/records/batch_create" \
-  --data '{"records":[{"fields":{...}}]}' \
-  --as bot
 ```
-
-**踩坑记录：**
-
-1. **竖屏量有限**：Mixkit 非洲动物/酒店类基本横屏，实用方案是「横裁竖」
-2. **Bitable v1 vs v3**：`+record-batch-create` 底层用 v3 校验严，推荐 v1 的 `api POST` 批量写入
-3. **Select 字段写入**：v1 API 直接传选项名字符串（如 `"类别":"🏨 酒店素材"`），无需包装成对象
-4. **公开权限**：`PATCH /permissions` 需传 `type` 字段，`link_share_entity` 需单独 PATCH
-5. **web_fetch 反爬**：Pexels 等有 403 限制，Mixkit 可直连，建议发链接让剪辑自己去下
+镜头1（地图/航线）
+  ├─ TikTok: https://www.tiktok.com/search/video/Southeast%20Asia%20travel%20route
+  ├─ 抖音: https://www.douyin.com/video/{aweme_id}
+  └─ 小红书: https://www.xiaohongshu.com/explore/{id}
+```
 
 ---
 
@@ -681,6 +735,15 @@ opencli lark-cli api POST \
 |:----|:-----|:--------:|
 | ⑥ 视频文案库 | 主表：每条视频一条记录，含口播文案 | faster-whisper 转写 |
 | 人物标签分析 | 子表：从文案提取的人物标签及上下文 | AI 分析 |
+
+## 采集线
+
+**独立多维表格：{产品名} - 全流程**
+
+| 编号 | 表名 | 用途 |
+|:---:|:----|:-----|
+| ①～⑤ | 创作线标准7张子表 | 同上 |
+| ⑥ | **素材清单** | 多平台竖屏视频链接索引，每个镜头3+条，含来源/关键词/文案段落 |
 
 ---
 
