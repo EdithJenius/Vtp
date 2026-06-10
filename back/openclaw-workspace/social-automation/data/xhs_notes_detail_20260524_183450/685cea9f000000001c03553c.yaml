@@ -1,0 +1,72 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 685cea9f000000001c03553c
+    model_type: note
+    note_card:
+      last_update_time: 1750919840000
+      share_info:
+        un_share: false
+      desc: "2025杭州十大高端酒店竞争力与商业模式解析\n\uFEFF#文旅策划[话题]#\uFEFF \uFEFF#文旅[话题]#\uFEFF \uFEFF\
+        #杭州高端酒店[话题]#\uFEFF \uFEFF#秋水山庄[话题]#\uFEFF \uFEFF#杭州香格里拉水知心居[话题]#\uFEFF \uFEFF\
+        #西子湖四季酒店[话题]#\uFEFF \uFEFF#法云安缦[话题]#\uFEFF"
+      interact_info:
+        liked_count: '140'
+        collected: false
+        collected_count: '111'
+        comment_count: '14'
+        share_count: '67'
+        followed: false
+        relation: none
+        liked: false
+      tag_list:
+      - id: 61556fcc000000000101f1e4
+        name: 文旅策划
+        type: topic
+      - id: 5d63a6fc0000000002002612
+        name: 文旅
+        type: topic
+      - id: 61359456000000000100050a
+        name: 杭州高端酒店
+        type: topic
+      - id: 60ef8a73000000000101cf5b
+        name: 秋水山庄
+        type: topic
+      - name: 杭州香格里拉水知心居
+        type: topic
+        id: 67e96a00000000000400e067
+      - id: 6177e660000000000101c77d
+        name: 西子湖四季酒店
+        type: topic
+      - type: topic
+        id: 5c0fbf0437c6ea00017ee5f4
+        name: 法云安缦
+      user:
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31h4sp2423q605nlep9sg8dbc0jj6bl0
+        xsec_token: ABMFRiQw3WdRr7UsZMcmAORTW9at8w5wAmprpGVItx53Y=
+        user_id: 5eaeca79000000000100356c
+        nickname: 文旅新知
+      image_list:
+      - live_photo: false
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/46378066e1bb34381adfcddd16371f9e/spectrum/1040g34o31j6drct1ia1g5nlep9sg8dbcek1e3i8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/adcf00af532648ffb80c8ba748a183bc/spectrum/1040g34o31j6drct1ia1g5nlep9sg8dbcek1e3i8!nd_dft_wlteh_webp_3
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/46378066e1bb34381adfcddd16371f9e/spectrum/1040g34o31j6drct1ia1g5nlep9sg8dbcek1e3i8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/adcf00af532648ffb80c8ba748a183bc/spectrum/1040g34o31j6drct1ia1g5nlep9sg8dbcek1e3i8!nd_dft_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        height: 1512
+        width: 1134
+      at_user_list: []
+      time: 1750930504000
+      note_id: 685cea9f000000001c03553c
+      type: normal
+      title: 我天，杭州十大高端酒店比“魔都”还壕？！
+  current_time: 1779618974921
+

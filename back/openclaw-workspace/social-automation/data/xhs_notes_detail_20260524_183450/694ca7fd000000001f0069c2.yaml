@@ -1,0 +1,174 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 694ca7fd000000001f0069c2
+    model_type: note
+    note_card:
+      type: normal
+      desc: "1️⃣ 崇左秘境丽世度假村\n\U0001F4CD大新县明仕村\n藏在祖国西南边陲的「山水秘境」！每间客房都自带270°落地窗观景台，拥有明星同款星空无边泳池\U0001F4A6\
+        ，不仅能拍到《花千骨》同款仙境倒影，还提供在地风味早餐及下午茶。\n\t\n2️⃣ 崇左在野宿集·野白​​\n\U0001F4CD大新县明仕旅游度假区\n\
+        由老糖厂改造而来，保留了红砖墙与铁轨元素，却在庭院里种满了紫色花海和青竹茶园\U0001F375~ 所有房型带私汤泡池或观景阳台，躺在床上就能看见喀斯特石山倒映在泳池里！\n\
+        \t\n3️⃣ ​​崇左明仕雅居​​\n\U0001F4CD大新县明仕村濑湍屯\n\U0001F33F房间设计把壮族文化融入细节，铜鼓元素吊灯、壮锦地毯、手工编织挂毯，连早餐都有五色糯米饭和恭城油茶！\n\
+        \t\n4️⃣ 崇左花山笙美度假村​​\n\U0001F4CD宁明县驮龙乡左江畔\n坐落在左江转弯处的半岛上，抬头就是世界文化遗产「花山岩画」的赭红崖壁，低头是碧绿的江水泛着粼光～\n\
+        \t\n5️⃣ ​​崇左在野宿集·既见​​\n\U0001F4CD大新县明仕旅游度假区\n在野宿集的「治愈系担当」！藏在一片百年古荔枝林里，白墙灰瓦的院落被绿植包裹，像一颗遗落的绿宝石\n\
+        \t\n6️⃣ ​​崇左江州笙美度假村​​\n\U0001F4CD江州区太平街道\n酒店依左江而建，园林里种满了百年古榕和三角梅，连泳池都藏在竹林后面，像一块被绿植包裹的翡翠\n\
+        \t\n7️⃣ ​​崇左大新明仕长留山居​​\n\U0001F4CD大新县明仕村\n「长留」二字取自「山水长留，岁月静好」，藏在明仕田园最幽静的角落，周围是连绵的稻田和竹林\n\
+        \t\n8️⃣ ​​崇左发呆坡·云舍​​\n\U0001F4CD大新县硕龙镇（近德天瀑布）\n藏在德天瀑布附近的山坡上，无边泳池像一块蓝宝石嵌在峰林之间。\n\
+        \t\n9️⃣ ​​崇左龙州观堂酒店​​\n\U0001F4CD龙州县独山路\n酒店由民国时期的「法国教会学校」改造而来，红砖墙、拱形门、老楼梯\n\
+        \t\n#怎么订酒店便宜[话题]#\n#发现宝藏酒店[话题]# #藏于山水间的度假胜地[话题]# #崇左[话题]# #崇左旅游[话题]# #崇左丽世[话题]#\
+        \ #崇左酒店[话题]# #崇左住宿[话题]# #度假酒店[话题]# #休闲度假酒店[话题]#"
+      image_list:
+      - width: 1242
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/7695120d318036f4ef8bda7ad8b4e39f/notes_pre_post/1040g3k831qghlkn3ga705q1rr74msc2ehirg088!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/77cf827bc0103911a1cc0d4c777c8698/notes_pre_post/1040g3k831qghlkn3ga705q1rr74msc2ehirg088!nd_dft_wlteh_webp_3
+          image_scene: WB_DFT
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/77cf827bc0103911a1cc0d4c777c8698/notes_pre_post/1040g3k831qghlkn3ga705q1rr74msc2ehirg088!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/7695120d318036f4ef8bda7ad8b4e39f/notes_pre_post/1040g3k831qghlkn3ga705q1rr74msc2ehirg088!nd_prv_wlteh_webp_3
+        height: 1656
+      - height: 1656
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/8a436cd595516ce083c86d47c48afb2f/notes_pre_post/1040g3k831qghlkn3ga7g5q1rr74msc2esbotlno!nd_prv_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/8a436cd595516ce083c86d47c48afb2f/notes_pre_post/1040g3k831qghlkn3ga7g5q1rr74msc2esbotlno!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/e4e5812d8d05e4059207a0e7c37e9eaa/notes_pre_post/1040g3k831qghlkn3ga7g5q1rr74msc2esbotlno!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/e4e5812d8d05e4059207a0e7c37e9eaa/notes_pre_post/1040g3k831qghlkn3ga7g5q1rr74msc2esbotlno!nd_dft_wlteh_webp_3
+        live_photo: false
+        width: 1242
+      - file_id: ''
+        height: 1656
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/41e1cfa8dafece2baf7f15de37e06990/notes_pre_post/1040g3k831qghlkn3ga805q1rr74msc2egubva5g!nd_prv_wlteh_webp_3
+        width: 1242
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/41e1cfa8dafece2baf7f15de37e06990/notes_pre_post/1040g3k831qghlkn3ga805q1rr74msc2egubva5g!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/3d45453126fe327781a47a153381b96e/notes_pre_post/1040g3k831qghlkn3ga805q1rr74msc2egubva5g!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/3d45453126fe327781a47a153381b96e/notes_pre_post/1040g3k831qghlkn3ga805q1rr74msc2egubva5g!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+      - file_id: ''
+        height: 1656
+        width: 1242
+        stream: {}
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/450e058cdd431a772972b0048b6044c3/notes_pre_post/1040g3k831qghlkn3ga8g5q1rr74msc2ectiqocg!nd_dft_wlteh_webp_3
+        live_photo: false
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/39ce128c8ec6c8529082fe5a62c43083/notes_pre_post/1040g3k831qghlkn3ga8g5q1rr74msc2ectiqocg!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/450e058cdd431a772972b0048b6044c3/notes_pre_post/1040g3k831qghlkn3ga8g5q1rr74msc2ectiqocg!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/39ce128c8ec6c8529082fe5a62c43083/notes_pre_post/1040g3k831qghlkn3ga8g5q1rr74msc2ectiqocg!nd_prv_wlteh_webp_3
+      - info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/3ff20a1842da023ea75dc6cdae2f9d2b/notes_pre_post/1040g3k831qghlkn3ga905q1rr74msc2ead810q8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/1d0c56d5d31414f290f1431d9d6260ea/notes_pre_post/1040g3k831qghlkn3ga905q1rr74msc2ead810q8!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/3ff20a1842da023ea75dc6cdae2f9d2b/notes_pre_post/1040g3k831qghlkn3ga905q1rr74msc2ead810q8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/1d0c56d5d31414f290f1431d9d6260ea/notes_pre_post/1040g3k831qghlkn3ga905q1rr74msc2ead810q8!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        height: 1656
+        trace_id: ''
+        width: 1242
+        url: ''
+      - stream: {}
+        file_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/79fc879abbbf0780cfe1cc3a0f2f750c/notes_pre_post/1040g3k831qghlkn3ga9g5q1rr74msc2eqqq9mfg!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/8687f6140e3eafbcd3952d77a933a458/notes_pre_post/1040g3k831qghlkn3ga9g5q1rr74msc2eqqq9mfg!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/79fc879abbbf0780cfe1cc3a0f2f750c/notes_pre_post/1040g3k831qghlkn3ga9g5q1rr74msc2eqqq9mfg!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/8687f6140e3eafbcd3952d77a933a458/notes_pre_post/1040g3k831qghlkn3ga9g5q1rr74msc2eqqq9mfg!nd_dft_wlteh_webp_3
+        height: 1656
+        width: 1242
+        trace_id: ''
+        live_photo: false
+      - live_photo: false
+        width: 1242
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/5f5463d15b63e0f4695cb295ee03ec5d/notes_pre_post/1040g3k831qghlkn3gaa05q1rr74msc2eigr4brg!nd_prv_wlteh_webp_3
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/5f5463d15b63e0f4695cb295ee03ec5d/notes_pre_post/1040g3k831qghlkn3gaa05q1rr74msc2eigr4brg!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/958ba1331928756d1ef5cf8fb0781616/notes_pre_post/1040g3k831qghlkn3gaa05q1rr74msc2eigr4brg!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/958ba1331928756d1ef5cf8fb0781616/notes_pre_post/1040g3k831qghlkn3gaa05q1rr74msc2eigr4brg!nd_dft_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        height: 1656
+      at_user_list: []
+      time: 1766631421000
+      note_id: 694ca7fd000000001f0069c2
+      title: 一张图看懂崇左酒店怎么选‼️
+      user:
+        user_id: 683bd9c9000000001b02304e
+        nickname: 快出发旅游
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31iurnjd1ha005q1rr74msc2ef7k2d78
+        xsec_token: ABaNnnpUPN9TJKVT8rP38rQ4hsP2qf-iK9esDKzgmkP28=
+      interact_info:
+        share_count: '265'
+        followed: false
+        relation: none
+        liked: false
+        liked_count: '387'
+        collected: false
+        collected_count: '727'
+        comment_count: '59'
+      tag_list:
+      - id: 62ec3f58000000000101dcbe
+        name: 怎么订酒店便宜
+        type: topic
+      - id: 58206ae0f5a26372fcf3daa3
+        name: 发现宝藏酒店
+        type: topic
+      - name: 藏于山水间的度假胜地
+        type: topic
+        id: 62e2bb1d0000000001006550
+      - id: 5cfa91cd000000000e017ee3
+        name: 崇左
+        type: topic
+      - id: 5c1aa46e000000000302e284
+        name: 崇左旅游
+        type: topic
+      - id: 5fcd97d2000000000100af35
+        name: 崇左丽世
+        type: topic
+      - name: 崇左酒店
+        type: topic
+        id: 619872a300000000010076d2
+      - id: 632b1806000000000101e2b7
+        name: 崇左住宿
+        type: topic
+      - id: 5c67648b000000000e030685
+        name: 度假酒店
+        type: topic
+      - type: topic
+        id: 61922776000000000101c1cc
+        name: 休闲度假酒店
+      last_update_time: 1767838445000
+      share_info:
+        un_share: false
+  current_time: 1779618948110
+

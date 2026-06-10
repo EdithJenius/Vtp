@@ -1,0 +1,184 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 68344ab0000000002300f005
+    model_type: note
+    note_card:
+      note_id: 68344ab0000000002300f005
+      title: 住一天要一个月工资🥹🥹
+      interact_info:
+        liked: false
+        liked_count: 3.6万
+        collected: false
+        collected_count: 1.7万
+        comment_count: '302'
+        share_count: '3379'
+        followed: false
+        relation: none
+      at_user_list: []
+      time: 1748257456000
+      last_update_time: 1748257456000
+      share_info:
+        un_share: false
+      type: video
+      desc: '这些国内的顶奢酒店太美了吧[哭惹R]
+
+        住一天都得一个月工资
+
+        #为了住酒店而去的目的地[话题]# #我是到了神仙住的地方吧[话题]# #度假酒店[话题]# #五星级酒店[话题]# #酒店代订[话题]# #酒店控[话题]#
+        #酒店天花板[话题]#'
+      user:
+        user_id: 6230f7620000000021025214
+        nickname: 小y不住酒店🏨
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/6415239a93ba5c915e6a6dd6.jpg
+        xsec_token: ABgLYxmV4uTi07PYH_tjy6Sg5bbbhLXwJX7dyyttev_rs=
+      image_list:
+      - url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/5f07f49e2c19e89fc6cb8569280bbebc/1040g2sg31huo8i5r5oe05ohguth8ckgkkag5sso!nd_prv_wgth_webp_3
+        stream: {}
+        file_id: ''
+        height: 1080
+        width: 1440
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/5f07f49e2c19e89fc6cb8569280bbebc/1040g2sg31huo8i5r5oe05ohguth8ckgkkag5sso!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/2503edfb0e16d1771193a8c5e992f57e/1040g2sg31huo8i5r5oe05ohguth8ckgkkag5sso!nd_dft_wgth_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/2503edfb0e16d1771193a8c5e992f57e/1040g2sg31huo8i5r5oe05ohguth8ckgkkag5sso!nd_dft_wgth_webp_3
+        live_photo: false
+      video:
+        media_v2: '{"video_id":"137417282632143115","video":{"biz_name":110,"biz_id":"281532472104906757","duration":21,"md5":"1d0ec00e558313e1f61a7cfbadba7fbc","hdr_type":0,"drm_type":0,"stream_types":[114,259,130],"width":1920,"height":1080,"bound":[{"x":0,"y":0,"w":0,"h":0}],"bbox":{"ocr_v5":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v3":[{"x":352,"y":170,"w":1264,"h":346}],"ocr_v4":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v2":[{"x":352,"y":170,"w":1264,"h":346}]},"opaque1":{"domestic":"1","loudnorm":"{\"lra\":1.1,\"htp\":1.57,\"hldn\":-9.24,\"ldn\":-9.04,\"thr\":-19.04}","isSupportSubtitle":"false","hasHumanVoice":"false","audioLevInfo":"{\"audio_quality_level\":\"E\",\"mos_overall\":3.7839,\"version\":\"3.0\"}","weakNetUserFlag":"1","audioClsInfo":"{\"music_ratio\":0.999510714309652,\"freesound_ratio\":0.16193736976823045,\"speech_ratio\":0.0}"}},"stream":{"h264":[{"stream_type":259,"stream_desc":"WM_X264_MP4_web","default_stream":0,"format":"mp4","width":1280,"height":720,"duration":20534,"size":3171804,"volume":0.0,"avg_bitrate":1235727,"fps":30,"video_codec":"h264","video_bitrate":1164283,"video_duration":20533,"audio_codec":"aac","audio_bitrate":64439,"audio_duration":20524,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/259/01e8344a5d49d10b01037003970c442228_259.mp4?sign=f47ffdbfe9e926370d9cf68df9d973ee&t=6a1771bf","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/259/01e8344a5d49d10b01037003970c442228_259.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":0.0,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h265":[{"stream_type":114,"stream_desc":"X265_MP4_WEB_114","default_stream":0,"format":"mp4","width":1280,"height":720,"duration":20534,"size":2481003,"volume":0.0,"avg_bitrate":966593,"fps":30,"video_codec":"hevc","video_bitrate":830580,"video_duration":20533,"audio_codec":"aac","audio_bitrate":128878,"audio_duration":20524,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/114/01e8344a5d49d10b01037001970c4488a6_114.mp4?sign=874976a7e933b53ca8689b3d27404e20&t=6a1771bf","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/114/01e8344a5d49d10b01037001970c4488a6_114.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":40.29199981689453,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}},{"stream_type":130,"stream_desc":"X265_MP4_WEB_130","default_stream":0,"format":"mp4","width":1920,"height":1080,"duration":20552,"size":2888280,"volume":0.0,"avg_bitrate":1124281,"fps":30,"video_codec":"hevc","video_bitrate":989855,"video_duration":20533,"audio_codec":"aac","audio_bitrate":128136,"audio_duration":20551,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/130/01e8344a5d49d10b01037001970ddd814e_130.mp4?sign=5cdc78dabd39203a4fb734adc77f3eb9&t=6a1771bf","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/130/01e8344a5d49d10b01037001970ddd814e_130.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":39.845001220703125,"ssim":0.0,"weight":70,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h266":[],"av1":[]},"user_level":0}'
+        media:
+          video_id: 137417282632143115
+          video:
+            biz_name: 110
+            biz_id: '281532472104906757'
+            duration: 21
+            md5: 1d0ec00e558313e1f61a7cfbadba7fbc
+            hdr_type: 0
+            drm_type: 0
+            stream_types:
+            - 114
+            - 259
+            - 130
+          stream:
+            av1: []
+            h264:
+            - default_stream: 0
+              height: 720
+              audio_codec: aac
+              audio_duration: 20524
+              audio_channels: 2
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/259/01e8344a5d49d10b01037003970c442228_259.mp4
+              duration: 20534
+              rotate: 0
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/259/01e8344a5d49d10b01037003970c442228_259.mp4?sign=f47ffdbfe9e926370d9cf68df9d973ee&t=6a1771bf
+              size: 3171804
+              video_bitrate: 1164283
+              audio_bitrate: 64439
+              weight: 62
+              stream_type: 259
+              stream_desc: WM_X264_MP4_web
+              width: 1280
+              video_duration: 20533
+              video_codec: h264
+              volume: 0
+              psnr: 0
+              quality_type: HD
+              hdr_type: 0
+              vmaf: -1
+              ssim: 0
+              format: mp4
+              avg_bitrate: 1235727
+              fps: 30
+            h265:
+            - duration: 20534
+              size: 2481003
+              psnr: 40.29199981689453
+              ssim: 0
+              quality_type: HD
+              stream_type: 114
+              format: mp4
+              audio_bitrate: 128878
+              weight: 62
+              fps: 30
+              audio_duration: 20524
+              audio_channels: 2
+              rotate: 0
+              default_stream: 0
+              avg_bitrate: 966593
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/114/01e8344a5d49d10b01037001970c4488a6_114.mp4?sign=874976a7e933b53ca8689b3d27404e20&t=6a1771bf
+              vmaf: -1
+              height: 720
+              video_codec: hevc
+              video_duration: 20533
+              hdr_type: 0
+              width: 1280
+              volume: 0
+              stream_desc: X265_MP4_WEB_114
+              video_bitrate: 830580
+              audio_codec: aac
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/114/01e8344a5d49d10b01037001970c4488a6_114.mp4
+            - stream_type: 130
+              duration: 20552
+              audio_channels: 2
+              weight: 70
+              volume: 0
+              audio_bitrate: 128136
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/130/01e8344a5d49d10b01037001970ddd814e_130.mp4?sign=5cdc78dabd39203a4fb734adc77f3eb9&t=6a1771bf
+              stream_desc: X265_MP4_WEB_130
+              format: mp4
+              video_bitrate: 989855
+              audio_codec: aac
+              rotate: 0
+              height: 1080
+              video_duration: 20533
+              vmaf: -1
+              quality_type: HD
+              video_codec: hevc
+              audio_duration: 20551
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/130/01e8344a5d49d10b01037001970ddd814e_130.mp4
+              psnr: 39.845001220703125
+              hdr_type: 0
+              default_stream: 0
+              ssim: 0
+              width: 1920
+              size: 2888280
+              avg_bitrate: 1124281
+              fps: 30
+            h266: []
+        image:
+          first_frame_fileid: 110/0/01e8344a5d49d10b001000000001970c43c7de_0.jpg
+          thumbnail_fileid: 110/0/01e8344a5d49d10b001000000001970c43e918_0.webp
+        capa:
+          duration: 20
+      tag_list:
+      - type: topic
+        id: 62faf50e000000000100083e
+        name: 为了住酒店而去的目的地
+      - type: topic
+        id: 63354aa800000000010021fe
+        name: 我是到了神仙住的地方吧
+      - id: 5c67648b000000000e030685
+        name: 度假酒店
+        type: topic
+      - id: 5bff3c1d0d09b90001f28573
+        name: 五星级酒店
+        type: topic
+      - id: 5c2497cd000000000a030839
+        name: 酒店代订
+        type: topic
+      - id: 553cf0b4b4c4d6125b84efc8
+        name: 酒店控
+        type: topic
+      - type: topic
+        id: 61913e970000000001005056
+        name: 酒店天花板
+  current_time: 1779618943408
+

@@ -1,0 +1,372 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 68e2550f000000000700f8b3
+    model_type: note
+    note_card:
+      tag_list:
+      - type: topic
+        id: 6374a654000000000100394b
+        name: 浪漫生活的记录者
+      - id: 63f87388000000000101d556
+        name: 崇左丽世秘境酒店
+        type: topic
+      - id: 5cd8c37b000000000d013594
+        name: 明仕田园
+        type: topic
+      - id: 67496bdb0000000020020177
+        name: 大新明仕长留山居
+        type: topic
+      at_user_list: []
+      time: 1759663375000
+      user:
+        user_id: 5a942e8ae8ac2b4653f62c07
+        nickname: Iris à Paris
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/63287ba5bf2310466421530c.jpg
+        xsec_token: AB-MeYNwb5839eAH5TfUnki3bVTOy0Tqf-h1ylUicvInM=
+      interact_info:
+        followed: false
+        relation: none
+        liked: false
+        liked_count: '248'
+        collected: false
+        collected_count: '154'
+        comment_count: '28'
+        share_count: '2013'
+      image_list:
+      - trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/b4c106e96b2cec122cc67b1f29702689/1040g00831n8n3rpaks104a2qffn8kb077qttdh8!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/3352be974cb58e9fceac2d9e5a9979c1/1040g00831n8n3rpaks104a2qffn8kb077qttdh8!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/b4c106e96b2cec122cc67b1f29702689/1040g00831n8n3rpaks104a2qffn8kb077qttdh8!nd_prv_wgth_webp_3
+        stream:
+          av1: []
+          h264:
+          - master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8e254dce89e1e0100500399b4242456_19.mp4?sign=e3a0866e960c5c53308bcf662393b20f&t=6a1771c6
+            backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8e254dce89e1e0100500399b4242456_19.mp4
+          h265: []
+          h266: []
+        file_id: ''
+        width: 2560
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/3352be974cb58e9fceac2d9e5a9979c1/1040g00831n8n3rpaks104a2qffn8kb077qttdh8!nd_dft_wgth_webp_3
+        live_photo: true
+        height: 1919
+        url: ''
+      - file_id: ''
+        url: ''
+        live_photo: false
+        height: 1920
+        width: 2560
+        trace_id: ''
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/e0423fc74241df0aa180b91b14f6c070/1040g00831n8loqhal24g4a2qffn8kb07orqpt2g!nd_prv_wgth_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/8a8b37abdcba1dd18a63935ace23a9f8/1040g00831n8loqhal24g4a2qffn8kb07orqpt2g!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/e0423fc74241df0aa180b91b14f6c070/1040g00831n8loqhal24g4a2qffn8kb07orqpt2g!nd_prv_wgth_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/8a8b37abdcba1dd18a63935ace23a9f8/1040g00831n8loqhal24g4a2qffn8kb07orqpt2g!nd_dft_wgth_webp_3
+        stream: {}
+      - file_id: ''
+        height: 1920
+        width: 2560
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/0897d59dcb5c1f37091c11fd4b051f22/1040g00831n8n3rpaks0g4a2qffn8kb07er8fa4g!nd_prv_wgth_webp_3
+        stream:
+          h264:
+          - master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8e254e0e7c5520100500399b42429b5_19.mp4?sign=7787268790d4bc31a0097655fa9abe07&t=6a1771c6
+            backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8e254e0e7c5520100500399b42429b5_19.mp4
+          h265: []
+          h266: []
+          av1: []
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/0897d59dcb5c1f37091c11fd4b051f22/1040g00831n8n3rpaks0g4a2qffn8kb07er8fa4g!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/06de0c9ac2badec2756fcee96e6e34ee/1040g00831n8n3rpaks0g4a2qffn8kb07er8fa4g!nd_dft_wgth_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/06de0c9ac2badec2756fcee96e6e34ee/1040g00831n8n3rpaks0g4a2qffn8kb07er8fa4g!nd_dft_wgth_webp_3
+        live_photo: true
+      - url_default: http://sns-webpic-qc.xhscdn.com/202605241835/057660ef812090e41acb012ff7f74d85/1040g00831n8loqhal22g4a2qffn8kb07t7kc2pg!nd_dft_wlteh_webp_3
+        file_id: ''
+        width: 1920
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/97ef4f285fc4ef5a04b075405f185889/1040g00831n8loqhal22g4a2qffn8kb07t7kc2pg!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/057660ef812090e41acb012ff7f74d85/1040g00831n8loqhal22g4a2qffn8kb07t7kc2pg!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/97ef4f285fc4ef5a04b075405f185889/1040g00831n8loqhal22g4a2qffn8kb07t7kc2pg!nd_prv_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        height: 2560
+        url: ''
+        trace_id: ''
+      - file_id: ''
+        height: 2560
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/f3575d86baaefe5cbf23173c8373d94f/1040g00831n8loqhal2204a2qffn8kb07lqq8uq8!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        width: 1920
+        url: ''
+        trace_id: ''
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/f9726eac97eb2cf6c8d5b85fd30fa370/1040g00831n8loqhal2204a2qffn8kb07lqq8uq8!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/f3575d86baaefe5cbf23173c8373d94f/1040g00831n8loqhal2204a2qffn8kb07lqq8uq8!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/f9726eac97eb2cf6c8d5b85fd30fa370/1040g00831n8loqhal2204a2qffn8kb07lqq8uq8!nd_prv_wlteh_webp_3
+      - file_id: ''
+        width: 2560
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/ee7e7750718f4dd4ca488034827a344e/1040g00831n8loqhal2404a2qffn8kb074e12oc8!nd_dft_wgth_webp_3
+        height: 1920
+        url: ''
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/fb96b40e51d126f93363b333d8e49ad2/1040g00831n8loqhal2404a2qffn8kb074e12oc8!nd_prv_wgth_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/ee7e7750718f4dd4ca488034827a344e/1040g00831n8loqhal2404a2qffn8kb074e12oc8!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/fb96b40e51d126f93363b333d8e49ad2/1040g00831n8loqhal2404a2qffn8kb074e12oc8!nd_prv_wgth_webp_3
+        stream: {}
+        live_photo: false
+      - width: 2560
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/9c4c64c40d3536c58c2566afb5bb7104/1040g00831n8n3rpaks3g4a2qffn8kb074uvg01g!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/c604a4963f4f248054599875e4a5777c/1040g00831n8n3rpaks3g4a2qffn8kb074uvg01g!nd_dft_wgth_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/c604a4963f4f248054599875e4a5777c/1040g00831n8n3rpaks3g4a2qffn8kb074uvg01g!nd_dft_wgth_webp_3
+        live_photo: true
+        height: 1920
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/9c4c64c40d3536c58c2566afb5bb7104/1040g00831n8n3rpaks3g4a2qffn8kb074uvg01g!nd_prv_wgth_webp_3
+        stream:
+          av1: []
+          h264:
+          - master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8e254e4e7d1080100500399b424211f_19.mp4?sign=b6d14d2b4cd965d79f477b7e45b3be30&t=6a1771c6
+            backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8e254e4e7d1080100500399b424211f_19.mp4
+          h265: []
+          h266: []
+        file_id: ''
+      - height: 1920
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/b0355a4332f411f375a27f63a0aa0849/1040g00831n8n3rpaks204a2qffn8kb07cgr05j0!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/212711c70bc99d0cd068bac7661a703c/1040g00831n8n3rpaks204a2qffn8kb07cgr05j0!nd_dft_wgth_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/212711c70bc99d0cd068bac7661a703c/1040g00831n8n3rpaks204a2qffn8kb07cgr05j0!nd_dft_wgth_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        width: 2560
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/b0355a4332f411f375a27f63a0aa0849/1040g00831n8n3rpaks204a2qffn8kb07cgr05j0!nd_prv_wgth_webp_3
+      - file_id: ''
+        height: 1920
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/c527d4465dcc26f7a0c2ce50428d80d4/1040g00831n8loqhal2304a2qffn8kb07n788sf8!nd_prv_wgth_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/a812f1056102034e801cf34d351a39a7/1040g00831n8loqhal2304a2qffn8kb07n788sf8!nd_dft_wgth_webp_3
+        width: 2560
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/c527d4465dcc26f7a0c2ce50428d80d4/1040g00831n8loqhal2304a2qffn8kb07n788sf8!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/a812f1056102034e801cf34d351a39a7/1040g00831n8loqhal2304a2qffn8kb07n788sf8!nd_dft_wgth_webp_3
+        stream: {}
+        live_photo: false
+      - file_id: ''
+        url: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/c90a9eff1ff6f6b29b50fbbe8e93659d/1040g00831n8loqhal2604a2qffn8kb07krs0edg!nd_dft_wgth_webp_3
+        stream: {}
+        live_photo: false
+        height: 1920
+        width: 2560
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/c52ea7c381fed6497e99b9248fdf25a6/1040g00831n8loqhal2604a2qffn8kb07krs0edg!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/c90a9eff1ff6f6b29b50fbbe8e93659d/1040g00831n8loqhal2604a2qffn8kb07krs0edg!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/c52ea7c381fed6497e99b9248fdf25a6/1040g00831n8loqhal2604a2qffn8kb07krs0edg!nd_prv_wgth_webp_3
+      - file_id: ''
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/7c99a94090e06df3d003afb26d5dea93/1040g00831n8loqhal25g4a2qffn8kb07t9id1vo!nd_prv_wgth_webp_3
+        live_photo: false
+        height: 1919
+        width: 2560
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/7c99a94090e06df3d003afb26d5dea93/1040g00831n8loqhal25g4a2qffn8kb07t9id1vo!nd_prv_wgth_webp_3
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/a290cd43fda0bf11984a314507421d5b/1040g00831n8loqhal25g4a2qffn8kb07t9id1vo!nd_dft_wgth_webp_3
+          image_scene: WB_DFT
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/a290cd43fda0bf11984a314507421d5b/1040g00831n8loqhal25g4a2qffn8kb07t9id1vo!nd_dft_wgth_webp_3
+        stream: {}
+      - width: 1920
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/cf4fb48549ca0228584903333222fb2a/1040g00831n8loqhal2504a2qffn8kb07i6l1sg8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/c3cda43da09c7b729a0c8618ea2f5322/1040g00831n8loqhal2504a2qffn8kb07i6l1sg8!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/cf4fb48549ca0228584903333222fb2a/1040g00831n8loqhal2504a2qffn8kb07i6l1sg8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/c3cda43da09c7b729a0c8618ea2f5322/1040g00831n8loqhal2504a2qffn8kb07i6l1sg8!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        height: 2560
+        url: ''
+      - file_id: ''
+        height: 2560
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/bddf8c8fe3b11e9181fc8e7196445611/1040g00831n8n3rpaks304a2qffn8kb07j8ueut0!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/99c3318833c7c042fc9d0f51fab6aa4a/1040g00831n8n3rpaks304a2qffn8kb07j8ueut0!nd_dft_wlteh_webp_3
+        live_photo: false
+        width: 1920
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/bddf8c8fe3b11e9181fc8e7196445611/1040g00831n8n3rpaks304a2qffn8kb07j8ueut0!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/99c3318833c7c042fc9d0f51fab6aa4a/1040g00831n8n3rpaks304a2qffn8kb07j8ueut0!nd_dft_wlteh_webp_3
+        stream: {}
+      - info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/0daa34f028d1305528988483a1383c68/1040g00831n8n3rpaks2g4a2qffn8kb07seujoig!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/c6512d090ccac6bd43228d71fe98a605/1040g00831n8n3rpaks2g4a2qffn8kb07seujoig!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/0daa34f028d1305528988483a1383c68/1040g00831n8n3rpaks2g4a2qffn8kb07seujoig!nd_prv_wgth_webp_3
+        height: 1920
+        trace_id: ''
+        url: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/c6512d090ccac6bd43228d71fe98a605/1040g00831n8n3rpaks2g4a2qffn8kb07seujoig!nd_dft_wgth_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        width: 2560
+      - file_id: ''
+        width: 2560
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/eaa4fcdf5454b8ae6d4d2484c0d90806/1040g00831n8n3rpaks404a2qffn8kb07q4olu60!nd_prv_wgth_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/c41a72e50ea7ff3c3dc3ee0a16b527f1/1040g00831n8n3rpaks404a2qffn8kb07q4olu60!nd_dft_wgth_webp_3
+        height: 1920
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/eaa4fcdf5454b8ae6d4d2484c0d90806/1040g00831n8n3rpaks404a2qffn8kb07q4olu60!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/c41a72e50ea7ff3c3dc3ee0a16b527f1/1040g00831n8n3rpaks404a2qffn8kb07q4olu60!nd_dft_wgth_webp_3
+        stream: {}
+        live_photo: false
+      - url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/a577d06569033beac30b08512dab9abe/1040g00831n8n3rpaks1g4a2qffn8kb0763ue0rg!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/409d4deb09fccc06084eb01d034fcad9/1040g00831n8n3rpaks1g4a2qffn8kb0763ue0rg!nd_dft_wgth_webp_3
+        stream:
+          h264:
+          - master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8e254e8e8804d0100500399b42421f7_19.mp4?sign=70d7a9f1dd249421ecf1bc460b2a556f&t=6a1771c6
+            backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8e254e8e8804d0100500399b42421f7_19.mp4
+          h265: []
+          h266: []
+          av1: []
+        live_photo: true
+        file_id: ''
+        height: 1920
+        width: 2560
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/a577d06569033beac30b08512dab9abe/1040g00831n8n3rpaks1g4a2qffn8kb0763ue0rg!nd_prv_wgth_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/409d4deb09fccc06084eb01d034fcad9/1040g00831n8n3rpaks1g4a2qffn8kb0763ue0rg!nd_dft_wgth_webp_3
+      - stream:
+          h264:
+          - master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8e254ebe7e7440100500399b4242234_19.mp4?sign=4347b0044b5fbe28aa71ceb7492d777d&t=6a1771c6
+            backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8e254ebe7e7440100500399b4242234_19.mp4
+          h265: []
+          h266: []
+          av1: []
+        width: 2560
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/cc9dcdddec9cfe670af0828eaabf1cd1/1040g00831n8loqhal26g4a2qffn8kb071oeusk8!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/4a79d62b6ee64868cd8de3de268da236/1040g00831n8loqhal26g4a2qffn8kb071oeusk8!nd_dft_wgth_webp_3
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/cc9dcdddec9cfe670af0828eaabf1cd1/1040g00831n8loqhal26g4a2qffn8kb071oeusk8!nd_prv_wgth_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/4a79d62b6ee64868cd8de3de268da236/1040g00831n8loqhal26g4a2qffn8kb071oeusk8!nd_dft_wgth_webp_3
+        live_photo: true
+        file_id: ''
+        height: 1920
+      - file_id: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/63a2f6ff135490be0c2db741224e37e7/1040g00831n8loqhal23g4a2qffn8kb07ms76co0!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/add1c788224515fbd2893b31788926e8/1040g00831n8loqhal23g4a2qffn8kb07ms76co0!nd_dft_wlteh_webp_3
+        live_photo: false
+        height: 2560
+        width: 1920
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/63a2f6ff135490be0c2db741224e37e7/1040g00831n8loqhal23g4a2qffn8kb07ms76co0!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/add1c788224515fbd2893b31788926e8/1040g00831n8loqhal23g4a2qffn8kb07ms76co0!nd_dft_wlteh_webp_3
+        stream: {}
+      desc: '崇左丽世还是很期待的一家度假酒店。
+
+        图1-3是大堂招牌明信片式的美景，无须多言。
+
+        早餐(图5)有点单部分，算正常水准。
+
+        泳池(图4)人不多，因为有的房型是有私人泳池的。
+
+        现在Le Labo算是奢华酒店备品的标配了吧，
+
+        Lux选的是22号，倒挺符合我的喜好的。
+
+        前几天暴雨水位太高，下午茶没有开放，有点可惜。
+
+        一个傍晚我们去了明仕那里的稻那里，
+
+        人造景观很一般，还是自然景观比较漂亮(图9-11)。
+
+        当然如果想凹造型拍照还是可以的。
+
+        另一个傍晚我们去了Citta餐厅(图12-14)，推荐！
+
+        食物都很不错，一楼景观位有300多的消费要求，
+
+        国定假日还是建议大家提前预约一下，2小时限时。
+
+        哦对了，明仕那里的中餐避雷，贵而且不好吃。
+
+        明仕田园我们还选了一家酒店入，大新明仕长留山居。
+
+        五楼的景观也很不错(图15)，国庆晚上还看到了烟花。
+
+        房型是酒店唯二的边套(图16)，270度景色无遮挡。
+
+        酒店有免费钓鱼活动，上鱼特别快特别多。
+
+        满足了家里小学生钓鱼的所有乐趣(图17-18)。
+
+        #浪漫生活的记录者[话题]# #崇左丽世秘境酒店[话题]# #明仕田园[话题]# #大新明仕长留山居[话题]#'
+      last_update_time: 1759663879000
+      share_info:
+        un_share: false
+      note_id: 68e2550f000000000700f8b3
+      type: normal
+      title: 久闻不如一住之崇左丽世
+  current_time: 1779618950211
+

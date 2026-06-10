@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超值旅行 · 小红书内容工坊</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: white;
+            padding: 30px 40px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 { font-size: 24px; font-weight: 700; }
+        .header .subtitle { font-size: 14px; opacity: 0.8; margin-top: 4px; }
+        .header .badge {
+            background: rgba(255,255,255,0.15);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid #e8e8ed;
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card-title .icon { font-size: 20px; }
+
+        /* Form */
+        .form-group { margin-bottom: 16px; }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: #555;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #d1d1d6;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #007aff;
+            box-shadow: 0 0 0 3px rgba(0,122,255,0.1);
+        }
+        .form-group textarea { min-height: 80px; resize: vertical; }
+
+        /* Buttons */
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn {
+            padding: 10px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn:active { transform: scale(0.97); }
+        .btn-primary { background: #007aff; color: white; }
+        .btn-primary:hover { background: #0066d6; }
+        .btn-primary:disabled { background: #a0c4ff; cursor: not-allowed; }
+        .btn-success { background: #34c759; color: white; }
+        .btn-success:hover { background: #2db84e; }
+        .btn-success:disabled { background: #a0e4b0; cursor: not-allowed; }
+        .btn-outline { background: transparent; color: #007aff; border: 1px solid #007aff; }
+        .btn-outline:hover { background: #f0f8ff; }
+        .btn-danger { background: #ff3b30; color: white; }
+        .btn-danger:hover { background: #d62b20; }
+        .btn-sm { padding: 6px 14px; font-size: 12px; }
+
+        /* Step indicators */
+        .steps {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .step {
+            flex: 1;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 500;
+            background: #f0f0f5;
+            color: #999;
+            transition: all 0.3s;
+        }
+        .step.active { background: #007aff; color: white; }
+        .step.done { background: #34c759; color: white; }
+        .step .step-num {
+            display: inline-block;
+            width: 22px; height: 22px;
+            line-height: 22px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            margin-right: 6px;
+            font-size: 12px;
+        }
+
+        /* Results */
+        .result-area {
+            background: #f9f9fb;
+            border: 1px solid #e8e8ed;
+            border-radius: 8px;
+            padding: 16px;
+            min-height: 100px;
+            font-size: 14px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        .result-area.loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            min-height: 80px;
+        }
+        .result-area .loading-dots::after {
+            content: '';
+            animation: dots 1.5s infinite;
+        }
+        @keyframes dots {
+            0% { content: ''; }
+            33% { content: '.'; }
+            66% { content: '..'; }
+            100% { content: '...'; }
+        }
+
+        /* Tabs */
+        .tabs { display: flex; gap: 4px; margin-bottom: 16px; }
+        .tab {
+            padding: 8px 20px;
+            border: 1px solid #d1d1d6;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .tab.active { background: #007aff; color: white; border-color: #007aff; }
+
+        /* Log */
+        .log-area {
+            background: #1d1d1f;
+            color: #98c379;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: 'SF Mono', monospace;
+            font-size: 12px;
+            min-height: 120px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+        .log-area .log-time { color: #888; }
+        .log-area .log-info { color: #61afef; }
+        .log-area .log-success { color: #98c379; }
+        .log-area .log-warn { color: #e5c07b; }
+        .log-area .log-error { color: #e06c75; }
+
+        /* Grid */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+        /* Matrix tags */
+        .matrix-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+        .matrix-tag {
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            background: #f0f0f5;
+            border: 1px solid #e0e0e5;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .matrix-tag.selected { background: #007aff; color: white; border-color: #007aff; }
+        .matrix-tag:hover { border-color: #007aff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <h1>📒 小红书内容工坊</h1>
+                <div class="subtitle">对标拆解 → 爆款分析 → 内容裂变 · 超值旅行 Value Trips</div>
+            </div>
+            <div class="badge">v1.0 · 由 Jarvis 🤖 驱动</div>
+        </div>
+
+        <!-- Steps -->
+        <div class="steps">
+            <div class="step active" id="step1"><span class="step-num">1</span> 输入对标</div>
+            <div class="step" id="step2"><span class="step-num">2</span> 🔍 抓取分析</div>
+            <div class="step" id="step3"><span class="step-num">3</span> 🧠 多维拆解</div>
+            <div class="step" id="step4"><span class="step-num">4</span> ✨ 裂变生成</div>
+        </div>
+
+        <div class="grid-2">
+            <!-- Left: Input -->
+            <div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">📎</span> 对标笔记输入</div>
+                    <div class="form-group">
+                        <label>小红书笔记链接</label>
+                        <input type="url" id="noteUrl" placeholder="https://www.xiaohongshu.com/explore/...">
+                    </div>
+                    <div class="form-group">
+                        <label>笔记标题/ID（可选）</label>
+                        <input type="text" id="noteTitle" placeholder="例如：3000块玩转大理">
+                    </div>
+                    <div class="form-group">
+                        <label>🎯 重点学习哪些点？</label>
+                        <textarea id="learnPoints" placeholder="例如：&#10;1. 标题用了数字悬念+场景代入&#10;2. 开头3行直击打工人痛点&#10;3. 图片风格是ins风暖色调&#10;4. 结尾引导收藏话术"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>🧭 内容方向 / 选题关键词</label>
+                        <input type="text" id="keywords" placeholder="例如：暑假去哪玩、蜜月旅行、亲子游">
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="startFetch()">🔍 抓取同类爆款</button>
+                        <button class="btn btn-outline" onclick="clearAll()">清空</button>
+                    </div>
+                </div>
+
+                <!-- Matrix Config -->
+                <div class="card">
+                    <div class="card-title"><span class="icon">🎯</span> 裂变维度配置</div>
+                    <div style="font-size:13px;color:#666;margin-bottom:12px;">选择你想裂变的方向（可多选）</div>
+                    <div class="matrix-tags" id="matrixTags">
+                        <span class="matrix-tag selected" data-tag="time">⏰ 时间/事件驱动</span>
+                        <span class="matrix-tag selected" data-tag="circle">👥 圈层/兴趣驱动</span>
+                        <span class="matrix-tag selected" data-tag="spirit">🎨 精神/审美驱动</span>
+                        <span class="matrix-tag" data-tag="sensory">🌊 感官/生活驱动</span>
+                        <span class="matrix-tag" data-tag="healing">🧘 疗愈/松弛驱动</span>
+                        <span class="matrix-tag" data-tag="desire">💎 物欲/仪式感驱动</span>
+                    </div>
+                    <div class="form-group" style="margin-bottom:0;">
+                        <label>生成篇数</label>
+                        <input type="number" id="genCount" value="3" min="1" max="10" style="width:80px;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Output -->
+            <div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">📋</span> 分析报告</div>
+                    <div class="tabs">
+                        <span class="tab active" onclick="switchTab(this,'tabAnalysis')">🧠 对标拆解</span>
+                        <span class="tab" onclick="switchTab(this,'tabSimilar')">📊 相似爆款</span>
+                        <span class="tab" onclick="switchTab(this,'tabGenerate')">✍️ 裂变内容</span>
+                    </div>
+                    <div id="tabAnalysis" class="result-area">等待输入...</div>
+                    <div id="tabSimilar" class="result-area" style="display:none;">等待抓取...</div>
+                    <div id="tabGenerate" class="result-area" style="display:none;">等待生成...</div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title"><span class="icon">📜</span> 操作日志</div>
+                    <div class="log-area" id="logArea">[系统] 内容工坊已就绪，等待任务...\n</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div class="card" style="display:flex;justify-content:space-between;align-items:center;">
+            <div style="font-size:13px;color:#666;">
+                💡 流程：贴链接 → 抓取分析 → 确认拆解 → 生成裂变
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-success" id="genBtn" onclick="startGenerate()" disabled>✨ 生成裂变内容</button>
+                <button class="btn btn-danger btn-sm" onclick="window.open('https://www.xiaohongshu.com','_blank')">📱 打开小红书</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Matrix tag toggle
+        document.querySelectorAll('.matrix-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                tag.classList.toggle('selected');
+            });
+        });
+
+        // Tab switching
+        function switchTab(el, tabId) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+            document.querySelectorAll('.result-area').forEach(r => r.style.display = 'none');
+            document.getElementById(tabId).style.display = 'block';
+        }
+
+        // Log
+        function addLog(msg, type = 'info') {
+            const now = new Date();
+            const time = now.toLocaleTimeString('zh-CN', {hour12: false});
+            const el = document.getElementById('logArea');
+            const cls = type === 'info' ? 'log-info' : type === 'success' ? 'log-success' : type === 'warn' ? 'log-warn' : 'log-error';
+            el.textContent += `[${time}] <${cls}>${msg}</${cls}>\n`;
+            el.scrollTop = el.scrollHeight;
+        }
+
+        function setResult(tabId, content) {
+            document.getElementById(tabId).textContent = content;
+            document.getElementById(tabId).classList.remove('loading');
+        }
+
+        function setLoading(tabId, msg) {
+            const el = document.getElementById(tabId);
+            el.textContent = msg;
+            el.classList.add('loading');
+        }
+
+        function updateStep(n) {
+            for (let i = 1; i <= 4; i++) {
+                const el = document.getElementById('step' + i);
+                el.classList.remove('active', 'done');
+                if (i < n) el.classList.add('done');
+                else if (i === n) el.classList.add('active');
+            }
+        }
+
+        // ==================== API Calls ====================
+        
+        async function startFetch() {
+            const url = document.getElementById('noteUrl').value.trim();
+            const points = document.getElementById('learnPoints').value.trim();
+            const keywords = document.getElementById('keywords').value.trim();
+
+            if (!url && !keywords) {
+                addLog('⚠️ 请输入小红书链接或关键词', 'warn');
+                return;
+            }
+
+            updateStep(2);
+            setLoading('tabSimilar', '🔍 正在搜索同类爆款笔记...');
+            addLog('🔍 开始抓取：' + (url || keywords), 'info');
+
+            try {
+                const resp = await fetch('/api/fetch', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ url, keywords, learnPoints: points })
+                });
+                const data = await resp.json();
+                
+                if (data.error) {
+                    addLog('❌ ' + data.error, 'error');
+                    setResult('tabSimilar', '抓取出错：' + data.error);
+                    return;
+                }
+
+                setResult('tabSimilar', data.similar || '未找到相似笔记');
+                if (data.analysis) {
+                    setResult('tabAnalysis', data.analysis);
+                }
+                
+                updateStep(3);
+                addLog('✅ 抓取完成，找到 ' + (data.count || 0) + ' 篇相关笔记', 'success');
+                document.getElementById('genBtn').disabled = false;
+
+            } catch (e) {
+                addLog('❌ 请求失败：' + e.message, 'error');
+                setResult('tabSimilar', '请求失败：' + e.message);
+            }
+        }
+
+        async function startGenerate() {
+            const points = document.getElementById('learnPoints').value.trim();
+            const keywords = document.getElementById('keywords').value.trim();
+            const count = document.getElementById('genCount').value || 3;
+            
+            const selected = [];
+            document.querySelectorAll('.matrix-tag.selected').forEach(t => {
+                selected.push(t.textContent.trim());
+            });
+
+            updateStep(4);
+            setLoading('tabGenerate', '✨ 正在生成裂变内容...');
+            addLog('✨ 开始生成 ' + count + ' 篇，维度：' + selected.join(', '), 'info');
+
+            try {
+                const resp = await fetch('/api/generate', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        learnPoints: points,
+                        keywords: keywords,
+                        dimensions: selected,
+                        count: parseInt(count)
+                    })
+                });
+                const data = await resp.json();
+
+                if (data.error) {
+                    addLog('❌ ' + data.error, 'error');
+                    setResult('tabGenerate', '生成出错：' + data.error);
+                    return;
+                }
+
+                setResult('tabGenerate', data.content || '生成完成！');
+                addLog('✅ 成功生成 ' + count + ' 篇内容', 'success');
+                updateStep(4);
+
+            } catch (e) {
+                addLog('❌ 生成失败：' + e.message, 'error');
+                setResult('tabGenerate', '生成失败：' + e.message);
+            }
+        }
+
+        function clearAll() {
+            document.getElementById('noteUrl').value = '';
+            document.getElementById('noteTitle').value = '';
+            document.getElementById('learnPoints').value = '';
+            document.getElementById('keywords').value = '';
+            ['tabAnalysis','tabSimilar','tabGenerate'].forEach(id => {
+                setResult(id, '已清空');
+            });
+            document.getElementById('genBtn').disabled = true;
+            updateStep(1);
+            addLog('🗑️ 已清空所有内容', 'warn');
+        }
+    </script>
+</body>
+</html>

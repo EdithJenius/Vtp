@@ -1,0 +1,186 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 6902e74f0000000003035de9
+    model_type: note
+    note_card:
+      interact_info:
+        liked: false
+        liked_count: '3294'
+        collected: false
+        collected_count: '469'
+        comment_count: '46'
+        share_count: '199'
+        followed: false
+        relation: none
+      video:
+        media:
+          stream:
+            av1: []
+            h264:
+            - default_stream: 0
+              width: 720
+              video_bitrate: 1629140
+              stream_type: 259
+              size: 19636893
+              rotate: 0
+              psnr: 0
+              quality_type: HD
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/259/01e902e6442566bd010370039a3358c94c_259.mp4
+              video_duration: 92300
+              ssim: 0
+              format: mp4
+              duration: 92369
+              video_codec: h264
+              audio_bitrate: 64096
+              weight: 62
+              audio_channels: 2
+              vmaf: -1
+              height: 1280
+              volume: 0
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/259/01e902e6442566bd010370039a3358c94c_259.mp4?sign=a9d6d70f3cd1e345c2cf066e21bafcef&t=6a1771a4
+              stream_desc: WM_X264_MP4_web
+              avg_bitrate: 1700734
+              fps: 60
+              audio_codec: aac
+              audio_duration: 92368
+              hdr_type: 0
+            h265:
+            - default_stream: 0
+              duration: 92369
+              rotate: 0
+              psnr: 40.617000579833984
+              quality_type: HD
+              avg_bitrate: 1552191
+              hdr_type: 0
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/114/01e902e6442566bd010370019a335b12d0_114.mp4
+              stream_desc: X265_MP4_WEB_114
+              volume: 0
+              video_duration: 92300
+              audio_bitrate: 128193
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/114/01e902e6442566bd010370019a335b12d0_114.mp4?sign=202f341a60fa7411b42bc4e45e73e3f1&t=6a1771a4
+              audio_codec: aac
+              audio_channels: 2
+              vmaf: -1
+              fps: 60
+              video_bitrate: 1416217
+              size: 17921793
+              weight: 62
+              stream_type: 114
+              format: mp4
+              width: 720
+              height: 1280
+              video_codec: hevc
+              audio_duration: 92368
+              ssim: 0
+            - volume: 0
+              audio_channels: 2
+              stream_type: 115
+              audio_bitrate: 128193
+              audio_duration: 92368
+              hdr_type: 0
+              vmaf: -1
+              video_duration: 92300
+              psnr: 40.64799880981445
+              weight: 70
+              height: 1920
+              video_bitrate: 1609028
+              format: mp4
+              width: 1080
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/115/01e902e6442566bd010370019a335b3ee8_115.mp4
+              ssim: 0
+              quality_type: HD
+              default_stream: 0
+              duration: 92369
+              video_codec: hevc
+              audio_codec: aac
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/115/01e902e6442566bd010370019a335b3ee8_115.mp4?sign=20198a328216d3ed03f610cff78a1136&t=6a1771a4
+              stream_desc: X265_MP4_WEB_115
+              size: 20146352
+              avg_bitrate: 1744858
+              fps: 60
+              rotate: 0
+            h266: []
+          video_id: 137644451620546237
+          video:
+            stream_types:
+            - 114
+            - 259
+            - 115
+            biz_name: 110
+            biz_id: '281759644174474729'
+            duration: 93
+            md5: 8fa5d16dcfd76e9aa8929858dfca21ed
+            hdr_type: 0
+            drm_type: 0
+        image:
+          first_frame_fileid: 110/0/01e902e6442566bd0010000000019a335796fc_0.jpg
+          thumbnail_fileid: frame/110/0/01e902e6442566bd0010000000019a3357f17e_0.webp
+        capa:
+          duration: 92
+        media_v2: '{"video_id":"137644451620546237","video":{"biz_name":110,"biz_id":"281759644174474729","duration":93,"md5":"8fa5d16dcfd76e9aa8929858dfca21ed","hdr_type":0,"drm_type":0,"stream_types":[114,259,115],"width":1080,"height":1920,"bound":[{"x":0,"y":0,"w":0,"h":0}],"bbox":{"ocr_v5":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v3":[{"x":311,"y":240,"w":455,"h":136}],"ocr_v4":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v2":[{"x":202,"y":240,"w":667,"h":1416}]},"opaque1":{"bottomAvgLuma":"105","loudnorm":"{\"lra\":5.9,\"htp\":-0.25,\"hldn\":-17.91,\"ldn\":-17.86,\"thr\":-27.96}","domestic":"1","isSupportSubtitle":"false","rightAvgLuma":"91","hasHumanVoice":"true","audioLevInfo":"{\"audio_quality_level\":\"G\",\"mos_overall\":3.2091,\"version\":\"3.0\"}","weakNetUserFlag":"1","insertSubtitleLanguages":"[\"zh-CN\",\"en-US\"]","topAvgLuma":"83","audioClsInfo":"{\"music_ratio\":0.847811949222141,\"freesound_ratio\":0.11958405416395089,\"speech_ratio\":0.7249783283689523}"},"subtitles":{"en-US":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e902e6442566bd010370039a3357d625_12.srt?sign=0e00fb1d53049753ec7243d214b999a3&t=6a1771a4","language":"en-US","format":0,"type":0}],"source":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e902e6442566bd010370039a3357d201_1.srt?sign=8e2364c1e4cbd0439514f2b0d997ca22&t=6a1771a4","language":"zh-CN","format":0,"type":0}],"zh-CN":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e902e6442566bd010370039a3357d28d_11.srt?sign=06ee5ae092bf90c8ebeca5f0f851c2ae&t=6a1771a4","language":"zh-CN","format":0,"type":0}]}},"stream":{"h264":[{"stream_type":259,"stream_desc":"WM_X264_MP4_web","default_stream":0,"format":"mp4","width":720,"height":1280,"duration":92369,"size":19636893,"volume":0.0,"avg_bitrate":1700734,"fps":60,"video_codec":"h264","video_bitrate":1629140,"video_duration":92300,"audio_codec":"aac","audio_bitrate":64096,"audio_duration":92368,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/259/01e902e6442566bd010370039a3358c94c_259.mp4?sign=a9d6d70f3cd1e345c2cf066e21bafcef&t=6a1771a4","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/259/01e902e6442566bd010370039a3358c94c_259.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":0.0,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h265":[{"stream_type":114,"stream_desc":"X265_MP4_WEB_114","default_stream":0,"format":"mp4","width":720,"height":1280,"duration":92369,"size":17921793,"volume":0.0,"avg_bitrate":1552191,"fps":60,"video_codec":"hevc","video_bitrate":1416217,"video_duration":92300,"audio_codec":"aac","audio_bitrate":128193,"audio_duration":92368,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/114/01e902e6442566bd010370019a335b12d0_114.mp4?sign=202f341a60fa7411b42bc4e45e73e3f1&t=6a1771a4","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/114/01e902e6442566bd010370019a335b12d0_114.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":40.617000579833984,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}},{"stream_type":115,"stream_desc":"X265_MP4_WEB_115","default_stream":0,"format":"mp4","width":1080,"height":1920,"duration":92369,"size":20146352,"volume":0.0,"avg_bitrate":1744858,"fps":60,"video_codec":"hevc","video_bitrate":1609028,"video_duration":92300,"audio_codec":"aac","audio_bitrate":128193,"audio_duration":92368,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/115/01e902e6442566bd010370019a335b3ee8_115.mp4?sign=20198a328216d3ed03f610cff78a1136&t=6a1771a4","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/115/01e902e6442566bd010370019a335b3ee8_115.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":40.64799880981445,"ssim":0.0,"weight":70,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h266":[],"av1":[]},"user_level":0}'
+      at_user_list: []
+      desc: "\U0001FAAD收集➕1 ！！\n\t\n#RedFaceOfFashion100[话题]# #时尚面孔[话题]#\n#文华东方[话题]#\
+        \ #北京前门文华东方[话题]# #老钱[话题]#\n#老钱酒店[话题]# #顶奢酒店[话题]# #北京[话题]#\n#正常穿搭无不良导向[话题]#"
+      user:
+        user_id: 5de7313300000000010005f2
+        nickname: 贝拉Bellawong
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31netq3r15m005nf764pg81filauva3o
+        xsec_token: ABJoOrx-IRY6aycg2Tu0n9eC23r9Yxfe3PReEVRCk8L2k=
+      image_list:
+      - info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/09ef4edffce93444d0be78122da2b5da/1040g2sg31o8gqmqvmm705nf764pg81fimnf2pfg!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/0dba484ca65c823235fa0e0840afcc2b/1040g2sg31o8gqmqvmm705nf764pg81fimnf2pfg!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/09ef4edffce93444d0be78122da2b5da/1040g2sg31o8gqmqvmm705nf764pg81fimnf2pfg!nd_prv_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        height: 3840
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/0dba484ca65c823235fa0e0840afcc2b/1040g2sg31o8gqmqvmm705nf764pg81fimnf2pfg!nd_dft_wlteh_webp_3
+        width: 2880
+        url: ''
+      tag_list:
+      - id: 6709ff1f000000002302f54b
+        name: RedFaceOfFashion100
+        type: topic
+      - id: 622dd75500000000010057b9
+        name: 时尚面孔
+        type: topic
+      - id: 5c05ce3f66a7ad00014764a3
+        name: 文华东方
+        type: topic
+      - id: 6468192f000000002301c2dd
+        name: 北京前门文华东方
+        type: topic
+      - id: 5f1dc343000000000100a9fc
+        name: 老钱
+        type: topic
+      - name: 老钱酒店
+        type: topic
+        id: 652b8d6d000000001702b989
+      - id: 60ff9cd5000000000100ab7f
+        name: 顶奢酒店
+        type: topic
+      - id: 54b4af43b4c4d63ba6783786
+        name: 北京
+        type: topic
+      - id: 62d27bf20000000001008b32
+        name: 正常穿搭无不良导向
+        type: topic
+      time: 1761797967000
+      note_id: 6902e74f0000000003035de9
+      type: video
+      title: 在北京住12W一晚的文华东方belike：
+      last_update_time: 1765176159000
+      share_info:
+        un_share: false
+  current_time: 1779618916393
+

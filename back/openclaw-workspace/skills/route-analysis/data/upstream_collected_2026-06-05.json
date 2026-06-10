@@ -1,0 +1,1221 @@
+{
+  "meta": {
+    "date": "2026-06-05",
+    "total_items": 133,
+    "working_sources": {
+      "新华网旅游": "新闻标题+日期提取完整",
+      "文旅部官网": "政策新闻+日期提取完整",
+      "RoutesOnline": "航线话题提取",
+      "HotelNewsResource": "酒店新闻标题提取",
+      "FlightGlobal": "航空新闻提取 (含付费标识)",
+      "环球旅讯": "JS渲染受限，仅提取静态部分"
+    },
+    "blocked_sources": [
+      "民航局统计 (caac.gov.cn) - WAF 403",
+      "携程趋势 - JS应用无法爬取",
+      "移民局 (nia.gov.cn) - JS渲染",
+      "Booking.com - 反爬机制",
+      "LuxuryTravelAdvisor - Cloudflare 403",
+      "HospitalityNet - Cloudflare 403"
+    ]
+  },
+  "items": [
+    {
+      "source": "新华网旅游",
+      "title": "科技赋能文旅IP点亮盛会——华强方特亮相第二十二届文博会",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260525/11183d27690f4e67903574c6a3835efc/c.html",
+      "timestamp": "2026-05-25"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "打造生态传播新路径 “秦小卫”数字IP入选新华社品牌工程",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260511/13931220848a4701b1c7cb6be440187f/c.html",
+      "timestamp": "2026-05-11"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "“创业宜居地 乐游生态城”武安市亮相《300秒看家乡》",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260509/976d3d01f37f4fd4bde5e6faafe12cdc/c.html",
+      "timestamp": "2026-05-09"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "300秒看家乡︱湖南省怀化市洪江区：千年商城 洪福洪江",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260508/67e0972f33b740db902be33b363f9deb/c.html",
+      "timestamp": "2026-05-08"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "“书法之乡 养生印江”印江土家族苗族自治县亮相《300秒看家乡》",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260430/66c97658b5b840a38c590860ad74306e/c.html",
+      "timestamp": "2026-04-30"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "300秒看家乡︱内蒙古自治区锡林郭勒盟乌拉盖管理区：“天边草原”乌拉盖",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260429/8a431f4b88e7408cb79d2cdcfdc64add/c.html",
+      "timestamp": "2026-04-29"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "“天边草原”乌拉盖亮相《300秒看家乡》",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260424/17121e7b7f574b90af4a608b66186279/c.html",
+      "timestamp": "2026-04-24"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "300秒看家乡︱四川省雅安市荥经县：千年窑火映古县，绿水青山展新卷",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260417/a139be985f184b61aafb046e66a40d6a/c.html",
+      "timestamp": "2026-04-17"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "300秒看家乡︱贵州省黔东南苗族侗族自治州镇远县：山水福地·千年镇远",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260413/7fac880269494d7cac4a9fde1fdc4473/c.html",
+      "timestamp": "2026-04-13"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "江西婺源：一城更新万象生",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260410/d48c1270c697485db481c699bff7db35/c.html",
+      "timestamp": "2026-04-10"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "孝感方特6月17日正式开业",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260605/66f836e3c0ac40458da17a0e6496201f/c.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "全国首张“无目的地海上游”出入境通行证在沪签发",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260605/52ee629d6a62487185d472658a309277/c.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "生态惠民绿意浓 广东62处郊野公园、山地公园建成开放",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260605/86d6c1ec58874d90b556829d0b8783c1/c.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "亚朵发布安心承诺，覆盖预订、食品、清洁等六大维度",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260603/b92cf72adbfc4d8794e6ef9f3fac38cd/c.html",
+      "timestamp": "2026-06-03"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "6月5日起中国内地航线燃油附加费将下调",
+      "summary": "",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "http://www.news.cn/travel/20260603/daf83ebcaec84ef994ebe0f1341c29ae/c.html",
+      "timestamp": "2026-06-03"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "三星堆出土红玉髓：揭示中国青铜时代交流互动",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260603/717e87538fe040798b4986a8896a54d3/c.html",
+      "timestamp": "2026-06-03"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "北京玛雅海滩水公园开园",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260602/6bbf1e8a4ee648f0bae8e9f650c52d77/c.html",
+      "timestamp": "2026-06-02"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "全国首家网上离境退税商店在北京落地",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260602/970c33755a284556ae4cda0b88967d29/c.html",
+      "timestamp": "2026-06-02"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "对随身登机行李收费，有依据吗",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260602/70499361e6eb4f538aa4f335080a8492/c.html",
+      "timestamp": "2026-06-02"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "乐高集团主题活动落地广州，邀请更多人在玩乐中探索热爱",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260601/6a5a0584733c4b8aaa0590fa7e444dd9/c.html",
+      "timestamp": "2026-06-01"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "当“欢乐”遇见“健康” 华强方特与妙可蓝多达成战略合作",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260601/87c2faaeb9bb40d4b3d9f1253d8c5013/c.html",
+      "timestamp": "2026-06-01"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "华强方特牵手乐华娱乐 共拓“文旅+文娱”融合新生态",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260601/d1c873d3b2a34497ab7a56db8207aa05/c.html",
+      "timestamp": "2026-06-01"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "华强方特携手多方发起孤独症儿童关爱行动",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260601/2234747e34914baa8ecb3917f5851bdd/c.html",
+      "timestamp": "2026-06-01"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "七部门：积极发展工业遗产游 推优质旅游线路",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260601/8f30eaf8f2254bdd89ec71ee03fa06d2/c.html",
+      "timestamp": "2026-06-01"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "新华视点｜透视景区NPC热潮",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260529/920096ca005145ae88ec9d039247c677/c.html",
+      "timestamp": "2026-05-29"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "从“舌尖”到“心头” 夜经济点亮消费新活力",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260526/346f4400d13e4bc595a02accc549e9b3/c.html",
+      "timestamp": "2026-05-26"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "新华鲜报｜3.25亿人次出游 “五一”假期乐享文旅新风",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "宏观指标：反映旅游市场整体恢复程度",
+      "url": "http://www.news.cn/travel/20260509/cd8d6149a9d346ddb9fec2241ca10b77/c.html",
+      "timestamp": "2026-05-09"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "从“看景”到“入景”：民俗体验拓宽县域文旅新赛道",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260509/072e233a573849008272a4dacfb8528d/c.html",
+      "timestamp": "2026-05-09"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "春日赴光谷 沉浸式打卡“文旅+科技”特色旅游线路",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20260325/d634ebdf035c4d94aed9437b7dd7076e/c.html",
+      "timestamp": "2026-03-25"
+    },
+    {
+      "source": "新华网旅游",
+      "title": "千城胜景｜吉林磐石：仙人湖公园荷花盛放",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "http://www.news.cn/travel/20250819/1ef9df14cae341919630dea7a1a49493/c.html",
+      "timestamp": "2025-08-19"
+    },
+    {
+      "source": "文旅部",
+      "title": "“大地情深”——全国优秀群众文艺作品示范性展演在浙江丽水举办",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260529_966041.htm",
+      "timestamp": "2026-05-29"
+    },
+    {
+      "source": "文旅部",
+      "title": "旅游市场强制消费问题典型案例（2026年第三批）",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "消费力指标：反映旅游消费趋势变化",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260529_966034.htm",
+      "timestamp": "2026-05-29"
+    },
+    {
+      "source": "文旅部",
+      "title": "七部门印发通知 弘扬工业文化 保护工业遗产 发展工业旅游",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260529_966040.htm",
+      "timestamp": "2026-05-29"
+    },
+    {
+      "source": "文旅部",
+      "title": "第二届中国新疆民间艺术季在新疆乌鲁木齐启动",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260522_965928.htm",
+      "timestamp": "2026-05-24"
+    },
+    {
+      "source": "文旅部",
+      "title": "2026文化强国建设高峰论坛在深圳开幕 李书磊出席并发表主旨演讲",
+      "summary": "",
+      "category": "会展活动",
+      "impact": "集中需求：大型活动将带来阶段性客流和住宿需求",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260522_965939.htm",
+      "timestamp": "2026-05-22"
+    },
+    {
+      "source": "文旅部",
+      "title": "2026年文化和旅游部科技教育工作会议在安徽合肥召开",
+      "summary": "",
+      "category": "会展活动",
+      "impact": "集中需求：大型活动将带来阶段性客流和住宿需求",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260522_965927.htm",
+      "timestamp": "2026-05-22"
+    },
+    {
+      "source": "文旅部",
+      "title": "2026年“5·19中国旅游日”主会场活动在广东广州举行",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260519_965881.htm",
+      "timestamp": "2026-05-19"
+    },
+    {
+      "source": "文旅部",
+      "title": "跟着品牌去旅行！首批体验地推荐名单发布",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260509_965763.htm",
+      "timestamp": "2026-05-10"
+    },
+    {
+      "source": "文旅部",
+      "title": "旅游市场强制消费问题典型案例（2026年第二批）",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "消费力指标：反映旅游消费趋势变化",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260502_965683.htm",
+      "timestamp": "2026-05-09"
+    },
+    {
+      "source": "文旅部",
+      "title": "2026年“五一”假期国内出游3.25亿人次",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "宏观需求信号：假期出行数据反映市场热度",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202605/t20260506_965708.htm",
+      "timestamp": "2026-05-07"
+    },
+    {
+      "source": "文旅部",
+      "title": "文化和旅游部、中国气象局联合发布五一假期旅游气象提示",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260429_965657.htm",
+      "timestamp": "2026-04-29"
+    },
+    {
+      "source": "文旅部",
+      "title": "文化和旅游部五一假期出游提示",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260428_965633.htm",
+      "timestamp": "2026-04-28"
+    },
+    {
+      "source": "文旅部",
+      "title": "旅游市场秩序集中整治严重失信主体典型名单（2026年第一批）",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "行业合规：影响渠道合作与定价策略",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260427_965618.htm",
+      "timestamp": "2026-04-27"
+    },
+    {
+      "source": "文旅部",
+      "title": "2026年全国“四季村歌”示范活动在江西景德镇举行",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260422_965537.htm",
+      "timestamp": "2026-04-22"
+    },
+    {
+      "source": "文旅部",
+      "title": "2026年全国重点文化和旅游企业主要负责人安全生产培训举办",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260422_965563.htm",
+      "timestamp": "2026-04-22"
+    },
+    {
+      "source": "文旅部",
+      "title": "图书馆全民阅读论坛暨2026年公共图书馆服务宣传周主场活动在江西南昌举办",
+      "summary": "",
+      "category": "会展活动",
+      "impact": "集中需求：大型活动将带来阶段性客流和住宿需求",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260421_965520.htm",
+      "timestamp": "2026-04-21"
+    },
+    {
+      "source": "文旅部",
+      "title": "2026年全国“四季村晚”春季主场活动在重庆石柱举办",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260416_965488.htm",
+      "timestamp": "2026-04-16"
+    },
+    {
+      "source": "文旅部",
+      "title": "文化和旅游部深入学习贯彻习近平总书记关于树立和践行正确政绩观的重要论...",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260416_965487.htm",
+      "timestamp": "2026-04-16"
+    },
+    {
+      "source": "文旅部",
+      "title": "2026年清明节假期国内出游1.35亿人次",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "宏观需求信号：假期出行数据反映市场热度",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260407_965316.htm",
+      "timestamp": "2026-04-07"
+    },
+    {
+      "source": "文旅部",
+      "title": "文化和旅游部清明节假期出游提示",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.mct.gov.cn/whzx/whyw/202604/t20260402_965276.htm",
+      "timestamp": "2026-04-02"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Routes Europe 2026",
+      "summary": "RoutesOnline Routes Europe 2026 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/9746/routes-europe-2026/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] airBaltic",
+      "summary": "RoutesOnline airBaltic 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/8681/airbaltic/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Wizz Air",
+      "summary": "RoutesOnline Wizz Air 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/908/wizz-air/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Boeing 737 Max",
+      "summary": "RoutesOnline Boeing 737 Max 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/7597/boeing-737-max/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Icelandair",
+      "summary": "RoutesOnline Icelandair 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/2066/icelandair-/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Iberia Airlines",
+      "summary": "RoutesOnline Iberia Airlines 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/6055/iberia-airlines/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Southwest Airlines",
+      "summary": "RoutesOnline Southwest Airlines 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/4996/southwest-airlines/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Air Transat",
+      "summary": "RoutesOnline Air Transat 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/1999/air-transat/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Almaty International Airport",
+      "summary": "RoutesOnline Almaty International Airport 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/1997/almaty-international-airport/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Airbus A319/A320/A321",
+      "summary": "RoutesOnline Airbus A319/A320/A321 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/9590/airbus-a319a320a321/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Aeroitalia",
+      "summary": "RoutesOnline Aeroitalia 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/9513/aeroitalia/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Hong Kong International Airport",
+      "summary": "RoutesOnline Hong Kong International Airport 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/3116/hong-kong-international-airport/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] IndiGo",
+      "summary": "RoutesOnline IndiGo 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/1377/indigo/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Belgrade Nikola Tesla Airport",
+      "summary": "RoutesOnline Belgrade Nikola Tesla Airport 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/1267/belgrade-nikola-tesla-airport/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Jazeera Airways",
+      "summary": "RoutesOnline Jazeera Airways 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/3295/jazeera-airways/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Caracas - Aeropuerto Internacional Simon Bolivar de Maiquetia",
+      "summary": "RoutesOnline Caracas - Aeropuerto Internacional Simon Bolivar de Maiquetia 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/7607/caracas-aeropuerto-internacional-simon-bolivar-de-maiquetia/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] air cargo",
+      "summary": "RoutesOnline air cargo 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/9149/air-cargo/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Airbus A330",
+      "summary": "RoutesOnline Airbus A330 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/4753/airbus-a330/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Air China",
+      "summary": "RoutesOnline Air China 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/1329/air-china-/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Vueling Airlines",
+      "summary": "RoutesOnline Vueling Airlines 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/5331/vueling-airlines/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "RoutesOnline",
+      "title": "[航线动态] Press Releases",
+      "summary": "RoutesOnline Press Releases 相关航线动态",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.routesonline.com/news/tagged/2046/press-release/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Is AI Killing User Experience?",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141486.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Central and South America’s Travel Sector Expected to Surpass Global Growth in 2026",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141518.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Data Doesn’t Book Meetings. People Do.",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141510.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Prime Investment Properties Lists Hideaway Mountain Lodge – A Rare Winter Park-Area Hospitality & Redevelopment Opportunity",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141525.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Pope Leo XIV’s Visit to Spain Expected to Spark Tourism Surge and Economic Boost",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141524.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "IHG Launches App in ChatGPT, Plans Conversational AI Search for Digital Channels",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141523.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "WTTC Calls for Calm and Coordinated Response As Ebola Outbreak Remains a Localised Health Challenge",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141520.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Four Seasons and Blasson Expand in Spain with New Hotel Project in Sevilla’s Plaza Nueva",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141519.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "The Alchemy of Recall: Why Luxury Hospitality is Measuring the Wrong Metric - By Tina Mrynska",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141507.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "How Convention Centers Change Hotel Markets - By Thomas A. Hazinski",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141500.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "The Top Four Things Business Travelers Want - By Mark Cullen",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141499.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "From Visitor Targets to Hotel Profitability: The Operating Model Saudi Hospitality Needs Next - By Dr. Tong Yin",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141488.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "If Search and Display Had a Baby: Why Demand Gen is the New Hybrid You Actually Want - By Kylie Chen",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141462.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Roommaster Brings AI-Powered Hospitality Technology to HITEC 2026",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141501.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "How to Optimize Hotel Category Pages for Increased Direct Bookings",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141496.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Actabl Launches Forward-Deployed Engineering for the Hotel Industry",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141485.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Innspire to Preview the ‘Future of the Connected Guest Experience’ at HITEC",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141484.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Hilton Expands in Florida Keys with 175-Room Waterfront Resort",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141517.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Hilton Signs Agreement to Open LXR Hotels & Resorts in Hakone Gora, Japan",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "供给增加：新酒店/品牌入驻，关注竞争格局变化",
+      "url": "https://www.hotelnewsresource.com/article141516.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Henderson Park and Pyramid Global Hospitality Acquire Hyatt Regency Grand Reserve in Puerto Rico",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "资本动向：酒店资产交易，关注行业整合趋势",
+      "url": "https://www.hotelnewsresource.com/article141512.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Mark Hucek Appointed General Manager of The Ellie Beach Resort and DoubleTree Resort Myrtle Beach Oceanfront",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141511.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "HotelNewsResource",
+      "title": "Actabl Hires Global Hotel Engineering Leader As SVP of AI Asset Management",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.hotelnewsresource.com/article141506.html",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "FlightGlobal",
+      "title": "[付费] Paid content The shift from reactive recruitment to long-term talent planning in aviation The ways airlines have traditionally sourced staff at short notice to meet expansion or attrition are becoming difficult to sustain. So how does the industry ensure it has the right resources in place over the next decade? 29 May 2026",
+      "summary": "",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.flightglobal.com/paid-content/2026/05/the-shift-from-reactive-recruitment-to-long-term-talent-planning-in-aviation/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "FlightGlobal",
+      "title": "[付费] Paid content Port Polska accelerates cargo ambitions as Warsaw prepares to host global air freight summit The development of Port Polska is increasingly shaping Poland’s role in European logistics, as the programme moves forward with plans to build a major multimodal transport hub combining air, rail and road infrastructure with advanced cargo capabilities. 11 May 2026",
+      "summary": "",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.flightglobal.com/paid-content/2026/05/port-polska-accelerates-cargo-ambitions-as-warsaw-prepares-to-host-global-air-freight-summit/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "FlightGlobal",
+      "title": "[付费] Paid content Viscom: advanced inspection technology enabling mission assurance For over 40 years, Viscom has pursued a singular and uncompromising objective: enabling manufacturers to achieve absolute product integrity through zero-defect production. Headquartered in Hanover, Germany, the company develops, engineers, and manufactures high-precision inspection systems designed to protect the functionality and reliability of the world’s most critical electronic systems.In today’s highly complex electronic environments, even… 30 April 2026",
+      "summary": "",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.flightglobal.com/paid-content/2026/04/viscom-advanced-inspection-technology-enabling-mission-assurance/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "FlightGlobal",
+      "title": "[付费] Paid content How airlines achieve more efficient ground operations with Jeppesen Smart Airport Maps The history of aviation – recent events included – highlights that some of the riskiest phases of any flight are not when the aircraft is in the air, but when it is on terra firma. Busy airports are complex and potentially hazardous workplaces for pilots, and plenty can go wrong between runway and gate. 9 April 2026",
+      "summary": "",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.flightglobal.com/paid-content/2026/04/how-airlines-achieve-more-efficient-ground-operations-with-jeppesen-smart-airport-maps/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "企业协议价，正在被酒店自己绕开",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190096/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "出海差旅，TMC 怎么选？",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190095/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "北京商旅酒店，进入新一轮价格战",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190092/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "流量不再是终点：寻找2026年旅游业营销新范本！创新营销奖 案例征集4 天前商旅&MICE推荐",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190104/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "当AI走进每一次行程：寻找2026年最值得被看见的旅游创新产品！DTA产品创新奖 案例征集4 天前商旅&MICE推荐",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190103/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "三项重磅调研即将启动，您想问什么？我们来设计行业报告AI旅游旅游消费商旅市场33 分钟前企业动态",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190139/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "航段费大幅下调，多少机票代理熬不到年底？丨TD内参山雨欲来4 天前商旅&MICE评论推荐",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190097/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "旅业采购需求（第34期）：急急急急需寻找酒店、旅行社、场地等旅游业供需对接，尽在环球旅讯旅连连商机广场。1 小时前出行住宿文旅&目的地",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190134/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "下沉市场酒店，别再只拼低价了2 天前商旅&MICE",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190130/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "同程旅行：美加墨世界杯开赛在即，墨西哥城酒店预订热度增长超50%高端定制游受追捧2 天前住宿文旅&目的地",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190119/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "加拿大上市公司，收购德比软件多数股权一个庞大而低调的旅游科技帝国3 天前评论",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190111/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "AI开始抢酒店流量分配权中国已有约6亿人在使用AI助手。3 天前评论AI+旅游",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190110/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "【华住集团 CEO 金辉】已确认参与分享！| 2026 环球旅讯峰会9月22-23日，诚邀您一起来到现场，与行业大咖交流学习。4 天前商旅&MICE",
+      "summary": "",
+      "category": "会展活动",
+      "impact": "集中需求：大型活动将带来阶段性客流和住宿需求",
+      "url": "https://www.traveldaily.cn/article/190108/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "【锦江酒店（中国区）首席执行官 王伟】已确认参与分享！| 2026 环球旅讯峰会9月22-23日，诚邀您一起来到现场，与行业大咖交流学习。4 天前商旅&MICE",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190107/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "输入不完整，输出就会失真：航空AI为何败在数据割裂上5 天前AI+旅游",
+      "summary": "",
+      "category": "航空运力",
+      "impact": "运力信号：关注航线运力调整对票价和库存的影响",
+      "url": "https://www.traveldaily.cn/article/190094/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "差旅管控前移，支付结算进入闭环 | 一周商旅动态企业差旅管理正在从“预订数字化”走向“管控闭环化”。5 天前商旅&MICE精选",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190083/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "旅游AI这辆车，再不上真就来不及了？势不等人5 天前评论",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190093/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "再不做研学 + 微度假，北京酒店下半年更难高质量发展指南6 天前评论",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190090/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "腾讯元宝，可能会砸了低端旅行社的饭碗小功能、大作用？6 天前评论",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190091/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "廉航倒闭潮来了？燃油成本，击穿低票价神话7 天前评论",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190089/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "ITB China 2026 | 文旅营销从触达走向全场景体验文旅品牌的新选择，是进入用户旅程7 天前文旅&目的地评论",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190088/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "不卷规模卷好店！慧友酒店集团凭什么杀入全国36强？三百而立・链启新程05-29 11:53住宿评论",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190074/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "NDC 在中国推了十多年，为什么没有上演“分销大战”AggSky 走到了哪一步05-29 10:16评论",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190072/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "贵州山里，正在长出旅游新爆款大自然不再只是被观赏，而是成为极致体验的场景。05-28 22:04评论",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190067/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "特朗普访华，没给美国人要到免签？亏本的买卖没人做。05-28 15:28文旅&目的地评论",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策红利：签证便利化将刺激出境游需求",
+      "url": "https://www.traveldaily.cn/article/190064/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "跳出低价内卷！2026中国商旅服务关系彻底变了共生05-27 16:06评论",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190062/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "高德×亚朵：当酒店在地图上，重新定义自己的边界一本打开的书，一个上线的POI。05-27 10:08评论",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190058/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "OTA巨头重整投流玩法，酒店排名大变天？| TD内参春天来了05-27 09:27住宿评论",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190057/",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "三项重磅调研即将启动，您想问什么？我们来设计",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190139",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "万豪旅享家如何用多元体验“圈粉”Z世代？",
+      "summary": "",
+      "category": "酒店供应链",
+      "impact": "酒店动态：关注供应链变化和品牌布局",
+      "url": "https://www.traveldaily.cn/article/190127",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "律商风险-数智风控护航旅宿业安全体验",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190120",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "以文明立心，向共生而行——2026虎啸盛典圆满落幕",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190128",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "新加坡航空正式开通杭州至新加坡往返航线",
+      "summary": "",
+      "category": "航空运力",
+      "impact": "供给增加：新航线/加密航线，关注对应目的地库存变化",
+      "url": "https://www.traveldaily.cn/article/190112",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "同程旅行：独库公路通车引爆新疆旅游热，搜索量环比增长166%",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/190106",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "中东冲突扰动全球旅游需求，中国入境游迎来新窗口",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/189889",
+      "timestamp": "2026-06-05"
+    },
+    {
+      "source": "环球旅讯",
+      "title": "AI入口重构，谁来承接交易的最后一公里？ ｜ SiteMinder财报解读",
+      "summary": "",
+      "category": "政策签证",
+      "impact": "政策变化：关注对业务合规和需求的影响",
+      "url": "https://www.traveldaily.cn/article/189674",
+      "timestamp": "2026-06-05"
+    }
+  ]
+}

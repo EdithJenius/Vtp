@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>热点商机 · 数字地球大屏</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+  background: #000; overflow: hidden; font-family: 'Microsoft YaHei', sans-serif;
+  color: #fff; user-select: none;
+}
+#canvas-container { width: 100vw; height: 100vh; display: block; }
+.title {
+  position: absolute; top: 30px; left: 0; right: 0; text-align: center;
+  pointer-events: none; z-index: 10;
+}
+.title h1 {
+  font-size: 2em; font-weight: 300; letter-spacing: 8px;
+  background: linear-gradient(135deg, #00d4ff 0%, #7b2ff7 50%, #ff4444 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  text-shadow: none; margin-bottom: 4px;
+}
+.title .sub {
+  font-size: 0.85em; color: #4a7c9b; letter-spacing: 4px;
+  -webkit-text-fill-color: #4a7c9b;
+}
+.stats-panel {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 30px; z-index: 10;
+  background: rgba(15,25,35,0.7); backdrop-filter: blur(12px);
+  border: 1px solid #1e3a5f66; border-radius: 16px;
+  padding: 16px 40px;
+}
+.stat-item { text-align: center; }
+.stat-item .num { font-size: 1.6em; font-weight: 700; }
+.stat-item .label { font-size: 0.75em; color: #6d8ca8; margin-top: 2px; }
+.legend {
+  position: absolute; right: 30px; top: 50%; transform: translateY(-50%);
+  z-index: 10; display: flex; flex-direction: column; gap: 12px;
+}
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.8em; color: #8b9dc3; }
+.legend-dot { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 8px currentColor; }
+.info-panel {
+  position: absolute; left: 30px; top: 50%; transform: translateY(-50%);
+  z-index: 10; width: 260px;
+  background: rgba(15,25,35,0.7); backdrop-filter: blur(12px);
+  border: 1px solid #1e3a5f66; border-radius: 12px;
+  padding: 16px; display: none; max-height: 400px; overflow-y: auto;
+}
+.info-panel.show { display: block; }
+.info-panel h3 { color: #00d4ff; font-size: 0.95em; margin-bottom: 8px; }
+.info-panel .row {
+  display: flex; justify-content: space-between; padding: 4px 0;
+  font-size: 0.8em; border-bottom: 1px solid #1e3a5f33;
+}
+.info-panel .label { color: #6d8ca8; }
+.info-panel .value { color: #e0e6ed; text-align: right; }
+.info-panel .analysis {
+  margin-top: 10px; padding: 10px; background: #0f192366;
+  border-radius: 8px; font-size: 0.78em; color: #8b9dc3; line-height: 1.5;
+}
+.glow-hint {
+  position: absolute; bottom: 110px; left: 50%; transform: translateX(-50%);
+  z-index: 10; font-size: 0.75em; color: #4a7c9b; letter-spacing: 2px;
+  animation: pulseText 3s ease-in-out infinite; pointer-events: none;
+}
+@keyframes pulseText { 0%,100%{opacity:0.3} 50%{opacity:1} }
+@media (max-width: 768px) {
+  .stats-panel { gap: 12px; padding: 12px 20px; flex-wrap: wrap; justify-content: center; }
+  .stat-item .num { font-size: 1.2em; }
+  .title h1 { font-size: 1.2em; }
+  .info-panel { left: 10px; width: 200px; }
+  .legend { right: 10px; }
+}
+</style>
+</head>
+<body>
+
+<div class="title">
+  <h1>🌍 旅游商机 · 热点感知</h1>
+  <div class="sub">HOTSPOT INTELLIGENCE · 2026-05-28 11:43</div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><span class="legend-dot" style="color:#ff4444;background:#ff4444;"></span>高优先级</div>
+  <div class="legend-item"><span class="legend-dot" style="color:#ffaa00;background:#ffaa00;"></span>中优先级</div>
+  <div class="legend-item"><span class="legend-dot" style="color:#4488ff;background:#4488ff;"></span>低优先级</div>
+</div>
+
+<div class="info-panel" id="infoPanel">
+  <h3 id="infoTitle">标题</h3>
+  <div class="row"><span class="label">优先级</span><span class="value" id="infoPriority"></span></div>
+  <div class="row"><span class="label">来源渠道</span><span class="value" id="infoSource"></span></div>
+  <div class="row"><span class="label">关联地点</span><span class="value" id="infoLocation"></span></div>
+  <div class="row"><span class="label">热度指数</span><span class="value" id="infoHot"></span></div>
+  <div class="analysis" id="infoAnalysis"></div>
+</div>
+
+<div class="stats-panel">
+  <div class="stat-item"><div class="num" id="stTotal" style="background:linear-gradient(135deg,#00d4ff,#7b2ff7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">13</div><div class="label">热点总数</div></div>
+  <div class="stat-item"><div class="num" id="stHigh" style="color:#ff4444;">8</div><div class="label">高优先级</div></div>
+  <div class="stat-item"><div class="num" id="stMid" style="color:#ffaa00;">4</div><div class="label">中优先级</div></div>
+  <div class="stat-item"><div class="num" id="stLow" style="color:#4488ff;">1</div><div class="label">低优先级</div></div>
+  <div class="stat-item"><div class="num" id="stNotes" style="color:#fff;">41</div><div class="label">内容笔记</div></div>
+</div>
+
+<div class="glow-hint">✦ 点击光点查看热点详情 ✦</div>
+
+<div id="canvas-container"></div>
+
+<script>
+// ===== DATA =====
+const hotspots = [
+  { title:'给阿嬷的情书', priority:'高', lat:31.2, lng:121.5, source:'微博/抖音', location:'全国影院', hot:100, analysis:'亲情题材爆款，可借势做「带爸妈去旅行」主题内容' },
+  { title:'这烟火气把我香迷糊了', priority:'高', lat:28.2, lng:113.0, source:'抖音', location:'全国夜市', hot:95, analysis:'美食+夜经济话题爆火，可做城市夜市美食攻略' },
+  { title:'欧洲热到失控', priority:'高', lat:46.2, lng:6.1, source:'百度/头条/贴吧', location:'瑞士/冰岛', hot:90, analysis:'欧洲高温催化避暑游需求，推北欧避暑线路' },
+  { title:'高考学子加油', priority:'高', lat:39.9, lng:116.4, source:'抖音', location:'全国高校', hot:88, analysis:'毕业旅行黄金窗口，推高校城市旅游产品' },
+  { title:'外国网红搭便车', priority:'高', lat:30.6, lng:104.1, source:'微博', location:'中国各地', hot:85, analysis:'正面国际传播，可做外国人在中国旅游系列' },
+  { title:'塞尔维亚总统访华', priority:'高', lat:44.8, lng:20.5, source:'百度', location:'塞尔维亚/北京', hot:85, analysis:'塞尔维亚免签，可做旅行攻略借势' },
+  { title:'广东猎德龙舟', priority:'高', lat:23.1, lng:113.3, source:'抖音', location:'广州', hot:82, analysis:'端午龙舟文化飙升，推广州观赛攻略' },
+  { title:'2026高考倒计时', priority:'高', lat:34.3, lng:108.9, source:'微博', location:'全国高考城市', hot:75, analysis:'毕业旅行刚需，提前布局暑期产品' },
+  { title:'稻城亚丁收费', priority:'中', lat:29.0, lng:100.3, source:'知乎', location:'四川稻城', hot:80, analysis:'景区争议带火知名度，做川西攻略' },
+  { title:'南方暴雨', priority:'中', lat:23.0, lng:114.0, source:'百度/微博', location:'南方多省', hot:78, analysis:'暴雨影响出游，推室内游/替代目的地' },
+  { title:'航天员回家', priority:'中', lat:40.0, lng:96.5, source:'微博', location:'酒泉', hot:70, analysis:'航天热点借势，推酒泉文昌航天游' },
+  { title:'胖东来探店', priority:'中', lat:34.0, lng:113.8, source:'B站', location:'河南许昌', hot:60, analysis:'胖东来出圈带火许昌小众旅游' },
+  { title:'激光灭蚊神器', priority:'低', lat:31.8, lng:119.9, source:'百度', location:'常州', hot:78, analysis:'户外灭蚊话题，旅游关联度一般' },
+];
+
+// ===== THREE.JS =====
+const container = document.getElementById('canvas-container');
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+container.appendChild(renderer.domElement);
+
+// 星空
+const starsGeometry = new THREE.BufferGeometry();
+const starCount = 6000;
+const starPos = new Float32Array(starCount * 3);
+for (let i = 0; i < starCount * 3; i++) starPos[i] = (Math.random() - 0.5) * 2000;
+starsGeometry.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 0.5, transparent: true, opacity: 0.8 });
+const stars = new THREE.Points(starsGeometry, starsMaterial);
+scene.add(stars);
+
+// 地球组
+const earthGroup = new THREE.Group();
+scene.add(earthGroup);
+
+const earthRadius = 5;
+const textureLoader = new THREE.TextureLoader();
+
+// 加载地球纹理
+const earthMap = textureLoader.load('https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg');
+const cloudMap = textureLoader.load('https://threejs.org/examples/textures/planets/earth_clouds_1024.png');
+
+// 地球主体
+const earthGeo = new THREE.SphereGeometry(earthRadius, 64, 64);
+const earthMat = new THREE.MeshPhongMaterial({
+  map: earthMap,
+  specular: new THREE.Color(0x333333),
+  shininess: 3,
+});
+const earth = new THREE.Mesh(earthGeo, earthMat);
+earthGroup.add(earth);
+
+// 云层
+const cloudGeo = new THREE.SphereGeometry(earthRadius * 1.008, 64, 64);
+const cloudMat = new THREE.MeshPhongMaterial({
+  map: cloudMap,
+  transparent: true,
+  opacity: 0.2,
+  blending: THREE.AdditiveBlending,
+  side: THREE.DoubleSide,
+});
+const clouds = new THREE.Mesh(cloudGeo, cloudMat);
+earthGroup.add(clouds);
+
+// 热点光点
+const markers = [];
+
+function latLngToPosition(lat, lng, radius) {
+  const phi = (90 - lat) * Math.PI / 180;
+  const theta = lng * Math.PI / 180;
+  return new THREE.Vector3(
+    radius * Math.sin(phi) * Math.cos(theta),
+    radius * Math.cos(phi),
+    radius * Math.sin(phi) * Math.sin(theta)
+  );
+}
+
+const priorityColors = { '高': 0xff4444, '中': 0xffaa00, '低': 0x4488ff };
+const priorityGlow = { '高': '#ff4444', '中': '#ffaa00', '低': '#4488ff' };
+
+hotspots.forEach(h => {
+  const pos = latLngToPosition(h.lat, h.lng, earthRadius * 1.01);
+  const color = priorityColors[h.priority];
+  
+  // 发光光晕
+  const canvas = document.createElement('canvas');
+  canvas.width = 128; canvas.height = 128;
+  const ctx = canvas.getContext('2d');
+  const gradient = ctx.createRadialGradient(64, 64, 0, 64, 64, 64);
+  gradient.addColorStop(0, priorityGlow[h.priority] + 'ff');
+  gradient.addColorStop(0.2, priorityGlow[h.priority] + '88');
+  gradient.addColorStop(0.5, priorityGlow[h.priority] + '22');
+  gradient.addColorStop(1, priorityGlow[h.priority] + '00');
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, 128, 128);
+  
+  const spriteMat = new THREE.SpriteMaterial({
+    map: new THREE.CanvasTexture(canvas),
+    blending: THREE.AdditiveBlending,
+    transparent: true,
+    opacity: 0.9,
+  });
+  const sprite = new THREE.Sprite(spriteMat);
+  sprite.position.copy(pos);
+  sprite.scale.set(1.0, 1.0, 1);
+  earthGroup.add(sprite);
+  
+  // 核心光点
+  const dotGeo = new THREE.SphereGeometry(0.08, 16, 16);
+  const dotMat = new THREE.MeshBasicMaterial({ color: color });
+  const dot = new THREE.Mesh(dotGeo, dotMat);
+  dot.position.copy(pos.clone().multiplyScalar(1.005));
+  earthGroup.add(dot);
+  
+  markers.push({
+    data: h,
+    sprite: sprite,
+    dot: dot,
+    baseScale: 1.0,
+    phase: Math.random() * Math.PI * 2,
+  });
+});
+
+// 灯光
+const ambientLight = new THREE.AmbientLight(0x4488ff, 0.3);
+scene.add(ambientLight);
+const dirLight = new THREE.DirectionalLight(0xffffff, 1.0);
+dirLight.position.set(5, 8, 10);
+scene.add(dirLight);
+const dirLight2 = new THREE.DirectionalLight(0x4488ff, 0.3);
+dirLight2.position.set(-8, -3, -5);
+scene.add(dirLight2);
+
+camera.position.set(0, 2, 14);
+camera.lookAt(0, 0, 0);
+
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.05;
+controls.minDistance = 7;
+controls.maxDistance = 25;
+controls.target.set(0, 0, 0);
+
+// 点击检测
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+renderer.domElement.addEventListener('click', (event) => {
+  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  raycaster.setFromCamera(mouse, camera);
+  const spriteObjects = markers.map(m => m.sprite);
+  const intersects = raycaster.intersectObjects(spriteObjects);
+  if (intersects.length > 0) {
+    const idx = spriteObjects.indexOf(intersects[0].object);
+    if (idx >= 0) showInfo(markers[idx].data);
+  }
+});
+
+function showInfo(h) {
+  const panel = document.getElementById('infoPanel');
+  document.getElementById('infoTitle').textContent = '📍 ' + h.title;
+  document.getElementById('infoPriority').textContent = h.priority;
+  document.getElementById('infoPriority').style.color = priorityGlow[h.priority];
+  document.getElementById('infoSource').textContent = h.source;
+  document.getElementById('infoLocation').textContent = h.location;
+  document.getElementById('infoHot').textContent = '🔥 ' + h.hot;
+  document.getElementById('infoAnalysis').textContent = '💡 ' + h.analysis;
+  panel.classList.add('show');
+}
+
+let autoRotate = true;
+renderer.domElement.addEventListener('mousedown', () => { autoRotate = false; });
+renderer.domElement.addEventListener('mouseup', () => { setTimeout(() => { autoRotate = true; }, 3000); });
+
+// 动画
+let time = 0;
+function animate() {
+  requestAnimationFrame(animate);
+  time += 0.01;
+  if (autoRotate) {
+    earthGroup.rotation.y += 0.002;
+    clouds.rotation.y += 0.003;
+  }
+  stars.rotation.y += 0.0001;
+  markers.forEach(m => {
+    const pulse = 0.7 + 0.3 * Math.sin(time * 2 + m.phase);
+    m.sprite.scale.set(1.0 * pulse, 1.0 * pulse, 1);
+    m.sprite.material.opacity = 0.5 + 0.5 * pulse;
+  });
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+setTimeout(() => showInfo(hotspots[2]), 1000);
+</script>
+</body>
+</html>

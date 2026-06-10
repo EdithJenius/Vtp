@@ -1,0 +1,268 @@
+{
+  "weibo": [
+    {
+      "word": "南开大学一学生被电诈220万",
+      "hot_value": 1166331,
+      "category": "民生新闻",
+      "rank": 1,
+      "url": "https://s.weibo.com/weibo?q=%23%E5%8D%97%E5%BC%80%E5%A4%A7%E5%AD%A6%E4%B8%80%E5%AD%A6%E7%94%9F%E8%A2%AB%E7%94%B5%E8%AF%88220%E4%B8%87%23"
+    },
+    {
+      "word": "男子落水7天6夜从海口漂到澄迈",
+      "hot_value": 834746,
+      "category": "民生新闻",
+      "rank": 2,
+      "url": "https://s.weibo.com/weibo?q=%23%E7%94%B7%E5%AD%90%E8%90%BD%E6%B0%B47%E5%A4%A96%E5%A4%9C%E4%BB%8E%E6%B5%B7%E5%8F%A3%E6%BC%82%E5%88%B0%E6%BE%84%E8%BF%88%23"
+    },
+    {
+      "word": "美丽中国行",
+      "hot_value": 654247,
+      "category": "国内时政",
+      "rank": 3,
+      "url": "https://s.weibo.com/weibo?q=%23%E7%BE%8E%E4%B8%BD%E4%B8%AD%E5%9B%BD%E8%A1%8C%23"
+    },
+    {
+      "word": "华为nova16系列正式开售",
+      "hot_value": 653949,
+      "category": "",
+      "rank": 4,
+      "url": "https://s.weibo.com/weibo?q=%23%E5%8D%8E%E4%B8%BAnova16%E7%B3%BB%E5%88%97%E6%AD%A3%E5%BC%8F%E5%BC%80%E5%94%AE%23"
+    },
+    {
+      "word": "意识到了一杯奶茶钱真不是小钱",
+      "hot_value": 652948,
+      "category": "情感",
+      "rank": 4,
+      "url": "https://s.weibo.com/weibo?q=%23%E6%84%8F%E8%AF%86%E5%88%B0%E4%BA%86%E4%B8%80%E6%9D%AF%E5%A5%B6%E8%8C%B6%E9%92%B1%E7%9C%9F%E4%B8%8D%E6%98%AF%E5%B0%8F%E9%92%B1%23"
+    },
+    {
+      "word": "中央空调才是电费刺客",
+      "hot_value": 629121,
+      "category": "幽默",
+      "rank": 5,
+      "url": "https://s.weibo.com/weibo?q=%23%E4%B8%AD%E5%A4%AE%E7%A9%BA%E8%B0%83%E6%89%8D%E6%98%AF%E7%94%B5%E8%B4%B9%E5%88%BA%E5%AE%A2%23"
+    },
+    {
+      "word": "周杰伦北京抢票",
+      "hot_value": 601649,
+      "category": "演出",
+      "rank": 6,
+      "url": "https://s.weibo.com/weibo?q=%23%E5%91%A8%E6%9D%B0%E4%BC%A6%E5%8C%97%E4%BA%AC%E6%8A%A2%E7%A5%A8%23"
+    },
+    {
+      "word": "豆包首次付费后月活减少610万",
+      "hot_value": 541097,
+      "category": "互联网",
+      "rank": 8,
+      "url": "https://s.weibo.com/weibo?q=%23%E8%B1%86%E5%8C%85%E9%A6%96%E6%AC%A1%E4%BB%98%E8%B4%B9%E5%90%8E%E6%9C%88%E6%B4%BB%E5%87%8F%E5%B0%91610%E4%B8%87%23"
+    },
+    {
+      "word": "A股",
+      "hot_value": 407720,
+      "category": "财经",
+      "rank": 13,
+      "url": "https://s.weibo.com/weibo?q=%23A%E8%82%A1%23"
+    },
+    {
+      "word": "存款达到多少可以提前退休",
+      "hot_value": 407227,
+      "category": "幽默",
+      "rank": 14,
+      "url": "https://s.weibo.com/weibo?q=%23%E5%AD%98%E6%AC%BE%E8%BE%BE%E5%88%B0%E5%A4%9A%E5%B0%91%E5%8F%AF%E4%BB%A5%E6%8F%90%E5%89%8D%E9%80%80%E4%BC%91%23"
+    },
+    {
+      "word": "如果减重变容易",
+      "hot_value": 406272,
+      "category": "运动健身",
+      "rank": 16,
+      "url": "https://s.weibo.com/weibo?q=%23%E5%A6%82%E6%9E%9C%E5%87%8F%E9%87%8D%E5%8F%98%E5%AE%B9%E6%98%93%23"
+    },
+    {
+      "word": "二手油车价格",
+      "hot_value": 404360,
+      "category": "汽车",
+      "rank": 18,
+      "url": "https://s.weibo.com/weibo?q=%23%E4%BA%8C%E6%89%8B%E6%B2%B9%E8%BD%A6%E4%BB%B7%E6%A0%BC%23"
+    },
+    {
+      "word": "C罗姆巴佩詹姆斯超燃世界杯短片",
+      "hot_value": 410205,
+      "category": "体育",
+      "rank": 10,
+      "url": "https://s.weibo.com/weibo?q=%23C%E7%BD%97%E5%A7%86%E5%B7%B4%E4%BD%A9%E8%A9%B9%E5%A7%86%E6%96%AF%E8%B6%85%E7%87%83%E4%B8%96%E7%95%8C%E6%9D%AF%E7%9F%AD%E7%89%87%23"
+    }
+  ],
+  "zhihu": [
+    {
+      "title": "耐克原价899元几个月后变429元",
+      "heat": "1072万热度",
+      "rank": 1,
+      "url": "https://www.zhihu.com/question/2045926418442350993"
+    },
+    {
+      "title": "欧洲智库报告称中国冲击波正吃掉德国工业午餐",
+      "heat": "537万热度",
+      "rank": 2,
+      "url": "https://www.zhihu.com/question/2045317414276093768"
+    },
+    {
+      "title": "多地高考安检要求戴眼镜考生摘镜查验",
+      "heat": "181万热度",
+      "rank": 3,
+      "url": "https://www.zhihu.com/question/2045449711071580892"
+    },
+    {
+      "title": "挪威附近发现18世纪沉船载有中国瓷器",
+      "heat": "132万热度",
+      "rank": 8,
+      "url": "https://www.zhihu.com/question/2045185863961804064"
+    },
+    {
+      "title": "为什么最近潮汕文学被重新看见",
+      "heat": "86万热度",
+      "rank": 14,
+      "url": "https://www.zhihu.com/question/2042573602273190485"
+    },
+    {
+      "title": "公司半夜通知全员放假后一夜搬空",
+      "heat": "91万热度",
+      "rank": 13,
+      "url": "https://www.zhihu.com/question/2045868590243341493"
+    }
+  ],
+  "toutiao": [
+    {
+      "title": "旅客在高铁上使用电风扇被乘警阻止",
+      "hot_value": 11336877,
+      "rank": 1,
+      "url": "https://www.toutiao.com/trending/7647766090546282542/"
+    },
+    {
+      "title": "英国间谍2次偷窃中国茶叶机密",
+      "hot_value": 10258030,
+      "rank": 2,
+      "url": "https://www.toutiao.com/trending/7647783333778214426/"
+    },
+    {
+      "title": "女子称住酒店赤裸卧床遭陌生男子开门",
+      "hot_value": 8398565,
+      "rank": 4,
+      "url": "https://www.toutiao.com/trending/7647388376106795071/"
+    },
+    {
+      "title": "重庆大轰炸幸存者仍在等待一句道歉",
+      "hot_value": 7599335,
+      "rank": 5,
+      "url": "https://www.toutiao.com/trending/7647649703156285491/"
+    },
+    {
+      "title": "河南一天11万台收割机抢收小麦",
+      "hot_value": 5093987,
+      "rank": 9,
+      "url": "https://www.toutiao.com/trending/7646655787444944915/"
+    },
+    {
+      "title": "高考倒计时",
+      "hot_value": 3089659,
+      "rank": 14,
+      "url": "https://www.toutiao.com/trending/7647427205803065407/"
+    },
+    {
+      "title": "中国小电驴在英国卖爆了",
+      "hot_value": 1534279,
+      "rank": 21,
+      "url": "https://www.toutiao.com/trending/7646901837195034643/"
+    }
+  ],
+  "bilibili": [
+    {
+      "title": "回忆永远都是加分项",
+      "play": 3153724,
+      "rank": 1,
+      "author": "央视新闻",
+      "url": "https://www.bilibili.com/video/BV1QzVR63E3L"
+    },
+    {
+      "title": "不儿，你俩来真的啊？！",
+      "play": 4040751,
+      "rank": 3,
+      "author": "主持人yoyo酱",
+      "url": "https://www.bilibili.com/video/BV1RvVo6QEqo"
+    },
+    {
+      "title": "陶勇：做近视手术，其实是掩耳盗铃",
+      "play": 558185,
+      "rank": 9,
+      "author": "北京青年x壹次访谈录",
+      "url": "https://www.bilibili.com/video/BV1ZTV26cEeq"
+    }
+  ],
+  "tieba": [
+    {
+      "title": "机器人表演飞踢误伤小孩哥",
+      "discussions": "65.6W",
+      "rank": 7,
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28354883"
+    },
+    {
+      "title": "耐克卖不动,品牌光环失灵",
+      "discussions": "44.5W",
+      "rank": 9,
+      "url": "https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=28354878"
+    }
+  ],
+  "36kr": [
+    {
+      "title": "Anthropic呼吁全员停止AI研究",
+      "rank": 1,
+      "url": "https://36kr.com/p/3839532802132489"
+    },
+    {
+      "title": "2.4亿单身群体，捧出了这个红利赛道",
+      "rank": 11,
+      "url": "https://36kr.com/p/3838188679645449"
+    }
+  ],
+  "douyin": [
+    {
+      "name": "芒种至好运至",
+      "view_count": 11738520,
+      "id": "2523738"
+    },
+    {
+      "name": "我的梦中情房申请出招",
+      "view_count": 11078603,
+      "id": "2524039"
+    },
+    {
+      "name": "乌拉圭宣布对中国公民免签",
+      "view_count": 10943498,
+      "id": "2523785"
+    },
+    {
+      "name": "网警护航高考",
+      "view_count": 10301781,
+      "id": "2524104"
+    },
+    {
+      "name": "教育部发布2026年高考十问十答",
+      "view_count": 9187808,
+      "id": "2524066"
+    },
+    {
+      "name": "警惕五类常见高考骗局话术",
+      "view_count": 8972718,
+      "id": "2523606"
+    },
+    {
+      "name": "高考从不是终点",
+      "view_count": 8946618,
+      "id": "2523137"
+    },
+    {
+      "name": "电视剧攻玉角色官宣",
+      "view_count": 8827658,
+      "id": "2524139"
+    }
+  ]
+}

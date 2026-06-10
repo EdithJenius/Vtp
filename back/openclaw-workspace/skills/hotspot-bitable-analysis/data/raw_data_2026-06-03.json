@@ -1,0 +1,506 @@
+{
+  "collect_time": "2026-06-03 09:36 CST",
+  "sources": {
+    "weibo": [
+      {
+        "title": "老宅被亲戚偷装光伏板女子崩溃痛哭",
+        "hot_value": "105万",
+        "rank": 1,
+        "url": "https://s.weibo.com/weibo?q=%E8%80%81%E5%AE%85%E8%A2%AB%E4%BA%B2%E6%88%9A%E5%81%B7%E8%A3%85%E5%85%89%E4%BC%8F%E6%9D%BF%E5%A5%B3%E5%AD%90%E5%B4%A9%E6%BA%83%E7%97%9B%E5%93%AD"
+      },
+      {
+        "title": "灵魂摆渡",
+        "hot_value": "75万",
+        "rank": 2,
+        "url": "https://s.weibo.com/weibo?q=%E7%81%B5%E9%AD%82%E6%91%86%E6%B8%A1"
+      },
+      {
+        "title": "美丽中国行",
+        "hot_value": "64万",
+        "rank": 3,
+        "url": "https://s.weibo.com/weibo?q=%E7%BE%8E%E4%B8%BD%E4%B8%AD%E5%9B%BD%E8%A1%8C"
+      },
+      {
+        "title": "618上京东领刘宇宁红包",
+        "hot_value": "63万",
+        "rank": 4,
+        "url": "https://s.weibo.com/weibo?q=618%E4%B8%8A%E4%BA%AC%E4%B8%9C%E9%A2%86%E5%88%98%E5%AE%87%E5%AE%81%E7%BA%A2%E5%8C%85"
+      },
+      {
+        "title": "世界是本巨大的番茄小说",
+        "hot_value": "63万",
+        "rank": 5,
+        "url": "https://s.weibo.com/weibo?q=%E4%B8%96%E7%95%8C%E6%98%AF%E6%9C%AC%E5%B7%A8%E5%A4%A7%E7%9A%84%E7%95%AA%E8%8C%84%E5%B0%8F%E8%AF%B4"
+      },
+      {
+        "title": "30岁女子爬楼瘦腿膝盖老成60岁",
+        "hot_value": "42万",
+        "rank": 6,
+        "url": "https://s.weibo.com/weibo?q=30%E5%B2%81%E5%A5%B3%E5%AD%90%E7%88%AC%E6%A5%BC%E7%98%A6%E8%85%BF%E8%86%9D%E7%9B%96%E8%80%81%E6%88%9060%E5%B2%81"
+      },
+      {
+        "title": "歌手",
+        "hot_value": "40万",
+        "rank": 7,
+        "url": "https://s.weibo.com/weibo?q=%E6%AD%8C%E6%89%8B"
+      },
+      {
+        "title": "大量印度人排队报名学日语",
+        "hot_value": "33万",
+        "rank": 8,
+        "url": "https://s.weibo.com/weibo?q=%E5%A4%A7%E9%87%8F%E5%8D%B0%E5%BA%A6%E4%BA%BA%E6%8E%92%E9%98%9F%E6%8A%A5%E5%90%8D%E5%AD%A6%E6%97%A5%E8%AF%AD"
+      },
+      {
+        "title": "电动车是最伟大的发明",
+        "hot_value": "30万",
+        "rank": 9,
+        "url": "https://s.weibo.com/weibo?q=%E7%94%B5%E5%8A%A8%E8%BD%A6%E6%98%AF%E6%9C%80%E4%BC%9F%E5%A4%A7%E7%9A%84%E5%8F%91%E6%98%8E"
+      },
+      {
+        "title": "你好星期六回应丁程鑫伤情",
+        "hot_value": "26万",
+        "rank": 10,
+        "url": "https://s.weibo.com/weibo?q=%E4%BD%A0%E5%A5%BD%E6%98%9F%E6%9C%9F%E5%85%AD%E5%9B%9E%E5%BA%94%E4%B8%81%E7%A8%8B%E9%91%AB%E4%BC%A4%E6%83%85"
+      },
+      {
+        "title": "陈学冬是奚梦瑶专属娘家人",
+        "hot_value": "26万",
+        "rank": 11,
+        "url": "https://s.weibo.com/weibo?q=%E9%99%88%E5%AD%A6%E5%86%AC%E6%98%AF%E5%A5%9A%E6%A2%A6%E7%91%B6%E4%B8%93%E5%B1%9E%E5%A8%98%E5%AE%B6%E4%BA%BA"
+      },
+      {
+        "title": "割四赔五乱象",
+        "hot_value": "26万",
+        "rank": 12,
+        "url": "https://s.weibo.com/weibo?q=%E5%89%B2%E5%9B%9B%E8%B5%94%E4%BA%94%E4%B9%B1%E8%B1%A1"
+      },
+      {
+        "title": "演员魏宗万去世",
+        "hot_value": "25万",
+        "rank": 13,
+        "url": "https://s.weibo.com/weibo?q=%E6%BC%94%E5%91%98%E9%AD%8F%E5%AE%97%E4%B8%87%E5%8E%BB%E4%B8%96"
+      },
+      {
+        "title": "做过手帐的才知道她有多厉害",
+        "hot_value": "25万",
+        "rank": 14,
+        "url": "https://s.weibo.com/weibo?q=%E5%81%9A%E8%BF%87%E6%89%8B%E5%B8%90%E7%9A%84%E6%89%8D%E7%9F%A5%E9%81%93%E5%A5%B9%E6%9C%89%E5%A4%9A%E5%8E%89%E5%AE%B3"
+      },
+      {
+        "title": "马思纯 丰满是我的优势",
+        "hot_value": "24万",
+        "rank": 15,
+        "url": "https://s.weibo.com/weibo?q=%E9%A9%AC%E6%80%9D%E7%BA%AF+%E4%B8%B0%E6%BB%A1%E6%98%AF%E6%88%91%E7%9A%84%E4%BC%98%E5%8A%BF"
+      },
+      {
+        "title": "国内金价跌破980元每克",
+        "hot_value": "24万",
+        "rank": 18,
+        "url": "https://s.weibo.com/weibo?q=%E5%9B%BD%E5%86%85%E9%87%91%E4%BB%B7%E8%B7%8C%E7%A0%B4980%E5%85%83%E6%AF%8F%E5%85%8B"
+      },
+      {
+        "title": "奚梦瑶何猷君婚礼誓词",
+        "hot_value": "24万",
+        "rank": 17,
+        "url": "https://s.weibo.com/weibo?q=%E5%A5%9A%E6%A2%A6%E7%91%B6%E4%BD%95%E7%8C%B7%E5%90%9B%E5%A9%9A%E7%A4%BC%E8%AA%93%E8%AF%8D"
+      },
+      {
+        "title": "孙正义再登亚洲首富",
+        "hot_value": "23万",
+        "rank": 21,
+        "url": "https://s.weibo.com/weibo?q=%E5%AD%99%E6%AD%A3%E4%B9%89%E5%86%8D%E7%99%BB%E4%BA%9A%E6%B4%B2%E9%A6%96%E5%AF%8C"
+      },
+      {
+        "title": "八段锦国家级教材来了",
+        "hot_value": "23万",
+        "rank": 25,
+        "url": "https://s.weibo.com/weibo?q=%E5%85%AB%E6%AE%B5%E9%94%A6%E5%9B%BD%E5%AE%B6%E7%BA%A7%E6%95%99%E6%9D%90%E6%9D%A5%E4%BA%86"
+      },
+      {
+        "title": "傅首尔瘦了38斤",
+        "hot_value": "23万",
+        "rank": 24,
+        "url": "https://s.weibo.com/weibo?q=%E5%82%85%E9%A6%96%E5%B0%94%E7%98%A6%E4%BA%8638%E6%96%A4"
+      },
+      {
+        "title": "丁程鑫受伤",
+        "hot_value": "22万",
+        "rank": 28,
+        "url": "https://s.weibo.com/weibo?q=%E4%B8%81%E7%A8%8B%E9%91%AB%E5%8F%97%E4%BC%A4"
+      },
+      {
+        "title": "事业编考生笔试第1因围报被取消资格",
+        "hot_value": "23万",
+        "rank": 20,
+        "url": "https://s.weibo.com/weibo?q=%E4%BA%8B%E4%B8%9A%E7%BC%96%E8%80%83%E7%94%9F%E7%AC%94%E8%AF%95%E7%AC%AC1%E5%9B%A0%E5%9B%B4%E6%8A%A5%E8%A2%AB%E5%8F%96%E6%B6%88%E8%B5%84%E6%A0%BC"
+      }
+    ],
+    "toutiao": [
+      {
+        "title": "彩民15元中6022万多月后才敢晒奖",
+        "hot_value": 13524830,
+        "rank": 1
+      },
+      {
+        "title": "00后姑娘开收割机收小麦",
+        "hot_value": 12237772,
+        "rank": 2
+      },
+      {
+        "title": "前4月农业投资同比增长14.5%",
+        "hot_value": 11073194,
+        "rank": 3
+      },
+      {
+        "title": "矿难致82死后当地县委书记落马",
+        "hot_value": 10019440,
+        "rank": 4
+      },
+      {
+        "title": "全球首款全尺寸超仿生人形机器人预售",
+        "hot_value": 9065965,
+        "rank": 5
+      },
+      {
+        "title": "司马懿饰演者魏宗万去世",
+        "hot_value": 8203224,
+        "rank": 6
+      },
+      {
+        "title": "微软发布全新量子芯片",
+        "hot_value": 7422584,
+        "rank": 7
+      },
+      {
+        "title": "是什么造成了菲律宾外交的矛盾姿态",
+        "hot_value": 6716232,
+        "rank": 8
+      },
+      {
+        "title": "台空军喊话解放军军机遭强硬回应",
+        "hot_value": 6077098,
+        "rank": 9
+      },
+      {
+        "title": "孙正义登顶亚洲首富",
+        "hot_value": 5498785,
+        "rank": 10
+      },
+      {
+        "title": "湖北安陆府河洪水冲断桥梁不实",
+        "hot_value": 4975507,
+        "rank": 11
+      },
+      {
+        "title": "年轻人扎堆挤进爱情公寓当NPC",
+        "hot_value": 4502024,
+        "rank": 12
+      },
+      {
+        "title": "伊朗称袭击美军第五舰队总部",
+        "hot_value": 3685946,
+        "rank": 14
+      },
+      {
+        "title": "傅首尔自称2年瘦了38斤",
+        "hot_value": 3335182,
+        "rank": 15
+      },
+      {
+        "title": "评论员：警惕日本变礁为岛图谋",
+        "hot_value": 3017797,
+        "rank": 16
+      },
+      {
+        "title": "泽连斯基再发声寻求美方支持",
+        "hot_value": 2730616,
+        "rank": 17
+      },
+      {
+        "title": "美军称空袭伊朗格什姆岛",
+        "hot_value": 2470763,
+        "rank": 18
+      },
+      {
+        "title": "专科女生上岸北大下个目标哈佛",
+        "hot_value": 2235639,
+        "rank": 19
+      }
+    ],
+    "zhihu": [
+      {
+        "title": "夏威夷野鸡泛滥数量或超几十万只",
+        "heat": "689万热度",
+        "rank": 1
+      },
+      {
+        "title": "双汇创始人父子10年掏空式分红517亿",
+        "heat": "476万热度",
+        "rank": 2
+      },
+      {
+        "title": "为什么英语black tea被翻译为红茶",
+        "heat": "449万热度",
+        "rank": 3
+      },
+      {
+        "title": "中国为什么能提前预测到碳排放是一个局",
+        "heat": "308万热度",
+        "rank": 4
+      },
+      {
+        "title": "司马懿饰演者魏宗万去世",
+        "heat": "286万热度",
+        "rank": 5
+      },
+      {
+        "title": "比亚迪5月汽车销量达38.3万辆",
+        "heat": "239万热度",
+        "rank": 6
+      },
+      {
+        "title": "柠季将接手哈根达斯中国内地门店",
+        "heat": "169万热度",
+        "rank": 7
+      },
+      {
+        "title": "网暴救灾村支书戴金耳环涉事人员被处罚",
+        "heat": "164万热度",
+        "rank": 8
+      },
+      {
+        "title": "中央财政下达育儿补贴补助资金999亿元",
+        "heat": "160万热度",
+        "rank": 9
+      },
+      {
+        "title": "土伦杯U19国足0:3输民主刚果",
+        "heat": "149万热度",
+        "rank": 10
+      },
+      {
+        "title": "山西煤矿爆炸致82死县委书记被查",
+        "heat": "148万热度",
+        "rank": 11
+      },
+      {
+        "title": "美加墨世界杯球员身价榜亚马尔居首",
+        "heat": "147万热度",
+        "rank": 12
+      },
+      {
+        "title": "印度夏季频繁出现近50度极端高温",
+        "heat": "141万热度",
+        "rank": 13
+      },
+      {
+        "title": "如何评价NVIDIA RTX Spark",
+        "heat": "139万热度",
+        "rank": 14
+      },
+      {
+        "title": "网易游戏26年新游计划降至4款",
+        "heat": "113万热度",
+        "rank": 15
+      }
+    ],
+    "douyin": [
+      {
+        "name": "NBA总决赛前瞻",
+        "view_count": 11848912,
+        "rank": 1
+      },
+      {
+        "name": "琵琶行里的中式穿搭美学",
+        "view_count": 11467364,
+        "rank": 2
+      },
+      {
+        "name": "我国商业航天取得新突破",
+        "view_count": 11236640,
+        "rank": 3
+      },
+      {
+        "name": "媒体评综艺安全带P图",
+        "view_count": 11182213,
+        "rank": 4
+      },
+      {
+        "name": "理发前vs理发后",
+        "view_count": 10382989,
+        "rank": 5
+      },
+      {
+        "name": "如何看懂暴雨预警信号",
+        "view_count": 10252091,
+        "rank": 6
+      },
+      {
+        "name": "老钱风怎么又火了",
+        "view_count": 8927796,
+        "rank": 7
+      },
+      {
+        "name": "司马懿饰演者魏宗万去世",
+        "view_count": 8874759,
+        "rank": 8
+      },
+      {
+        "name": "这一眼国家地理的含金量",
+        "view_count": 8831386,
+        "rank": 9
+      },
+      {
+        "name": "普通人也能穿的夏日美女感穿搭",
+        "view_count": 8534154,
+        "rank": 11
+      },
+      {
+        "name": "接住来自考神的高考祝福",
+        "view_count": 8098065,
+        "rank": 12
+      },
+      {
+        "name": "中国足球小将意大利杯夺冠",
+        "view_count": 7959551,
+        "rank": 14
+      },
+      {
+        "name": "姆巴佩客串小黄人与大怪兽",
+        "view_count": 7824774,
+        "rank": 15
+      },
+      {
+        "name": "张杰工作室发布声明",
+        "view_count": 7809800,
+        "rank": 16
+      },
+      {
+        "name": "一口吃掉水果味的夏天",
+        "view_count": 7775578,
+        "rank": 18
+      },
+      {
+        "name": "周星驰入股苏州企业",
+        "view_count": 7761620,
+        "rank": 20
+      }
+    ],
+    "bilibili": [
+      {
+        "title": "回忆永远都是加分项",
+        "play": 2404070,
+        "rank": 1
+      },
+      {
+        "title": "不儿，你俩来真的啊？！",
+        "play": 1846126,
+        "rank": 2
+      },
+      {
+        "title": "初代跑男团战力排行",
+        "play": 247009,
+        "rank": 3
+      },
+      {
+        "title": "儿捅节",
+        "play": 489017,
+        "rank": 4
+      },
+      {
+        "title": "起初我一直以为霸总只是大家对王心凌站哥的爱称",
+        "play": 1469609,
+        "rank": 5
+      },
+      {
+        "title": "世界杯主题曲IShowSpeed",
+        "play": 1247983,
+        "rank": 6
+      },
+      {
+        "title": "坏了，这下特朗普都反犹了",
+        "play": 516768,
+        "rank": 8
+      },
+      {
+        "title": "做了一把千机伞，能变十三个形态",
+        "play": 2218921,
+        "rank": 14
+      }
+    ],
+    "tieba": [
+      {
+        "title": "前LPL选手icon偷看路人裙底",
+        "discussions": "243.3W",
+        "rank": 1
+      },
+      {
+        "title": "看图瞎编,日媒不懂中文闹笑话",
+        "discussions": "233.1W",
+        "rank": 2
+      },
+      {
+        "title": "白嫖结束!豆包AI开始收费",
+        "discussions": "210.8W",
+        "rank": 3
+      },
+      {
+        "title": "游客5千字差评逼店家免单",
+        "discussions": "184.3W",
+        "rank": 4
+      },
+      {
+        "title": "硬刚GTA6?影之刃零跳票",
+        "discussions": "158.2W",
+        "rank": 5
+      },
+      {
+        "title": "海力士火灾,内存涨价理由+1",
+        "discussions": "44.6W",
+        "rank": 10
+      }
+    ],
+    "36kr": [
+      {
+        "title": "Anthropic冲击AI史上最大IPO",
+        "rank": 1
+      },
+      {
+        "title": "ChatGPT+Codex官宣合体，10亿人喜提超级Agent",
+        "rank": 2
+      },
+      {
+        "title": "iPhone 18 Pro新配色未发先火",
+        "rank": 3
+      },
+      {
+        "title": "字节AI大将顾全全离职",
+        "rank": 4
+      },
+      {
+        "title": "腾讯股价暴涨创2021年后单日最高涨幅",
+        "rank": 5
+      },
+      {
+        "title": "中产的夏天，正在戒掉穷人的啤酒",
+        "rank": 6
+      },
+      {
+        "title": "山东诞生一家AI黑马",
+        "rank": 7
+      },
+      {
+        "title": "微信扛旗，总攻AI",
+        "rank": 8
+      },
+      {
+        "title": "豆包6月下旬正式付费",
+        "rank": 12
+      },
+      {
+        "title": "英伟达重新发明PC",
+        "rank": 14
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - model_type: note
+    note_card:
+      user:
+        user_id: 63745abe000000001f0187db
+        nickname: 钥匙挂在门上
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31p41aht83c005orkbav7r1ur02hio58
+        xsec_token: ABfGdEQvMM8wqVCZDcnsFZleWZuS_ygcMCj204isxGPuk=
+      at_user_list: []
+      time: 1753881262000
+      last_update_time: 1753881263000
+      share_info:
+        un_share: false
+      note_id: 688a1aae0000000003027278
+      title: ''
+      desc: 黄仁勋在北京“前门文华东方酒店”住了三个晚上🏨这家酒店最基础的四合院房型、每晚至少也得人民币一万元以上。三晚加税费大概接近4万元。黄总至少起步入住的应该是十多万一晚的四合院房型。不知道酒店的官总是否给黄总能升级到二十几万元的房型。据说那几天许多科技界的大佬纷纷上赶着想做黄仁勋的邻居。本来十分静谧的“前门文华东方”突然就喧嚣了起来～
+      interact_info:
+        share_count: '571'
+        followed: false
+        relation: none
+        liked: false
+        liked_count: '990'
+        collected: false
+        collected_count: '195'
+        comment_count: '315'
+      image_list:
+      - width: 1440
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/9a44fbfb30144b8329122e62cfa64149/notes_pre_post/1040g3k831kihvqhc2u005orkbav7r1ur3r6akg8!nd_dft_wgth_webp_3
+        stream: {}
+        file_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/be6875d7ea939ae3de60ce1a29fc203f/notes_pre_post/1040g3k831kihvqhc2u005orkbav7r1ur3r6akg8!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/9a44fbfb30144b8329122e62cfa64149/notes_pre_post/1040g3k831kihvqhc2u005orkbav7r1ur3r6akg8!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/be6875d7ea939ae3de60ce1a29fc203f/notes_pre_post/1040g3k831kihvqhc2u005orkbav7r1ur3r6akg8!nd_prv_wgth_webp_3
+        live_photo: false
+        height: 1080
+      - trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/0eebe82ee1862f09d7dcf9cbbdd7e6b7/notes_pre_post/1040g3k831kihvqhc2u0g5orkbav7r1ur8m7o620!nd_prv_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        height: 1338
+        width: 1073
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/0eebe82ee1862f09d7dcf9cbbdd7e6b7/notes_pre_post/1040g3k831kihvqhc2u0g5orkbav7r1ur8m7o620!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/3ede95dad8ca1a476db68f39a7be75bb/notes_pre_post/1040g3k831kihvqhc2u0g5orkbav7r1ur8m7o620!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/3ede95dad8ca1a476db68f39a7be75bb/notes_pre_post/1040g3k831kihvqhc2u0g5orkbav7r1ur8m7o620!nd_dft_wlteh_webp_3
+      - url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/be599b0ce2557a36e3becabd906a0925/notes_pre_post/1040g3k831kihvqhc2u105orkbav7r1ur1924i0o!nd_prv_wlteh_webp_3
+        stream:
+          av1: []
+          h264:
+          - backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e88a1aacb2486f01005003985b785cbd_19.mp4
+            master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e88a1aacb2486f01005003985b785cbd_19.mp4?sign=d5c533ad8952c988c354025852811928&t=6a1771ac
+          h265: []
+          h266: []
+        live_photo: true
+        height: 2560
+        width: 1920
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/be599b0ce2557a36e3becabd906a0925/notes_pre_post/1040g3k831kihvqhc2u105orkbav7r1ur1924i0o!nd_prv_wlteh_webp_3
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/04648dc4f369c90483078ba56365f0fe/notes_pre_post/1040g3k831kihvqhc2u105orkbav7r1ur1924i0o!nd_dft_wlteh_webp_3
+          image_scene: WB_DFT
+        file_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/04648dc4f369c90483078ba56365f0fe/notes_pre_post/1040g3k831kihvqhc2u105orkbav7r1ur1924i0o!nd_dft_wlteh_webp_3
+      tag_list: []
+      type: normal
+    id: 688a1aae0000000003027278
+  current_time: 1779618925009
+

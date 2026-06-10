@@ -1,0 +1,287 @@
+ok: true
+schema_version: '1'
+data:
+  items:
+  - id: 68a6e9ba000000001c012de0
+    model_type: note
+    note_card:
+      desc: '和朋友说走就走的旅行 入住陵水新开的金普顿。
+
+        推门即是扑面而来的低调奢华——不张扬的质感。
+
+        ✨第一次见设施这么完备的酒店
+
+        SPA舒缓身心，电竞房唤醒活力，午后与好友对弈一局象棋，孩童在活动室自在嬉戏。入夜后，在Bar Ronero，微醺恰到好处。感觉情侣的浪漫，闺蜜的欢笑，家庭的温馨，在这里都能找到归属！
+
+        😋味蕾与居所的双重享受🛁
+
+        一日三餐皆都可以在酒店解决，餐食丰盈而且精致；
+
+        路间营业到12点！晚起也能吃到全球的街头美食 。
+
+        观海餐厅的海鲜盲盒食材好新鲜！
+
+        房间内敛而考究，每一处设计都长在审美上——住了就不想离开。
+
+        📷超多高颜值的机位
+
+        满足了我们喜欢拍拍拍的需要！不管是室内还是室外，随手一拍，出片和呼吸一样简单😆 ！
+
+        我们一起说笑，享受了三天的闺蜜时光 ，约定好下次还要来这里度假🏖️！
+
+        #度假酒店[话题]# #治愈系酒店[话题]# #酒店天花板[话题]# #豪华酒店式享受[话题]# #奢华住宿体验[话题]# #设计感超强酒店[话题]#'
+      user:
+        user_id: 5ee2361d000000000100136c
+        nickname: 库扎Hazel
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo315unc1ka2o005nn26oeg84rc0c9gaj8
+        xsec_token: ABoZNKt3x8qU0UJ8x0YbpCo3agPRxA4m3A0wlKD63CvMQ=
+      image_list:
+      - file_id: ''
+        width: 1922
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/01e65cdf3598c11164c6624085179630/notes_pre_post/1040g3k831lem0j5lle705nn26oeg84rcvbotomo!nd_prv_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        height: 2560
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/01e65cdf3598c11164c6624085179630/notes_pre_post/1040g3k831lem0j5lle705nn26oeg84rcvbotomo!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/2f06827173c4914aeac2c392d67f5dd4/notes_pre_post/1040g3k831lem0j5lle705nn26oeg84rcvbotomo!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/2f06827173c4914aeac2c392d67f5dd4/notes_pre_post/1040g3k831lem0j5lle705nn26oeg84rcvbotomo!nd_dft_wlteh_webp_3
+      - stream: {}
+        live_photo: false
+        file_id: ''
+        width: 1920
+        url: ''
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/a5ab4831c85eb2f97bf039fc1daad507/notes_pre_post/1040g3k831lem0j5lle7g5nn26oeg84rc70bskdg!nd_dft_wlteh_webp_3
+        height: 2560
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/67e7edb9f6e71ad5906454aa80e00a89/notes_pre_post/1040g3k831lem0j5lle7g5nn26oeg84rc70bskdg!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/a5ab4831c85eb2f97bf039fc1daad507/notes_pre_post/1040g3k831lem0j5lle7g5nn26oeg84rc70bskdg!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/67e7edb9f6e71ad5906454aa80e00a89/notes_pre_post/1040g3k831lem0j5lle7g5nn26oeg84rc70bskdg!nd_prv_wlteh_webp_3
+      - height: 2560
+        width: 1922
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/b5639e64ec5342bcc740bfc71ab48543/notes_pre_post/1040g3k831lem0j5lle805nn26oeg84rc8vknp8o!nd_dft_wlteh_webp_3
+        live_photo: false
+        file_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/0512cbdc90a070df36a5edc18916c731/notes_pre_post/1040g3k831lem0j5lle805nn26oeg84rc8vknp8o!nd_prv_wlteh_webp_3
+        - url: http://sns-webpic-qc.xhscdn.com/202605241836/b5639e64ec5342bcc740bfc71ab48543/notes_pre_post/1040g3k831lem0j5lle805nn26oeg84rc8vknp8o!nd_dft_wlteh_webp_3
+          image_scene: WB_DFT
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/0512cbdc90a070df36a5edc18916c731/notes_pre_post/1040g3k831lem0j5lle805nn26oeg84rc8vknp8o!nd_prv_wlteh_webp_3
+        stream: {}
+        url: ''
+      - file_id: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/642f0dd3cffb1f042f46ba3e050c4ce8/notes_pre_post/1040g3k831lem0j5lle8g5nn26oeg84rc82ltcqg!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/75f8a8358aebee179dc215c1b3f62bef/notes_pre_post/1040g3k831lem0j5lle8g5nn26oeg84rc82ltcqg!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/642f0dd3cffb1f042f46ba3e050c4ce8/notes_pre_post/1040g3k831lem0j5lle8g5nn26oeg84rc82ltcqg!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/75f8a8358aebee179dc215c1b3f62bef/notes_pre_post/1040g3k831lem0j5lle8g5nn26oeg84rc82ltcqg!nd_dft_wlteh_webp_3
+        stream: {}
+        height: 2560
+        width: 1920
+        url: ''
+        live_photo: false
+      - file_id: ''
+        url: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/e15f242133b7fc6abb664eb6dba58e51/notes_pre_post/1040g3k831lem0j5lle905nn26oeg84rcgl2kkg0!nd_dft_wlteh_webp_3
+        live_photo: false
+        height: 6048
+        width: 4540
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/7a8f51648c60c445dceab90ba3268bce/notes_pre_post/1040g3k831lem0j5lle905nn26oeg84rcgl2kkg0!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/e15f242133b7fc6abb664eb6dba58e51/notes_pre_post/1040g3k831lem0j5lle905nn26oeg84rcgl2kkg0!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/7a8f51648c60c445dceab90ba3268bce/notes_pre_post/1040g3k831lem0j5lle905nn26oeg84rcgl2kkg0!nd_prv_wlteh_webp_3
+        stream: {}
+      - file_id: ''
+        height: 2560
+        width: 1920
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/d09ca5441b9330059f5f0df7646b7a9b/notes_pre_post/1040g3k831lem0j5lle9g5nn26oeg84rck28c5po!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/ceaee6a24d101db004a58605190bef74/notes_pre_post/1040g3k831lem0j5lle9g5nn26oeg84rck28c5po!nd_dft_wlteh_webp_3
+        live_photo: false
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/d09ca5441b9330059f5f0df7646b7a9b/notes_pre_post/1040g3k831lem0j5lle9g5nn26oeg84rck28c5po!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/ceaee6a24d101db004a58605190bef74/notes_pre_post/1040g3k831lem0j5lle9g5nn26oeg84rck28c5po!nd_dft_wlteh_webp_3
+        stream: {}
+      - file_id: ''
+        height: 2560
+        width: 1920
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/c52d2db85b0ff362329436c2d273e17e/notes_pre_post/1040g3k831lem0j5llea05nn26oeg84rch189s90!nd_prv_wlteh_webp_3
+        trace_id: ''
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241836/c52d2db85b0ff362329436c2d273e17e/notes_pre_post/1040g3k831lem0j5llea05nn26oeg84rch189s90!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/2fdc15e79e6cf7f0a05db7b1f4b66206/notes_pre_post/1040g3k831lem0j5llea05nn26oeg84rch189s90!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/2fdc15e79e6cf7f0a05db7b1f4b66206/notes_pre_post/1040g3k831lem0j5llea05nn26oeg84rch189s90!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+      - width: 1920
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/e13f9b95f3fca87d2512676104597a19/notes_pre_post/1040g3k831lem0j5lleag5nn26oeg84rcvgjkf3g!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/7aa09d0b63bc27bdf6a4dbe33932960f/notes_pre_post/1040g3k831lem0j5lleag5nn26oeg84rcvgjkf3g!nd_dft_wlteh_webp_3
+        file_id: ''
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/e13f9b95f3fca87d2512676104597a19/notes_pre_post/1040g3k831lem0j5lleag5nn26oeg84rcvgjkf3g!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/7aa09d0b63bc27bdf6a4dbe33932960f/notes_pre_post/1040g3k831lem0j5lleag5nn26oeg84rcvgjkf3g!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        height: 2560
+      - height: 2560
+        width: 1920
+        stream: {}
+        file_id: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/e7a3063239fbaa944682ebcf736b357e/notes_pre_post/1040g3k831lem0j5lleb05nn26oeg84rc5l5s0a8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/c7c55fa0d6e94d19aff51141e3dff6a9/notes_pre_post/1040g3k831lem0j5lleb05nn26oeg84rc5l5s0a8!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/e7a3063239fbaa944682ebcf736b357e/notes_pre_post/1040g3k831lem0j5lleb05nn26oeg84rc5l5s0a8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/c7c55fa0d6e94d19aff51141e3dff6a9/notes_pre_post/1040g3k831lem0j5lleb05nn26oeg84rc5l5s0a8!nd_dft_wlteh_webp_3
+        live_photo: false
+        url: ''
+      - trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/30e5947a8484d8648f62f27a0fb2dd71/notes_pre_post/1040g3k831lem0j5llebg5nn26oeg84rciq2e4go!nd_prv_wlteh_webp_3
+        - url: http://sns-webpic-qc.xhscdn.com/202605241836/cb09959611c5083b93e361bef355f453/notes_pre_post/1040g3k831lem0j5llebg5nn26oeg84rciq2e4go!nd_dft_wlteh_webp_3
+          image_scene: WB_DFT
+        live_photo: false
+        file_id: ''
+        height: 2560
+        width: 1920
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/30e5947a8484d8648f62f27a0fb2dd71/notes_pre_post/1040g3k831lem0j5llebg5nn26oeg84rciq2e4go!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/cb09959611c5083b93e361bef355f453/notes_pre_post/1040g3k831lem0j5llebg5nn26oeg84rciq2e4go!nd_dft_wlteh_webp_3
+        stream: {}
+      - file_id: ''
+        width: 1920
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/8a6ee6f2ac2403379c19e2ff2ec3ddfb/notes_pre_post/1040g3k831lem0j5llec05nn26oeg84rclefftr8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/c06f36f5c2beeacdd687bd70dc1bf989/notes_pre_post/1040g3k831lem0j5llec05nn26oeg84rclefftr8!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        height: 2560
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/8a6ee6f2ac2403379c19e2ff2ec3ddfb/notes_pre_post/1040g3k831lem0j5llec05nn26oeg84rclefftr8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/c06f36f5c2beeacdd687bd70dc1bf989/notes_pre_post/1040g3k831lem0j5llec05nn26oeg84rclefftr8!nd_dft_wlteh_webp_3
+      - info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/dd31c1d23abeb47611028a4c858ac27c/notes_pre_post/1040g3k831lem0j5llecg5nn26oeg84rccc00alo!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/5472a6d946667fc50fb6e9efd9fc37d1/notes_pre_post/1040g3k831lem0j5llecg5nn26oeg84rccc00alo!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/dd31c1d23abeb47611028a4c858ac27c/notes_pre_post/1040g3k831lem0j5llecg5nn26oeg84rccc00alo!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/5472a6d946667fc50fb6e9efd9fc37d1/notes_pre_post/1040g3k831lem0j5llecg5nn26oeg84rccc00alo!nd_dft_wlteh_webp_3
+        height: 2560
+        width: 1920
+        trace_id: ''
+        stream: {}
+        live_photo: false
+        file_id: ''
+        url: ''
+      - info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/dc71b7f37ca6c81cfba1cc55ba458bb7/notes_pre_post/1040g3k831lem0j5lled05nn26oeg84rc0bg217o!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/6d22891613fa218f9c93ac8ad5726159/notes_pre_post/1040g3k831lem0j5lled05nn26oeg84rc0bg217o!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/dc71b7f37ca6c81cfba1cc55ba458bb7/notes_pre_post/1040g3k831lem0j5lled05nn26oeg84rc0bg217o!nd_prv_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        url: ''
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/6d22891613fa218f9c93ac8ad5726159/notes_pre_post/1040g3k831lem0j5lled05nn26oeg84rc0bg217o!nd_dft_wlteh_webp_3
+        live_photo: false
+        height: 2560
+        width: 1920
+      - height: 2560
+        width: 1920
+        trace_id: ''
+        stream: {}
+        live_photo: false
+        file_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/6f79d7ff218c67df51b697d88ed840a0/notes_pre_post/1040g3k831lem0j5lledg5nn26oeg84rc5v75jq8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/396629fd49eafb67eb4f216db2120a9a/notes_pre_post/1040g3k831lem0j5lledg5nn26oeg84rc5v75jq8!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/6f79d7ff218c67df51b697d88ed840a0/notes_pre_post/1040g3k831lem0j5lledg5nn26oeg84rc5v75jq8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/396629fd49eafb67eb4f216db2120a9a/notes_pre_post/1040g3k831lem0j5lledg5nn26oeg84rc5v75jq8!nd_dft_wlteh_webp_3
+      - url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/731ec4ff3e041ba60d964ef227a2fcec/notes_pre_post/1040g3k831lem8mtslo705nn26oeg84rc46c1u6o!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/7efabc22d6b22fdeb93faf4d7d557039/notes_pre_post/1040g3k831lem8mtslo705nn26oeg84rc46c1u6o!nd_dft_wlteh_webp_3
+        stream: {}
+        height: 2560
+        width: 1922
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/731ec4ff3e041ba60d964ef227a2fcec/notes_pre_post/1040g3k831lem8mtslo705nn26oeg84rc46c1u6o!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/7efabc22d6b22fdeb93faf4d7d557039/notes_pre_post/1040g3k831lem8mtslo705nn26oeg84rc46c1u6o!nd_dft_wlteh_webp_3
+        live_photo: false
+        file_id: ''
+      at_user_list: []
+      type: normal
+      title: 陵水金普顿三天 plog️🩵🧩🛁
+      interact_info:
+        followed: false
+        relation: none
+        liked: false
+        liked_count: '251'
+        collected: false
+        collected_count: '88'
+        comment_count: '14'
+        share_count: '39'
+      tag_list:
+      - id: 5c67648b000000000e030685
+        name: 度假酒店
+        type: topic
+      - type: topic
+        id: 5ef85dd0000000000101c9ad
+        name: 治愈系酒店
+      - name: 酒店天花板
+        type: topic
+        id: 61913e970000000001005056
+      - id: 64ccc7e9000000001a00aced
+        name: 豪华酒店式享受
+        type: topic
+      - id: 6464962f000000001c024d94
+        name: 奢华住宿体验
+        type: topic
+      - id: 616c2cad0000000001008a40
+        name: 设计感超强酒店
+        type: topic
+      time: 1755769274000
+      last_update_time: 1755769275000
+      share_info:
+        un_share: false
+      note_id: 68a6e9ba000000001c012de0
+  current_time: 1779619013674
+  cursor_score: ''
+

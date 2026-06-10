@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>视频全链路工坊 v3.0 — 架构图</title>
+<style>
+body { background: #f5f5f5; margin: 0; padding: 30px; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; display: flex; justify-content: center; }
+.container { max-width: 1200px; width: 100%; }
+h1 { text-align: center; color: #1a1a2e; font-weight: 600; font-size: 24px; margin-bottom: 8px; }
+.subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 30px; }
+svg { width: 100%; height: auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+.legend { display: flex; gap: 20px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #555; }
+.legend-dot { width: 12px; height: 12px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🎬 视频全链路工坊 v3.0</h1>
+  <p class="subtitle">三线架构 · 创作线 + 分析线 + 提效线 → 剪辑师交付</p>
+
+  <svg viewBox="0 0 1100 900" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#3b82f6"/>
+      </marker>
+      <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+      </marker>
+      <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#a855f7"/>
+      </marker>
+      <marker id="arrow-orange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+      </marker>
+
+      <filter id="shadow" x="-2" y="-2" width="4" height="4">
+        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+      </filter>
+
+      <!-- 步骤框渐变 -->
+      <linearGradient id="g-blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eff6ff"/><stop offset="1" stop-color="#dbeafe"/></linearGradient>
+      <linearGradient id="g-green" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f0fdf4"/><stop offset="1" stop-color="#dcfce7"/></linearGradient>
+      <linearGradient id="g-purple" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#faf5ff"/><stop offset="1" stop-color="#f3e8ff"/></linearGradient>
+      <linearGradient id="g-orange" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff7ed"/><stop offset="1" stop-color="#ffedd5"/></linearGradient>
+      <linearGradient id="g-red" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fef2f2"/><stop offset="1" stop-color="#fee2e2"/></linearGradient>
+    </defs>
+
+    <!-- ===== 背景区域 ===== -->
+
+    <!-- 创作线背景 -->
+    <rect x="30" y="50" width="1040" height="370" rx="12" fill="#f8faff" stroke="#e0e7ff" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <text x="50" y="78" font-size="16" font-weight="600" fill="#3b82f6">🎬 创作线 — 旅行视频制作</text>
+
+    <!-- 分析线背景 -->
+    <rect x="30" y="440" width="500" height="200" rx="12" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <text x="50" y="468" font-size="16" font-weight="600" fill="#22c55e">📱 分析线 — 抖音文案提取</text>
+
+    <!-- 提效线背景 -->
+    <rect x="550" y="440" width="520" height="200" rx="12" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <text x="570" y="468" font-size="16" font-weight="600" fill="#a855f7">⚡ 提效线 (v3.0)</text>
+
+    <!-- 交付区域 -->
+    <rect x="30" y="660" width="1040" height="210" rx="12" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <text x="50" y="688" font-size="16" font-weight="600" fill="#f59e0b">🎯 交付</text>
+
+    <!-- ===== 创作线 步骤框 ===== -->
+
+    <!-- 第1行 -->
+    <!-- S1 行程产品库 -->
+    <rect x="60" y="95" width="108" height="60" rx="8" fill="url(#g-blue)" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="114" y="121" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">① 行程产品库</text>
+    <text x="114" y="141" text-anchor="middle" font-size="10" fill="#6b7280">产品信息+行程明细</text>
+
+    <line x1="168" y1="125" x2="198" y2="125" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+    <!-- S2 对标视频搜索 -->
+    <rect x="200" y="95" width="108" height="60" rx="8" fill="url(#g-blue)" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="254" y="121" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">② 对标视频搜索</text>
+    <text x="254" y="141" text-anchor="middle" font-size="10" fill="#6b7280">小红书XHS搜索</text>
+
+    <line x1="308" y1="125" x2="338" y2="125" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+    <!-- S3 痛点分析 -->
+    <rect x="340" y="95" width="108" height="60" rx="8" fill="url(#g-blue)" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="394" y="121" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">③ 痛点分析</text>
+    <text x="394" y="141" text-anchor="middle" font-size="10" fill="#6b7280">用户需求提炼</text>
+
+    <line x1="448" y1="125" x2="478" y2="125" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+    <!-- S4 讲解流程 -->
+    <rect x="480" y="95" width="108" height="60" rx="8" fill="url(#g-blue)" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="534" y="121" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">④ 讲解流程</text>
+    <text x="534" y="141" text-anchor="middle" font-size="10" fill="#6b7280">脚本大纲(7步结构)</text>
+
+    <line x1="588" y1="125" x2="618" y2="125" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+    <!-- S5 文案生成 -->
+    <rect x="620" y="95" width="108" height="60" rx="8" fill="url(#g-blue)" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="674" y="121" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">⑤ 文案生成</text>
+    <text x="674" y="141" text-anchor="middle" font-size="10" fill="#6b7280">AI口播文案×2版</text>
+
+    <line x1="728" y1="125" x2="758" y2="125" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+    <!-- S6 素材匹配 -->
+    <rect x="760" y="95" width="108" height="60" rx="8" fill="url(#g-blue)" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="814" y="121" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">⑥ 素材匹配</text>
+    <text x="814" y="141" text-anchor="middle" font-size="10" fill="#6b7280">镜头→素材映射</text>
+
+    <!-- 折线 S6 → S7 -->
+    <path d="M 814 155 L 814 175 L 394 175 L 394 195" fill="none" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+    <!-- 第2行 -->
+    <!-- S7 画面分割 -->
+    <rect x="200" y="200" width="130" height="70" rx="8" fill="url(#g-blue)" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="265" y="224" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">⑦ 画面分割</text>
+    <text x="265" y="242" text-anchor="middle" font-size="10" fill="#6b7280">YouTube章节提取</text>
+    <text x="265" y="258" text-anchor="middle" font-size="10" fill="#6b7280">中英对照时间轴</text>
+
+    <line x1="330" y1="235" x2="370" y2="235" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+    <!-- S8 BGM+转场 -->
+    <rect x="372" y="200" width="130" height="70" rx="8" fill="url(#g-blue)" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="437" y="224" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">⑧ BGM+转场分析</text>
+    <text x="437" y="242" text-anchor="middle" font-size="10" fill="#6b7280">AI推理 无需下载</text>
+    <text x="437" y="258" text-anchor="middle" font-size="10" fill="#6b7280">BGM建议+卡点建议</text>
+
+    <line x1="502" y1="235" x2="542" y2="235" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+    <!-- S9 EDL导出 -->
+    <rect x="544" y="200" width="130" height="70" rx="8" fill="url(#g-blue)" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="609" y="224" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">⑨ EDL时间线导出</text>
+    <text x="609" y="242" text-anchor="middle" font-size="10" fill="#6b7280">EDL/FCPXML/CSV</text>
+    <text x="609" y="258" text-anchor="middle" font-size="10" fill="#6b7280">一键导入剪辑软件</text>
+
+    <line x1="674" y1="235" x2="714" y2="235" stroke="#3b82f6" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+    <!-- S10 素材下载 -->
+    <rect x="716" y="200" width="130" height="70" rx="8" fill="url(#g-blue)" stroke="#93c5fd" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="781" y="224" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">⑩ 素材下载</text>
+    <text x="781" y="242" text-anchor="middle" font-size="10" fill="#6b7280">yt-dlp 1080p</text>
+    <text x="781" y="258" text-anchor="middle" font-size="10" fill="#6b7280">自动切割+代理文件</text>
+
+    <!-- ===== 创作线 HeyGen 分支 ===== -->
+    <rect x="620" y="290" width="150" height="55" rx="8" fill="url(#g-red)" stroke="#fca5a5" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="695" y="314" text-anchor="middle" font-size="12" font-weight="600" fill="#991b1b">🤖 HeyGen数字人</text>
+    <text x="695" y="332" text-anchor="middle" font-size="10" fill="#991b1b">文案→AI口播视频</text>
+
+    <path d="M 674 155 L 674 280 L 695 280 L 695 288" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow-blue)"/>
+
+    <!-- ===== 分析线 ===== -->
+
+    <!-- A1 抖音链接 -->
+    <rect x="60" y="485" width="110" height="55" rx="8" fill="url(#g-green)" stroke="#86efac" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="115" y="509" text-anchor="middle" font-size="12" font-weight="600" fill="#166534">① 输入抖音链接</text>
+    <text x="115" y="527" text-anchor="middle" font-size="10" fill="#6b7280">opencli browser</text>
+
+    <line x1="170" y1="512" x2="200" y2="512" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+    <!-- A2 获取视频数据 -->
+    <rect x="202" y="485" width="110" height="55" rx="8" fill="url(#g-green)" stroke="#86efac" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="257" y="509" text-anchor="middle" font-size="12" font-weight="600" fill="#166534">② 获取视频数据</text>
+    <text x="257" y="527" text-anchor="middle" font-size="10" fill="#6b7280">XHR提取元数据</text>
+
+    <line x1="312" y1="512" x2="342" y2="512" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+    <!-- A3 语音转写 -->
+    <rect x="344" y="485" width="110" height="55" rx="8" fill="url(#g-green)" stroke="#86efac" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="399" y="509" text-anchor="middle" font-size="12" font-weight="600" fill="#166534">③ 语音转写</text>
+    <text x="399" y="527" text-anchor="middle" font-size="10" fill="#6b7280">faster-whisper</text>
+
+    <line x1="454" y1="512" x2="484" y2="512" stroke="#22c55e" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+    <!-- A4 文案入库 -->
+    <rect x="60" y="565" width="130" height="55" rx="8" fill="url(#g-green)" stroke="#86efac" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="125" y="589" text-anchor="middle" font-size="12" font-weight="600" fill="#166534">④ 写入文案库</text>
+    <text x="125" y="607" text-anchor="middle" font-size="10" fill="#6b7280">Bitable 视频文案库</text>
+
+    <!-- A5 标签分析 -->
+    <rect x="215" y="565" width="130" height="55" rx="8" fill="url(#g-green)" stroke="#86efac" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="280" y="589" text-anchor="middle" font-size="12" font-weight="600" fill="#166534">⑤ 人物标签分析</text>
+    <text x="280" y="607" text-anchor="middle" font-size="10" fill="#6b7280">人物/性格/情感标签</text>
+
+    <path d="M 449 540 L 449 555 L 340 555 L 340 563" fill="none" stroke="#22c55e" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+
+    <!-- ===== 提效线 ===== -->
+
+    <!-- T1 BGM风格 -->
+    <rect x="580" y="485" width="145" height="55" rx="8" fill="url(#g-purple)" stroke="#d8b4fe" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="652" y="509" text-anchor="middle" font-size="12" font-weight="600" fill="#6b21a8">🎵 BGM风格建议</text>
+    <text x="652" y="527" text-anchor="middle" font-size="10" fill="#6b7280">画面描述→BGM推理</text>
+
+    <line x1="725" y1="512" x2="755" y2="512" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+
+    <!-- T2 卡点转场 -->
+    <rect x="757" y="485" width="145" height="55" rx="8" fill="url(#g-purple)" stroke="#d8b4fe" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="829" y="509" text-anchor="middle" font-size="12" font-weight="600" fill="#6b21a8">🎬 卡点转场建议</text>
+    <text x="829" y="527" text-anchor="middle" font-size="10" fill="#6b7280">镜头顺序→转场推理</text>
+
+    <line x1="902" y1="512" x2="932" y2="512" stroke="#a855f7" stroke-width="1.5" marker-end="url(#arrow-purple)"/>
+
+    <!-- T3 SOP文档 -->
+    <rect x="580" y="565" width="145" height="55" rx="8" fill="url(#g-purple)" stroke="#d8b4fe" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="652" y="589" text-anchor="middle" font-size="12" font-weight="600" fill="#6b21a8">📋 SOP文档</text>
+    <text x="652" y="607" text-anchor="middle" font-size="10" fill="#6b7280">剪辑师操作指南</text>
+
+    <!-- T4 质量巡检 -->
+    <rect x="757" y="565" width="145" height="55" rx="8" fill="url(#g-purple)" stroke="#d8b4fe" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="829" y="589" text-anchor="middle" font-size="12" font-weight="600" fill="#6b21a8">🔍 质量自动巡检</text>
+    <text x="829" y="607" text-anchor="middle" font-size="10" fill="#6b7280">分辨率/帧率/黑帧检查</text>
+
+    <path d="M 652 468 L 652 483" fill="none" stroke="#a855f7" stroke-width="1.2" marker-end="url(#arrow-purple)"/>
+    <path d="M 829 468 L 829 483" fill="none" stroke="#a855f7" stroke-width="1.2" marker-end="url(#arrow-purple)"/>
+
+    <!-- ===== 交付区 ===== -->
+
+    <!-- 汇合箭头：创作线→交付 -->
+    <path d="M 450 270 L 450 350 L -100 350 L -100 700 L 200 700 L 200 720" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+
+    <!-- 汇合箭头：分析线→交付 -->
+    <path d="M 180 620 L 180 700 L 400 700" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+
+    <!-- 汇合箭头：提效线→交付 -->
+    <path d="M 660 620 L 660 700 L 600 700" fill="none" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrow-orange)"/>
+
+    <!-- 交付卡片 -->
+    <rect x="180" y="710" width="150" height="65" rx="10" fill="url(#g-orange)" stroke="#fb923c" stroke-width="2" filter="url(#shadow)"/>
+    <text x="255" y="735" text-anchor="middle" font-size="13" font-weight="600" fill="#9a3412">🎬 Premiere/DaVinci</text>
+    <text x="255" y="755" text-anchor="middle" font-size="10" fill="#9a3412">导入EDL→直接开剪</text>
+
+    <rect x="370" y="710" width="150" height="65" rx="10" fill="url(#g-orange)" stroke="#fb923c" stroke-width="2" filter="url(#shadow)"/>
+    <text x="445" y="735" text-anchor="middle" font-size="13" font-weight="600" fill="#9a3412">🎬 Final Cut Pro</text>
+    <text x="445" y="755" text-anchor="middle" font-size="10" fill="#9a3412">导入FCPXML→时间线就绪</text>
+
+    <rect x="560" y="710" width="150" height="65" rx="10" fill="url(#g-orange)" stroke="#fb923c" stroke-width="2" filter="url(#shadow)"/>
+    <text x="635" y="735" text-anchor="middle" font-size="13" font-weight="600" fill="#9a3412">📁 本地素材库</text>
+    <text x="635" y="755" text-anchor="middle" font-size="10" fill="#9a3412">切割片段+代理文件</text>
+
+    <!-- HeyGen 分支到交付 -->
+    <path d="M 695 345 L 695 370 L 780 370 L 780 708" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow-red)"/>
+
+    <!-- 底部标注 -->
+    <rect x="820" y="720" width="150" height="45" rx="8" fill="url(#g-red)" stroke="#fca5a5" stroke-width="1.5"/>
+    <text x="895" y="740" text-anchor="middle" font-size="12" font-weight="600" fill="#991b1b">🤖 AI数字人口播</text>
+    <text x="895" y="755" text-anchor="middle" font-size="9" fill="#991b1b">HeyGen视频替代剪辑</text>
+
+    <!-- 第3行 HeyGen 箭头 -->
+    <defs>
+      <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+      </marker>
+    </defs>
+    <path d="M 695 345 L 695 370 L 895 370 L 895 718" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrow-red)"/>
+
+  </svg>
+
+  <!-- 图例 -->
+  <div class="legend">
+    <div class="legend-item"><span class="legend-dot" style="background:#3b82f6"></span> 创作线 10步</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#22c55e"></span> 分析线 5步</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#a855f7"></span> 提效线 v3.0</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#ef4444"></span> HeyGen AI数字人</div>
+    <div class="legend-item"><span class="legend-dot" style="background:#f59e0b"></span> 交付</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>热点商机多维分析 — 工作流架构</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  body { background:#f5f5f5; display:flex; justify-content:center; padding:40px; font-family:system-ui; }
+  .container { background:white; border-radius:16px; padding:40px; box-shadow:0 4px 24px rgba(0,0,0,.08); max-width:1100px; }
+  h1 { font-size:20px; margin:0 0 8px; color:#333; font-weight:600; }
+  .subtitle { color:#888; font-size:14px; margin-bottom:24px; }
+</style></head>
+<body>
+<div class="container">
+  <h1>📍 热点商机多维分析 — 工作流架构</h1>
+  <div class="subtitle">数据采集 → 分析引擎 → Bitable 存储 → 内容生成</div>
+  <pre class="mermaid">
+    graph TD
+      subgraph 采集层[📡 数据采集层]
+        S0["上游产业链采集 route-analysis"]
+        S1["热搜采集 opencli/web_fetch"]
+      end
+      subgraph 分析层[⚙️ 分析引擎]
+        A1["交叉验证+融合 step0_upstream_feeder"]
+        A2["商机分析 人工+AI"]
+      end
+      subgraph 存储层[🗄️ Bitable 存储]
+        B1["商机总览 主表15条"]
+        B2["深度分析子表 地区×4"]
+        B3["上游情报子表 133条"]
+        B4["笔记裂变库 48篇"]
+      end
+      subgraph 生成层[🎯 内容生成]
+        N1["笔记引擎 10模板/对标克隆"]
+        N2["每日混合简报 上游+热搜"]
+        N3["BOSS简报 管理层汇报"]
+      end
+      S0 --> A1
+      S1 --> A1
+      A1 --> A2
+      A2 --> B1
+      B1 --> B2
+      B2 --> N1
+      S0 --> B3
+      A1 --> N2
+      N2 --> N3
+      N1 --> B4
+      style S0 fill:#e1f5fe,stroke:#0288d1
+      style S1 fill:#e1f5fe,stroke:#0288d1
+      style A1 fill:#fff3e0,stroke:#f57c00
+      style A2 fill:#fff3e0,stroke:#f57c00
+      style B1 fill:#e8f5e9,stroke:#388e3c
+      style B2 fill:#e8f5e9,stroke:#388e3c
+      style B3 fill:#e8f5e9,stroke:#388e3c
+      style B4 fill:#e8f5e9,stroke:#388e3c
+      style N1 fill:#f3e5f5,stroke:#7b1fa2
+      style N2 fill:#f3e5f5,stroke:#7b1fa2
+      style N3 fill:#f3e5f5,stroke:#7b1fa2
+  </pre>
+  <div style="margin-top:16px;color:#999;font-size:12px">蓝色=采集 | 橙色=分析 | 绿色=存储 | 紫色=生成</div>
+</div>
+</body>
+</html>

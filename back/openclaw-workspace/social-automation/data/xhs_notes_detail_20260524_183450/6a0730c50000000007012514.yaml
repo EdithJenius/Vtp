@@ -1,0 +1,206 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 6a0730c50000000007012514
+    model_type: note
+    note_card:
+      note_id: 6a0730c50000000007012514
+      last_update_time: 1778856133000
+      share_info:
+        un_share: false
+      desc: '#高品质酒店[话题]# #酒店测评[话题]# #奢华酒店[话题]# #vlog[话题]# #北京前门文华东方酒店[话题]# #四合院[话题]#'
+      user:
+        user_id: 65b8ea6a000000000e0251ed
+        nickname: TQ大王
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo3206mimj9lm005pdot9l3kkfdl631fr8
+        xsec_token: ABRqDauAYKhDzbUgOFRFUSvHVXLkCRuVz-c9gyjVOzpcY=
+      image_list:
+      - stream: {}
+        live_photo: false
+        file_id: ''
+        height: 2880
+        url: ''
+        trace_id: ''
+        width: 2160
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/ff36de8aac87d37d23d39f6f9ddfdca8/1040g2sg3206mqlhdm8e05pdot9l3kkfdi8j8p7o!nd_prv_wlteh_webp_3
+        - url: http://sns-webpic-qc.xhscdn.com/202605241836/3ee2b55919f3aeac7f4b9302eecd9620/1040g2sg3206mqlhdm8e05pdot9l3kkfdi8j8p7o!nd_dft_wlteh_webp_3
+          image_scene: WB_DFT
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/ff36de8aac87d37d23d39f6f9ddfdca8/1040g2sg3206mqlhdm8e05pdot9l3kkfdi8j8p7o!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/3ee2b55919f3aeac7f4b9302eecd9620/1040g2sg3206mqlhdm8e05pdot9l3kkfdi8j8p7o!nd_dft_wlteh_webp_3
+      time: 1778856133000
+      title: 沉浸式测评北京前门文华东方酒店
+      interact_info:
+        liked: false
+        liked_count: '2828'
+        collected: false
+        collected_count: '903'
+        comment_count: '224'
+        share_count: '648'
+        followed: false
+        relation: none
+      video:
+        capa:
+          duration: 861
+        media_v2: '{"video_id":"137930644617902177","video":{"biz_name":110,"biz_id":"282045832710923540","duration":862,"md5":"e220f3fce0aeb676b771026c566f4e4a","hdr_type":0,"drm_type":0,"stream_types":[114,259,108,115],"width":1440,"height":2560,"bound":[{"x":0,"y":0,"w":0,"h":0}],"bbox":{"ocr_v5":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v3":[{"x":17,"y":401,"w":1401,"h":1721}],"ocr_v4":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v2":[{"x":17,"y":149,"w":1401,"h":1973}]},"opaque1":{"bottomAvgLuma":"89","loudnorm":"{\"lra\":7.2,\"htp\":0.16,\"hldn\":-10.28,\"ldn\":-8.9,\"thr\":-19.38}","hasHumanVoice":"true","topAvgLuma":"102","domestic":"1","isSupportSubtitle":"true","rightAvgLuma":"104","videoLanguage":"[\"zh-CN\",\"en-US\"]","audioLevInfo":"{\"audio_quality_level\":\"E\",\"mos_overall\":3.9591,\"version\":\"3.0\"}","weakNetUserFlag":"1","insertSubtitleLanguages":"[\"zh-CN\"]","audioClsInfo":"{\"music_ratio\":0.16022376299723354,\"freesound_ratio\":0.15596993164038234,\"speech_ratio\":0.9502010361281964}"},"subtitles":{"en-US":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01ea0730c4173861010370039e2c179eb1_12.srt?sign=7e9431693be06292cd77a897c723d5bd&t=6a17720a","language":"en-US","format":0,"type":0}],"source":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01ea0730c4173861010370039e2c179516_1.srt?sign=54c623e5ce8ca575f1f73cf3fc4de34d&t=6a17720a","language":"zh-CN","format":0,"type":0}],"zh-CN":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01ea0730c4173861010370039e2c17981e_11.srt?sign=f1c9a8b018ad67344c5b528f398413e9&t=6a17720a","language":"zh-CN","format":0,"type":0}]}},"stream":{"h264":[{"stream_type":259,"stream_desc":"WM_X264_MP4_web","default_stream":0,"format":"mp4","width":720,"height":1280,"duration":861555,"size":140417307,"volume":0.0,"avg_bitrate":1303849,"fps":30,"video_codec":"h264","video_bitrate":1233357,"video_duration":861533,"audio_codec":"aac","audio_bitrate":64010,"audio_duration":861554,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/259/01ea0730c4173861010370039e2c39a35b_259.mp4?sign=2387f35aa35123aa2276e1b157c2a4ba&t=6a17720a","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/259/01ea0730c4173861010370039e2c39a35b_259.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":0.0,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h265":[{"stream_type":114,"stream_desc":"X265_MP4_WEB_114","default_stream":0,"format":"mp4","width":720,"height":1280,"duration":861555,"size":110167719,"volume":0.0,"avg_bitrate":1022966,"fps":30,"video_codec":"hevc","video_bitrate":920392,"video_duration":861533,"audio_codec":"aac","audio_bitrate":95999,"audio_duration":861554,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/114/01ea0730c4173861010370019e2c2408ef_114.mp4?sign=c4b29aa86f7fea8bfe4fca1901d90f15&t=6a17720a","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/114/01ea0730c4173861010370019e2c2408ef_114.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":40.6510009765625,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}},{"stream_type":108,"stream_desc":"X265_MP4_WEB_108","default_stream":0,"format":"mp4","width":1440,"height":2560,"duration":861555,"size":272053960,"volume":0.0,"avg_bitrate":2526166,"fps":30,"video_codec":"hevc","video_bitrate":2391635,"video_duration":861533,"audio_codec":"aac","audio_bitrate":127999,"audio_duration":861554,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/108/01ea0730c4173861010370019e2f4890a4_108.mp4?sign=ccc2a196e13a7459c880fcffc06621d3&t=6a17720a","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/108/01ea0730c4173861010370019e2f4890a4_108.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":43.025001525878906,"ssim":0.0,"weight":70,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}},{"stream_type":115,"stream_desc":"X265_MP4_WEB_115","default_stream":0,"format":"mp4","width":1080,"height":1920,"duration":861555,"size":109445863,"volume":0.0,"avg_bitrate":1016263,"fps":30,"video_codec":"hevc","video_bitrate":913690,"video_duration":861533,"audio_codec":"aac","audio_bitrate":95999,"audio_duration":861554,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/115/01ea0730c4173861010370019e2c225639_115.mp4?sign=8643cf8337f4f5c8e5739a5e11dd4204&t=6a17720a","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/115/01ea0730c4173861010370019e2c225639_115.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":0.0,"ssim":0.0,"weight":70,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h266":[],"av1":[]},"user_level":0}'
+        media:
+          video_id: 137930644617902177
+          video:
+            biz_id: '282045832710923540'
+            duration: 862
+            md5: e220f3fce0aeb676b771026c566f4e4a
+            hdr_type: 0
+            drm_type: 0
+            stream_types:
+            - 114
+            - 259
+            - 108
+            - 115
+            biz_name: 110
+          stream:
+            h266: []
+            av1: []
+            h264:
+            - height: 1280
+              video_codec: h264
+              width: 720
+              audio_channels: 2
+              vmaf: -1
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/259/01ea0730c4173861010370039e2c39a35b_259.mp4
+              default_stream: 0
+              video_duration: 861533
+              audio_duration: 861554
+              stream_desc: WM_X264_MP4_web
+              size: 140417307
+              avg_bitrate: 1303849
+              audio_bitrate: 64010
+              hdr_type: 0
+              stream_type: 259
+              ssim: 0
+              fps: 30
+              rotate: 0
+              quality_type: HD
+              duration: 861555
+              volume: 0
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/259/01ea0730c4173861010370039e2c39a35b_259.mp4?sign=2387f35aa35123aa2276e1b157c2a4ba&t=6a17720a
+              format: mp4
+              video_bitrate: 1233357
+              psnr: 0
+              weight: 62
+              audio_codec: aac
+            h265:
+            - audio_duration: 861554
+              psnr: 40.6510009765625
+              weight: 62
+              size: 110167719
+              audio_codec: aac
+              video_codec: hevc
+              video_bitrate: 920392
+              rotate: 0
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/114/01ea0730c4173861010370019e2c2408ef_114.mp4?sign=c4b29aa86f7fea8bfe4fca1901d90f15&t=6a17720a
+              hdr_type: 0
+              default_stream: 0
+              width: 720
+              height: 1280
+              video_duration: 861533
+              audio_bitrate: 95999
+              ssim: 0
+              stream_desc: X265_MP4_WEB_114
+              volume: 0
+              audio_channels: 2
+              stream_type: 114
+              quality_type: HD
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/114/01ea0730c4173861010370019e2c2408ef_114.mp4
+              vmaf: -1
+              avg_bitrate: 1022966
+              format: mp4
+              fps: 30
+              duration: 861555
+            - audio_codec: aac
+              audio_duration: 861554
+              duration: 861555
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/108/01ea0730c4173861010370019e2f4890a4_108.mp4
+              height: 2560
+              ssim: 0
+              volume: 0
+              fps: 30
+              video_bitrate: 2391635
+              audio_bitrate: 127999
+              rotate: 0
+              hdr_type: 0
+              stream_desc: X265_MP4_WEB_108
+              default_stream: 0
+              avg_bitrate: 2526166
+              vmaf: -1
+              video_duration: 861533
+              psnr: 43.025001525878906
+              stream_type: 108
+              format: mp4
+              width: 1440
+              weight: 70
+              video_codec: hevc
+              audio_channels: 2
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/108/01ea0730c4173861010370019e2f4890a4_108.mp4?sign=ccc2a196e13a7459c880fcffc06621d3&t=6a17720a
+              quality_type: HD
+              size: 272053960
+            - default_stream: 0
+              rotate: 0
+              height: 1920
+              size: 109445863
+              avg_bitrate: 1016263
+              video_duration: 861533
+              audio_codec: aac
+              vmaf: -1
+              stream_desc: X265_MP4_WEB_115
+              format: mp4
+              audio_channels: 2
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/115/01ea0730c4173861010370019e2c225639_115.mp4?sign=8643cf8337f4f5c8e5739a5e11dd4204&t=6a17720a
+              weight: 70
+              psnr: 0
+              fps: 30
+              hdr_type: 0
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/115/01ea0730c4173861010370019e2c225639_115.mp4
+              ssim: 0
+              quality_type: HD
+              width: 1080
+              duration: 861555
+              audio_bitrate: 95999
+              audio_duration: 861554
+              volume: 0
+              video_bitrate: 913690
+              stream_type: 115
+              video_codec: hevc
+        image:
+          first_frame_fileid: 110/0/01ea0730c41738610010000000019e2c168ea5_0.jpg
+          thumbnail_fileid: frame/110/0/01ea0730c41738610010000000019e2c39aae5_0.webp
+      tag_list:
+      - type: topic
+        id: 5e7832c6000000000100574f
+        name: 高品质酒店
+      - id: 5ee086070000000001000d73
+        name: 酒店测评
+        type: topic
+      - id: 5a55804a092b5b204d843379
+        name: 奢华酒店
+        type: topic
+      - id: 5c1b8ead0000000003011197
+        name: vlog
+        type: topic
+      - id: 6125fe9a00000000010017bf
+        name: 北京前门文华东方酒店
+        type: topic
+      - type: topic
+        id: 5c8f349a000000000f01b827
+        name: 四合院
+      at_user_list: []
+      type: video
+      ip_location: 山东
+  current_time: 1779619018038
+

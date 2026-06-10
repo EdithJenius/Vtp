@@ -1,0 +1,198 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 69a7bdcc000000001a02d1db
+    model_type: note
+    note_card:
+      at_user_list: []
+      share_info:
+        un_share: false
+      type: video
+      title: 北京最贵酒店开箱！1.5w一晚的四合院值不值？
+      desc: '酒店开箱之入住京城最贵四合院前门文化东方酒店
+
+        5位数的酒店不止是为了睡一晚
+
+        而是为了用一张房卡推开六百年的前门历史
+
+        在北京顶级酒店不少但能做到和街坊四邻当邻居
+
+        并拿下了全球排名第28的奢华酒店也就只有它一家了
+
+        #酒店开箱[话题]# #老北京传统[话题]# #vlog[话题]# #酒店颜值控[话题]# #奢华住宿体验[话题]# #酒店天花板[话题]# #北京前门文化东方酒店[话题]#
+        #四合院[话题]# #酒店玩出花[话题]# #住进古迹里[话题]#'
+      user:
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/63a47635b4956e469e0d0686.jpg
+        xsec_token: ABlfxdgPAP6QArZg8y07aAVqURbgX2pU9d94zN3IYFNaA=
+        user_id: 5f2d75c10000000001000951
+        nickname: Sail杨奶奶
+      image_list:
+      - url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/ec48863fb5fe257ff6ce5ab7c999678d/1040g00831t9d1pkh5s005npden0g82ahlme77j8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/28dbc8431a4ffce05b542e33d65aac63/1040g00831t9d1pkh5s005npden0g82ahlme77j8!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/ec48863fb5fe257ff6ce5ab7c999678d/1040g00831t9d1pkh5s005npden0g82ahlme77j8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/28dbc8431a4ffce05b542e33d65aac63/1040g00831t9d1pkh5s005npden0g82ahlme77j8!nd_dft_wlteh_webp_3
+        height: 1180
+        width: 884
+      last_update_time: 1772606346000
+      note_id: 69a7bdcc000000001a02d1db
+      interact_info:
+        collected_count: '444'
+        comment_count: '20'
+        share_count: '192'
+        followed: false
+        relation: none
+        liked: false
+        liked_count: '2281'
+        collected: false
+      video:
+        media:
+          video_id: 137825790609588260
+          video:
+            stream_types:
+            - 114
+            - 259
+            - 115
+            biz_name: 110
+            biz_id: '281940885307576795'
+            duration: 202
+            md5: 48a2db760e85c7d3851d69d6865952b4
+            hdr_type: 0
+            drm_type: 0
+          stream:
+            av1: []
+            h264:
+            - volume: 0
+              audio_channels: 2
+              vmaf: -1
+              format: mp4
+              weight: 62
+              video_codec: h264
+              audio_codec: aac
+              psnr: 0
+              default_stream: 0
+              quality_type: HD
+              audio_bitrate: 64046
+              audio_duration: 201618
+              stream_type: 259
+              fps: 30
+              width: 720
+              master_url: http://sns-video-qc.xhscdn.com/stream/79/110/259/01e9a7d38a2c0024010370039cb79447f1_259.mp4?sign=ed4477c03b05c5648af728439be63125&t=6a1771a8
+              hdr_type: 0
+              stream_desc: WM_X264_MP4_web
+              ssim: 0
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/79/110/259/01e9a7d38a2c0024010370039cb79447f1_259.mp4
+              avg_bitrate: 1661294
+              video_duration: 201633
+              rotate: 0
+              size: 41871670
+              video_bitrate: 1590736
+              height: 1280
+              duration: 201634
+            h265:
+            - default_stream: 0
+              rotate: 0
+              stream_desc: X265_MP4_WEB_114
+              hdr_type: 0
+              height: 1280
+              video_duration: 201633
+              audio_codec: aac
+              audio_channels: 2
+              audio_bitrate: 128073
+              master_url: http://sns-video-qc.xhscdn.com/stream/79/110/114/01e9a7d38a2c00244f0370019cb7951011_114.mp4?sign=6536ed19345c9ab8d5e6e8f6a79b1d24&t=6a1771a8
+              ssim: 0
+              fps: 30
+              video_bitrate: 1068228
+              audio_duration: 201618
+              weight: 62
+              avg_bitrate: 1202927
+              vmaf: -1
+              format: mp4
+              width: 720
+              duration: 201634
+              volume: 0
+              video_codec: hevc
+              stream_type: 114
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/79/110/114/01e9a7d38a2c00244f0370019cb7951011_114.mp4
+              psnr: 38.154998779296875
+              quality_type: HD
+              size: 30318893
+            - video_bitrate: 1439977
+              stream_type: 115
+              size: 39688541
+              avg_bitrate: 1574676
+              audio_codec: aac
+              audio_duration: 201618
+              psnr: 38.27799987792969
+              weight: 70
+              quality_type: HD
+              width: 1080
+              volume: 0
+              default_stream: 0
+              height: 1920
+              audio_channels: 2
+              fps: 30
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/115/01e9a7d38a2c0024010370019cb7986b6a_115.mp4?sign=9fe2e5b654b81e89d70de022122510ec&t=6a1771a8
+              hdr_type: 0
+              format: mp4
+              audio_bitrate: 128073
+              video_duration: 201633
+              vmaf: -1
+              stream_desc: X265_MP4_WEB_115
+              duration: 201634
+              rotate: 0
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/115/01e9a7d38a2c0024010370019cb7986b6a_115.mp4
+              ssim: 0
+              video_codec: hevc
+            h266: []
+        image:
+          thumbnail_fileid: frame/110/0/01e9a7d38a2c00240010000000019cb7942e71_0.webp
+        capa:
+          duration: 201
+        media_v2: '{"video_id":"137825790609588260","video":{"biz_name":110,"biz_id":"281940885307576795","duration":202,"md5":"48a2db760e85c7d3851d69d6865952b4","hdr_type":0,"drm_type":0,"stream_types":[114,259,115],"width":1080,"height":1920,"bound":[{"x":0,"y":0,"w":0,"h":0}],"bbox":{"ocr_v5":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v3":[{"x":82,"y":256,"w":912,"h":1122}],"ocr_v4":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v2":[{"x":82,"y":256,"w":912,"h":1125}]},"opaque1":{"bottomAvgLuma":"113","loudnorm":"{\"lra\":3.7,\"htp\":-0.22,\"hldn\":-17.02,\"ldn\":-19.96,\"thr\":-29.96}","domestic":"1","isSupportSubtitle":"false","rightAvgLuma":"105","hasHumanVoice":"true","audioLevInfo":"{\"audio_quality_level\":\"G+\",\"mos_overall\":3.6893,\"version\":\"3.0\"}","weakNetUserFlag":"1","insertSubtitleLanguages":"[\"zh-CN\",\"en-US\"]","topAvgLuma":"114","audioClsInfo":"{\"music_ratio\":0.9855158681274014,\"freesound_ratio\":8.92857138428288E-4,\"speech_ratio\":0.9997519791678968}"},"subtitles":{"en-US":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e9a7d38a2c0024010370039cb7928cd2_12.srt?sign=1840dc9330de02d04da6e65df0e3a96e&t=6a1771a8","language":"en-US","format":0,"type":0}],"source":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e9a7d38a2c0024010370039cb7928575_1.srt?sign=ca4268b0cbc1685fce017b54dd4f23dc&t=6a1771a8","language":"zh-CN","format":0,"type":0}],"zh-CN":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e9a7d38a2c0024010370039cb7928762_11.srt?sign=cdd6eafc987bf37492e9600356f13f4b&t=6a1771a8","language":"zh-CN","format":0,"type":0}]}},"stream":{"h264":[{"stream_type":259,"stream_desc":"WM_X264_MP4_web","default_stream":0,"format":"mp4","width":720,"height":1280,"duration":201634,"size":41871670,"volume":0.0,"avg_bitrate":1661294,"fps":30,"video_codec":"h264","video_bitrate":1590736,"video_duration":201633,"audio_codec":"aac","audio_bitrate":64046,"audio_duration":201618,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/79/110/259/01e9a7d38a2c0024010370039cb79447f1_259.mp4?sign=ed4477c03b05c5648af728439be63125&t=6a1771a8","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/79/110/259/01e9a7d38a2c0024010370039cb79447f1_259.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":0.0,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h265":[{"stream_type":114,"stream_desc":"X265_MP4_WEB_114","default_stream":0,"format":"mp4","width":720,"height":1280,"duration":201634,"size":30318893,"volume":0.0,"avg_bitrate":1202927,"fps":30,"video_codec":"hevc","video_bitrate":1068228,"video_duration":201633,"audio_codec":"aac","audio_bitrate":128073,"audio_duration":201618,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/79/110/114/01e9a7d38a2c00244f0370019cb7951011_114.mp4?sign=6536ed19345c9ab8d5e6e8f6a79b1d24&t=6a1771a8","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/79/110/114/01e9a7d38a2c00244f0370019cb7951011_114.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":38.154998779296875,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}},{"stream_type":115,"stream_desc":"X265_MP4_WEB_115","default_stream":0,"format":"mp4","width":1080,"height":1920,"duration":201634,"size":39688541,"volume":0.0,"avg_bitrate":1574676,"fps":30,"video_codec":"hevc","video_bitrate":1439977,"video_duration":201633,"audio_codec":"aac","audio_bitrate":128073,"audio_duration":201618,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/115/01e9a7d38a2c0024010370019cb7986b6a_115.mp4?sign=9fe2e5b654b81e89d70de022122510ec&t=6a1771a8","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/115/01e9a7d38a2c0024010370019cb7986b6a_115.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":38.27799987792969,"ssim":0.0,"weight":70,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h266":[],"av1":[]},"user_level":0}'
+      tag_list:
+      - id: 5fc859f1000000000100514d
+        name: 酒店开箱
+        type: topic
+      - id: 61f696ff000000000100bb0f
+        name: 老北京传统
+        type: topic
+      - id: 5c1b8ead0000000003011197
+        name: vlog
+        type: topic
+      - type: topic
+        id: 659ca182000000003f03fc0c
+        name: 酒店颜值控
+      - id: 6464962f000000001c024d94
+        name: 奢华住宿体验
+        type: topic
+      - id: 61913e970000000001005056
+        name: 酒店天花板
+        type: topic
+      - id: 66a62fda000000000e02cafc
+        name: 北京前门文化东方酒店
+        type: topic
+      - id: 5c8f349a000000000f01b827
+        name: 四合院
+        type: topic
+      - id: 61efbdd40000000001001d90
+        name: 酒店玩出花
+        type: topic
+      - id: 66727f3a000000000202e7d1
+        name: 住进古迹里
+        type: topic
+      time: 1772600781000
+  current_time: 1779618920106
+

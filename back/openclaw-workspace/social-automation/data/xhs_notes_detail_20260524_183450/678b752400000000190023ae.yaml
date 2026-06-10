@@ -1,0 +1,248 @@
+ok: true
+schema_version: '1'
+data:
+  current_time: 1779618945823
+  cursor_score: ''
+  items:
+  - id: 678b752400000000190023ae
+    model_type: note
+    note_card:
+      type: video
+      title: vlog🌴｜当我带了一台大疆pocket 3去崇左✈️
+      user:
+        user_id: 60c5777b0000000001009064
+        nickname: 邱天（肉瑶）
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1000g2jo2ptaqikajq0005o65ettg94344u55mmo
+        xsec_token: AB4O0zljPjNBUxewYhdOJd_8uthpGaY02fGAkRATmKV8w=
+      image_list:
+      - file_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/890b0366316ca9c65077e54ab4d0c27f/1040g2sg31cps8pach2705o65ettg9434bhkelho!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/931070d86fd9c70ddc49c1e04b3986ad/1040g2sg31cps8pach2705o65ettg9434bhkelho!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/931070d86fd9c70ddc49c1e04b3986ad/1040g2sg31cps8pach2705o65ettg9434bhkelho!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        height: 1920
+        width: 1440
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/890b0366316ca9c65077e54ab4d0c27f/1040g2sg31cps8pach2705o65ettg9434bhkelho!nd_prv_wlteh_webp_3
+      tag_list:
+      - type: topic
+        id: 5c3038f7000000000a0040da
+        name: 旅游vlog
+      - id: 54b0fc6bb4c4d65f7116650c
+        name: 旅行是我的解药
+        type: topic
+      - id: 5dafd06f0000000002002e75
+        name: 我的Vlog神器
+        type: topic
+      - name: 慢慢游世界
+        type: topic
+        id: 665b2688000000000301afa1
+      - id: 6183447b000000000100ba71
+        name: 带上相机去旅行
+        type: topic
+      - id: 54aa80b6b4c4d65bb52019fe
+        name: 度假穿搭
+        type: topic
+      - id: 5be8cb1f1cc2b5000131695e
+        name: 广西
+        type: topic
+      - id: 5cfa91cd000000000e017ee3
+        name: 崇左
+        type: topic
+      - id: 62947a3d0000000001007a6a
+        name: 大疆pocket3
+        type: topic
+      - name: 广西崇左秘境丽世度假村
+        type: topic
+        id: 5fcdfb0e000000000100210b
+      at_user_list: []
+      time: 1737192740000
+      note_id: 678b752400000000190023ae
+      last_update_time: 1737204423000
+      interact_info:
+        share_count: '6058'
+        followed: false
+        relation: none
+        liked: false
+        liked_count: 1.6万
+        collected: false
+        collected_count: '4388'
+        comment_count: '225'
+      video:
+        image:
+          first_frame_fileid: 110/0/01e78b75247c83e80010000000019478c1a0f8_0.jpg
+          thumbnail_fileid: 110/0/01e78b75247c83e80010000000019478c1e4b2_0.webp
+        capa:
+          duration: 20
+        media_v2: '{"video_id":"137231648897663976","video":{"biz_name":110,"biz_id":"281346836971922350","duration":21,"md5":"052dcabc9b282977e767a2defa7a7257","hdr_type":0,"drm_type":0,"stream_types":[259,84,130,108,109],"width":3840,"height":2160,"bound":[{"x":0,"y":0,"w":0,"h":0}],"bbox":{"ocr_v5":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v3":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v4":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v2":[{"x":1402,"y":1010,"w":1024,"h":1070}]},"opaque1":{"domestic":"1","loudnorm":"{\"lra\":3.2,\"htp\":-0.9,\"hldn\":-13.98,\"ldn\":-12.81,\"thr\":-22.81}","isSupportSubtitle":"true","hasHumanVoice":"true","videoLanguage":"[\"en-US\"]","weakNetUserFlag":"1"},"subtitles":{"en-US":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e78b75247c83e80103700397b17c3198_12.srt?sign=f2cc1cf51073a2a58f7ec86c52a13510&t=6a1771c1","language":"en-US","format":0,"type":0}],"source":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e78b75247c83e80103700397aff40bcb_1.srt?sign=0f12fe3c0c6e6a513d227f2856bcc20f&t=6a1771c1","language":"en-US","format":0,"type":0}],"zh-CN":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e78b75247c83e80103700397b178eb67_11.srt?sign=9c4f4f8d8d8f2eb41a3dd978109a416f&t=6a1771c1","language":"zh-CN","format":0,"type":0}]}},"stream":{"h264":[{"stream_type":259,"stream_desc":"WM_X264_MP4_web","default_stream":0,"format":"mp4","width":1280,"height":720,"duration":20467,"size":8246892,"volume":0.0,"avg_bitrate":3223488,"fps":60,"video_codec":"h264","video_bitrate":3150017,"video_duration":20466,"audio_codec":"aac","audio_bitrate":64510,"audio_duration":20463,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/79/110/259/01e78b75247c83e8010370039478c27f3f_259.mp4?sign=f804bf3995f271cb01688756f6c4e322&t=6a1771c1","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/79/110/259/01e78b75247c83e8010370039478c27f3f_259.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":0.0,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h265":[{"stream_type":84,"stream_desc":"X265_MP4_WEB_84","default_stream":0,"format":"mp4","width":1280,"height":720,"duration":20479,"size":5179884,"volume":0.0,"avg_bitrate":2023490,"fps":60,"video_codec":"hevc","video_bitrate":1886415,"video_duration":20466,"audio_codec":"aac","audio_bitrate":128880,"audio_duration":20478,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/79/110/84/01e78b75247c83e84f0370019478c2bbd5_84.mp4?sign=96da90fd7b91b18e48acceccedca9e83&t=6a1771c1","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/79/110/84/01e78b75247c83e84f0370019478c2bbd5_84.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":34.13100051879883,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}},{"stream_type":130,"stream_desc":"X265_MP4_WEB_130","default_stream":0,"format":"mp4","width":1920,"height":1080,"duration":20479,"size":9425850,"volume":0.0,"avg_bitrate":3682152,"fps":60,"video_codec":"hevc","video_bitrate":3606165,"video_duration":20466,"audio_codec":"aac","audio_bitrate":64409,"audio_duration":20478,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/130/01e78b75247c83e80103700197ce9c8410_130.mp4?sign=783807a131cded53a1a2e2f47e95d199&t=6a1771c1","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/130/01e78b75247c83e80103700197ce9c8410_130.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":35.50699996948242,"ssim":0.0,"weight":70,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}},{"stream_type":108,"stream_desc":"X265_MP4_WEB_108","default_stream":0,"format":"mp4","width":2560,"height":1440,"duration":20505,"size":17452776,"volume":0.0,"avg_bitrate":6809178,"fps":60,"video_codec":"hevc","video_bitrate":6684230,"video_duration":20466,"audio_codec":"aac","audio_bitrate":128136,"audio_duration":20504,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/108/01e78b75247c83e80103700197ce8cfdb1_108.mp4?sign=bf65a59d6ad196135f39648f1e37079c&t=6a1771c1","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/108/01e78b75247c83e80103700197ce8cfdb1_108.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":37.57400131225586,"ssim":0.0,"weight":70,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}},{"stream_type":109,"stream_desc":"X265_MP4_WEB_109","default_stream":0,"format":"mp4","width":3840,"height":2160,"duration":20505,"size":29094188,"volume":0.0,"avg_bitrate":11351060,"fps":60,"video_codec":"hevc","video_bitrate":11234620,"video_duration":20466,"audio_codec":"aac","audio_bitrate":128136,"audio_duration":20504,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/109/01e78b75247c83e80103700197ce8b3771_109.mp4?sign=ba75d446a5e1b8b7708b345213d8be8f&t=6a1771c1","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/109/01e78b75247c83e80103700197ce8b3771_109.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":39.18899917602539,"ssim":0.0,"weight":80,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h266":[],"av1":[]},"user_level":0}'
+        media:
+          stream:
+            h266: []
+            av1: []
+            h264:
+            - vmaf: -1
+              stream_desc: WM_X264_MP4_web
+              width: 1280
+              volume: 0
+              fps: 60
+              video_codec: h264
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/79/110/259/01e78b75247c83e8010370039478c27f3f_259.mp4
+              size: 8246892
+              audio_codec: aac
+              rotate: 0
+              default_stream: 0
+              format: mp4
+              video_bitrate: 3150017
+              video_duration: 20466
+              height: 720
+              duration: 20467
+              avg_bitrate: 3223488
+              master_url: http://sns-video-qc.xhscdn.com/stream/79/110/259/01e78b75247c83e8010370039478c27f3f_259.mp4?sign=f804bf3995f271cb01688756f6c4e322&t=6a1771c1
+              weight: 62
+              stream_type: 259
+              audio_bitrate: 64510
+              audio_channels: 2
+              quality_type: HD
+              hdr_type: 0
+              ssim: 0
+              audio_duration: 20463
+              psnr: 0
+            h265:
+            - width: 1280
+              volume: 0
+              hdr_type: 0
+              size: 5179884
+              video_codec: hevc
+              audio_duration: 20478
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/79/110/84/01e78b75247c83e84f0370019478c2bbd5_84.mp4
+              avg_bitrate: 2023490
+              psnr: 34.13100051879883
+              weight: 62
+              quality_type: HD
+              rotate: 0
+              vmaf: -1
+              stream_type: 84
+              duration: 20479
+              fps: 60
+              audio_codec: aac
+              format: mp4
+              video_duration: 20466
+              audio_bitrate: 128880
+              audio_channels: 2
+              master_url: http://sns-video-qc.xhscdn.com/stream/79/110/84/01e78b75247c83e84f0370019478c2bbd5_84.mp4?sign=96da90fd7b91b18e48acceccedca9e83&t=6a1771c1
+              stream_desc: X265_MP4_WEB_84
+              ssim: 0
+              default_stream: 0
+              height: 720
+              video_bitrate: 1886415
+            - format: mp4
+              volume: 0
+              quality_type: HD
+              fps: 60
+              video_codec: hevc
+              video_bitrate: 3606165
+              audio_bitrate: 64409
+              audio_duration: 20478
+              hdr_type: 0
+              ssim: 0
+              audio_channels: 2
+              vmaf: -1
+              psnr: 35.50699996948242
+              stream_type: 130
+              stream_desc: X265_MP4_WEB_130
+              video_duration: 20466
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/130/01e78b75247c83e80103700197ce9c8410_130.mp4
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/130/01e78b75247c83e80103700197ce9c8410_130.mp4?sign=783807a131cded53a1a2e2f47e95d199&t=6a1771c1
+              default_stream: 0
+              height: 1080
+              avg_bitrate: 3682152
+              rotate: 0
+              width: 1920
+              duration: 20479
+              audio_codec: aac
+              size: 9425850
+              weight: 70
+            - fps: 60
+              video_bitrate: 6684230
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/108/01e78b75247c83e80103700197ce8cfdb1_108.mp4
+              hdr_type: 0
+              psnr: 37.57400131225586
+              video_codec: hevc
+              rotate: 0
+              default_stream: 0
+              quality_type: HD
+              audio_channels: 2
+              height: 1440
+              audio_codec: aac
+              audio_bitrate: 128136
+              width: 2560
+              volume: 0
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/108/01e78b75247c83e80103700197ce8cfdb1_108.mp4?sign=bf65a59d6ad196135f39648f1e37079c&t=6a1771c1
+              vmaf: -1
+              format: mp4
+              avg_bitrate: 6809178
+              video_duration: 20466
+              audio_duration: 20504
+              ssim: 0
+              weight: 70
+              stream_desc: X265_MP4_WEB_108
+              stream_type: 108
+              duration: 20505
+              size: 17452776
+            - audio_channels: 2
+              audio_bitrate: 128136
+              hdr_type: 0
+              ssim: 0
+              weight: 80
+              psnr: 39.18899917602539
+              avg_bitrate: 11351060
+              video_bitrate: 11234620
+              audio_codec: aac
+              rotate: 0
+              vmaf: -1
+              stream_desc: X265_MP4_WEB_109
+              volume: 0
+              video_codec: hevc
+              audio_duration: 20504
+              stream_type: 109
+              format: mp4
+              video_duration: 20466
+              quality_type: HD
+              fps: 60
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/109/01e78b75247c83e80103700197ce8b3771_109.mp4?sign=ba75d446a5e1b8b7708b345213d8be8f&t=6a1771c1
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/109/01e78b75247c83e80103700197ce8b3771_109.mp4
+              default_stream: 0
+              width: 3840
+              height: 2160
+              duration: 20505
+              size: 29094188
+          video_id: 137231648897663976
+          video:
+            hdr_type: 0
+            drm_type: 0
+            stream_types:
+            - 259
+            - 84
+            - 130
+            - 108
+            - 109
+            biz_name: 110
+            biz_id: '281346836971922350'
+            duration: 21
+            md5: 052dcabc9b282977e767a2defa7a7257
+      share_info:
+        un_share: false
+      desc: "生活需要随时看世界的勇气 希望你们也有\n这次临时定了广西崇左秘境丽世度假村\n拥有了说走就走的勇气\n而旅行就是一次一次治愈的过程\U0001F334\
+        \n\t\n-\n#旅游vlog[话题]# #旅行是我的解药[话题]# #我的Vlog神器[话题]# #慢慢游世界[话题]# #带上相机去旅行[话题]#\
+        \ #度假穿搭[话题]# #广西[话题]# #崇左[话题]# #大疆pocket3[话题]##广西崇左秘境丽世度假村[话题]#"
+

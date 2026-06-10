@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ValueTrips · 智能话术工作台</title>
+<style>
+/* ===== Design System ===== */
+:root {
+  --nav: #1a2332;
+  --bg: #f0f2f5;
+  --surf: #ffffff;
+  --side: #f5f7f9;
+  --bord: #dfe3e8;
+  --bord-l: #e9edf0;
+  --text: #33475b;
+  --txt2: #6b7a8d;
+  --txt3: #99a7b8;
+  --blue: #0091ae;
+  --blue-bg: #e5f5fa;
+  --green: #00b86b;
+  --red: #e64653;
+  --red-bg: #fff5f5;
+  --orange: #f5a623;
+  --purple: #5c3dd0;
+  --shd: 0 1px 3px rgba(0,0,0,.06);
+  --shd-md: 0 4px 12px rgba(0,0,0,.07);
+  --rad: 8px;
+  --rad-lg: 12px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --tr: all .18s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"] {
+  --bg: #0d1520; --surf: #1a2332; --side: #141d2a; --bord: #2d3a4a; --bord-l: #233040;
+  --text: #e8edf2; --txt2: #9aabb8; --txt3: #5c6f82; --blue-bg: #0d2838;
+  --red-bg: #2d0a0a; --shd: 0 1px 3px rgba(0,0,0,.2); --shd-md: 0 4px 12px rgba(0,0,0,.25);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-thumb{background:var(--txt3);border-radius:10px}
+
+/* === Shell === */
+.shell{display:flex;flex-direction:column;height:100vh;max-width:1440px;margin:0 auto}
+
+/* === Top Nav === */
+.top{background:var(--nav);padding:0 24px;height:48px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.top-l{display:flex;align-items:center;gap:10px}
+.top-l .logo{font-size:16px;font-weight:800;background:linear-gradient(135deg,#00b8d4,#00e5a0);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:-.3px}
+.top-l .div{width:1px;height:20px;background:rgba(255,255,255,.15)}
+.top-l .sub{font-size:11px;color:rgba(255,255,255,.45);font-weight:500;letter-spacing:.3px;text-transform:uppercase}
+.top-r{display:flex;gap:4px}
+.nb{background:rgba(255,255,255,.08);border:none;color:rgba(255,255,255,.65);padding:4px 10px;border-radius:4px;font-size:11px;cursor:pointer;display:flex;align-items:center;gap:4px;font-family:var(--font);font-weight:500;transition:var(--tr)}
+.nb:hover{background:rgba(255,255,255,.14);color:#fff}
+.nb.on{background:var(--blue);color:#fff}
+.nb .kd{font-size:9px;opacity:.5;background:rgba(255,255,255,.1);padding:0 4px;border-radius:2px;margin-left:2px}
+
+/* === Work === */
+.wk{display:flex;flex:1;min-height:0;overflow:hidden}
+
+/* === Side === */
+.sd{width:224px;flex-shrink:0;background:var(--side);border-right:1px solid var(--bord);display:flex;flex-direction:column;overflow-y:auto;padding:14px 10px;gap:12px}
+.sd h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--txt3);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.sd h4 .b{font-size:9px;background:var(--bord);padding:0 6px;border-radius:3px;color:var(--txt3);font-weight:600;text-transform:none;letter-spacing:0}
+
+/* === Persona === */
+.pl{display:flex;flex-direction:column;gap:3px}
+.pc{display:flex;align-items:center;gap:8px;padding:7px 8px;border-radius:6px;cursor:pointer;border:1px solid transparent;transition:var(--tr)}
+.pc:hover{background:var(--surf);border-color:var(--bord)}
+.pc.on{background:var(--blue-bg);border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
+.pc .e{font-size:15px;width:22px;text-align:center;flex-shrink:0}
+.pc .i{flex:1;min-width:0}
+.pc .n{font-size:12px;font-weight:600}
+.pc .h{font-size:10px;color:var(--txt3);margin-top:1px}
+.pc .d{width:8px;height:8px;border-radius:50%;flex-shrink:0;opacity:0;transition:var(--tr)}
+.pc.on .d{opacity:1}
+.d0{background:#f43f5e}.d1{background:#3b82f6}.d2{background:#8b5cf6}.d3{background:#f59e0b}.d4{background:#10b981}.d5{background:#06b6d4}
+
+/* === Redline === */
+.rl{font-size:11px;line-height:1.9}
+.rl .r{display:flex;align-items:center;gap:6px;padding:2px 0;color:var(--txt2)}
+.rl .r .x{font-size:12px;width:16px;text-align:center}
+
+/* === Notes === */
+.nb{margin-top:auto}
+.nb textarea{width:100%;background:var(--surf);border:1px solid var(--bord);border-radius:6px;padding:8px;font-size:11px;outline:none;color:var(--text);resize:vertical;min-height:44px;font-family:var(--font);transition:var(--tr)}
+.nb textarea:focus{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue-bg)}
+.nb .h{font-size:9px;color:var(--txt3);margin-top:3px}
+
+/* === Steps === */
+.st{background:var(--surf);border-bottom:1px solid var(--bord);display:flex;flex-shrink:0;overflow-x:auto;padding:0 16px}
+.stb{padding:9px 14px;font-size:12px;font-weight:500;cursor:pointer;color:var(--txt3);border-bottom:2px solid transparent;display:flex;align-items:center;gap:5px;white-space:nowrap;background:none;border-top:none;border-left:none;border-right:none;font-family:var(--font);transition:var(--tr)}
+.stb:hover{color:var(--txt2);background:var(--side)}
+.stb.on{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}
+.stb .l{font-size:10px;font-weight:700;background:var(--bord);border-radius:3px;padding:0 5px;line-height:18px;color:var(--txt3);transition:var(--tr)}
+.stb.on .l{background:var(--blue-bg);color:var(--blue)}
+
+/* === Content === */
+.cx{flex:1;overflow-y:auto;padding:18px 22px;background:var(--bg)}
+
+/* === Card === */
+.cd{background:var(--surf);border:1px solid var(--bord);border-radius:var(--rad-lg);box-shadow:var(--shd);margin-bottom:10px}
+.cd-h{padding:12px 16px 0;display:flex;align-items:center;gap:8px}
+.cd-h h3{font-size:13px;font-weight:600}
+.cd-b{padding:10px 16px 14px}
+
+/* === Script === */
+.sb{background:var(--side);border:1px solid var(--bord-l);border-radius:var(--rad);padding:10px 14px;margin:6px 0;position:relative}
+.sb .m{font-size:10px;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.sb .t{font-size:13px;line-height:1.8;color:var(--text)}
+.sb .n{font-size:10px;color:var(--txt3);margin-top:3px;display:flex;align-items:center;gap:4px}
+.cp{position:absolute;top:8px;right:8px;opacity:0;transition:var(--tr);background:var(--surf);border:1px solid var(--bord);border-radius:4px;padding:2px 7px;font-size:10px;cursor:pointer;color:var(--txt3);font-family:var(--font);display:flex;align-items:center;gap:3px}
+.sb:hover .cp{opacity:1}
+.cp:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.cp.ok{background:var(--green);color:#fff;border-color:var(--green);opacity:1}
+
+/* === Option grid === */
+.og{display:flex;flex-direction:column;gap:6px}
+.og .sb{margin:0}
+
+/* === Warning badge === */
+.wb{display:inline-flex;align-items:center;gap:3px;font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;margin-left:4px}
+.wb.warn{background:#fffbeb;color:#b45309}
+.wb.dang{background:#fef2f2;color:#991b1b}
+.wb.ok{background:#ecfdf5;color:#065f46}
+
+/* === Obj Table === */
+.ow{overflow-x:auto}
+.ot{width:100%;border-collapse:separate;border-spacing:0;font-size:12px}
+.ot th{padding:7px 10px;text-align:left;font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--txt3);background:var(--side);border-bottom:2px solid var(--bord);position:sticky;top:0}
+.ot th:first-child{border-radius:6px 0 0 0}
+.ot th:last-child{border-radius:0 6px 0 0}
+.ot td{padding:7px 10px;border-bottom:1px solid var(--bord-l);color:var(--text);vertical-align:top}
+.ot tr:last-child td{border-bottom:none}
+.ot tr:hover td{background:var(--side)}
+.ot .cb{background:none;border:none;cursor:pointer;font-size:15px;padding:2px;border-radius:3px;color:var(--txt3);transition:var(--tr)}
+.ot .cb:hover{background:var(--blue-bg);color:var(--blue)}
+
+/* === Alert === */
+.ar{background:var(--red-bg);border:1px solid #fecaca;border-left:3px solid var(--red);border-radius:var(--rad);padding:10px 14px;margin-top:10px}
+.ar .l{font-size:10px;font-weight:700;text-transform:uppercase;color:var(--red);letter-spacing:.4px;margin-bottom:3px}
+.ar .b{font-size:12px;color:var(--text);line-height:1.7}
+
+/* === Badge === */
+.pbadge{display:inline-flex;align-items:center;gap:3px;padding:1px 7px;border-radius:4px;font-size:10px;font-weight:600}
+.pbadge.hm{background:#fff1f2;color:#be123c}.pbadge.fm{background:#eff6ff;color:#1d4ed8}.pbadge.bz{background:#f5f3ff;color:#6d28d9}.pbadge.ex{background:#fffbeb;color:#b45309}.pbadge.yn{background:#ecfdf5;color:#047857}.pbadge.nd{background:#ecfeff;color:#0e7490}
+
+/* === Tip === */
+.tp{font-size:11px;color:var(--txt3);padding:4px 0 6px 2px;display:flex;align-items:center;gap:4px}
+
+/* === Empty === */
+.em{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:60px 20px}
+.em .g{width:80px;height:80px;background:var(--side);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;margin-bottom:14px}
+.em h2{font-size:16px;color:var(--txt2);font-weight:500}
+.em p{font-size:12px;color:var(--txt3);margin-top:4px}
+
+/* === Word Bank === */
+.wb-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:11px;margin-top:6px}
+.wb-grid .wg{background:var(--side);border:1px solid var(--bord-l);border-radius:4px;padding:6px 8px}
+.wb-grid .wg .w{font-weight:600;color:var(--red)}
+.wb-grid .wg .r{color:var(--txt2);font-size:10px;margin-top:2px}
+
+/* === Toast === */
+.tt{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:var(--surf);padding:8px 20px;border-radius:6px;font-size:13px;font-weight:500;opacity:0;transition:all .3s;z-index:9999;pointer-events:none;box-shadow:var(--shd-md);white-space:nowrap}
+.tt.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* === RWD === */
+@media(max-width:860px){
+  .wk{flex-direction:column}
+  .sd{width:100%;flex-direction:row;overflow-x:auto;padding:8px 10px;gap:6px;border-right:none;border-bottom:1px solid var(--bord)}
+  .sd>div{min-width:200px}
+  .pl{flex-direction:row;flex-wrap:wrap}
+  .pc{flex:1;min-width:100px}
+  .cx{padding:12px 14px}
+  .cp{opacity:1}
+  .wb-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .top{padding:0 12px}
+  .st{padding:0 6px}
+  .stb{padding:7px 8px;font-size:11px}
+  .cx{padding:8px 10px}
+}
+</style>
+</head>
+<body>
+
+<div class="tt" id="tt"></div>
+
+<div class="shell">
+  <!-- Top -->
+  <nav class="top">
+    <div class="top-l">
+      <span class="logo">VT</span><span class="div"></span><span class="sub">Smart CRM</span>
+    </div>
+    <div class="top-r">
+      <button class="nb on" id="modeBtn" onclick="toggleMode()"><span>🎓</span><span class="tx">培训</span><span class="kd">M</span></button>
+      <button class="nb" id="themeBtn" onclick="toggleTheme()"><span>🌙</span><span class="kd">T</span></button>
+    </div>
+  </nav>
+
+  <div class="wk">
+    <!-- Side -->
+    <aside class="sd">
+      <div>
+        <h4>👤 客户人群 <span class="b">1–6</span></h4>
+        <div class="pl" id="pl"></div>
+      </div>
+      <div>
+        <h4>🚨 红线速查</h4>
+        <div class="rl">
+          <div class="r"><span class="x">⛔</span>航司员工 / 未成年 / 65+</div>
+          <div class="r"><span class="x">⛔</span>国内·经济舱·东南亚</div>
+          <div class="r"><span class="x">⛔</span>同行探价 / 报价≥5万</div>
+          <div class="r"><span class="x">⛔</span>客户要改合同 / 退费</div>
+        </div>
+      </div>
+      <div class="nb">
+        <h4>📝 客户备注 <span class="b">自动保存</span></h4>
+        <textarea id="notesF" placeholder="记录关键信息…" oninput="svNotes()"></textarea>
+        <div class="h">关页面不丢</div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main" style="flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden">
+      <!-- Steps & Sub-steps -->
+      <div class="st" id="stepsBar"></div>
+
+      <!-- Content -->
+      <div class="cx" id="cx">
+        <div class="em">
+          <div class="g">👈</div>
+          <h2>选择一个客户人群</h2>
+          <p>从左侧选择后将加载对应话术</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== 违禁词库 =====
+const BANNED = {
+  comment: [
+    { word:'微信', risk:'高', tip:'评论区严禁出现，会被系统自动屏蔽或限流', alt:'用「礼貌用语引导主页」代替' },
+    { word:'加我', risk:'高', tip:'直接引流词，触发违规', alt:'用「有需要可以主页联系」' },
+    { word:'私我', risk:'高', tip:'同上，评论区引流违规', alt:'用「主页有联系方式哦」' },
+    { word:'QQ', risk:'中', tip:'评论区不宜直接出现' },
+    { word:'手机号', risk:'高', tip:'评论区严禁出现' },
+    { word:'电话', risk:'高', tip:'同上' },
+    { word:'价格', risk:'中', tip:'评论区直接报价可能被判定营销', alt:'用「方案」「预算」替代' },
+    { word:'优惠', risk:'中', tip:'评论区慎用，易触发营销判定', alt:'用「礼遇」「权益」替代' },
+    { word:'打折', risk:'中', tip:'评论区勿用' },
+    { word:'保证', risk:'中', tip:'绝对化用语风险' },
+    { word:'100%', risk:'高', tip:'绝对化承诺，违规' },
+    { word:'包过', risk:'高', tip:'承诺性用语，严重违规' },
+    { word:'一定行', risk:'中', tip:'绝对化承诺' },
+    { word:'最便宜', risk:'中', tip:'最高级用语' },
+    { word:'第一名', risk:'中', tip:'最高级用语' },
+    { word:'全网最低', risk:'高', tip:'绝对化营销用语' },
+    { word:'点击链接', risk:'中', tip:'评论区引流违规' },
+    { word:'扫码', risk:'中', tip:'评论区引导扫码违规' },
+  ],
+  dm: [
+    { word:'包下卡', risk:'高', tip:'承诺性用语，私信也建议避免', alt:'用「正常流程办理」替代' },
+    { word:'保证下卡', risk:'高', tip:'绝对承诺，法律风险', alt:'用「目前通过率较高」替代' },
+    { word:'稳过', risk:'中', tip:'虽无私信明文禁止，但建议避免绝对化' },
+    { word:'作弊', risk:'高', tip:'严重违规词' },
+    { word:'刷航段', risk:'中', tip:'可能被判定违规操作' },
+    { word:'内部渠道', risk:'中', tip:'容易引起平台审查', alt:'用「企业合作渠道」替代' },
+    { word:'100%', risk:'中', tip:'绝对化承诺，私信也建议避免' },
+    { word:'保证', risk:'中', tip:'同上' },
+  ]
+};
+
+// ===== 人群数据 =====
+const D = {
+  honeymoon:{
+    name:'奢华蜜月', em:'👑', kw:'蜜月/新婚/纪念日', pr:'hm', cls:'pbadge hm', dot:'d0',
+    prod:['国际商务舱','高端酒店','航司卡白金'],
+    // 评论区回复（多条可选）
+    comment:[
+      '恭喜呀🎉 蜜月一定要好好规划，可以主页看看我们的案例～',
+      '蜜月安排好了吗？主页有惊喜哦🎊',
+      '新婚快乐！蜜月出行可以多看看攻略再决定～',
+    ],
+    // 私信回复（基础话术，多条可选）
+    dm:[
+      '您好～ 恭喜新婚呀🎉 看到您在咨询出行方面，我们有很多像您一样的新人选择我们的服务，我给您推荐几个适合蜜月的方案？',
+      '新婚快乐！了解到您在规划蜜月出行，我们是ValueTrips，专注高端出行服务。方便了解下您的出行计划吗？',
+      '您好🎉 蜜月旺季名额紧张，建议尽早规划。我们这边有一些专属蜜月方案，先发您看看？'
+    ],
+    // 引导留lxfs（固定1条）
+    guide:'方便加个微信不？我让专员把详细方案和案例发您～',
+    welcome:'您好~ 我是ValueTrips的XX，您从小红书咨询的对吧？我拉个群方便专员跟您对接～',
+    cq:['出发日期','目的地','人数','预算','有什么特别想要的体验'],
+    obj:{
+      '太贵了':['蜜月是一辈子一次的事，多花一点换全程头等舱体验，回忆是无价的','其实算下来人均没多少，但体验完全不一样','这个方案含的礼遇价值远超票价，算上休息室、优先登机其实很划算'],
+      '怕不靠谱':['我们服务过XX对新人，没出过问题，给您看看案例📸','我们企业蓝V认证+正规合同，蜜月是大事我们比您还重视','建议先加微信，我把资质和案例发您看看'],
+      '想对比':['建议先锁定名额，旺季蜜月档期很紧，错过了要等','您可以去对比，但我们直定含礼遇，市场不太有竞品']
+    },
+    hook:'蜜月方案名额有限，建议先把名额锁了，细节后面可以调',
+    do:['强调「专属感」','发真实案例','客户感性时立刻推进'],
+    dont:['不要只谈价格不谈体验','不要用"经济实惠"这种词'],
+    ext:'推酒店蜜月套餐/接机服务'
+  },
+  family:{
+    name:'精英家庭', em:'💼', kw:'一家人/带孩子/全家出游', pr:'fm', cls:'pbadge fm', dot:'d1',
+    prod:['酒店礼遇','国际商务舱','航司卡'],
+    comment:[
+      '带家人出行最重要的是省心❤️ 主页有方案可以参考哦～',
+      '全家出游规划好了吗？欢迎主页看看～',
+      '家庭出行安排起来🎉 主页有不少攻略～'
+    ],
+    dm:[
+      '您好～ 一家人出行规划对吧😊 我们很多家庭客户都选我们，省心+性价比高。您一家几口人？大概什么时间？',
+      '您好！了解到您是家庭出行。我们是ValueTrips，专注高端出行服务，包含酒店礼遇和航司权益。方便了解下计划？',
+      '您好～ 最近XX酒店家庭套餐名额很紧，我先把方案发您看看？'
+    ],
+    guide:'方便加微信不？我让专员把方案和案例发给您～',
+    welcome:'您好~ 我是ValueTrips的XX，您咨询家庭出行对吧？我拉个群方便专员跟您对接～',
+    cq:['出发日期','目的地','人数(含孩子年龄)','预算','对酒店的要求'],
+    obj:{
+      '比携程贵':['我们是直接跟酒店/航司对接，含的礼遇携程没有。算上早餐、接送机其实更划算','我给您算总账：含XX礼遇，携程单订加起来反而更贵','您对比的不只是价格，还有服务和保障'],
+      '我再看看':['好的，不过最近XX酒店优惠套餐名额有限，建议先了解以免错过','明白，先加微信把资料发您，有需要随时找我'],
+      '怕麻烦':['理解！我们全程跟进，您建个群后面什么都不用操心','流程很简单，签约→打款→提交，全程代办']
+    },
+    hook:'家庭套餐本月还剩X个名额，建议趁优惠先锁',
+    do:['强调「省心」','算总账','给家庭案例'],
+    dont:['不要推过度高端产品','不要忽略孩子需求'],
+    ext:'推亲子住宿/儿童餐食'
+  },
+  business:{
+    name:'精英商务', em:'✈️', kw:'出差/商务/公司报销', pr:'bz', cls:'pbadge bz', dot:'d2',
+    prod:['航司卡终白/白金','国际商务舱','酒店礼遇'],
+    comment:[
+      '差旅出行可以看看我们的方案✈️ 主页有介绍～',
+      '经常出差的话要好好规划出行成本，主页看看？',
+      '商务出行安排欢迎主页了解～'
+    ],
+    dm:[
+      '您好～ 您平时出差多对吧😊 像您这种高频差旅客户，用航司卡方案一年能省不少。您主要飞哪个航司？',
+      '您好！了解到您有高频差旅需求。我们为商务人士提供航司会籍和出行权益优化方案。方便聊下？',
+      '您好！季度审批名额有限，现在办下季度就能用上。您主要飞哪个航司？我帮您看下最优方案'
+    ],
+    guide:'方便加微信？我让专员根据您的航线出个方案',
+    welcome:'您好~ 我是ValueTrips的XX，您咨询差旅方案对吧？我拉个群让专员跟您对接～',
+    cq:['常飞航司','差旅频率','月均飞行次数','主要航线','公司报销还是自费'],
+    obj:{
+      '公司报销不需要':['报销是公司的，权益是您自己的。休息室、优先登机自己用着舒服才是真的','正因为报销才更该办——同样的预算升级体验'],
+      '流程麻烦吗':['不麻烦，签约→打款→提交，全程代办，15分钟搞定'],
+      '怕影响会籍':['我们处理过很多商务客户，会籍不受影响，合同有保障条款','完全不影响，出问题我们负责解决']
+    },
+    hook:'季度审批名额固定，政策可能调整',
+    do:['强调「效率」','用数据说话','谈ROI'],
+    dont:['不要啰嗦','不要用太感性语言'],
+    ext:'推酒店会籍匹配/快速通道'
+  },
+  exhibition:{
+    name:'参展客户', em:'🏪', kw:'展会/广交会/进博会', pr:'ex', cls:'pbadge ex', dot:'d3',
+    prod:['酒店礼遇','国际商务舱','航司卡企业'],
+    comment:[
+      '展会出行要提前安排哦～ 主页看看方案？',
+      '展期资源紧张，早规划早安心🎯 主页了解～',
+      '参加展会的话住宿交通要提前锁！主页有攻略'
+    ],
+    dm:[
+      '您好～ 是参加XX展会对吧😊 展期房源机票紧张，我们有展会专属方案，您大概几个人过去？',
+      '您好！展期资源紧张，我们跟周边酒店有协议价。方便了解团队规模？',
+      '您好！展期房源每天都在涨，建议尽早锁定。我们有展会协议价，先看下方案？'
+    ],
+    guide:'方便加微信？我让专员根据展会信息出方案',
+    welcome:'您好~ 我是ValueTrips的XX，您咨询展会出行对吧？我拉个群方便对接～',
+    cq:['展会名称','时间','人数','住宿要求','交通方式'],
+    obj:{
+      '自己订就行':['我们跟酒店有协议价，比您自己订更划算还含礼遇','展期我们的价格和房源是公开渠道没有的'],
+      '预算有限':['理解，我给您看看预算内的最优方案。展期协议价比公开渠道便宜'],
+      '团队有优惠吗':['团队订单有阶梯优惠，人越多越划算，我给您算一下']
+    },
+    hook:'展期房源每天在涨，早定早安心',
+    do:['强调「锁定」','突出团队优势','快速出方案'],
+    dont:['不要拖节奏','不要忽略预算限制'],
+    ext:'推下次展会提前预约'
+  },
+  young:{
+    name:'年轻人', em:'🌱', kw:'第一次/不太懂/小白', pr:'yn', cls:'pbadge yn', dot:'d4',
+    prod:['酒店礼遇','国际商务舱','航司卡入门'],
+    comment:[
+      '第一次了解的话可以先看看主页内容哦～',
+      '很多年轻人都在关注这个，主页有详细介绍😊',
+      '想了解高端出行可以先从主页开始～'
+    ],
+    dm:[
+      '哈哈第一次了解这个对吧😄 没事我给您简单说下。很多人一开始也不太了解，后来发现其实比自己订划算多了～',
+      '您好！第一次了解没关系，我简单介绍下。我们是正规平台，主打性价比出行方案',
+      '您好！体验价名额有限，我简单说下，感兴趣再深入聊？'
+    ],
+    guide:'方便加微信？我把详细资料发给您，有问题随时问我',
+    welcome:'您好~ 我是ValueTrips的XX，刚才在小红书聊过的～ 我拉个群方便对接',
+    cq:['出行目的','预估频率','预算范围','之前用过类似服务吗'],
+    obj:{
+      '太贵了':['正因为刚工作才更要会花！这个卡一年下来比单次买省XX，越飞越赚','飞两次商务舱就回本了，后面都是赚的'],
+      '怕被骗':['我们有蓝V认证+正规合同，很多第一次客户都在我们这办的','可以先加微信看看资质和案例'],
+      '我再想想':['没事，加个联系方式，有需要随时找我']
+    },
+    hook:'入门方案体验价，不满意有保障',
+    do:['降低门槛','算对比账','给安全感'],
+    dont:['不要高高在上','不要push太紧'],
+    ext:'推升级版方案'
+  },
+  nomad:{
+    name:'数字游民', em:'💻', kw:'到处跑/远程办公/自由职业', pr:'nd', cls:'pbadge nd', dot:'d5',
+    prod:['航司卡','酒店礼遇','国际商务舱'],
+    comment:[
+      '到处跑的话出行成本要算好哦～ 主页看看方案💻',
+      '自由职业出行有技巧，主页了解下？',
+      '经常换城市的话可以参考主页的攻略～'
+    ],
+    dm:[
+      '您好～ 经常在不同城市跑对吧😊 像您这样的数字游民客户我们有不少，长期飞用航司卡方案最划算。您现在主要跑哪些城市？',
+      '您好！了解到您是远程办公/自由职业，经常多城市移动。我们的方案特适合高频灵活出行',
+      '您好！像您这种经常飞的，航司卡越早办越划算。先看看有没有心仪的方案？'
+    ],
+    guide:'方便加微信？我让专员根据您的路线出个灵活方案',
+    welcome:'您好~ 我是ValueTrips的XX，您咨询灵活出行方案对吧？我拉个群方便对接～',
+    cq:['常去城市/国家','出行频率','住宿偏好','是否需要办公条件'],
+    obj:{
+      '居无定所怕麻烦':['正因为经常换地方才更需要！全程线上对接，您在哪儿都能办','不麻烦，所有流程线上搞定'],
+      '预算不稳定':['推荐灵活方案，根据实际出行频率来选，用多少算多少','有不同档位方案，先选基础后面能升级'],
+      '要能办公':['我们推荐的酒店有商务中心和高速网络，适合远程办公']
+    },
+    hook:'灵活方案随时可调，先用着后面能升级',
+    do:['强调「远程可办」','突出灵活性','认同生活方式'],
+    dont:['不要用"稳定""固定"','不要怀疑其生活方式'],
+    ext:'推更多目的地选择'
+  }
+};
+
+const PKEYS = Object.keys(D);
+let st = { p: null, step: 'A', sub: 'dm', mode: 'training', theme: 'light' };
+
+// ===== INIT SIDEBAR =====
+function initSide() {
+  const el = document.getElementById('pl');
+  el.innerHTML = PKEYS.map((k,i)=>{
+    const d = D[k];
+    return `<div class="pc" data-p="${k}" onclick="selP('${k}')">
+      <span class="e">${d.em}</span>
+      <div class="i"><div class="n">${d.name}</div><div class="h">${d.kw}</div></div>
+      <span class="d ${d.dot}"></span>
+    </div>`;
+  }).join('');
+}
+initSide();
+
+// ===== INIT STEPS =====
+function initSteps() {
+  const el = document.getElementById('stepsBar');
+  el.innerHTML = `
+    <button class="stb" data-s="A" onclick="goS('A')"><span class="l">A</span> 私信</button>
+    <button class="stb" data-s="AR" onclick="goS('AR')"><span class="l">📢</span> 评论区</button>
+    <button class="stb" data-s="B" onclick="goS('B')"><span class="l">B</span> 加群</button>
+    <button class="stb" data-s="C" onclick="goS('C')"><span class="l">C</span> 报价</button>
+    <button class="stb" data-s="D" onclick="goS('D')"><span class="l">D</span> 异议</button>
+    <button class="stb" data-s="E" onclick="goS('E')"><span class="l">E</span> 促单</button>
+    <button class="stb" data-s="F" onclick="goS('F')"><span class="l">F</span> 售后</button>
+    <button class="stb" data-s="WB" onclick="goS('WB')"><span class="l">⚠️</span> 违禁词</button>
+  `;
+}
+initSteps();
+
+// ===== CORE =====
+function selP(k) { st.p = k; st.tone = 0; render(); }
+function goS(s) {
+  if (!st.p && s !== 'WB') { toast('请先选择客户人群'); return; }
+  st.step = s; render();
+}
+
+function toggleMode() {
+  st.mode = st.mode === 'training' ? 'live' : 'training';
+  const b = document.getElementById('modeBtn');
+  if (st.mode === 'training') { b.innerHTML='<span>🎓</span><span class="tx">培训</span><span class="kd">M</span>'; b.classList.add('on'); }
+  else { b.innerHTML='<span>⚡</span><span class="tx">实战</span><span class="kd">M</span>'; b.classList.remove('on'); }
+  render();
+}
+
+function toggleTheme() {
+  if (document.body.getAttribute('data-theme')==='dark') {
+    document.body.removeAttribute('data-theme');
+    document.getElementById('themeBtn').innerHTML='<span>🌙</span><span class="kd">T</span>';
+  } else {
+    document.body.setAttribute('data-theme','dark');
+    document.getElementById('themeBtn').innerHTML='<span>☀️</span><span class="kd">T</span>';
+  }
+}
+
+// ===== RENDER =====
+function render() {
+  // Update active states
+  document.querySelectorAll('.pc').forEach(el => el.classList.toggle('on', el.dataset.p === st.p));
+  document.querySelectorAll('.stb').forEach(el => el.classList.toggle('on', el.dataset.s === st.step));
+
+  const cx = document.getElementById('cx');
+  if (!st.p && st.step !== 'WB') {
+    cx.innerHTML = `<div class="em"><div class="g">👈</div><h2>选择一个客户人群</h2><p>从左侧选择后将加载对应话术</p></div>`;
+    return;
+  }
+
+  if (st.step === 'WB') { renderWB(cx); return; }
+
+  const p = D[st.p];
+  if (st.step === 'AR') { renderComment(cx, p); return; }
+
+  switch(st.step) {
+    case 'A': renderDM(cx, p); break;
+    case 'B': renderB(cx, p); break;
+    case 'C': renderC(cx, p); break;
+    case 'D': renderD(cx, p); break;
+    case 'E': renderE(cx, p); break;
+    case 'F': renderF(cx, p); break;
+  }
+}
+
+// ===== COMMENT REPLIES =====
+function renderComment(cx, p) {
+  const tr = st.mode === 'training';
+  let html = `<div class="cd">
+    <div class="cd-h"><h3>📢 小红书评论回复 <span class="${p.cls}">${p.em} ${p.name}</span></h3></div>
+    <div class="cd-b">
+      <p style="font-size:11px;color:var(--txt3);margin-bottom:8px;">
+        ⚠️ 评论区禁止引流（不加微信/QQ/电话），仅做引导关注主页
+        ${tr ? '<br>💡 选择一条最合适的回复，直接复制粘贴到评论区' : ''}
+      </p>
+      <div class="og">${p.comment.map((t,i) => sb(t, `评论选项 ${i+1}`, true)).join('')}</div>
+    </div>
+  </div>`;
+  if (tr) html += `<div class="cd"><div class="cd-b">
+    <div class="ar"><div class="l">🚨 评论区违规红线</div>
+    <div class="b" style="font-size:11px;">
+      ❌ 不能出现：微信 / 加我 / 私我 / QQ / 手机号 / 电话<br>
+      ❌ 不能直接报价、说价格、说优惠<br>
+      ❌ 不能使用绝对化用语（最便宜、100%、保证）<br>
+      ✅ 只能引导「主页了解」「主页联系」
+    </div></div>
+  </div></div>`;
+  cx.innerHTML = html;
+  bindCopy();
+}
+
+// ===== DM (私信) =====
+function renderDM(cx, p) {
+  const tr = st.mode === 'training';
+  let html = `<div class="cd">
+    <div class="cd-h"><h3>📩 小红书私信话术 <span class="${p.cls}">${p.em} ${p.name}</span></h3></div>
+    <div class="cd-b">
+      <p style="font-size:11px;color:var(--txt3);margin-bottom:8px;">
+        ${tr ? '💡 以下多条可选，根据客户语气选择最合适的。私信可以引导加微信，但避免绝对承诺。' : ''}
+      </p>
+      <div class="og">${p.dm.map((t,i) => sb(t, `开场选项 ${i+1}`, false)).join('')}</div>
+    </div>
+  </div>`;
+  html += `<div class="cd"><div class="cd-b">
+    <div class="sb" style="border-left-color:var(--green);border-left-width:3px;">
+      <div class="m">📩 引导留联系方式 <span class="wb ok">固定回复</span></div>
+      <div class="t">${p.guide}</div>
+      <button class="cp" data-c="${esc(p.guide)}">📋 复制</button>
+    </div>
+  </div></div>`;
+  html += `<div class="cd"><div class="cd-b">
+    <div class="ar"><div class="l">⚠️ 私信也要注意</div>
+    <div class="b" style="font-size:11px;">避免「保证下卡」「包过」「100%」「内部渠道」等词 → 查阅违禁词页面</div></div>
+  </div></div>`;
+  cx.innerHTML = html;
+  bindCopy();
+}
+
+// ===== B-F (same structure, fewer changes) =====
+function renderB(cx,p){
+  cx.innerHTML=`<div class="cd"><div class="cd-h"><h3>👥 加微信 / 拉群</h3></div><div class="cd-b">
+    <div class="sb"><div class="m">💬 通过验证后 <span class="wb ok">固定回复</span></div><div class="t">${p.welcome}</div><button class="cp" data-c="${esc(p.welcome)}">📋 复制</button></div>
+    <div class="sb" style="margin-top:6px;"><div class="m">📛 群命名规则</div><div class="t"><code style="background:var(--side);padding:1px 5px;border-radius:3px;">花名-客户名-${p.name}-业务</code><br>例：阿杰 - 小李 - ${p.name} - 航司卡</div></div>
+    <div style="margin-top:8px;font-size:12px;line-height:2;color:var(--txt2);border-top:1px solid var(--bord);padding-top:8px;"><b>客户可能问：</b><br>"你是哪位？" → 发小红书截图核对<br>"群里都是谁？" → 专员+后台，24小时在线<br>拒绝入群 → 单聊，表格记录</div>
+  </div></div>`; bindCopy();
+}
+function renderC(cx,p){
+  const t=st.tone;
+  let rows=Object.entries(p.obj).map(([k,v])=>`<tr><td style="font-weight:600;white-space:nowrap;">"${k}"</td><td>${v[t]||v[0]}</td><td><button class="cb" data-c="${esc(v[t]||v[0])}">📋</button></td></tr>`).join('');
+  cx.innerHTML=`<div class="cd"><div class="cd-h"><h3>📋 必问项 <span class="${p.cls}">${p.em} ${p.name}</span></h3></div><div class="cd-b"><div style="font-size:12px;line-height:2;color:var(--txt2);">${p.cq.map(q=>`• ${q}`).join('<br>')}</div></div></div>
+  <div class="cd"><div class="cd-h"><h3>💰 报价 + 常见反应</h3></div><div class="cd-b"><div class="ow"><table class="ot"><tr><th>客户反应</th><th>话术</th><th style="width:32px;"></th></tr>${rows}<tr><td style="font-weight:600;color:var(--green);">接受报价</td><td>—</td><td>→ E</td></tr><tr><td style="font-weight:600;color:var(--red);">≥5万/反复比价</td><td style="color:var(--red);">转专员</td><td>🚨</td></tr></table></div></div></div>
+  ${dd(p)}`; bindCopy();
+}
+function renderD(cx,p){
+  const t=st.tone;
+  let rows=Object.entries(p.obj).map(([k,v])=>`<tr><td style="font-weight:600;white-space:nowrap;">"${k}"</td><td>${v[t]||v[0]}</td><td><button class="cb" data-c="${esc(v[t]||v[0])}">📋</button></td></tr>`).join('');
+  cx.innerHTML=`<div class="cd"><div class="cd-h"><h3>💬 异议处理 <span class="${p.cls}">${p.em} ${p.name}</span></h3></div><div class="cd-b">
+    <div class="ow"><table class="ot"><tr><th>异议</th><th>话术</th><th style="width:32px;"></th></tr>${rows}</table></div>
+    <div class="ar"><div class="l">⚠️ 红线</div><div class="b">同一异议 <strong>2次</strong> 后仍无法推进 → 转专员<br>客户提合同条款 / 拿出别家具体报价 → 转专员</div></div>
+  </div></div>${dd(p)}`; bindCopy();
+}
+function renderE(cx,p){
+  cx.innerHTML=`<div class="cd"><div class="cd-h"><h3>🤝 促单成交 <span class="${p.cls}">${p.em} ${p.name}</span></h3></div><div class="cd-b">
+    <div class="sb"><div class="m">🎯 促单钩子</div><div class="t">${p.hook}</div><button class="cp" data-c="${esc(p.hook)}">📋 复制</button></div>
+    <div style="font-size:12px;line-height:2;margin-top:8px;">流程：名额紧张促单 → 签合同→打款→提交 → 报账户信息<br><span style="color:var(--red);">⚠️ 新人不动合同，签约转专员</span></div>
+  </div></div>
+  <div class="cd"><div class="cd-h"><h3>💳 付款问题速查</h3></div><div class="cd-b"><div class="ow"><table class="ot"><tr><th>客户问</th><th>答</th></tr>
+    <tr><td>签约人和办卡人不一致？</td><td>合同不需要一样，办卡需本人信息</td></tr>
+    <tr><td>能开发票吗？</td><td>下卡之后开</td></tr>
+    <tr><td>不开票有优惠？</td><td>对私返3个点</td></tr>
+    <tr><td>可以分期吗？</td><td>不可以，必须预付</td></tr>
+    <tr><td>信用卡能付吗？</td><td>绑支付宝到企业支付宝</td></tr>
+  </table></div></div></div>`; bindCopy();
+}
+function renderF(cx,p){
+  cx.innerHTML=`<div class="cd"><div class="cd-h"><h3>📎 等待期 + 售后</h3></div><div class="cd-b">
+    <div class="sb"><div class="m">📎 等待期标准话术 <span class="wb ok">固定回复</span></div><div class="t">已提交航司审批，90–120个工作日内按季度审批，下卡后短信通知+App显示</div><button class="cp" data-c="已提交航司审批，90–120个工作日内按季度审批，下卡后短信通知+App显示">📋 复制</button></div>
+    <div class="ow" style="margin-top:8px;"><table class="ot"><tr><th>客户问</th><th>回答</th></tr>
+      <tr><td>进度怎么样？</td><td>已提交，90–120工作日，季度批复</td></tr>
+      <tr><td>能快点吗？</td><td>不能缩短，季度审批</td></tr>
+      <tr><td>怎么知道下卡了？</td><td>短信+App显示</td></tr>
+      <tr><td>什么时候开发票？</td><td>下卡之后</td></tr>
+    </table></div>
+    <div class="sb" style="margin-top:8px;"><div class="m">🔄 延伸服务 <span class="wb ok">${p.name}</span></div><div class="t">${p.ext}</div></div>
+    <div class="ar"><div class="l">🚨 必转专员</div><div class="b">客户提退费/投诉/已超期 → 不答应任何条件，立刻转专员</div></div>
+  </div></div>`; bindCopy();
+}
+
+// ===== 违禁词页面 =====
+function renderWB(cx) {
+  cx.innerHTML = `<div class="cd"><div class="cd-h"><h3>⚠️ 小红书违禁词库</h3></div><div class="cd-b">
+    <p style="font-size:12px;color:var(--txt3);margin-bottom:6px;">红色=高风险，黄色=中风险。评论区话术发出前务必检查。</p>
+    <h4 style="font-size:13px;margin:10px 0 6px;">📢 评论区违禁词</h4>
+    <div class="wb-grid">${BANNED.comment.map(w=>`<div class="wg"><div class="w ${w.risk==='高'?'':'color:var(--orange)'}">${w.word} <span style="font-weight:400;font-size:10px;color:var(--txt3);">(${w.risk}风险)</span></div><div class="r">${w.tip}</div>${w.alt?`<div class="r" style="color:var(--green);">✅ ${w.alt}</div>`:''}</div>`).join('')}</div>
+    <h4 style="font-size:13px;margin:16px 0 6px;">📩 私信注意词</h4>
+    <div class="wb-grid">${BANNED.dm.map(w=>`<div class="wg"><div class="w ${w.risk==='高'?'':'color:var(--orange)'}">${w.word} <span style="font-weight:400;font-size:10px;color:var(--txt3);">(${w.risk}风险)</span></div><div class="r">${w.tip}</div>${w.alt?`<div class="r" style="color:var(--green);">✅ ${w.alt}</div>`:''}</div>`).join('')}</div>
+    <div class="ar" style="margin-top:14px;"><div class="l">💡 安全建议</div>
+    <div class="b" style="font-size:11px;">
+      1. 评论区只引导「主页了解」，绝不发联系方式<br>
+      2. 私信引导加微信时不使用「保证」「包过」等承诺词<br>
+      3. 所有话术发出前过一遍违禁词检查<br>
+      4. 每周更新违禁词库（平台规则会变）
+    </div></div>
+  </div></div>`;
+}
+
+// ===== HELPERS =====
+function sb(text, label, isComment) {
+  const warn = isComment ? checkBanned(text) : '';
+  return `<div class="sb">
+    <div class="m">${label} ${warn}</div>
+    <div class="t">${text}</div>
+    <button class="cp" data-c="${esc(text)}">📋 复制</button>
+  </div>`;
+}
+
+function checkBanned(text) {
+  const hits = BANNED.comment.filter(w => text.includes(w.word));
+  if (hits.length === 0) return '';
+  return `<span class="wb dang">🚨 含违禁词：${hits.map(h=>h.word).join('、')}</span>`;
+}
+
+function dd(p) {
+  return `<div class="cd"><div class="cd-b">
+    <div style="font-size:12px;line-height:2.2;">
+      <span style="color:var(--green);">✅ 应该做</span><br>${p.do.map(d=>`&nbsp;&nbsp;• ${d}`).join('<br>')}
+    </div>
+    <div style="font-size:12px;line-height:2.2;margin-top:4px;">
+      <span style="color:var(--red);">❌ 不要做</span><br>${p.dont.map(d=>`&nbsp;&nbsp;• ${d}`).join('<br>')}
+    </div>
+  </div></div>`;
+}
+
+function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+function bindCopy() {
+  document.querySelectorAll('.cp, .cb').forEach(el => {
+    el.removeEventListener('click', cpH);
+    el.addEventListener('click', cpH);
+  });
+}
+function cpH(e) {
+  const el = e.currentTarget;
+  let t = el.getAttribute('data-c') || '';
+  if (!t) t = el.parentElement.querySelector('.t')?.textContent || '';
+  const raw = t.replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'");
+  clip(raw).then(() => {
+    el.textContent = '✅'; el.classList.add('ok');
+    toast('✅ 已复制');
+    setTimeout(() => { el.textContent='📋'; el.classList.remove('ok'); }, 1200);
+  });
+}
+async function clip(t) {
+  try { await navigator.clipboard.writeText(t); return; } catch(e) {}
+  const ta = document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select();
+  document.execCommand('copy'); document.body.removeChild(ta);
+}
+
+function toast(m) { const t=document.getElementById('tt'); t.textContent=m; t.classList.add('show'); clearTimeout(t._tm); t._tm=setTimeout(()=>t.classList.remove('show'),1800); }
+
+// ===== NOTES =====
+function svNotes() { try { localStorage.setItem('vtnotes',document.getElementById('notesF').value); }catch(e){} }
+(function(){ try { const n=localStorage.getItem('vtnotes'); if(n) document.getElementById('notesF').value=n; }catch(e){} })();
+
+// ===== KEYS =====
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='TEXTAREA') return;
+  const n='123456'.indexOf(e.key); if(n>=0&&PKEYS[n]){ selP(PKEYS[n]); return; }
+  const s='abcdef'.indexOf(e.key.toLowerCase()); if(s>=0){ goS('ABCDEF'[s]); return; }
+  if(e.key==='7'){ goS('AR'); return; }
+  if(e.key==='8'){ goS('WB'); return; }
+  if(e.key.toLowerCase()==='m'){ toggleMode(); return; }
+  if(e.key.toLowerCase()==='t'){ toggleTheme(); return; }
+});
+</script>
+</body>
+</html>

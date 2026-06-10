@@ -1,0 +1,230 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 68d0cf4b000000001201cd47
+    model_type: note
+    note_card:
+      interact_info:
+        share_count: '127'
+        followed: false
+        relation: none
+        liked: false
+        liked_count: '172'
+        collected: false
+        collected_count: '145'
+        comment_count: '4'
+      tag_list:
+      - id: 62d9692e00000000010011d7
+        name: 杭州奢华酒店
+        type: topic
+      - id: 58b6440b805d8974ef9a7744
+        name: 杭州酒店
+        type: topic
+      - id: 5c8f4b84000000000e023238
+        name: 西湖酒店
+        type: topic
+      - id: 68132be1000000001800998c
+        name: 杭州避世酒店
+        type: topic
+      - name: 杭州酒店探店
+        type: topic
+        id: 61222e7e000000000101e455
+      - id: 58b6440b805d8974ef9a7744
+        name: 杭州酒店
+        type: topic
+      - type: topic
+        id: 5c67648b000000000e030685
+        name: 度假酒店
+      - name: 杭州黑珍珠餐厅
+        type: topic
+        id: 5c9a21df000000000e01f5d2
+      - type: topic
+        id: 61913e970000000001005056
+        name: 酒店天花板
+      - type: topic
+        id: 68999dad00000000180040a3
+        name: 小红书市集秋上新
+      at_user_list: []
+      last_update_time: 1758515020000
+      note_id: 68d0cf4b000000001201cd47
+      type: normal
+      title: 杭州最贵酒店Top10｜奢华避世天花板💸
+      desc: "杭州自古便是文人墨客笔下的\"人间天堂\"，这些顶级酒店各有千秋，是体验江南奢华与诗意的上佳之选。\n\t\n1️⃣杭州秋水山庄\n参考价格：12800元/晚起\n\
+        亮点：西湖边SLH成员，仅12间房，半开放式无边泳池直面西湖，民国风情，部分客房配备智能调温床垫\n\t\n2️⃣杭州法云安缦\n参考价格：6555元/晚起\n\
+        亮点：毗邻灵隐寺的古村落改造酒店，禅意十足，环境隐秘清幽，宛若避世\n\t\n3️⃣杭州西子湖四季酒店\n参考价格：6000元/晚起\n亮点：江南园林风格，坐拥黑珍珠三钻金沙厅，提供私人游船体验，深入西湖秘境\n\
+        \t\n4️⃣杭州Vallie酒店\n参考价格：5800元/晚起\n亮点：近六和塔，仅8间房，极私密，拥有米其林星级法餐厅溪畔十九，隐于山谷\n\t\
+        \n5️⃣罗莱夏朵·杭州紫萱度假村\n参考价格：3900元/晚起\n亮点：内有三家黑珍珠餐厅（解香楼、三嚥阁、曼殊），环境低调静谧，充满东方美学\n\
+        \t\n6️⃣杭州香格里拉饭店·水知心居\n参考价格：3800元/晚起\n亮点：香格里拉旗下新高奢品牌，融合中式美学与极繁主义，坐拥西湖核心区湖光山色。\n\
+        \t\n7️⃣杭州西溪悦榕庄\n参考价格：2900元/晚起\n亮点：坐落于西溪湿地内，全套房/别墅设计，标配景观阳台或庭院，可体验悦榕庄经典SPA\n\
+        \t\n8️⃣杭州所见·西溪度假酒店\n参考价格：2850元/晚起\n亮点：深藏西溪湿地，所有客房临水而建，私密性极佳，营造避世渔隐的宁静氛围。\n\
+        \t\n9️⃣杭州木守西溪酒店\n参考价格：2800元/晚起\n亮点：隐于西溪密林，设计现代简约，拥有私人码头和人气餐厅溪隐（创新江浙菜）\n\t\n\
+        \U0001F51F杭州夕上·虎跑1934酒店\n参考价格：2400元/晚起\n亮点：民国历史别墅改造，毗邻虎跑泉，幽丽清雅，店内设有人气网红月芽自由餐厅（创意西餐）。\n\
+        \t\n#杭州奢华酒店[话题]#  #杭州酒店[话题]#  #西湖酒店[话题]#  #杭州避世酒店[话题]#  #杭州酒店探店[话题]#  #杭州酒店[话题]#\
+        \  #度假酒店[话题]#  #杭州黑珍珠餐厅[话题]#  #酒店天花板[话题]#  #小红书市集秋上新[话题]#"
+      user:
+        nickname: 江浙沪酒店推荐官
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31e9i1rmd10005pto5rd39c2ta9m7de8
+        xsec_token: ABxfOjXCuubF5KgWC-wf5ARRc93dEh9UXxeyNOJekoehU=
+        user_id: 67b82eda000000000d00b05d
+      image_list:
+      - file_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/6b6587015d8055e7ad988a78a3fa5068/spectrum/1040g0k031mnjgeflkq005pto5rd39c2tlebfvq0!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        height: 1660
+        width: 1242
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/5900b3f5d5847aa93f595922fe534d58/spectrum/1040g0k031mnjgeflkq005pto5rd39c2tlebfvq0!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/6b6587015d8055e7ad988a78a3fa5068/spectrum/1040g0k031mnjgeflkq005pto5rd39c2tlebfvq0!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/5900b3f5d5847aa93f595922fe534d58/spectrum/1040g0k031mnjgeflkq005pto5rd39c2tlebfvq0!nd_prv_wlteh_webp_3
+      - url_default: http://sns-webpic-qc.xhscdn.com/202605241836/8b203a06e6d1bcbb8434c2fe61584641/spectrum/1040g0k031mnjgeflkq0g5pto5rd39c2ti3pj66g!nd_dft_wlteh_webp_3
+        height: 1660
+        width: 1242
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/307dc221b813fc21032b9fcf9ab90459/spectrum/1040g0k031mnjgeflkq0g5pto5rd39c2ti3pj66g!nd_prv_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/307dc221b813fc21032b9fcf9ab90459/spectrum/1040g0k031mnjgeflkq0g5pto5rd39c2ti3pj66g!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/8b203a06e6d1bcbb8434c2fe61584641/spectrum/1040g0k031mnjgeflkq0g5pto5rd39c2ti3pj66g!nd_dft_wlteh_webp_3
+      - url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/e6644469116bf707edb05baeb1938d41/spectrum/1040g0k031mnjgeflkq105pto5rd39c2tqj3993g!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/81ee23de222f324bdcb87243ae529d4c/spectrum/1040g0k031mnjgeflkq105pto5rd39c2tqj3993g!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/81ee23de222f324bdcb87243ae529d4c/spectrum/1040g0k031mnjgeflkq105pto5rd39c2tqj3993g!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        height: 1660
+        width: 1242
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/e6644469116bf707edb05baeb1938d41/spectrum/1040g0k031mnjgeflkq105pto5rd39c2tqj3993g!nd_prv_wlteh_webp_3
+      - trace_id: ''
+        stream: {}
+        file_id: ''
+        height: 1660
+        url: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/2d9c284c8c96e9762d95b68f0567c236/spectrum/1040g0k031mnjgeflkq1g5pto5rd39c2tc3g3ja0!nd_dft_wlteh_webp_3
+        live_photo: false
+        width: 1242
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/affe17fca3276ffad520fe9c6fe9a636/spectrum/1040g0k031mnjgeflkq1g5pto5rd39c2tc3g3ja0!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/2d9c284c8c96e9762d95b68f0567c236/spectrum/1040g0k031mnjgeflkq1g5pto5rd39c2tc3g3ja0!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/affe17fca3276ffad520fe9c6fe9a636/spectrum/1040g0k031mnjgeflkq1g5pto5rd39c2tc3g3ja0!nd_prv_wlteh_webp_3
+      - url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/9a1d839659da9974efe2b57d2054e226/spectrum/1040g0k031mnjgeflkq205pto5rd39c2tcg071uo!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/bf082cdfd89af9f391805b4e286ae848/spectrum/1040g0k031mnjgeflkq205pto5rd39c2tcg071uo!nd_dft_wlteh_webp_3
+        live_photo: false
+        file_id: ''
+        width: 1242
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/9a1d839659da9974efe2b57d2054e226/spectrum/1040g0k031mnjgeflkq205pto5rd39c2tcg071uo!nd_prv_wlteh_webp_3
+        - url: http://sns-webpic-qc.xhscdn.com/202605241836/bf082cdfd89af9f391805b4e286ae848/spectrum/1040g0k031mnjgeflkq205pto5rd39c2tcg071uo!nd_dft_wlteh_webp_3
+          image_scene: WB_DFT
+        stream: {}
+        height: 1660
+        trace_id: ''
+      - file_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/c6cf9b4f6619ed25dab383b135c34ed4/spectrum/1040g0k031mnjgeflkq2g5pto5rd39c2t5hudq50!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        height: 1660
+        width: 1242
+        url: ''
+        trace_id: ''
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241836/fcafe53a2431404c93e8b7c6c8a1862d/spectrum/1040g0k031mnjgeflkq2g5pto5rd39c2t5hudq50!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/c6cf9b4f6619ed25dab383b135c34ed4/spectrum/1040g0k031mnjgeflkq2g5pto5rd39c2t5hudq50!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/fcafe53a2431404c93e8b7c6c8a1862d/spectrum/1040g0k031mnjgeflkq2g5pto5rd39c2t5hudq50!nd_prv_wlteh_webp_3
+      - info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/5adb42cd661d5d565a041b8fc8686d3b/spectrum/1040g0k031mnjgeflkq305pto5rd39c2ta9upv18!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/863261bcadf5b1b3fdfe5f571757762c/spectrum/1040g0k031mnjgeflkq305pto5rd39c2ta9upv18!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/5adb42cd661d5d565a041b8fc8686d3b/spectrum/1040g0k031mnjgeflkq305pto5rd39c2ta9upv18!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/863261bcadf5b1b3fdfe5f571757762c/spectrum/1040g0k031mnjgeflkq305pto5rd39c2ta9upv18!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        width: 1242
+        trace_id: ''
+        height: 1660
+        url: ''
+      - url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/1041958171af102cea3f74180892b5c4/spectrum/1040g0k031mnjgeflkq3g5pto5rd39c2tl14f6ao!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/8a59bfa10c13ad77d40657ecf70cb441/spectrum/1040g0k031mnjgeflkq3g5pto5rd39c2tl14f6ao!nd_dft_wlteh_webp_3
+        live_photo: false
+        width: 1242
+        trace_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/1041958171af102cea3f74180892b5c4/spectrum/1040g0k031mnjgeflkq3g5pto5rd39c2tl14f6ao!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/8a59bfa10c13ad77d40657ecf70cb441/spectrum/1040g0k031mnjgeflkq3g5pto5rd39c2tl14f6ao!nd_dft_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        height: 1660
+      - height: 1660
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/722c7bce221f8b4a393c2469a94f4370/spectrum/1040g0k031mnjgeflkq405pto5rd39c2tk08517g!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/41bb79d0be1011e9859c3604bc38470e/spectrum/1040g0k031mnjgeflkq405pto5rd39c2tk08517g!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/722c7bce221f8b4a393c2469a94f4370/spectrum/1040g0k031mnjgeflkq405pto5rd39c2tk08517g!nd_prv_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        url: ''
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/41bb79d0be1011e9859c3604bc38470e/spectrum/1040g0k031mnjgeflkq405pto5rd39c2tk08517g!nd_dft_wlteh_webp_3
+        width: 1242
+      - width: 1242
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/dea3777d3daa5be8ca912b10159f1917/spectrum/1040g0k031mnjgeflkq4g5pto5rd39c2tuhvl6t8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/ad6d07c5a9cd89c6edf6876bc97f4fc5/spectrum/1040g0k031mnjgeflkq4g5pto5rd39c2tuhvl6t8!nd_dft_wlteh_webp_3
+        file_id: ''
+        height: 1660
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/dea3777d3daa5be8ca912b10159f1917/spectrum/1040g0k031mnjgeflkq4g5pto5rd39c2tuhvl6t8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/ad6d07c5a9cd89c6edf6876bc97f4fc5/spectrum/1040g0k031mnjgeflkq4g5pto5rd39c2tuhvl6t8!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+      - url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/07cfb062d505ba20e26586512206cc95/spectrum/1040g0k031mnjgeflkq505pto5rd39c2tk8rh6c8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/97ce8af9e43daa7c5721d5887299cb1c/spectrum/1040g0k031mnjgeflkq505pto5rd39c2tk8rh6c8!nd_dft_wlteh_webp_3
+        live_photo: false
+        file_id: ''
+        width: 1242
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/07cfb062d505ba20e26586512206cc95/spectrum/1040g0k031mnjgeflkq505pto5rd39c2tk8rh6c8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/97ce8af9e43daa7c5721d5887299cb1c/spectrum/1040g0k031mnjgeflkq505pto5rd39c2tk8rh6c8!nd_dft_wlteh_webp_3
+        stream: {}
+        height: 1660
+        url: ''
+        trace_id: ''
+      time: 1758709383000
+      share_info:
+        un_share: false
+  current_time: 1779618966487
+

@@ -1,0 +1,103 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - model_type: note
+    note_card:
+      type: normal
+      title: 2026杭州酒店梯队划分
+      desc: "本篇对杭州的39家酒店进行了四个梯队的划分\n\t\n第一梯队：\n秋水山庄\n法云安缦\n西子湖四季酒店\n西湖国宾馆\n西子宾馆汪庄\n\
+        罗莱夏朵·紫萱\n\t\n第二梯队：\n杭州柏悦\n杭州Vallie酒店\n香格里拉-水知心居\n西溪悦榕庄\n杭州康莱德酒店\n杭州中心四季酒店\n\
+        杭州富春山居高尔夫度假村\n杭州桐庐康莱德酒店\n杭州富春方外酒店\n杭州所见·西溪度假酒店\n杭州夕上·虎跑1934酒店\n\t\n第三梯队：\n\
+        杭州绿城尊蓝钱江豪华精选酒店\n杭州城中香格里拉大酒店\n杭州君悦\n杭州西湖柳莺里酒店\n杭州久泰饭店\n杭州九里云松度假酒店\n杭州西湖安隅酒店\n\
+        杭州托尼洛·兰博基尼ROSSO酒店\n杭州湘湖逍遥庄园·香园\n\t\n第四梯队：\n杭州明月松间·潜川酒店\n杭州凡云西溪酒店\n杭州木棉花酒店\n\
+        杭州洲际酒店\n杭州良渚洲际酒店\n杭州上城英迪格酒店\n杭州天目山英迪格酒店\n杭州香格里拉饭店\n杭州索菲特西湖大酒店\n\t\n所以你会选择哪一家作为2026第一次入住选择！\n\
+        欢迎补充！\n\t\n#野生vlogger成长计划[话题]# #酒店天花板[话题]# #杭州[话题]# #周末去哪儿[话题]# #杭州酒店[话题]#\
+        \ #江浙沪酒店[话题]# #酒店[话题]# #杭州住哪儿[话题]# #杭州酒店推荐[话题]# #万豪[话题]#"
+      interact_info:
+        comment_count: '60'
+        share_count: '303'
+        followed: false
+        relation: none
+        liked: false
+        liked_count: '772'
+        collected: false
+        collected_count: '641'
+      at_user_list: []
+      last_update_time: 1767350520000
+      note_id: 6957a0f8000000001e02aec3
+      user:
+        user_id: 5db2c06600000000010066b5
+        nickname: 爱住套房的Randy
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo314b2pcs8mi1g5ndio1j08pllv0fp0l8
+        xsec_token: ABm6_IBEWWDIC6jyHLeKqzJHoqTT0qo1FY6Gd913SKLsM=
+      image_list:
+      - info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/49f8450e8094a3463916007d8575a88b/1040g2sg31qr8ep8u7ue05ndio1j08pllnqcpkeo!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/a3bf0d974e3627120974f68e1a1f0a11/1040g2sg31qr8ep8u7ue05ndio1j08pllnqcpkeo!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/a3bf0d974e3627120974f68e1a1f0a11/1040g2sg31qr8ep8u7ue05ndio1j08pllnqcpkeo!nd_dft_wlteh_webp_3
+        height: 2200
+        trace_id: ''
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/49f8450e8094a3463916007d8575a88b/1040g2sg31qr8ep8u7ue05ndio1j08pllnqcpkeo!nd_prv_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        width: 1300
+      - width: 1232
+        trace_id: ''
+        live_photo: false
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/b271716cd74a881236afb87ae592e40a/1040g2sg31qr8ep8u7ueg5ndio1j08pllss9q5m0!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/97802b3d01d18b7091be72276e4dffe1/1040g2sg31qr8ep8u7ueg5ndio1j08pllss9q5m0!nd_dft_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        height: 2228
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/b271716cd74a881236afb87ae592e40a/1040g2sg31qr8ep8u7ueg5ndio1j08pllss9q5m0!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/97802b3d01d18b7091be72276e4dffe1/1040g2sg31qr8ep8u7ueg5ndio1j08pllss9q5m0!nd_dft_wlteh_webp_3
+      tag_list:
+      - name: 野生vlogger成长计划
+        type: topic
+        id: 694a7f010000000024011717
+      - id: 61913e970000000001005056
+        name: 酒店天花板
+        type: topic
+      - id: 54db8cc1b4c4d628cd003eba
+        name: 杭州
+        type: topic
+      - id: 56f7ffe6b46c5d5ca95b82e8
+        name: 周末去哪儿
+        type: topic
+      - type: topic
+        id: 58b6440b805d8974ef9a7744
+        name: 杭州酒店
+      - id: 602086fe0000000001008ec8
+        name: 江浙沪酒店
+        type: topic
+      - name: 酒店
+        type: topic
+        id: 5968c0fbcd30d868b4f689ad
+      - id: 62aa972c0000000001000926
+        name: 杭州住哪儿
+        type: topic
+      - id: 5c317bda000000000801386b
+        name: 杭州酒店推荐
+        type: topic
+      - id: 5c3011100000000009014aa3
+        name: 万豪
+        type: topic
+      - id: '137737612160875476'
+        name: 2026第一次入住你会选择
+        type: interact_vote
+      time: 1767350520000
+      share_info:
+        un_share: false
+    id: 6957a0f8000000001e02aec3
+  current_time: 1779618956165
+

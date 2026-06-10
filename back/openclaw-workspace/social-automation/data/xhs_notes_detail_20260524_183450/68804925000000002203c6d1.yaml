@@ -1,0 +1,278 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 68804925000000002203c6d1
+    model_type: note
+    note_card:
+      user:
+        user_id: 54e5c4dee779895d94957428
+        nickname: 折腾的小肉团
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31gk41bu9jq00401fl62dst18oo0gpoo
+        xsec_token: AB6hsDddY94W7NuuOcjhLXSUIPOqbKfLC6m1YAljmmRwk=
+      note_id: 68804925000000002203c6d1
+      type: normal
+      title: 花了大几万，住进北京胡同是一种什么体验
+      desc: "从阿布扎比回来，正好落地北京大兴机场，来都来了，自然要在北京玩上两天～\n酒店选了从开业到现在一直很火的前门文华东方，好奇凭什么一家酒店能卖到那么贵‼️\n\
+        \t\n入住后才发现，服务的最高境界，就是将你的情绪价值拉满！而他们家真是把仪式感做到了极致～\n\t\n✨入住前两天，酒店管家就已经开始联系，确定了我们的航班号，提前安排好了房间～\n\
+        \t\n✨入住时每个人都会有专属的房卡，上面☝️竟然还印着属于自己的名字！就连小朋友的房卡，都别出心裁的作成了手串，戴上后都没舍得摘下来。\n\t\n\
+        ✨办理完入住，专属小车直接送回房～\n有别于其他酒店，前门文华东方的42间四合院，都是散落在草场胡同内的，推开门是摇着蒲扇，用京腔侃大山的大爷们！而关上门，则又是传统而不失新潮的的四合院～\n\
+        \t\n胡同很小，所以连这车都是定制款，穿梭在胡同内，管家给我们讲着关于这片胡同的故事，还时不时的和胡同里的邻里们唠两句家常，颇有意思～\n\t\n\
+        ✨推开那扇门，藏着的是烟火气里的隐奢体验，我们住的四合院，估摸着至少得有160平左右，在这寸土寸金的北京城中轴线上，这个含金量不言而喻～\n进门便是一个偌大的院子，也是恺恺最喜欢的一部分，房间是新中式的设计风格，竟可能的保留着四合院的原汁原味同时，又在设计上融入了许多时尚的元素，每一次随意的举起相机\U0001F4F7\
+        ，都会不由的感叹一声，真美～\n\t\n✨因为提前沟通有小朋友入住，所以管家布置了帐篷、玩具等很多适合小朋友玩乐的内容～还有可爱的“才高”和“八斗”两只小猫，他们究竟是长什么样，那可得自己去胡同里寻找他们的踪迹了[偷笑R]\n\
+        \t\n✨房间内的配置，都是高端体验，从mini bar里的饮料酒水，到洗漱日用，每一细节之处，都让你觉得这房价的含金量不停在上升～\n\t\n✨喜欢每天房间里都会有不一样的小惊喜，例如：管家贴心准备的遮阳帽，或盲猜一下今天会尝到什么样的地道老北京小吃呢？\n\
+        \t\n✨ 我们当时选了套餐，里面含了每天小朋友的8小时看护服务！也就是说，我每天有了8个小时耳根子清净的时候～\n\t\n而小朋友则有了属于他的情绪价值！有管家陪着玩游戏、陪着看电影、陪着做pizza、陪着在胡同里寻宝，陪着聊天陪着笑～\n\
+        \t\n虽然酒店距离故宫、前门和天坛仅数步之遥，但我们入住的几天，竟然都没走出过胡同～在自己的四合院里，已可以偷得浮生半日闲，光是一个胡同文化，就足矣让我们回味无穷～#北京旅游[话题]#\
+        \ #北京胡同[话题]# #北京前门文华东方酒店[话题]#"
+      time: 1753237797000
+      last_update_time: 1753237843000
+      share_info:
+        un_share: false
+      interact_info:
+        relation: none
+        liked: false
+        liked_count: '267'
+        collected: false
+        collected_count: '103'
+        comment_count: '27'
+        share_count: '37'
+        followed: false
+      image_list:
+      - height: 1920
+        width: 1280
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/c0900444db5b5d99435698d4e0e50cf7/1040g2sg31k8v5e6bio8g401fl62dst180lnf9t0!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/6b39b22c3814519a4a6da4d3f0611857/1040g2sg31k8v5e6bio8g401fl62dst180lnf9t0!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/c0900444db5b5d99435698d4e0e50cf7/1040g2sg31k8v5e6bio8g401fl62dst180lnf9t0!nd_prv_wlteh_webp_3
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/6b39b22c3814519a4a6da4d3f0611857/1040g2sg31k8v5e6bio8g401fl62dst180lnf9t0!nd_dft_wlteh_webp_3
+          image_scene: WB_DFT
+      - height: 2560
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/00e9895418de6a545b3abeec85b689c5/1040g2sg31k8v5e6bio70401fl62dst180bvilig!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/02936642d25d05b0c0cf4ffba1f127df/1040g2sg31k8v5e6bio70401fl62dst180bvilig!nd_dft_wlteh_webp_3
+        live_photo: false
+        file_id: ''
+        width: 1706
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/00e9895418de6a545b3abeec85b689c5/1040g2sg31k8v5e6bio70401fl62dst180bvilig!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/02936642d25d05b0c0cf4ffba1f127df/1040g2sg31k8v5e6bio70401fl62dst180bvilig!nd_dft_wlteh_webp_3
+        stream: {}
+      - height: 2560
+        width: 1706
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/179b63932fecc2572a5649b762854177/1040g2sg31k8v5e6bio7g401fl62dst182edueio!nd_dft_wlteh_webp_3
+        live_photo: false
+        file_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/006e5860b536ae4fed60ae0460525eda/1040g2sg31k8v5e6bio7g401fl62dst182edueio!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/179b63932fecc2572a5649b762854177/1040g2sg31k8v5e6bio7g401fl62dst182edueio!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/006e5860b536ae4fed60ae0460525eda/1040g2sg31k8v5e6bio7g401fl62dst182edueio!nd_prv_wlteh_webp_3
+        stream: {}
+      - height: 2560
+        width: 1706
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/4ac88fef3cfc93a03a3a9b2e89fe273f/1040g2sg31k8v5e6bio80401fl62dst18n26aaio!nd_prv_wlteh_webp_3
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/d0c5e2241a0e795d3c3ff647e29d02bd/1040g2sg31k8v5e6bio80401fl62dst18n26aaio!nd_dft_wlteh_webp_3
+          image_scene: WB_DFT
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/4ac88fef3cfc93a03a3a9b2e89fe273f/1040g2sg31k8v5e6bio80401fl62dst18n26aaio!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/d0c5e2241a0e795d3c3ff647e29d02bd/1040g2sg31k8v5e6bio80401fl62dst18n26aaio!nd_dft_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        live_photo: false
+      - width: 1280
+        url: ''
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/d0e3a7347be86992d94c7d9af9fc2dbe/1040g2sg31k8v5e6bio90401fl62dst18ml5rdgo!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/fe78d7ed4736915a8109191070235534/1040g2sg31k8v5e6bio90401fl62dst18ml5rdgo!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/d0e3a7347be86992d94c7d9af9fc2dbe/1040g2sg31k8v5e6bio90401fl62dst18ml5rdgo!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/fe78d7ed4736915a8109191070235534/1040g2sg31k8v5e6bio90401fl62dst18ml5rdgo!nd_dft_wlteh_webp_3
+        live_photo: false
+        file_id: ''
+        height: 1920
+        trace_id: ''
+        stream: {}
+      - file_id: ''
+        trace_id: ''
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/bf808e46e6af1e624acaba3830eed77d/1040g2sg31k8v5e6bio9g401fl62dst18biuqiqg!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/fdd91debc093608265f70f67bd23aa95/1040g2sg31k8v5e6bio9g401fl62dst18biuqiqg!nd_dft_wlteh_webp_3
+        stream: {}
+        height: 1920
+        width: 1280
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/bf808e46e6af1e624acaba3830eed77d/1040g2sg31k8v5e6bio9g401fl62dst18biuqiqg!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/fdd91debc093608265f70f67bd23aa95/1040g2sg31k8v5e6bio9g401fl62dst18biuqiqg!nd_dft_wlteh_webp_3
+        live_photo: false
+      - file_id: ''
+        width: 1280
+        url: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/0d08288d94a592c16c5dcfa2cc08ba64/1040g2sg31k8v5e6bioa0401fl62dst18df3h3o8!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        height: 1920
+        trace_id: ''
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/0026acb79347fbad021e09e1a5326153/1040g2sg31k8v5e6bioa0401fl62dst18df3h3o8!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/0d08288d94a592c16c5dcfa2cc08ba64/1040g2sg31k8v5e6bioa0401fl62dst18df3h3o8!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/0026acb79347fbad021e09e1a5326153/1040g2sg31k8v5e6bioa0401fl62dst18df3h3o8!nd_prv_wlteh_webp_3
+      - height: 1920
+        width: 1280
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/62d804de3ff491b5072ecafd09ec433a/1040g2sg31k8v5e6bioag401fl62dst184rvsp8o!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/b9471cb28f3de6c8ce0ae2cf67ffc118/1040g2sg31k8v5e6bioag401fl62dst184rvsp8o!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/62d804de3ff491b5072ecafd09ec433a/1040g2sg31k8v5e6bioag401fl62dst184rvsp8o!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/b9471cb28f3de6c8ce0ae2cf67ffc118/1040g2sg31k8v5e6bioag401fl62dst184rvsp8o!nd_dft_wlteh_webp_3
+        file_id: ''
+        live_photo: false
+        stream: {}
+      - file_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/e20fbb7afbf7760406011303d2714aeb/1040g2sg31k8v5e6biob0401fl62dst18kij6710!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        height: 1920
+        width: 1280
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/531f5d3fd332b0d0da3c7c3f0544dd95/1040g2sg31k8v5e6biob0401fl62dst18kij6710!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/e20fbb7afbf7760406011303d2714aeb/1040g2sg31k8v5e6biob0401fl62dst18kij6710!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/531f5d3fd332b0d0da3c7c3f0544dd95/1040g2sg31k8v5e6biob0401fl62dst18kij6710!nd_prv_wlteh_webp_3
+      - url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/f9fde8e71b64043182b14f810e50ab85/1040g2sg31k8v5e6biobg401fl62dst1818hncfo!nd_prv_wlteh_webp_3
+        height: 2048
+        width: 1365
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/df19c1c685d8d4b1d76a95321629c689/1040g2sg31k8v5e6biobg401fl62dst1818hncfo!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/f9fde8e71b64043182b14f810e50ab85/1040g2sg31k8v5e6biobg401fl62dst1818hncfo!nd_prv_wlteh_webp_3
+        - url: http://sns-webpic-qc.xhscdn.com/202605241835/df19c1c685d8d4b1d76a95321629c689/1040g2sg31k8v5e6biobg401fl62dst1818hncfo!nd_dft_wlteh_webp_3
+          image_scene: WB_DFT
+      - url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/17f993cfc33da57bd62cb6b88e37b138/1040g2sg31k8v5e6bioc0401fl62dst180a95v3g!nd_prv_wlteh_webp_3
+        height: 1920
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/17f993cfc33da57bd62cb6b88e37b138/1040g2sg31k8v5e6bioc0401fl62dst180a95v3g!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/8d673561738f370f57327d003b1958b0/1040g2sg31k8v5e6bioc0401fl62dst180a95v3g!nd_dft_wlteh_webp_3
+        url: ''
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/8d673561738f370f57327d003b1958b0/1040g2sg31k8v5e6bioc0401fl62dst180a95v3g!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        width: 1280
+      - file_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/601baf78ff5f2cb871a6e92c69d33c2c/1040g2sg31k8v5e6biocg401fl62dst181rm3lh0!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/7e48e4040d3de0102a161d80ab4d4cd1/1040g2sg31k8v5e6biocg401fl62dst181rm3lh0!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/601baf78ff5f2cb871a6e92c69d33c2c/1040g2sg31k8v5e6biocg401fl62dst181rm3lh0!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/7e48e4040d3de0102a161d80ab4d4cd1/1040g2sg31k8v5e6biocg401fl62dst181rm3lh0!nd_dft_wlteh_webp_3
+        height: 1920
+        width: 1280
+        trace_id: ''
+        stream: {}
+        live_photo: false
+      - file_id: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/244a11988079d78b10eb5f81c9c4ff0c/1040g2sg31k8v5e6biod0401fl62dst18s9ctpd0!nd_prv_wlteh_webp_3
+        live_photo: false
+        stream: {}
+        height: 2560
+        width: 1706
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/244a11988079d78b10eb5f81c9c4ff0c/1040g2sg31k8v5e6biod0401fl62dst18s9ctpd0!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/602251f43363026d8ca5d1991a451633/1040g2sg31k8v5e6biod0401fl62dst18s9ctpd0!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/602251f43363026d8ca5d1991a451633/1040g2sg31k8v5e6biod0401fl62dst18s9ctpd0!nd_dft_wlteh_webp_3
+      - url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/964346b05d7a3291be97ca9fcce65899/1040g2sg31k8v5e6biodg401fl62dst1838el688!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/154050957600540eaffa8f1e7b11d7db/1040g2sg31k8v5e6biodg401fl62dst1838el688!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/154050957600540eaffa8f1e7b11d7db/1040g2sg31k8v5e6biodg401fl62dst1838el688!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        height: 2560
+        width: 1706
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/964346b05d7a3291be97ca9fcce65899/1040g2sg31k8v5e6biodg401fl62dst1838el688!nd_prv_wlteh_webp_3
+      - file_id: ''
+        height: 1920
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/490f0f7c6fd3c4c8ac99bd63ff3133b6/1040g2sg31k8v5e75ioe0401fl62dst18ojuvr00!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/75c1ba336263159903dce7a8e0bebd34/1040g2sg31k8v5e75ioe0401fl62dst18ojuvr00!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        width: 1280
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/490f0f7c6fd3c4c8ac99bd63ff3133b6/1040g2sg31k8v5e75ioe0401fl62dst18ojuvr00!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/75c1ba336263159903dce7a8e0bebd34/1040g2sg31k8v5e75ioe0401fl62dst18ojuvr00!nd_dft_wlteh_webp_3
+      - file_id: ''
+        height: 2560
+        width: 1655
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/14de3f7a58d3b288f717ff7d9c02177a/1040g2sg31k8v5e75ioeg401fl62dst18h6kso9g!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241835/d079b691b95c2a2042a293362266c868/1040g2sg31k8v5e75ioeg401fl62dst18h6kso9g!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241835/14de3f7a58d3b288f717ff7d9c02177a/1040g2sg31k8v5e75ioeg401fl62dst18h6kso9g!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241835/d079b691b95c2a2042a293362266c868/1040g2sg31k8v5e75ioeg401fl62dst18h6kso9g!nd_dft_wlteh_webp_3
+        trace_id: ''
+        stream: {}
+        live_photo: false
+      tag_list:
+      - id: 5bd2f6e6615da831353ceb6d
+        name: 北京旅游
+        type: topic
+      - type: topic
+        id: 57a3fc9578362332d8ee6884
+        name: 北京胡同
+      - id: 6125fe9a00000000010017bf
+        name: 北京前门文华东方酒店
+        type: topic
+      at_user_list: []
+  current_time: 1779618941430
+

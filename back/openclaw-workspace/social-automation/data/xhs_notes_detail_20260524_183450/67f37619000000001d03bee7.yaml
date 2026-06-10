@@ -1,0 +1,249 @@
+ok: true
+schema_version: '1'
+data:
+  items:
+  - id: 67f37619000000001d03bee7
+    model_type: note
+    note_card:
+      type: normal
+      desc: '我刚到的时候觉得酒店太小了，很难承重“度假村”的称号，但是细细走下来，觉得真的非常精美和宁静，越逛越喜欢。尤其出门走了一下旺季的旅游景区，真的回来就是一个感恩和知足。
+
+        首先说说最大的优势：精美，只有不到100间客房，非常的宁静。整个院落虽然不大，但是植物布置得非常精巧，从颜色搭配到形状修理，都能看出层次和设计感。强烈推荐酒店的游船活动。我赶上清明节，为了保证西湖游船数量（和酒店小船都归属市政管理），酒店只有3条人工摇橹船供住客提前预约，可以预约1小时的时段，能安排船上早饭或下午茶。码头是酒店私有的，水域是西湖的公共水域一部分，但是船只非常少。一小时的时间，足够游览，看看鸟，看看桥，体会杭州花红柳绿的春天美景，同时能够彻底的避开旅游胜地的喧嚣。我选择的8点船上早饭，这一小时让我觉得值回票价。
+
+        位置：步行到西湖边景区大约10分钟，走到印象西湖演出大约15分钟。问题是节假日西湖景区限行，不登记的车辆出入困难，同时频繁交通管制让周边交通很拥堵。所以步行虽然近，但是也缺乏别的选择。步行还可以到达杭州植物园，人少，景美，还有免费的韩美林艺术馆，推荐。我还乘坐了7路公交车前往灵隐寺，坐车特别方便，但是下车看到人从众，直接掉头回来了。顺着酒店的小路可以直接走到盖叫天故居，是一个京剧名角的家，没人，很漂亮，很值得去溜溜弯。
+
+        餐饮：酒店有大名鼎鼎的金沙厅是中餐，非常符合游客口味，清淡、选择丰富，都在具有本土特色的基础上做了更大众化的改良。西餐厅WL其实也还可以，坐在户外主打环境好。酒店有这两个餐厅，让“足不出户下江南”成为了可能。两个餐厅的共同点都是饮料和酒非常贵，饭菜价格可接受。酒店门口还有绿茶旗舰店，各种外卖也可以送达。
+
+        服务：令我印象深刻的是酒店有给7岁的小朋友单独准备了一张小汽车形状的房卡，这是我们以前没见过的，小朋友每天很郑重的收房卡、负责开门锁门，给旅行增添了小确幸。
+
+        其他：房间、健身房都非常标准，没有什么值得说的，但是也没有太明显的短板。
+
+        总体来讲，喜欢！#四季酒店[话题]# #杭州西子湖四季酒店[话题]#'
+      user:
+        user_id: 632d5d0c0000000015017a22
+        nickname: 温室仙人掌
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31bupvcetgs5g5opdbk65auh2mm3on2g
+        xsec_token: AB9Oyq1rQMm5cDisWGbjzRjlB7_17notXT_zR4p27X258=
+      tag_list:
+      - id: 5bf7e44fb859030001e7983d
+        name: 四季酒店
+        type: topic
+      - id: 5c5406bc000000000d01e984
+        name: 杭州西子湖四季酒店
+        type: topic
+      last_update_time: 1744008729000
+      note_id: 67f37619000000001d03bee7
+      title: 杭州西子湖四季酒店，好！
+      interact_info:
+        liked_count: '124'
+        collected: false
+        collected_count: '86'
+        comment_count: '9'
+        share_count: '136'
+        followed: false
+        relation: none
+        liked: false
+      image_list:
+      - url_default: http://sns-webpic-qc.xhscdn.com/202605241836/6e4255c3b3843bafcdbf97054a4054b7/1040g00831fvdr7q3g06g5opdbk65auh2skiugl0!nd_dft_wgth_webp_3
+        live_photo: false
+        file_id: ''
+        width: 2560
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/9aba173e16497bf6afc86d69b47db310/1040g00831fvdr7q3g06g5opdbk65auh2skiugl0!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/6e4255c3b3843bafcdbf97054a4054b7/1040g00831fvdr7q3g06g5opdbk65auh2skiugl0!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/9aba173e16497bf6afc86d69b47db310/1040g00831fvdr7q3g06g5opdbk65auh2skiugl0!nd_prv_wgth_webp_3
+        height: 1920
+        url: ''
+        trace_id: ''
+        stream: {}
+      - height: 1920
+        width: 2560
+        trace_id: ''
+        stream: {}
+        file_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/cb46f87cec26105a2c264bc9a77b2d70/1040g00831fvdr7q3g0605opdbk65auh2n8nov4g!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/5a7015e440c4d96b00792597f89a28dc/1040g00831fvdr7q3g0605opdbk65auh2n8nov4g!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/cb46f87cec26105a2c264bc9a77b2d70/1040g00831fvdr7q3g0605opdbk65auh2n8nov4g!nd_prv_wgth_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/5a7015e440c4d96b00792597f89a28dc/1040g00831fvdr7q3g0605opdbk65auh2n8nov4g!nd_dft_wgth_webp_3
+        live_photo: false
+      - height: 2560
+        width: 1920
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/8c1768ef919c91b3ca8df4b590bebebb/1040g00831fvdr7q3g04g5opdbk65auh2n2a8o1o!nd_prv_wlteh_webp_3
+        file_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/8c1768ef919c91b3ca8df4b590bebebb/1040g00831fvdr7q3g04g5opdbk65auh2n2a8o1o!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/34b703403ba24ab07d0ed6cf0988a2de/1040g00831fvdr7q3g04g5opdbk65auh2n2a8o1o!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/34b703403ba24ab07d0ed6cf0988a2de/1040g00831fvdr7q3g04g5opdbk65auh2n2a8o1o!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        url: ''
+      - info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/cd71efff50d7e4382b28798980a64670/1040g00831fvdr7q3g0505opdbk65auh2moi1keo!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/1ecf249dc906fa04a2caadbafb1ed8ec/1040g00831fvdr7q3g0505opdbk65auh2moi1keo!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/cd71efff50d7e4382b28798980a64670/1040g00831fvdr7q3g0505opdbk65auh2moi1keo!nd_prv_wgth_webp_3
+        width: 2560
+        url: ''
+        trace_id: ''
+        stream: {}
+        live_photo: false
+        file_id: ''
+        height: 1920
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/1ecf249dc906fa04a2caadbafb1ed8ec/1040g00831fvdr7q3g0505opdbk65auh2moi1keo!nd_dft_wgth_webp_3
+      - file_id: ''
+        width: 2560
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/4ea1102e1caf1ed4de997da63b14bd89/1040g00831fvdr7q3g0005opdbk65auh2jnth5lo!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/d24af28bf61b52d36003e3961cca21eb/1040g00831fvdr7q3g0005opdbk65auh2jnth5lo!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/4ea1102e1caf1ed4de997da63b14bd89/1040g00831fvdr7q3g0005opdbk65auh2jnth5lo!nd_prv_wgth_webp_3
+        live_photo: false
+        height: 1920
+        url: ''
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/d24af28bf61b52d36003e3961cca21eb/1040g00831fvdr7q3g0005opdbk65auh2jnth5lo!nd_dft_wgth_webp_3
+        stream: {}
+      - url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/f941571d45c6c73dde8dd940c7c7f4a2/1040g00831fvdr7q3g0105opdbk65auh2noo3ub8!nd_prv_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        height: 2560
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/f941571d45c6c73dde8dd940c7c7f4a2/1040g00831fvdr7q3g0105opdbk65auh2noo3ub8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/f31ec8f45ea4b0ce00c7eb3fb07d4040/1040g00831fvdr7q3g0105opdbk65auh2noo3ub8!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/f31ec8f45ea4b0ce00c7eb3fb07d4040/1040g00831fvdr7q3g0105opdbk65auh2noo3ub8!nd_dft_wlteh_webp_3
+        width: 1920
+        url: ''
+        trace_id: ''
+      - url_default: http://sns-webpic-qc.xhscdn.com/202605241836/9ddbf553dfc45caabef06a3c0e30621b/1040g00831fvdr7q3g0205opdbk65auh27tsni30!nd_dft_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        height: 2560
+        width: 1920
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/5990be0181a16c65f130191daa149332/1040g00831fvdr7q3g0205opdbk65auh27tsni30!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/9ddbf553dfc45caabef06a3c0e30621b/1040g00831fvdr7q3g0205opdbk65auh27tsni30!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/5990be0181a16c65f130191daa149332/1040g00831fvdr7q3g0205opdbk65auh27tsni30!nd_prv_wlteh_webp_3
+        live_photo: false
+      - live_photo: false
+        file_id: ''
+        height: 1920
+        width: 2560
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/997a794e53aedcd91b6a5bbf8b01dc0e/1040g00831fvdr7q3g0305opdbk65auh2m9q2qug!nd_prv_wgth_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/053410ed0d112529583c568de19699a9/1040g00831fvdr7q3g0305opdbk65auh2m9q2qug!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/997a794e53aedcd91b6a5bbf8b01dc0e/1040g00831fvdr7q3g0305opdbk65auh2m9q2qug!nd_prv_wgth_webp_3
+        stream: {}
+        url: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/053410ed0d112529583c568de19699a9/1040g00831fvdr7q3g0305opdbk65auh2m9q2qug!nd_dft_wgth_webp_3
+      - url_default: http://sns-webpic-qc.xhscdn.com/202605241836/a467926b05a5244eb56845917ad56ba2/1040g00831fvdr7q3g03g5opdbk65auh2vkfdp2o!nd_dft_wgth_webp_3
+        stream: {}
+        live_photo: false
+        width: 2560
+        trace_id: ''
+        url: ''
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241836/504f354e815d521fb4719c92a2453777/1040g00831fvdr7q3g03g5opdbk65auh2vkfdp2o!nd_prv_wgth_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/a467926b05a5244eb56845917ad56ba2/1040g00831fvdr7q3g03g5opdbk65auh2vkfdp2o!nd_dft_wgth_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/504f354e815d521fb4719c92a2453777/1040g00831fvdr7q3g03g5opdbk65auh2vkfdp2o!nd_prv_wgth_webp_3
+        file_id: ''
+        height: 1920
+      - file_id: ''
+        height: 2560
+        width: 1920
+        url: ''
+        trace_id: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/d348cbf9e1917332698d5d826bde2873/1040g00831fvdr7q3g02g5opdbk65auh2h9bbgq8!nd_dft_wlteh_webp_3
+        stream: {}
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/a1c51e6f68a041ee9ba87243fb03eb19/1040g00831fvdr7q3g02g5opdbk65auh2h9bbgq8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/d348cbf9e1917332698d5d826bde2873/1040g00831fvdr7q3g02g5opdbk65auh2h9bbgq8!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/a1c51e6f68a041ee9ba87243fb03eb19/1040g00831fvdr7q3g02g5opdbk65auh2h9bbgq8!nd_prv_wlteh_webp_3
+        live_photo: false
+      - stream: {}
+        live_photo: false
+        height: 2560
+        width: 1920
+        trace_id: ''
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241836/f6f239f14ecf81522c2dccd98d0bc2bf/1040g00831fvdr7q3g0405opdbk65auh2grgab5o!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/79a3bd11ddc6bdcc05ebbc1cedb17659/1040g00831fvdr7q3g0405opdbk65auh2grgab5o!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/79a3bd11ddc6bdcc05ebbc1cedb17659/1040g00831fvdr7q3g0405opdbk65auh2grgab5o!nd_dft_wlteh_webp_3
+        file_id: ''
+        url: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/f6f239f14ecf81522c2dccd98d0bc2bf/1040g00831fvdr7q3g0405opdbk65auh2grgab5o!nd_prv_wlteh_webp_3
+      - url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/216196e41a7725bb12544476f9a7d59c/1040g00831fvdr7q3g00g5opdbk65auh2rv99juo!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/1acc4161af9a430828d9870d0fd1b333/1040g00831fvdr7q3g00g5opdbk65auh2rv99juo!nd_dft_wlteh_webp_3
+        live_photo: false
+        height: 2560
+        width: 1920
+        trace_id: ''
+        stream: {}
+        file_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/216196e41a7725bb12544476f9a7d59c/1040g00831fvdr7q3g00g5opdbk65auh2rv99juo!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/1acc4161af9a430828d9870d0fd1b333/1040g00831fvdr7q3g00g5opdbk65auh2rv99juo!nd_dft_wlteh_webp_3
+      - file_id: ''
+        height: 2560
+        width: 1920
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/2360af7ed34eca4d3589aaddde636e0a/1040g00831fvdr7q3g01g5opdbk65auh2f1bjjq0!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/cd280021caa9403be705ae6667ecb0ec/1040g00831fvdr7q3g01g5opdbk65auh2f1bjjq0!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/cd280021caa9403be705ae6667ecb0ec/1040g00831fvdr7q3g01g5opdbk65auh2f1bjjq0!nd_dft_wlteh_webp_3
+        stream: {}
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/2360af7ed34eca4d3589aaddde636e0a/1040g00831fvdr7q3g01g5opdbk65auh2f1bjjq0!nd_prv_wlteh_webp_3
+        live_photo: false
+      - info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/ee217fb4ca53a7340d85ed245d53dcd9/1040g00831fvdr7q3g05g5opdbk65auh2fvh2qcg!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241836/c2a565b3b68624658dd28d06b412e5ce/1040g00831fvdr7q3g05g5opdbk65auh2fvh2qcg!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241836/ee217fb4ca53a7340d85ed245d53dcd9/1040g00831fvdr7q3g05g5opdbk65auh2fvh2qcg!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241836/c2a565b3b68624658dd28d06b412e5ce/1040g00831fvdr7q3g05g5opdbk65auh2fvh2qcg!nd_dft_wlteh_webp_3
+        file_id: ''
+        height: 2560
+        trace_id: ''
+        live_photo: false
+        width: 1920
+        url: ''
+        stream: {}
+      at_user_list: []
+      time: 1744008729000
+      share_info:
+        un_share: false
+  current_time: 1779618977155
+  cursor_score: ''
+

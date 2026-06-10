@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>H-150-C-01 — 150㎡ 新中式 方案一 一层平面</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #c8c3bc; font-family: 'PingFang SC','Microsoft YaHei',sans-serif; padding: 24px; }
+  .wrap { max-width: 1300px; margin: 0 auto; }
+  .sheet { background:#fff; border-radius:2px; padding:20px; margin-bottom:20px; box-shadow:0 3px 12px rgba(0,0,0,.18); }
+  canvas { display:block; margin:0 auto; width:100%; max-width:1100px; }
+  table { width:100%; border-collapse:collapse; font-size:11px; margin-top:8px; }
+  th { background:#e8e4de; padding:5px 8px; border:1px solid #ccc; text-align:left; font-weight:600; font-size:10px; }
+  td { padding:4px 8px; border:1px solid #ddd; font-size:10px; }
+  h3 { font-size:13px; color:#1a2a1a; margin:12px 0 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="sheet">
+  <h3>H-150-C-01 一层平面图 — 三开间格局 (10m×8m)  1:100</h3>
+  <canvas id="c" width="1100" height="780"></canvas>
+</div>
+
+<div class="sheet" style="display:grid; grid-template-columns:1fr 1fr; gap:20px">
+  <div>
+    <h3>📋 房间数据</h3>
+    <table><thead><tr><th>#</th><th>房间</th><th>面积</th><th>宽×深</th><th>地面</th><th>墙面</th></tr></thead>
+    <tbody id="roomTab"></tbody></table>
+  </div>
+  <div>
+    <h3>🚪 门窗表</h3>
+    <table><thead><tr><th>编号</th><th>类型</th><th>尺寸(mm)</th><th>备注</th></tr></thead>
+    <tbody id="doorTab"></tbody></table>
+    <table style="margin-top:6px"><thead><tr><th>编号</th><th>类型</th><th>尺寸(mm)</th><th>备注</th></tr></thead>
+    <tbody id="winTab"></tbody></table>
+  </div>
+</div>
+
+<script>
+const S=60, OX=160, OY=100;
+function m(x){return x*S}
+// 数据：所有房间 [name, x,y, w,h, fill, floor, wall, ceiling]
+const R = [
+  ['门厅/堂屋', 3.3,0, 3.4,4.5, '#f8f6ee', '800×800玻化砖', '白色乳胶漆', '石膏板吊顶'],
+  ['老人房',    0,0, 3.3,4.5, '#f7f5ef', '复合木地板',      '白色乳胶漆', '白色乳胶漆'],
+  ['客厅',      6.7,0, 3.3,4.5, '#f8f6ee', '800×800玻化砖', '白色乳胶漆', '石膏板吊顶(局部挑空)'],
+  ['老人卫',    0,4.5, 2,2.2, '#eef2ee', '300×300防滑砖', '瓷砖至顶', '铝扣板'],
+  ['储藏室',    2,4.5, 1.3,2.2, '#f4f3ed', '水泥砂浆',      '白色乳胶漆', '白色乳胶漆'],
+  ['楼梯间',    3.3,4.5, 3.4,3.5, '#f4f2ec', '防滑地砖',     '白色乳胶漆', '白色乳胶漆'],
+  ['厨房',      6.7,4.5, 2.2,3.5, '#eef2ee', '300×300防滑砖', '瓷砖至顶', '铝扣板'],
+  ['公卫',      8.9,4.5, 1.1,3.5, '#eef2ee', '300×300防滑砖', '瓷砖至顶', '铝扣板'],
+];
+// 墙体 [x1,y1, x2,y2, type]
+const W = [
+  [0,0,10,0,'ext'],[10,0,10,8,'ext'],[10,8,0,8,'ext'],[0,8,0,0,'ext'],
+  [3.3,0,3.3,4.5,'int'],[6.7,0,6.7,4.5,'int'],
+  [0,4.5,10,4.5,'int'],
+  [2,4.5,2,6.7,'int'],[3.3,4.5,3.3,8,'int'],
+  [6.7,4.5,6.7,8,'int'],[8.9,4.5,8.9,8,'int'],
+  [0,6.7,2,6.7,'int'],
+];
+// 窗 [name, x,y, w, dir, note]
+const Win = [
+  ['C-01','老人房南','0.5',8,2.3,'s','2400×1800 平开铝合金'],
+  ['C-02','客厅落地','7',8,2.8,'s','6000×2400 落地组合'],
+  ['C-03','厨房北','7.2',0,1.8,'n','1800×1500 平开'],
+  ['C-04','储藏室北','9.2',0,0.6,'n','600×600 高窗'],
+  ['C-05','门厅北','4',0,2.0,'n','2000×900 高窗磨砂'],
+];
+// 门 [name, x,y, w,h, dir, note]
+const Dr = [
+  ['M-01','入户大门',1.2,8, 1.5,0,'v','双开防盗门 新中式雕花'],
+  ['M-02','门厅→楼梯',3.3,2.5, 0.9,0,'h','实木门'],
+  ['M-03','门厅→老人房',1.5,4.5, 0.9,0,'h','实木门'],
+  ['M-04','门厅→客厅',6.7,3, 0.9,0,'h','实木门'],
+  ['M-05','老人房→卫',1,6.7, 0.8,0,'v','钛镁合金门'],
+  ['M-06','过道→储藏',2.4,6.7, 0.8,0,'v','实木门'],
+  ['M-07','过道→公卫',8.9,5.5, 0.8,0,'h','钛镁合金门'],
+  ['M-08','过道→厨房',6.7,6.5, 0.9,0,'h','钛镁合金推拉'],
+  ['M-09','客厅→庭院',9.2,7, 0.9,0,'h','落地推拉门'],
+  ['M-10','楼梯→过道',3.3,6.5, 0.9,0,'h','实木门'],
+];
+// 家具 [type, x,y, w,h, label]
+// 只标注主要家具
+const F = [
+  ['bed', 0.6, 0.8, 0.7, 1.3, '1.8m床'],
+  ['cab', 0.3, 0.2, 0.4, 0.5, '衣柜'],
+  ['wc', 1.3, 4.7, 0.3, 0.4, '马桶'],
+  ['sink',0.3,4.8,0.3,0.4,'洗手台'],
+  ['shower',1.5,5.2,0.4,0.4,'淋浴'],
+  ['kitchen',7,4.7,1.5,0.4,'操作台'],
+  ['stove',7.8,4.7,0.4,0.4,'灶台'],
+  ['wc2',9.1,5.2,0.3,0.4,'马桶'],
+  ['sink2',9,5.8,0.3,0.3,'洗手台'],
+  ['sofa',7.5,1.5,1.2,0.4,'转角沙发'],
+  ['table',7.5,2.5,0.5,0.4,'茶几'],
+  ['tv',7,3.8,1.2,0.15,'电视墙'],
+  ['stairs',3.5,4.7,3,2.5,'楼梯'],
+];
+// 房间标签位置 (room index, label_x, label_y)
+const LABEL_OFFSET = [
+  [0, 5, 1.8],  // 门厅
+  [1, 1.65, 1.8], // 老人房
+  [2, 8.35, 1.8], // 客厅
+  [3, 1, 5.6],   // 老人卫
+  [4, 2.65, 5.6], // 储藏
+  [5, 5, 6.2],   // 楼梯间
+  [6, 7.8, 6.2],  // 厨房
+  [7, 9.45, 6.2], // 公卫
+];
+// 标高
+const LV = [
+  [0.2,0.2, '±0.000'],
+  [0.2,7.9, '-0.020'],
+];
+
+// ============== DRAW ==============
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+ctx.clearRect(0,0,1100,780);
+ctx.fillStyle='#fcfaf6'; ctx.fillRect(0,0,1100,780);
+
+// 网格
+ctx.strokeStyle='#e8e4de'; ctx.lineWidth=.2;
+for(let i=0;i<=10;i++){ctx.beginPath();ctx.moveTo(OX+m(i),OY);ctx.lineTo(OX+m(i),OY+m(8));ctx.stroke()}
+for(let i=0;i<=8;i++){ctx.beginPath();ctx.moveTo(OX,OY+m(i));ctx.lineTo(OX+m(10),OY+m(8));ctx.stroke()}
+
+// 房间填充
+for(const r of R){
+  ctx.fillStyle=r[4];
+  ctx.fillRect(OX+m(r[1]),OY+m(r[2]),m(r[3]),m(r[4]));
+  ctx.strokeStyle='#d8d4cc'; ctx.lineWidth=.5;
+  ctx.strokeRect(OX+m(r[1]),OY+m(r[2]),m(r[3]),m(r[4]));
+}
+
+// 墙体
+for(const w of W){
+  const isExt=w[4]==='ext';
+  ctx.strokeStyle=isExt?'#111':'#444'; ctx.lineWidth=isExt?3.5:2;
+  ctx.beginPath(); ctx.moveTo(OX+m(w[0]),OY+m(w[1])); ctx.lineTo(OX+m(w[2]),OY+m(w[3])); ctx.stroke();
+}
+
+// 窗
+for(const w of Win){
+  const [name,_,xx,yy,wide,dir]=w;
+  const x=parseFloat(xx), y=parseFloat(yy);
+  ctx.fillStyle='#b8d4e0'; ctx.strokeStyle='#3a6a7a'; ctx.lineWidth=.8;
+  if(dir==='s'||dir==='n'){
+    const wy=dir==='s'?OY+m(y)-m(0.15):OY+m(y);
+    ctx.fillRect(OX+m(x),wy,m(wide),m(0.15));
+    ctx.strokeRect(OX+m(x),wy,m(wide),m(0.15));
+    ctx.strokeStyle='#3a6a7a'; ctx.lineWidth=.4;
+    for(let i=1;i<wide/0.5;i++){ctx.beginPath();ctx.moveTo(OX+m(x)+m(wide)*i/(wide/0.5),wy);ctx.lineTo(OX+m(x)+m(wide)*i/(wide/0.5),wy+m(0.15));ctx.stroke()}
+    ctx.fillStyle='#3a5a7a'; ctx.font='bold 7px sans-serif'; ctx.textAlign='center'; ctx.fillText(name,OX+m(x)+m(wide)/2,dir==='s'?wy+m(0.3)+12:wy-4);
+  }else{
+    ctx.fillRect(OX+m(x)-m(0.08),OY+m(y),m(0.15),m(wide)); ctx.strokeRect(OX+m(x)-m(0.08),OY+m(y),m(0.15),m(wide));
+    ctx.fillStyle='#3a5a7a'; ctx.font='bold 7px sans-serif'; ctx.textAlign='center';
+    ctx.save(); ctx.translate(OX+m(x)+12,OY+m(y)+m(wide)/2); ctx.rotate(-Math.PI/2); ctx.fillText(name,0,0); ctx.restore();
+  }
+}
+
+// 门
+for(const d of Dr){
+  const [name,_,xx,yy,wide,high,dir]=d;
+  const x=parseFloat(xx),y=parseFloat(yy),w=parseFloat(wide),h=parseFloat(high);
+  ctx.fillStyle='#e8dcc8'; ctx.strokeStyle='#7a6a4a'; ctx.lineWidth=0.8;
+  if(dir==='v'){
+    ctx.fillRect(OX+m(x),OY+m(y)-m(h/2),m(w),m(h)); ctx.strokeRect(OX+m(x),OY+m(y)-m(h/2),m(w),m(h));
+    ctx.strokeStyle='#b8a88a'; ctx.setLineDash([3,2]); ctx.lineWidth=0.4;
+    ctx.beginPath(); ctx.arc(OX+m(x),OY+m(y),m(w)*1.3,Math.PI/2,Math.PI); ctx.stroke(); ctx.setLineDash([]);
+  }else{
+    ctx.fillRect(OX+m(x)-m(w/2),OY+m(y),m(w),m(h)); ctx.strokeRect(OX+m(x)-m(w/2),OY+m(y),m(w),m(h));
+    ctx.strokeStyle='#b8a88a'; ctx.setLineDash([3,2]); ctx.lineWidth=0.4;
+    ctx.beginPath(); ctx.arc(OX+m(x),OY+m(y)+m(h),m(h)*1.3,-Math.PI/2,0); ctx.stroke(); ctx.setLineDash([]);
+  }
+}
+
+// 楼梯
+ctx.fillStyle='#f0ede8'; ctx.strokeStyle='#999'; ctx.lineWidth=0.5;
+ctx.fillRect(OX+m(3.5),OY+m(4.7),m(3),m(2.5));
+ctx.strokeRect(OX+m(3.5),OY+m(4.7),m(3),m(2.5));
+ctx.strokeStyle='#bbb'; ctx.lineWidth=0.4;
+for(let i=1;i<=6;i++){ctx.beginPath();ctx.moveTo(OX+m(3.5),OY+m(4.7)+m(2.5)*i/7);ctx.lineTo(OX+m(6.5),OY+m(4.7)+m(2.5)*i/7);ctx.stroke()}
+ctx.strokeStyle='#888'; ctx.lineWidth=1.5;
+ctx.beginPath(); ctx.moveTo(OX+m(4.5),OY+m(4.7)); ctx.lineTo(OX+m(4.5),OY+m(7.2)); ctx.stroke();
+ctx.fillStyle='#aaa'; ctx.beginPath(); ctx.moveTo(OX+m(4.2),OY+m(5.4)); ctx.lineTo(OX+m(4.8),OY+m(5.4)); ctx.lineTo(OX+m(4.5),OY+m(5.2)); ctx.closePath(); ctx.fill();
+ctx.fillStyle='#888'; ctx.font='8px sans-serif'; ctx.textAlign='center'; ctx.fillText('上',OX+m(4.5),OY+m(6.2));
+
+// 房间标签
+for(const [idx,cx,cy] of LABEL_OFFSET){
+  const r=R[idx];
+  const px=OX+m(cx), py=OY+m(cy);
+  ctx.fillStyle='rgba(255,255,255,0.85)';
+  ctx.fillRect(px-35, py-12, 70, 24);
+  ctx.fillStyle='#333'; ctx.font='bold 9px sans-serif'; ctx.textAlign='center';
+  ctx.fillText(`${idx+1}. ${r[0]}`,px,py-2);
+  ctx.fillStyle='#888'; ctx.font='7px sans-serif';
+  ctx.fillText(`${(r[3]*r[4]).toFixed(1)}㎡`,px,py+9);
+  // 地面材料左下
+  ctx.fillStyle='#aaa'; ctx.font='5px sans-serif'; ctx.textAlign='left';
+  ctx.fillText(`▸${r[5]}`,OX+m(r[1])+2,OY+m(r[2])+m(r[4])-3);
+}
+
+// 尺寸标注
+ctx.strokeStyle='#999'; ctx.lineWidth=0.4;
+// 底面宽
+ctx.beginPath(); ctx.moveTo(OX,OY+m(8)+15); ctx.lineTo(OX+m(10),OY+m(8)+15); ctx.stroke();
+ctx.beginPath(); ctx.moveTo(OX,OY+m(8)+10); ctx.lineTo(OX,OY+m(8)+20); ctx.stroke();
+ctx.beginPath(); ctx.moveTo(OX+m(10),OY+m(8)+10); ctx.lineTo(OX+m(10),OY+m(8)+20); ctx.stroke();
+ctx.fillStyle='#666'; ctx.font='8px sans-serif'; ctx.textAlign='center'; ctx.fillText('10,000mm',OX+m(5),OY+m(8)+23);
+
+// 分段
+const segs=[[0,3.3],[3.3,3.4],[6.7,3.3]];
+let sx=0;
+for(const [start,len] of segs){
+  ctx.beginPath(); ctx.moveTo(OX+m(start),OY+m(8)+28); ctx.lineTo(OX+m(start+len),OY+m(8)+28); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(OX+m(start),OY+m(8)+24); ctx.lineTo(OX+m(start),OY+m(8)+32); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(OX+m(start+len),OY+m(8)+24); ctx.lineTo(OX+m(start+len),OY+m(8)+32); ctx.stroke();
+  ctx.fillStyle='#888'; ctx.font='6px sans-serif'; ctx.textAlign='center';
+  ctx.fillText(`${(len*1000).toFixed(0)}mm`,OX+m(start+len/2),OY+m(8)+36);
+}
+
+// 右侧进深
+ctx.beginPath(); ctx.moveTo(OX+m(10)+15,OY); ctx.lineTo(OX+m(10)+15,OY+m(8)); ctx.stroke();
+ctx.beginPath(); ctx.moveTo(OX+m(10)+10,OY); ctx.lineTo(OX+m(10)+20,OY); ctx.stroke();
+ctx.beginPath(); ctx.moveTo(OX+m(10)+10,OY+m(8)); ctx.lineTo(OX+m(10)+20,OY+m(8)); ctx.stroke();
+ctx.save(); ctx.translate(OX+m(10)+19,OY+m(4)); ctx.rotate(-Math.PI/2);
+ctx.fillStyle='#666'; ctx.font='8px sans-serif'; ctx.textAlign='center'; ctx.fillText('8,000mm',0,0); ctx.restore();
+
+// 右前深分段
+ctx.beginPath(); ctx.moveTo(OX+m(10)+28,OY); ctx.lineTo(OX+m(10)+28,OY+m(4.5)); ctx.stroke();
+ctx.beginPath(); ctx.moveTo(OX+m(10)+24,OY); ctx.lineTo(OX+m(10)+32,OY); ctx.stroke();
+ctx.beginPath(); ctx.moveTo(OX+m(10)+24,OY+m(4.5)); ctx.lineTo(OX+m(10)+32,OY+m(4.5)); ctx.stroke();
+ctx.save(); ctx.translate(OX+m(10)+32,OY+m(2.25)); ctx.rotate(-Math.PI/2);
+ctx.fillStyle='#888'; ctx.font='6px sans-serif'; ctx.textAlign='center'; ctx.fillText('4500mm',0,0); ctx.restore();
+
+ctx.beginPath(); ctx.moveTo(OX+m(10)+28,OY+m(4.5)); ctx.lineTo(OX+m(10)+28,OY+m(8)); ctx.stroke();
+ctx.beginPath(); ctx.moveTo(OX+m(10)+24,OY+m(4.5)); ctx.lineTo(OX+m(10)+32,OY+m(4.5)); ctx.stroke();
+ctx.beginPath(); ctx.moveTo(OX+m(10)+24,OY+m(8)); ctx.lineTo(OX+m(10)+32,OY+m(8)); ctx.stroke();
+ctx.save(); ctx.translate(OX+m(10)+32,OY+m(6.25)); ctx.rotate(-Math.PI/2);
+ctx.fillStyle='#888'; ctx.font='6px sans-serif'; ctx.textAlign='center'; ctx.fillText('3500mm',0,0); ctx.restore();
+
+// 标高
+for(const [x,y,txt] of LV){
+  ctx.fillStyle='#c00';
+  ctx.beginPath(); ctx.moveTo(OX+m(x),OY+m(y)); ctx.lineTo(OX+m(x)-5,OY+m(y)+8); ctx.lineTo(OX+m(x)+5,OY+m(y)+8); ctx.closePath(); ctx.fill();
+  ctx.fillRect(OX+m(x)-0.5,OY+m(y)+8,1,6);
+  ctx.fillStyle='#c00'; ctx.font='7px sans-serif'; ctx.textAlign='left';
+  ctx.fillText(txt,OX+m(x)+7,OY+m(y)+13);
+}
+
+// 指北针
+ctx.strokeStyle='#1a2a1a'; ctx.lineWidth=.8;
+ctx.beginPath(); ctx.arc(OX+m(9),OY-28,14,0,Math.PI*2); ctx.stroke();
+ctx.fillStyle='#1a2a1a'; ctx.beginPath(); ctx.moveTo(OX+m(9),OY-42); ctx.lineTo(OX+m(9)-5,OY-32); ctx.lineTo(OX+m(9)+5,OY-32); ctx.closePath(); ctx.fill();
+ctx.fillStyle='#fff'; ctx.beginPath(); ctx.moveTo(OX+m(9),OY-42); ctx.lineTo(OX+m(9)-3,OY-35); ctx.lineTo(OX+m(9)+3,OY-35); ctx.closePath(); ctx.fill();
+ctx.fillStyle='#1a2a1a'; ctx.font='bold 8px sans-serif'; ctx.textAlign='center'; ctx.fillText('N',OX+m(9),OY-46);
+
+// 图框
+ctx.strokeStyle='#222'; ctx.lineWidth=1.5; ctx.strokeRect(15,15,1070,750);
+ctx.strokeStyle='#666'; ctx.lineWidth=.5; ctx.strokeRect(19,19,1062,742);
+
+// 标题栏
+ctx.fillStyle='#f0ede8'; ctx.fillRect(19,695,1062,66);
+ctx.strokeStyle='#222'; ctx.lineWidth=.8; ctx.strokeRect(19,695,1062,66);
+ctx.beginPath(); ctx.moveTo(19,717); ctx.lineTo(1081,717); ctx.stroke();
+ctx.beginPath(); ctx.moveTo(830,695); ctx.lineTo(830,761); ctx.stroke();
+ctx.fillStyle='#1a2a1a'; ctx.font='bold 10px sans-serif'; ctx.textAlign='left';
+ctx.fillText('H-150-C-01  150㎡新中式方案一', 35, 713);
+ctx.fillStyle='#333'; ctx.font='7px sans-serif';
+ctx.fillText('设计：乙方  |  绘图：Jarvis AI  |  图别：建筑  |  比例：1:100  |  2026-06-07', 35, 735);
+ctx.fillStyle='#888';
+ctx.fillText('本图仅供方案选型参考，施工图以CAD文件为准', 35, 752);
+ctx.textAlign='right';
+ctx.fillStyle='#333'; ctx.font='7px sans-serif';
+ctx.fillText('图号：JZ-01', 1060, 713);
+ctx.fillStyle='#1a2a1a'; ctx.font='bold 9px sans-serif';
+ctx.fillText('一层平面图', 1060, 735);
+
+// 图例
+let lx=50, ly=OY+m(8)+50;
+ctx.fillStyle='#333'; ctx.font='8px sans-serif'; ctx.textAlign='left'; ctx.fillText('图例：',lx,ly+4);
+lx+=35;
+const LEGEND=[
+  ['#b8d4e0','#3a6a7a','窗'],
+  ['#e8dcc8','#7a6a4a','门'],
+  ['#f0ede8','#999','楼梯'],
+  ['#f8f6ee','#ddd','房间'],
+];
+for(const [fill,stroke,label] of LEGEND){
+  ctx.fillStyle=fill; ctx.strokeStyle=stroke; ctx.lineWidth=.5;
+  ctx.fillRect(lx,ly-7,14,10); ctx.strokeRect(lx,ly-7,14,10);
+  ctx.fillStyle='#555'; ctx.font='7px sans-serif'; ctx.textAlign='left'; ctx.fillText(label,lx+18,ly+1);
+  lx+=50;
+}
+ctx.fillStyle='#c00'; ctx.beginPath(); ctx.moveTo(lx,ly-3); ctx.lineTo(lx-4,ly+3); ctx.lineTo(lx+4,ly+3); ctx.closePath(); ctx.fill();
+ctx.fillStyle='#555'; ctx.font='7px sans-serif'; ctx.textAlign='left'; ctx.fillText('标高',lx+10,ly+1);
+
+// ========== 数据表 ==========
+let rHtml='';
+for(let i=0;i<R.length;i++){
+  const r=R[i];
+  rHtml+=`<tr><td>${i+1}</td><td>${r[0]}</td><td>${(r[3]*r[4]).toFixed(1)}㎡</td><td>${r[3]}×${r[4]}m</td><td>${r[5]}</td><td>${r[6]}</td></tr>`;
+}
+document.getElementById('roomTab').innerHTML=rHtml;
+
+let dHtml='';
+for(const d of Dr){dHtml+=`<tr><td>${d[0]}</td><td>${d[1]}</td><td>${d[3]!='0'?`${d[3]}×${d[4]}`:`${d[4]}×${d[3]}`}m</td><td>${d[5]}</td></tr>`}
+document.getElementById('doorTab').innerHTML=dHtml;
+
+let wHtml='';
+for(const w of Win){wHtml+=`<tr><td>${w[0]}</td><td>${w[1]}</td><td>${w[4]}</td><td>${w[5]}</td></tr>`}
+document.getElementById('winTab').innerHTML=wHtml;
+</script>
+</div>
+</body>
+</html>

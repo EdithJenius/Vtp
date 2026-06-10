@@ -1,0 +1,6 @@
+ok: false
+schema_version: '1'
+error:
+  code: verification_required
+  message: 'Captcha required: type=216, uuid=8661b314-796f-4779-b124-a4ed17ef115d'
+

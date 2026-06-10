@@ -1,0 +1,192 @@
+ok: true
+schema_version: '1'
+data:
+  current_time: 1779619030568
+  cursor_score: ''
+  items:
+  - id: 68ff3d9300000000040218e6
+    model_type: note
+    note_card:
+      tag_list:
+      - id: 5c05ce3f66a7ad00014764a3
+        name: 文华东方
+        type: topic
+      - type: topic
+        id: 5c6ff770000000000d00b82d
+        name: 酒店运营
+      - name: 酒店管理
+        type: topic
+        id: 5c03c7bbe86d9c0001609323
+      - name: 奢华酒店
+        type: topic
+        id: 5a55804a092b5b204d843379
+      - id: 5bf939568438830001a947a1
+        name: 豪宅
+        type: topic
+      - name: 酒店推荐
+        type: topic
+        id: 5d01c4fd000000000e006b93
+      - id: 5a5c6bc281f6d130730d2cd0
+        name: 北京酒店
+        type: topic
+      - id: 5c054efb69f13e0001ca56be
+        name: 酒店设计
+        type: topic
+      - id: 6651cbfb000000001b03ec19
+        name: 前门文华东方酒店
+        type: topic
+      - type: topic
+        id: 59db2eeae39faf3717682a66
+        name: 网红酒店
+      last_update_time: 1762336458000
+      share_info:
+        un_share: false
+      note_id: 68ff3d9300000000040218e6
+      title: 酒店案例｜营销人必看，文华东方的“溢价逻辑”
+      desc: "其实，前门MO贩卖的，是一场关于老北京四合院里的顶级的梦。它用最核心的土地，为你搭建了一个短暂的舞台，让你在这里瞬间带入一个“有钱、有文化、有权力”的顶层角色；而这个舞台的背景板，是老北京，是皇城根，是全球独一无二的。在这片土地上，酒店提取了4个故事：\n\
+        \t\n☑️ 第一个故事，讲皇城的“特权感”\n☑️ 第二个故事，讲传承的“使命感”\n☑️ 第三个故事，讲建筑的“稀缺感”\n☑️ 第四个故事，讲住客的“参与感”\n\
+        \t\n如果你也想学习这类顶级的溢价手段，只需要想明白，与其卖产品，不如卖“认同感”；不光卖认同感，还要卖社会身份的“标签感”。这本质上，是一场“心理游戏”。\n\
+        \t\n#文华东方[话题]# #酒店运营[话题]# #酒店管理[话题]# #奢华酒店[话题]# #豪宅[话题]# #酒店推荐[话题]#  #北京酒店[话题]#\
+        \  #酒店设计[话题]# #前门文华东方酒店[话题]# #网红酒店[话题]#"
+      image_list:
+      - width: 1320
+        url: ''
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/c45d13c8e7376cb09bc53f67edb68fb7/1040g00831oghbii86g004btueo43l4ftqpdr028!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/7ce00f866bd6d3d5e2325794fdda5db4/1040g00831oghbii86g004btueo43l4ftqpdr028!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/c45d13c8e7376cb09bc53f67edb68fb7/1040g00831oghbii86g004btueo43l4ftqpdr028!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/7ce00f866bd6d3d5e2325794fdda5db4/1040g00831oghbii86g004btueo43l4ftqpdr028!nd_dft_wlteh_webp_3
+        file_id: ''
+        height: 1760
+        stream: {}
+        live_photo: false
+      video:
+        capa:
+          duration: 238
+        media_v2: '{"video_id":"137640428567489478","video":{"biz_name":110,"biz_id":"281755616636180710","duration":239,"md5":"f6d57c0e2e8bce4b05c635be06522fe7","hdr_type":0,"drm_type":0,"stream_types":[114,259,115],"width":1920,"height":1080,"bound":[{"x":0,"y":0,"w":0,"h":0}],"bbox":{"ocr_v5":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v3":[{"x":85,"y":324,"w":1728,"h":593}],"ocr_v4":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v2":[{"x":85,"y":324,"w":1728,"h":644}]},"opaque1":{"bottomAvgLuma":"58","loudnorm":"{\"lra\":1.7,\"htp\":0.83,\"hldn\":-9.89,\"ldn\":-9.94,\"thr\":-19.99}","domestic":"1","isSupportSubtitle":"false","rightAvgLuma":"36","hasHumanVoice":"true","audioLevInfo":"{\"audio_quality_level\":\"E\",\"mos_overall\":4.0238,\"version\":\"3.0\"}","weakNetUserFlag":"1","insertSubtitleLanguages":"[\"zh-CN\",\"en-US\"]","topAvgLuma":"51","audioClsInfo":"{\"music_ratio\":0.9999999957986724,\"freesound_ratio\":0.0016805310407506469,\"speech_ratio\":0.9846651500518226}"},"subtitles":{"en-US":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e8ff3d937f6bc6010370039a2508bad2_12.srt?sign=e3adcdfe341e3134915b180050cb93b5&t=6a177216","language":"en-US","format":0,"type":0}],"source":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e8ff3d937f6bc6010370039a2508b540_1.srt?sign=378bcad4204bab5b2395fb732269d592&t=6a177216","language":"zh-CN","format":0,"type":0}],"zh-CN":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e8ff3d937f6bc6010370039a2508b7be_11.srt?sign=7a2fd28533ae9596b4d0ee3bb533aa16&t=6a177216","language":"zh-CN","format":0,"type":0}]}},"stream":{"h264":[{"stream_type":259,"stream_desc":"WM_X264_MP4_web","default_stream":0,"format":"mp4","width":1280,"height":720,"duration":238028,"size":25513395,"volume":0.0,"avg_bitrate":857492,"fps":30,"video_codec":"h264","video_bitrate":787013,"video_duration":238000,"audio_codec":"aac","audio_bitrate":64034,"audio_duration":238027,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/79/110/259/01e8ff3d937f6bc6010370039a2509a8ca_259.mp4?sign=f46e060fd1999cc6ede2100117d385cc&t=6a177216","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/79/110/259/01e8ff3d937f6bc6010370039a2509a8ca_259.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":0.0,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h265":[{"stream_type":114,"stream_desc":"X265_MP4_WEB_114","default_stream":0,"format":"mp4","width":1280,"height":720,"duration":238028,"size":19500835,"volume":0.0,"avg_bitrate":655413,"fps":30,"video_codec":"hevc","video_bitrate":520785,"video_duration":238000,"audio_codec":"aac","audio_bitrate":128062,"audio_duration":238027,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/79/110/114/01e8ff3d937f6bc64f0370019a250b6183_114.mp4?sign=fc6f92c231c8484c0d80a0ebec1a22e6&t=6a177216","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/79/110/114/01e8ff3d937f6bc64f0370019a250b6183_114.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":43.124000549316406,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}},{"stream_type":115,"stream_desc":"X265_MP4_WEB_115","default_stream":0,"format":"mp4","width":1920,"height":1080,"duration":238028,"size":24298573,"volume":0.0,"avg_bitrate":816662,"fps":30,"video_codec":"hevc","video_bitrate":682054,"video_duration":238000,"audio_codec":"aac","audio_bitrate":128062,"audio_duration":238027,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/115/01e8ff3d937f6bc6010370019a250e5b67_115.mp4?sign=5e0556ff03c67512d4a05f18c9357f22&t=6a177216","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/115/01e8ff3d937f6bc6010370019a250e5b67_115.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":43.66299819946289,"ssim":0.0,"weight":70,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h266":[],"av1":[]},"user_level":0}'
+        media:
+          video_id: 137640428567489478
+          video:
+            drm_type: 0
+            stream_types:
+            - 114
+            - 259
+            - 115
+            biz_name: 110
+            biz_id: '281755616636180710'
+            duration: 239
+            md5: f6d57c0e2e8bce4b05c635be06522fe7
+            hdr_type: 0
+          stream:
+            h264:
+            - format: mp4
+              video_bitrate: 787013
+              vmaf: -1
+              video_codec: h264
+              rotate: 0
+              master_url: http://sns-video-qc.xhscdn.com/stream/79/110/259/01e8ff3d937f6bc6010370039a2509a8ca_259.mp4?sign=f46e060fd1999cc6ede2100117d385cc&t=6a177216
+              stream_desc: WM_X264_MP4_web
+              duration: 238028
+              audio_bitrate: 64034
+              width: 1280
+              fps: 30
+              audio_codec: aac
+              hdr_type: 0
+              psnr: 0
+              weight: 62
+              avg_bitrate: 857492
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/79/110/259/01e8ff3d937f6bc6010370039a2509a8ca_259.mp4
+              stream_type: 259
+              volume: 0
+              ssim: 0
+              quality_type: HD
+              default_stream: 0
+              video_duration: 238000
+              height: 720
+              size: 25513395
+              audio_duration: 238027
+              audio_channels: 2
+            h265:
+            - size: 19500835
+              default_stream: 0
+              height: 720
+              volume: 0
+              psnr: 43.124000549316406
+              format: mp4
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/79/110/114/01e8ff3d937f6bc64f0370019a250b6183_114.mp4
+              hdr_type: 0
+              video_bitrate: 520785
+              video_duration: 238000
+              audio_codec: aac
+              audio_bitrate: 128062
+              width: 1280
+              video_codec: hevc
+              duration: 238028
+              avg_bitrate: 655413
+              master_url: http://sns-video-qc.xhscdn.com/stream/79/110/114/01e8ff3d937f6bc64f0370019a250b6183_114.mp4?sign=fc6f92c231c8484c0d80a0ebec1a22e6&t=6a177216
+              stream_type: 114
+              ssim: 0
+              weight: 62
+              stream_desc: X265_MP4_WEB_114
+              audio_channels: 2
+              rotate: 0
+              quality_type: HD
+              fps: 30
+              audio_duration: 238027
+              vmaf: -1
+            - quality_type: HD
+              format: mp4
+              audio_duration: 238027
+              audio_channels: 2
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/115/01e8ff3d937f6bc6010370019a250e5b67_115.mp4
+              psnr: 43.66299819946289
+              video_duration: 238000
+              stream_desc: X265_MP4_WEB_115
+              default_stream: 0
+              duration: 238028
+              audio_bitrate: 128062
+              rotate: 0
+              volume: 0
+              avg_bitrate: 816662
+              video_codec: hevc
+              video_bitrate: 682054
+              audio_codec: aac
+              width: 1920
+              height: 1080
+              ssim: 0
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/115/01e8ff3d937f6bc6010370019a250e5b67_115.mp4?sign=5e0556ff03c67512d4a05f18c9357f22&t=6a177216
+              vmaf: -1
+              weight: 70
+              size: 24298573
+              fps: 30
+              hdr_type: 0
+              stream_type: 115
+            h266: []
+            av1: []
+        image:
+          first_frame_fileid: 110/0/01e8ff3d937f6bc60010000000019a25088ed0_0.jpg
+          thumbnail_fileid: frame/110/0/01e8ff3d937f6bc60010000000019a2508bf76_0.webp
+      type: video
+      user:
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31ctrjlrngk004btueo43l4ftqndp9n8
+        xsec_token: ABHngb2rJ8CbP7DsNcD1CzCOKzNSPOMfgOhi_Bz1KWDuU=
+        user_id: 5bfac83ae5efa70001d491fd
+        nickname: YOUNGER羊锅锅
+      interact_info:
+        share_count: '129'
+        followed: false
+        relation: none
+        liked: false
+        liked_count: '323'
+        collected: false
+        collected_count: '236'
+        comment_count: '8'
+      at_user_list: []
+      time: 1761557907000
+

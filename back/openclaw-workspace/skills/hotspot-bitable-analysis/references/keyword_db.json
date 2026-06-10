@@ -1,0 +1,615 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-06-09",
+  "hotels": {
+    "三亚亚特兰蒂斯酒店": {
+      "aliases": [
+        "亚特兰蒂斯",
+        "三亚亚特兰蒂斯",
+        "Atlantis Sanya"
+      ],
+      "angles": {
+        "干货/清单流": {
+          "used": true,
+          "last_note": "三亚亚特兰蒂斯必看8项隐藏福利✨",
+          "keywords": {
+            "pexels": "Atlantis Sanya hotel guide tips",
+            "unsplash": "Sanya luxury resort aerial view",
+            "xhs": "亚特兰蒂斯 酒店 隐藏攻略",
+            "pinterest": "亚特兰蒂斯 度假村 航拍",
+            "douyin": "三亚亚特兰蒂斯 水世界 游玩"
+          }
+        },
+        "情绪种草流": {
+          "used": true,
+          "last_note": "住进海底世界是什么体验🌊",
+          "keywords": {
+            "pexels": "underwater hotel room luxury",
+            "unsplash": "ocean aquarium bedroom design",
+            "xhs": "亚特兰蒂斯 海底套房 梦幻",
+            "pinterest": "海底酒店 水族馆 打卡",
+            "douyin": "亚特兰蒂斯 水族馆 鲨鱼 海底"
+          }
+        },
+        "测评对比流": {
+          "used": true,
+          "last_note": "亚特兰蒂斯vs艾迪逊 毕业选哪个🤔",
+          "keywords": {
+            "pexels": "EDITION Sanya hotel design",
+            "unsplash": "modern minimalist hotel architecture",
+            "xhs": "亚特兰蒂斯 艾迪逊 对比测评",
+            "pinterest": "三亚 海棠湾 酒店 对比",
+            "douyin": "三亚 亚特兰蒂斯 vs 艾迪逊"
+          }
+        },
+        "行业分析流": {
+          "used": true,
+          "last_note": "三亚亚特兰蒂斯凭什么年收20亿💰",
+          "keywords": {
+            "pexels": "luxury resort business model",
+            "unsplash": "resort complex architecture design",
+            "xhs": "复星旅文 亚特兰蒂斯 营收",
+            "pinterest": "度假酒店 商业模式 分析",
+            "douyin": "三亚 亚特兰蒂斯 年收入 揭秘"
+          }
+        },
+        "截流紧迫感流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "hotel reservation booking concept",
+            "unsplash": "vacation planning summer trip",
+            "xhs": "亚特兰蒂斯 限时 优惠 抢购",
+            "pinterest": "三亚 毕业旅行 低价 攻略",
+            "douyin": "三亚 暑期 酒店 价格 暴涨"
+          }
+        },
+        "Vlog日程流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "resort daily activities pool",
+            "unsplash": "tropical vacation lifestyle",
+            "xhs": "亚特兰蒂斯 一日游 vlog",
+            "pinterest": "三亚 度假 每天 怎么玩",
+            "douyin": "三亚 亚特兰蒂斯 24小时"
+          }
+        },
+        "反差点评流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "luxury hotel before after",
+            "unsplash": "hotel room surprise reveal",
+            "xhs": "亚特兰蒂斯 值不值 真实评价",
+            "pinterest": "酒店 实际 体验 对比",
+            "douyin": "三亚 亚特兰蒂斯 避坑 必看"
+          }
+        },
+        "科普涨知识流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "aquarium marine biology education",
+            "unsplash": "ocean conservation underwater",
+            "xhs": "亚特兰蒂斯 水族馆 科普 知识",
+            "pinterest": "海底世界 鱼类 科普 图鉴",
+            "douyin": "亚特兰蒂斯 失落的空间 揭秘"
+          }
+        },
+        "真实UGC流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "real guest experience resort",
+            "unsplash": "honest travel photography",
+            "xhs": "亚特兰蒂斯 真实入住 优缺点",
+            "pinterest": "酒店 素人 实拍 推荐",
+            "douyin": "三亚 亚特兰蒂斯 素人 测评"
+          }
+        },
+        "问答攻略流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "travel planning checklist",
+            "unsplash": "vacation preparation essentials",
+            "xhs": "亚特兰蒂斯 行前 攻略 避坑",
+            "pinterest": "三亚 旅游 准备 清单",
+            "douyin": "三亚 旅游 避坑 注意事项"
+          }
+        }
+      }
+    },
+    "长沙君悦酒店": {
+      "aliases": [
+        "长沙君悦",
+        "Grand Hyatt Changsha",
+        "君悦酒店"
+      ],
+      "angles": {
+        "干货/清单流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Grand Hyatt Changsha guide",
+            "unsplash": "Changsha Xiang River view",
+            "xhs": "长沙君悦 隐藏 服务 福利",
+            "pinterest": "长沙 网红 酒店 打卡 攻略",
+            "douyin": "长沙君悦 入住 攻略 必看"
+          }
+        },
+        "情绪种草流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "luxury hotel romantic sunset",
+            "unsplash": "river view bedroom morning",
+            "xhs": "长沙君悦 湘江 夜景 浪漫",
+            "pinterest": "长沙 高空 酒店 氛围感",
+            "douyin": "长沙 君悦 江景 太美了"
+          }
+        },
+        "测评对比流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Changsha luxury hotel comparison",
+            "unsplash": "modern hotel lobby design",
+            "xhs": "长沙君悦 对比 尼依格罗 瑞吉",
+            "pinterest": "长沙 高端 酒店 排名 对比",
+            "douyin": "长沙 君悦 尼依格罗 怎么选"
+          }
+        },
+        "行业分析流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "hotel industry business China",
+            "unsplash": "urban hotel architecture",
+            "xhs": "君悦 品牌 酒店 集团 分析",
+            "pinterest": "凯悦 集团 高端 酒店 设计",
+            "douyin": "长沙 高端 酒店 市场 分析"
+          }
+        },
+        "截流紧迫感流": {
+          "used": true,
+          "last_note": "毕业旅行抓紧！暑期长沙房价马上翻倍⚠️",
+          "keywords": {
+            "pexels": "summer vacation booking rush",
+            "unsplash": "travel deal limited time",
+            "xhs": "长沙 暑期 酒店 涨价 预警",
+            "pinterest": "长沙 旅游 省钱 攻略",
+            "douyin": "长沙 酒店 暑期 价格 暴涨"
+          }
+        },
+        "Vlog日程流": {
+          "used": true,
+          "last_note": "24h在长沙君悦 纯吃纯玩vlog🎬",
+          "keywords": {
+            "pexels": "Changsha city travel itinerary",
+            "unsplash": "infinity pool rooftop city",
+            "xhs": "长沙 君悦 24小时 怎么玩",
+            "pinterest": "长沙 一日游 路线 推荐",
+            "douyin": "长沙 君悦 一日 vlog"
+          }
+        },
+        "反差点评流": {
+          "used": true,
+          "last_note": "去之前觉得贵 退房时发现赚了😱",
+          "keywords": {
+            "pexels": "luxury hotel best value",
+            "unsplash": "hotel room panoramic window",
+            "xhs": "长沙君悦 性价比 真实体验",
+            "pinterest": "高端酒店 性价比 测评",
+            "douyin": "长沙 君悦 值不值 测评"
+          }
+        },
+        "科普涨知识流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "hotel architecture design concept",
+            "unsplash": "modern building structure",
+            "xhs": "君悦 酒店 品牌 历史 科普",
+            "pinterest": "凯悦 酒店 设计 风格",
+            "douyin": "长沙 君悦 建筑 设计 故事"
+          }
+        },
+        "真实UGC流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "real review guest experience",
+            "unsplash": "hotel candid photography",
+            "xhs": "长沙君悦 真实 评价 优缺点",
+            "pinterest": "长沙 酒店 素人 推荐",
+            "douyin": "长沙 君悦 真实 入住 测评"
+          }
+        },
+        "问答攻略流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "travel FAQ preparation tips",
+            "unsplash": "luggage packing essentials",
+            "xhs": "长沙 旅游 行前 准备 清单",
+            "pinterest": "长沙 旅游 攻略 必看",
+            "douyin": "长沙 旅游 避坑 注意 事项"
+          }
+        }
+      }
+    },
+    "贵阳安纳塔拉度假酒店": {
+      "aliases": [
+        "安纳塔拉",
+        "贵阳安纳塔拉",
+        "Anantara Guiyang"
+      ],
+      "angles": {
+        "干货/清单流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Anantara Guiyang resort guide",
+            "unsplash": "mountain resort architecture",
+            "xhs": "安纳塔拉 隐藏 服务 攻略",
+            "pinterest": "贵州 高端 度假 酒店 推荐",
+            "douyin": "安纳塔拉 入住 攻略 必看"
+          }
+        },
+        "情绪种草流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "mountain retreat morning mist",
+            "unsplash": "forest pool sunrise vibe",
+            "xhs": "安纳塔拉 山林 度假 治愈",
+            "pinterest": "贵州 山景 酒店 氛围",
+            "douyin": "安纳塔拉 避暑 太舒服了"
+          }
+        },
+        "测评对比流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Guiyang hotel comparison luxury",
+            "unsplash": "resort villa pool design",
+            "xhs": "安纳塔拉 对比 贵阳 其他 酒店",
+            "pinterest": "贵州 度假 酒店 排名",
+            "douyin": "贵阳 安纳塔拉 和其他 怎么选"
+          }
+        },
+        "行业分析流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "resort industry branding",
+            "unsplash": "Thai style resort architecture",
+            "xhs": "安纳塔拉 品牌 美诺集团 分析",
+            "pinterest": "泰国 酒店 品牌 设计 风格",
+            "douyin": "安纳塔拉 品牌 故事 揭秘"
+          }
+        },
+        "截流紧迫感流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "summer escape booking deal",
+            "unsplash": "vacation hurry limited offer",
+            "xhs": "贵州 避暑 酒店 抢订 攻略",
+            "pinterest": "避暑 酒店 限时 优惠",
+            "douyin": "贵州 暑期 避暑 酒店 涨价"
+          }
+        },
+        "Vlog日程流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "day at resort activities spa",
+            "unsplash": "resort daily routine relax",
+            "xhs": "安纳塔拉 一天 怎么 玩",
+            "pinterest": "贵州 度假 每天 活动",
+            "douyin": "安纳塔拉 24小时 vlog"
+          }
+        },
+        "反差点评流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "expectation vs reality hotel",
+            "unsplash": "surprise travel experience",
+            "xhs": "安纳塔拉 真实 值不值 评价",
+            "pinterest": "度假 酒店 实际 体验",
+            "douyin": "安纳塔拉 避坑 实话实说"
+          }
+        },
+        "科普涨知识流": {
+          "used": true,
+          "last_note": "贵州避暑酒店为什么选安纳塔拉🌿",
+          "keywords": {
+            "pexels": "Thai culture design elements",
+            "unsplash": "Southeast Asian architecture",
+            "xhs": "安纳塔拉 泰式 文化 科普",
+            "pinterest": "泰式 建筑 设计 元素",
+            "douyin": "安纳塔拉 泰式 风格 介绍"
+          }
+        },
+        "真实UGC流": {
+          "used": true,
+          "last_note": "在贵阳安纳塔拉躺了三天 说说真实的体验",
+          "keywords": {
+            "pexels": "honest guest review experience",
+            "unsplash": "real travel photo authentic",
+            "xhs": "安纳塔拉 真实 入住 优缺点",
+            "pinterest": "贵州 酒店 素人 推荐",
+            "douyin": "安纳塔拉 真实 入住 测评"
+          }
+        },
+        "问答攻略流": {
+          "used": true,
+          "last_note": "去贵州避暑前先看这8个问题❓",
+          "keywords": {
+            "pexels": "Guizhou travel planning tips",
+            "unsplash": "summer vacation destination",
+            "xhs": "贵州 避暑 攻略 行前 准备",
+            "pinterest": "贵州 旅游 准备 清单",
+            "douyin": "贵州 避暑 攻略 注意 事项"
+          }
+        }
+      }
+    },
+    "北京国贸大酒店": {
+      "aliases": [
+        "北京国贸",
+        "国贸大酒店",
+        "China World Beijing"
+      ],
+      "angles": {
+        "干货/清单流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Beijing business hotel luxury",
+            "unsplash": "CBD skyline office tower",
+            "xhs": "国贸大酒店 隐藏 服务 攻略",
+            "pinterest": "北京 国贸 高端 酒店",
+            "douyin": "北京 国贸 酒店 入住 攻略"
+          }
+        },
+        "情绪种草流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Beijing night skyline view",
+            "unsplash": "CBD skyline sunset",
+            "xhs": "国贸 夜景 北京 云端 酒店",
+            "pinterest": "北京 国贸 夜景 打卡",
+            "douyin": "北京 国贸 高空 酒店 太美了"
+          }
+        },
+        "测评对比流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "luxury hotel China World Beijing",
+            "unsplash": "business hotel modern design",
+            "xhs": "国贸大酒店 对比 中国大 王府井",
+            "pinterest": "北京 高端 酒店 排名",
+            "douyin": "北京 国贸 酒店 对比 哪个好"
+          }
+        },
+        "行业分析流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Shangri-La hotel group China",
+            "unsplash": "luxury business hotel tower",
+            "xhs": "国贸 大酒店 商圈 商业 分析",
+            "pinterest": "北京 CBD 商业 地标",
+            "douyin": "国贸 商圈 酒店 行业 分析"
+          }
+        },
+        "截流紧迫感流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Beijing hotel summer deal",
+            "unsplash": "business travel planning",
+            "xhs": "北京 暑期 国贸 酒店 优惠",
+            "pinterest": "北京 旅游 省钱 攻略",
+            "douyin": "北京 暑期 酒店 价格 走势"
+          }
+        },
+        "Vlog日程流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Beijing travel day itinerary",
+            "unsplash": "city exploration tourism",
+            "xhs": "北京 国贸 一日游 吃喝玩乐",
+            "pinterest": "北京 一日游 行程 推荐",
+            "douyin": "北京 国贸 24小时 vlog"
+          }
+        },
+        "反差点评流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "business hotel unexpected find",
+            "unsplash": "Beijing travel surprise",
+            "xhs": "北京 国贸 酒店 值不值",
+            "pinterest": "北京 酒店 实测 体验",
+            "douyin": "国贸 大酒店 真实 评价"
+          }
+        },
+        "科普涨知识流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Beijing architecture modern design",
+            "unsplash": "China skyscraper building",
+            "xhs": "国贸 建筑 设计 历史 科普",
+            "pinterest": "北京 国贸 建筑 设计",
+            "douyin": "国贸 大酒店 建筑 故事"
+          }
+        },
+        "真实UGC流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "real hotel guest experience",
+            "unsplash": "Beijing travel authentic",
+            "xhs": "国贸 大酒店 真实 评价",
+            "pinterest": "北京 酒店 素人 入住",
+            "douyin": "北京 国贸 酒店 素人 测评"
+          }
+        },
+        "问答攻略流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "business trip travel tips",
+            "unsplash": "Beijing travel guide map",
+            "xhs": "北京 国贸 出行 攻略 必看",
+            "pinterest": "北京 商务 旅行 准备",
+            "douyin": "北京 国贸 旅游 攻略"
+          }
+        }
+      }
+    },
+    "北京王府井半岛酒店": {
+      "aliases": [
+        "北京半岛",
+        "王府井半岛",
+        "Peninsula Beijing"
+      ],
+      "angles": {
+        "干货/清单流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Peninsula Beijing luxury hotel",
+            "unsplash": "Beijing Wangfujing street",
+            "xhs": "王府井半岛 隐藏 服务 攻略",
+            "pinterest": "北京 半岛 酒店 推荐",
+            "douyin": "北京 半岛 酒店 入住 攻略"
+          }
+        },
+        "情绪种草流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "classic luxury hotel interior",
+            "unsplash": "heritage hotel elegance",
+            "xhs": "半岛酒店 复古 奢华 氛围",
+            "pinterest": "半岛 酒店 经典 设计",
+            "douyin": "北京 半岛 太高级了"
+          }
+        },
+        "测评对比流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Peninsula vs Four Seasons Beijing",
+            "unsplash": "luxury brand hotel design",
+            "xhs": "半岛酒店 对比 华尔道夫 宝格丽",
+            "pinterest": "北京 顶级 酒店 对比",
+            "douyin": "北京 顶级 酒店 哪家强"
+          }
+        },
+        "行业分析流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Hong Kong hotel group brand",
+            "unsplash": "luxury heritage hotel facade",
+            "xhs": "半岛 酒店 集团 百年 品牌",
+            "pinterest": "半岛 酒店 历史 故事",
+            "douyin": "半岛 酒店 百年 历史 品牌"
+          }
+        },
+        "截流紧迫感流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Beijing luxury hotel deal",
+            "unsplash": "hotel booking limited time",
+            "xhs": "北京 高端 酒店 暑期 优惠",
+            "pinterest": "北京 奢华 酒店 特价",
+            "douyin": "北京 半岛 酒店 限时 活动"
+          }
+        },
+        "Vlog日程流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Beijing culture tour luxury",
+            "unsplash": "Wangfujing shopping street",
+            "xhs": "王府井 半岛 一日 怎么玩",
+            "pinterest": "北京 王府井 逛街 攻略",
+            "douyin": "北京 王府井 半岛 一日 vlog"
+          }
+        },
+        "反差点评流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "heritage hotel modern twist",
+            "unsplash": "Beijing hotel surprise",
+            "xhs": "半岛 酒店 真实 值不值 入住",
+            "pinterest": "北京 奢华 酒店 体验",
+            "douyin": "王府井 半岛 真实 评价"
+          }
+        },
+        "科普涨知识流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "hotel history heritage culture",
+            "unsplash": "classic architecture details",
+            "xhs": "半岛 酒店 品牌 故事 科普",
+            "pinterest": "半岛 酒店 设计 细节",
+            "douyin": "半岛 酒店 品牌 故事"
+          }
+        },
+        "真实UGC流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "luxury hotel guest experience",
+            "unsplash": "Beijing travel real photo",
+            "xhs": "王府井 半岛 真实 入住 评价",
+            "pinterest": "北京 酒店 素人 实拍",
+            "douyin": "北京 半岛 真实 入住 体验"
+          }
+        },
+        "问答攻略流": {
+          "used": false,
+          "last_note": "",
+          "keywords": {
+            "pexels": "Beijing luxury travel guide",
+            "unsplash": "city break essentials",
+            "xhs": "北京 王府井 旅游 攻略 必看",
+            "pinterest": "北京 旅行 准备 清单",
+            "douyin": "北京 旅游 高端 酒店 攻略"
+          }
+        }
+      }
+    }
+  },
+  "source_priority": [
+    "pexels",
+    "unsplash",
+    "xhs",
+    "pinterest",
+    "douyin"
+  ],
+  "source_labels": {
+    "pexels": "Pexels",
+    "unsplash": "Unsplash",
+    "xhs": "小红书",
+    "pinterest": "Pinterest",
+    "douyin": "抖音"
+  }
+}

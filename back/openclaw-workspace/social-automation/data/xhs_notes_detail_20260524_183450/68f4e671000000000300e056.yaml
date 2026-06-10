@@ -1,0 +1,264 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 68f4e671000000000300e056
+    model_type: note
+    note_card:
+      type: normal
+      title: 北京🍁老钱文华住了~ 国风高定看了~
+      desc: "来北京看秀啦~\n拍了VLOG 记得蹲蹲[害羞R]\n\t\n#小红书时装周群聊[话题]# #RedFaceOfFashion100[话题]#\
+        \ #时尚面孔[话题]#\n#东方气质美学[话题]# #时从今[话题]# #北京前门文华东方[话题]#"
+      interact_info:
+        collected: false
+        collected_count: '379'
+        comment_count: '40'
+        share_count: '21'
+        followed: false
+        relation: none
+        liked: false
+        liked_count: '1068'
+      image_list:
+      - file_id: ''
+        url: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/b33708ec584132b54ac3b7ed2f8d0efb/notes_pre_post/1040g3k831nqqvjvh6md05nf764pg81fi9eakj30!nd_dft_wlteh_webp_3
+        live_photo: false
+        height: 3258
+        width: 1832
+        trace_id: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/9e5bfe3b13a416958ce7152797b4c864/notes_pre_post/1040g3k831nqqvjvh6md05nf764pg81fi9eakj30!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/b33708ec584132b54ac3b7ed2f8d0efb/notes_pre_post/1040g3k831nqqvjvh6md05nf764pg81fi9eakj30!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/9e5bfe3b13a416958ce7152797b4c864/notes_pre_post/1040g3k831nqqvjvh6md05nf764pg81fi9eakj30!nd_prv_wlteh_webp_3
+        stream: {}
+      - url_default: http://sns-webpic-qc.xhscdn.com/202605241837/87f892b21279d6b70d5943026089f243/notes_pre_post/1040g3k831nqqvjvh6mdg5nf764pg81fimsc1qg8!nd_dft_wlteh_webp_3
+        width: 1832
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/39d7b7a4ebca57253ee63512edc181f1/notes_pre_post/1040g3k831nqqvjvh6mdg5nf764pg81fimsc1qg8!nd_prv_wlteh_webp_3
+        live_photo: false
+        file_id: ''
+        height: 3258
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/39d7b7a4ebca57253ee63512edc181f1/notes_pre_post/1040g3k831nqqvjvh6mdg5nf764pg81fimsc1qg8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/87f892b21279d6b70d5943026089f243/notes_pre_post/1040g3k831nqqvjvh6mdg5nf764pg81fimsc1qg8!nd_dft_wlteh_webp_3
+        stream: {}
+      - live_photo: false
+        url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/2c2a26aeb1f3c5e9cf09d0174f88d10d/notes_pre_post/1040g3k831nqr80st58705nf764pg81fi0f2drcg!nd_prv_wlteh_webp_3
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/2c2a26aeb1f3c5e9cf09d0174f88d10d/notes_pre_post/1040g3k831nqr80st58705nf764pg81fi0f2drcg!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/4d1f4cafadfe21184f436744dff2d27a/notes_pre_post/1040g3k831nqr80st58705nf764pg81fi0f2drcg!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/4d1f4cafadfe21184f436744dff2d27a/notes_pre_post/1040g3k831nqr80st58705nf764pg81fi0f2drcg!nd_dft_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        height: 3264
+        width: 1832
+      - live_photo: false
+        height: 3264
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241837/cbd632c61e09bca40f66ac3f64fa3946/notes_pre_post/1040g3k831nqr80st58805nf764pg81fit06l570!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/1b7ba89c0b24dfad6b49da077cde9d73/notes_pre_post/1040g3k831nqr80st58805nf764pg81fit06l570!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/cbd632c61e09bca40f66ac3f64fa3946/notes_pre_post/1040g3k831nqr80st58805nf764pg81fit06l570!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/1b7ba89c0b24dfad6b49da077cde9d73/notes_pre_post/1040g3k831nqr80st58805nf764pg81fit06l570!nd_dft_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        width: 1832
+        url: ''
+        trace_id: ''
+      - file_id: ''
+        height: 3264
+        width: 1832
+        trace_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/f240871888705f0e276c911e5c923f5d/notes_pre_post/1040g3k831nqr80st587g5nf764pg81fi3jjtkj8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/971939dca4b67161f88db2925001e4c5/notes_pre_post/1040g3k831nqr80st587g5nf764pg81fi3jjtkj8!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/f240871888705f0e276c911e5c923f5d/notes_pre_post/1040g3k831nqr80st587g5nf764pg81fi3jjtkj8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/971939dca4b67161f88db2925001e4c5/notes_pre_post/1040g3k831nqr80st587g5nf764pg81fi3jjtkj8!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+      - stream:
+          h264:
+          - master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8f4e573256f620100500399fca4aa35_19.mp4?sign=f1380a18a77732f1c15ff83bf4a7c316&t=6a17720c
+            backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8f4e573256f620100500399fca4aa35_19.mp4
+          h265: []
+          h266: []
+          av1: []
+        file_id: ''
+        width: 1536
+        url: ''
+        trace_id: ''
+        live_photo: true
+        height: 2560
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241837/bfff73ea51cf6a9af8eb73fbc8953ec1/notes_pre_post/1040g3k831nqr80st588g5nf764pg81fi2dlupc8!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/59aa002592e2ff0b44ea85f56b9b2a6e/notes_pre_post/1040g3k831nqr80st588g5nf764pg81fi2dlupc8!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/bfff73ea51cf6a9af8eb73fbc8953ec1/notes_pre_post/1040g3k831nqr80st588g5nf764pg81fi2dlupc8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/59aa002592e2ff0b44ea85f56b9b2a6e/notes_pre_post/1040g3k831nqr80st588g5nf764pg81fi2dlupc8!nd_dft_wlteh_webp_3
+      - file_id: ''
+        width: 1536
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/e177eb35c8827113c130f94123af0192/notes_pre_post/1040g3k831nqr80st58905nf764pg81fi0av0ec0!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/b1fdf538abc7442132e8898d75b15146/notes_pre_post/1040g3k831nqr80st58905nf764pg81fi0av0ec0!nd_dft_wlteh_webp_3
+        stream:
+          h266: []
+          av1: []
+          h264:
+          - master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8f4e5742573c60100500399fca48505_19.mp4?sign=3f841dfa1de29e44a22c5508c3eb7439&t=6a17720c
+            backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8f4e5742573c60100500399fca48505_19.mp4
+          h265: []
+        live_photo: true
+        height: 2560
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/e177eb35c8827113c130f94123af0192/notes_pre_post/1040g3k831nqr80st58905nf764pg81fi0av0ec0!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/b1fdf538abc7442132e8898d75b15146/notes_pre_post/1040g3k831nqr80st58905nf764pg81fi0av0ec0!nd_dft_wlteh_webp_3
+      - file_id: ''
+        url: ''
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/7edac5eadef69ff84a356e1efd5c6aa3/notes_pre_post/1040g3k831nqr80st589g5nf764pg81fi3kp73o8!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/7a859606cf468d224fc405ff7e6fa94a/notes_pre_post/1040g3k831nqr80st589g5nf764pg81fi3kp73o8!nd_dft_wlteh_webp_3
+        stream:
+          h264:
+          - master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8f4e57625781a0100500399fca45cab_19.mp4?sign=aab19ac06212f7499666ee4af73b8f55&t=6a17720c
+            backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8f4e57625781a0100500399fca45cab_19.mp4
+          h265: []
+          h266: []
+          av1: []
+        height: 2560
+        width: 1536
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/7edac5eadef69ff84a356e1efd5c6aa3/notes_pre_post/1040g3k831nqr80st589g5nf764pg81fi3kp73o8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/7a859606cf468d224fc405ff7e6fa94a/notes_pre_post/1040g3k831nqr80st589g5nf764pg81fi3kp73o8!nd_dft_wlteh_webp_3
+        live_photo: true
+      - height: 2560
+        info_list:
+        - url: http://sns-webpic-qc.xhscdn.com/202605241837/fef9d9cdc234f205ea7bc7b59c3971fb/notes_pre_post/1040g3k831nqr80st58a05nf764pg81fiap69jj8!nd_prv_wlteh_webp_3
+          image_scene: WB_PRV
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/cb6e9608657eb3c12844becfc9184de4/notes_pre_post/1040g3k831nqr80st58a05nf764pg81fiap69jj8!nd_dft_wlteh_webp_3
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/fef9d9cdc234f205ea7bc7b59c3971fb/notes_pre_post/1040g3k831nqr80st58a05nf764pg81fiap69jj8!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/cb6e9608657eb3c12844becfc9184de4/notes_pre_post/1040g3k831nqr80st58a05nf764pg81fiap69jj8!nd_dft_wlteh_webp_3
+        stream:
+          h264:
+          - master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8f4e577257c0c0100500399fca47382_19.mp4?sign=52c0b9a6c5066693636ca85e3258b895&t=6a17720c
+            backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8f4e577257c0c0100500399fca47382_19.mp4
+          h265: []
+          h266: []
+          av1: []
+        live_photo: true
+        file_id: ''
+        url: ''
+        trace_id: ''
+        width: 1536
+      - height: 1920
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/d9693d7e13930351dace4b18590edeeb/notes_pre_post/1040g3k831nqr80st58b05nf764pg81fifgjeauo!nd_prv_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/736be0ecba87e317656a68d8a938d57a/notes_pre_post/1040g3k831nqr80st58b05nf764pg81fifgjeauo!nd_dft_wlteh_webp_3
+        live_photo: true
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/d9693d7e13930351dace4b18590edeeb/notes_pre_post/1040g3k831nqr80st58b05nf764pg81fifgjeauo!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/736be0ecba87e317656a68d8a938d57a/notes_pre_post/1040g3k831nqr80st58b05nf764pg81fifgjeauo!nd_dft_wlteh_webp_3
+        stream:
+          h264:
+          - backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8f4e57922c2aa0100500399fca46c7f_19.mp4
+            master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8f4e57922c2aa0100500399fca46c7f_19.mp4?sign=8904aef5de89354f3bf1aca90929d64e&t=6a17720c
+          h265: []
+          h266: []
+          av1: []
+        file_id: ''
+        width: 1152
+        url: ''
+        trace_id: ''
+      - info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/292ee2f9d45179c1a894c5fa416bbf2e/notes_pre_post/1040g3k831nqr80st58bg5nf764pg81fifn0iusg!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/9e80798c96626c3bc9a82f7b9ddcfac9/notes_pre_post/1040g3k831nqr80st58bg5nf764pg81fifn0iusg!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/9e80798c96626c3bc9a82f7b9ddcfac9/notes_pre_post/1040g3k831nqr80st58bg5nf764pg81fifn0iusg!nd_dft_wlteh_webp_3
+        live_photo: false
+        height: 2560
+        width: 1536
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/292ee2f9d45179c1a894c5fa416bbf2e/notes_pre_post/1040g3k831nqr80st58bg5nf764pg81fifn0iusg!nd_prv_wlteh_webp_3
+        stream: {}
+        file_id: ''
+        url: ''
+      - info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/1453f5421871ca55c790a7fb7f188568/notes_pre_post/1040g3k831nqr80st58ag5nf764pg81fisda1n0o!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241837/a0ea3d93a877b0480cecc96fab9ecb8c/notes_pre_post/1040g3k831nqr80st58ag5nf764pg81fisda1n0o!nd_dft_wlteh_webp_3
+        stream:
+          h265: []
+          h266: []
+          av1: []
+          h264:
+          - master_url: http://sns-video-qc.xhscdn.com/stream/1/10/19/01e8f4e57b2545e50100500399fca46dde_19.mp4?sign=801d61f217caeb8a9e4de7ce8fdc4da5&t=6a17720c
+            backup_urls:
+            - http://sns-bak-v6.xhscdn.com/stream/1/10/19/01e8f4e57b2545e50100500399fca46dde_19.mp4
+        height: 2560
+        width: 1536
+        url: ''
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241837/a0ea3d93a877b0480cecc96fab9ecb8c/notes_pre_post/1040g3k831nqr80st58ag5nf764pg81fisda1n0o!nd_dft_wlteh_webp_3
+        live_photo: true
+        file_id: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241837/1453f5421871ca55c790a7fb7f188568/notes_pre_post/1040g3k831nqr80st58ag5nf764pg81fisda1n0o!nd_prv_wlteh_webp_3
+      tag_list:
+      - id: 64f1a1b90000000004001580
+        name: 小红书时装周群聊
+        type: topic
+      - id: 6709ff1f000000002302f54b
+        name: RedFaceOfFashion100
+        type: topic
+      - id: 622dd75500000000010057b9
+        name: 时尚面孔
+        type: topic
+      - type: topic
+        id: 612ee25a000000000101cb74
+        name: 东方气质美学
+      - id: 64e947c7000000001403aec3
+        name: 时从今
+        type: topic
+      - id: 6468192f000000002301c2dd
+        name: 北京前门文华东方
+        type: topic
+      at_user_list: []
+      note_id: 68f4e671000000000300e056
+      user:
+        user_id: 5de7313300000000010005f2
+        nickname: 贝拉Bellawong
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31netq3r15m005nf764pg81filauva3o
+        xsec_token: ABJoOrx-IRY6aycg2Tu0n9eC23r9Yxfe3PReEVRCk8L2k=
+      time: 1760880241000
+      last_update_time: 1760880241000
+      share_info:
+        un_share: false
+  current_time: 1779619020100
+

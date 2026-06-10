@@ -1,0 +1,178 @@
+ok: true
+schema_version: '1'
+data:
+  cursor_score: ''
+  items:
+  - id: 68e09d7a0000000004014c3e
+    model_type: note
+    note_card:
+      at_user_list: []
+      time: 1759550842000
+      last_update_time: 1759550843000
+      share_info:
+        un_share: false
+      desc: '看到最后感叹人和人之间的缘分好奇妙！
+
+        #vlog[话题]# #旅游vlog[话题]# #vlog我的一天[话题]# #崇左丽世[话题]# #碎碎念[话题]# #记录吧就现在[话题]#'
+      type: video
+      title: vlog/⛰️放轻松 跟我一起去山里度假吧！
+      user:
+        avatar: https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo31r2qggi07u0g5nc835o08gvj5ti62s8
+        xsec_token: AB0OQbK2o4Inu5O3jDWwT4zjJSd2X3iznGUg_-90d3Zjo=
+        user_id: 5d88197000000000010043f3
+        nickname: 我想再睡九分钟
+      interact_info:
+        liked_count: '2424'
+        collected: false
+        collected_count: '498'
+        comment_count: '103'
+        share_count: '185'
+        followed: false
+        relation: none
+        liked: false
+      image_list:
+      - url: ''
+        trace_id: ''
+        url_pre: http://sns-webpic-qc.xhscdn.com/202605241834/4b992c1b71bde1eecd59225d9bcd9345/1040g00831n71cpeu5m005nc835o08gvj6thvato!nd_prv_wlteh_webp_3
+        info_list:
+        - image_scene: WB_PRV
+          url: http://sns-webpic-qc.xhscdn.com/202605241834/4b992c1b71bde1eecd59225d9bcd9345/1040g00831n71cpeu5m005nc835o08gvj6thvato!nd_prv_wlteh_webp_3
+        - image_scene: WB_DFT
+          url: http://sns-webpic-qc.xhscdn.com/202605241834/1495085de28189b6c5b29354e7148607/1040g00831n71cpeu5m005nc835o08gvj6thvato!nd_dft_wlteh_webp_3
+        url_default: http://sns-webpic-qc.xhscdn.com/202605241834/1495085de28189b6c5b29354e7148607/1040g00831n71cpeu5m005nc835o08gvj6thvato!nd_dft_wlteh_webp_3
+        stream: {}
+        live_photo: false
+        file_id: ''
+        height: 3840
+        width: 2880
+      video:
+        image:
+          first_frame_fileid: 110/0/01e8e09d7a7fe38000100000000199ad672f12_0.jpg
+          thumbnail_fileid: frame/110/0/01e8e09d7a7fe38000100000000199ad68760e_0.webp
+        capa:
+          duration: 345
+        media_v2: '{"video_id":"137606755604489088","video":{"biz_name":110,"biz_id":"281721943673097278","duration":346,"md5":"3f2ab0c0318ca491fd6515c33e1ff94f","hdr_type":0,"drm_type":0,"stream_types":[114,259,115],"width":1920,"height":1080,"bound":[{"x":0,"y":0,"w":0,"h":0}],"bbox":{"ocr_v5":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v3":[{"x":10,"y":125,"w":1811,"h":688}],"ocr_v4":[{"x":0,"y":0,"w":0,"h":0}],"ocr_v2":[{"x":10,"y":125,"w":1811,"h":869}]},"opaque1":{"bottomAvgLuma":"109","loudnorm":"{\"lra\":6.6,\"htp\":0.41,\"hldn\":-9.72,\"ldn\":-10.76,\"thr\":-20.95}","hasHumanVoice":"true","topAvgLuma":"124","domestic":"1","isSupportSubtitle":"true","rightAvgLuma":"90","videoLanguage":"[\"zh-CN\"]","audioLevInfo":"{\"audio_quality_level\":\"G+\",\"mos_overall\":3.5103,\"version\":\"3.0\"}","weakNetUserFlag":"1","insertSubtitleLanguages":"[\"zh-CN\"]","audioClsInfo":"{\"music_ratio\":0.9880883514858092,\"freesound_ratio\":0.16077830414947872,\"speech_ratio\":0.9559673847693785}"},"subtitles":{"en-US":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e8e09d7a7fe3800103700399ad676931_12.srt?sign=4f32db5f69cc6c1f101430fcd07b83ca&t=6a17718e","language":"en-US","format":0,"type":0}],"source":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e8e09d7a7fe3800103700399ad6763de_1.srt?sign=f0dd36a7cc0dc2b48cdf80d50abd3f2e&t=6a17718e","language":"zh-CN","format":0,"type":0}],"zh-CN":[{"url":"https://sns-subtitle-s1.xhscdn.com/subtitle/1/110/1/01e8e09d7a7fe3800103700399ad676508_11.srt?sign=0f2a8dcacccf1c092234eb9e7d107491&t=6a17718e","language":"zh-CN","format":0,"type":0}]}},"stream":{"h264":[{"stream_type":259,"stream_desc":"WM_X264_MP4_web","default_stream":0,"format":"mp4","width":1280,"height":720,"duration":345934,"size":62589093,"volume":0.0,"avg_bitrate":1447422,"fps":30,"video_codec":"h264","video_bitrate":1376935,"video_duration":345933,"audio_codec":"aac","audio_bitrate":64026,"audio_duration":345929,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/79/110/259/01e8e09d7a7fe3800103700399ad6cdd5f_259.mp4?sign=1bd838da4c348373d8fd4b04511f11eb&t=6a17718e","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/79/110/259/01e8e09d7a7fe3800103700399ad6cdd5f_259.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":0.0,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h265":[{"stream_type":114,"stream_desc":"X265_MP4_WEB_114","default_stream":0,"format":"mp4","width":1280,"height":720,"duration":345934,"size":49768187,"volume":0.0,"avg_bitrate":1150929,"fps":30,"video_codec":"hevc","video_bitrate":1016271,"video_duration":345933,"audio_codec":"aac","audio_bitrate":128052,"audio_duration":345929,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/79/110/114/01e8e09d7a7fe3804f03700199ad6c4531_114.mp4?sign=4cb69747a2d642ac219ff4b4fd8487a1&t=6a17718e","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/79/110/114/01e8e09d7a7fe3804f03700199ad6c4531_114.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":39.99100112915039,"ssim":0.0,"weight":62,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}},{"stream_type":115,"stream_desc":"X265_MP4_WEB_115","default_stream":0,"format":"mp4","width":1920,"height":1080,"duration":345934,"size":60706079,"volume":0.0,"avg_bitrate":1403876,"fps":30,"video_codec":"hevc","video_bitrate":1269220,"video_duration":345933,"audio_codec":"aac","audio_bitrate":128052,"audio_duration":345929,"audio_channels":2,"rotate":0,"master_url":"http://sns-video-qc.xhscdn.com/stream/1/110/115/01e8e09d7a7fe3800103700199ad6ccf69_115.mp4?sign=149606776d2301b0d73392ca074229e8&t=6a17718e","backup_urls":["http://sns-bak-v6.xhscdn.com/stream/1/110/115/01e8e09d7a7fe3800103700199ad6ccf69_115.mp4"],"hdr_type":0,"vmaf":-1.0,"psnr":0.0,"ssim":0.0,"weight":70,"quality_type":"HD","sr":0,"opaque1":{"pcdn_302_flag":"false","didLoudnorm":"false","pcdn_supplier":""}}],"h266":[],"av1":[]},"user_level":0}'
+        media:
+          video_id: 137606755604489088
+          video:
+            stream_types:
+            - 114
+            - 259
+            - 115
+            biz_name: 110
+            biz_id: '281721943673097278'
+            duration: 346
+            md5: 3f2ab0c0318ca491fd6515c33e1ff94f
+            hdr_type: 0
+            drm_type: 0
+          stream:
+            h264:
+            - stream_type: 259
+              duration: 345934
+              size: 62589093
+              avg_bitrate: 1447422
+              hdr_type: 0
+              quality_type: HD
+              audio_codec: aac
+              audio_bitrate: 64026
+              video_codec: h264
+              ssim: 0
+              fps: 30
+              format: mp4
+              video_duration: 345933
+              audio_channels: 2
+              master_url: http://sns-video-qc.xhscdn.com/stream/79/110/259/01e8e09d7a7fe3800103700399ad6cdd5f_259.mp4?sign=1bd838da4c348373d8fd4b04511f11eb&t=6a17718e
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/79/110/259/01e8e09d7a7fe3800103700399ad6cdd5f_259.mp4
+              weight: 62
+              default_stream: 0
+              volume: 0
+              rotate: 0
+              vmaf: -1
+              stream_desc: WM_X264_MP4_web
+              width: 1280
+              height: 720
+              video_bitrate: 1376935
+              audio_duration: 345929
+              psnr: 0
+            h265:
+            - stream_type: 114
+              audio_duration: 345929
+              quality_type: HD
+              height: 720
+              video_duration: 345933
+              psnr: 39.99100112915039
+              audio_bitrate: 128052
+              default_stream: 0
+              width: 1280
+              volume: 0
+              size: 49768187
+              hdr_type: 0
+              vmaf: -1
+              video_bitrate: 1016271
+              audio_channels: 2
+              master_url: http://sns-video-qc.xhscdn.com/stream/79/110/114/01e8e09d7a7fe3804f03700199ad6c4531_114.mp4?sign=4cb69747a2d642ac219ff4b4fd8487a1&t=6a17718e
+              ssim: 0
+              stream_desc: X265_MP4_WEB_114
+              duration: 345934
+              fps: 30
+              video_codec: hevc
+              audio_codec: aac
+              format: mp4
+              avg_bitrate: 1150929
+              rotate: 0
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/79/110/114/01e8e09d7a7fe3804f03700199ad6c4531_114.mp4
+              weight: 62
+            - width: 1920
+              avg_bitrate: 1403876
+              audio_duration: 345929
+              ssim: 0
+              video_codec: hevc
+              audio_codec: aac
+              audio_channels: 2
+              quality_type: HD
+              duration: 345934
+              video_duration: 345933
+              rotate: 0
+              stream_type: 115
+              fps: 30
+              audio_bitrate: 128052
+              weight: 70
+              volume: 0
+              master_url: http://sns-video-qc.xhscdn.com/stream/1/110/115/01e8e09d7a7fe3800103700199ad6ccf69_115.mp4?sign=149606776d2301b0d73392ca074229e8&t=6a17718e
+              default_stream: 0
+              format: mp4
+              hdr_type: 0
+              psnr: 0
+              stream_desc: X265_MP4_WEB_115
+              backup_urls:
+              - http://sns-bak-v6.xhscdn.com/stream/1/110/115/01e8e09d7a7fe3800103700199ad6ccf69_115.mp4
+              vmaf: -1
+              height: 1080
+              size: 60706079
+              video_bitrate: 1269220
+            h266: []
+            av1: []
+      tag_list:
+      - id: 5c1b8ead0000000003011197
+        name: vlog
+        type: topic
+      - name: 旅游vlog
+        type: topic
+        id: 5c3038f7000000000a0040da
+      - id: 5cc83744000000000f0033b4
+        name: vlog我的一天
+        type: topic
+      - id: 5fcd97d2000000000100af35
+        name: 崇左丽世
+        type: topic
+      - id: 5be7ec8779d44e0001cc97c0
+        name: 碎碎念
+        type: topic
+      - id: 644a15b7000000002901d04c
+        name: 记录吧就现在
+        type: topic
+      note_id: 68e09d7a0000000004014c3e
+  current_time: 1779618894667
+
