@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>航空公司会籍业务全流程系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0d1f33 50%, #1a2d3d 100%);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .flow-step {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .flow-step:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .flow-step::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 20px;
+            background: linear-gradient(to bottom, rgba(59, 130, 246, 0.5), transparent);
+        }
+        
+        .flow-step:last-child::after {
+            display: none;
+        }
+        
+        .step-icon {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        }
+        
+        .badge-correct {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+        
+        .badge-wrong {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+        }
+        
+        .badge-warning {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+        
+        .badge-tip {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+        
+        .tab-active {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+        }
+        
+        .airline-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .airline-card:hover {
+            border-left-color: #3b82f6;
+            transform: translateX(5px);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #3b82f6;
+            border: 3px solid #1e3a5f;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 20px;
+            width: 2px;
+            height: calc(100% - 12px);
+            background: rgba(59, 130, 246, 0.3);
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .price-highlight {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2));
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width 0.3s;
+        }
+        
+        .nav-item:hover::after,
+        .nav-item.active::after {
+            width: 100%;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-plane-departure text-white"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight">航空会籍业务系统</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#overview" class="nav-item text-sm font-medium text-gray-300 hover:text-white transition">概览</a>
+                    <a href="#flow" class="nav-item text-sm font-medium text-gray-300 hover:text-white transition">业务流程</a>
+                    <a href="#products" class="nav-item text-sm font-medium text-gray-300 hover:text-white transition">产品话术</a>
+                    <a href="#qa" class="nav-item text-sm font-medium text-gray-300 hover:text-white transition">问答库</a>
+                    <a href="#followup" class="nav-item text-sm font-medium text-gray-300 hover:text-white transition">跟进</a>
+                    <a href="#hotel" class="nav-item text-sm font-medium text-gray-300 hover:text-white transition">酒店</a>
+                </div>
+                <button onclick="toggleMobileMenu()" class="md:hidden text-gray-300 hover:text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden glass-card border-t border-white/10">
+            <div class="px-4 py-3 space-y-2">
+                <a href="#overview" class="block py-2 text-gray-300 hover:text-white">概览</a>
+                <a href="#flow" class="block py-2 text-gray-300 hover:text-white">业务流程</a>
+                <a href="#products" class="block py-2 text-gray-300 hover:text-white">产品话术</a>
+                <a href="#qa" class="block py-2 text-gray-300 hover:text-white">问答库</a>
+                <a href="#followup" class="block py-2 text-gray-300 hover:text-white">跟进</a>
+                <a href="#hotel" class="block py-2 text-gray-300 hover:text-white">酒店</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="overview" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 fade-in">
+                <div class="inline-flex items-center px-4 py-2 rounded-full glass-card mb-6">
+                    <span class="pulse-dot w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                    <span class="text-sm text-gray-300">V2.0 可视化流程系统</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
+                    航空公司会籍业务<br>全流程追踪系统
+                </h1>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                    从流量入口到服务完成，覆盖售前咨询、跟进转化、售后跟进完整业务链路
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="glass-card px-6 py-3 rounded-xl">
+                        <div class="text-2xl font-bold text-blue-400">6</div>
+                        <div class="text-sm text-gray-400">航空公司</div>
+                    </div>
+                    <div class="glass-card px-6 py-3 rounded-xl">
+                        <div class="text-2xl font-bold text-purple-400">90-120</div>
+                        <div class="text-sm text-gray-400">工作日周期</div>
+                    </div>
+                    <div class="glass-card px-6 py-3 rounded-xl">
+                        <div class="text-2xl font-bold text-green-400">3</div>
+                        <div class="text-sm text-gray-400">酒店计划</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="glass-card p-6 rounded-2xl hover:bg-white/10 transition cursor-pointer" onclick="scrollToSection('flow')">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mb-4">
+                        <i class="fas fa-sitemap text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">整体业务流程</h3>
+                    <p class="text-sm text-gray-400">从引流到成交的完整链路</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl hover:bg-white/10 transition cursor-pointer" onclick="scrollToSection('products')">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center mb-4">
+                        <i class="fas fa-comments text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">产品话术库</h3>
+                    <p class="text-sm text-gray-400">6大航空公司专业话术</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl hover:bg-white/10 transition cursor-pointer" onclick="scrollToSection('qa')">
+                    <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mb-4">
+                        <i class="fas fa-question-circle text-green-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">常见问题应对</h3>
+                    <p class="text-sm text-gray-400">10+高频问题标准回复</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl hover:bg-white/10 transition cursor-pointer" onclick="scrollToSection('hotel')">
+                    <div class="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center mb-4">
+                        <i class="fas fa-hotel text-orange-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Amex酒店计划</h3>
+                    <p class="text-sm text-gray-400">FHR/THC/小程序对比</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Flow Section -->
+    <section id="flow" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">整体业务流程</h2>
+                <p class="text-gray-400">从流量入口到服务完成的完整客户旅程</p>
+            </div>
+
+            <!-- Flow Visualization -->
+            <div class="glass-card rounded-3xl p-8 mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Step 1 -->
+                    <div class="flow-step glass-card p-6 rounded-2xl text-center">
+                        <div class="step-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-door-open text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-blue-400 font-medium mb-2">📥 流量入口</div>
+                        <h3 class="font-semibold mb-2">客户看到帖子</h3>
+                        <p class="text-sm text-gray-400">小红书/平台引流</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flow-step glass-card p-6 rounded-2xl text-center">
+                        <div class="step-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-exchange-alt text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-blue-400 font-medium mb-2">🔄 引流转化</div>
+                        <h3 class="font-semibold mb-2">留资加微</h3>
+                        <p class="text-sm text-gray-400">获取联系方式，拉群</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flow-step glass-card p-6 rounded-2xl text-center">
+                        <div class="step-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-blue-400 font-medium mb-2">💬 售前咨询</div>
+                        <h3 class="font-semibold mb-2">专业话术</h3>
+                        <p class="text-sm text-gray-400">解答疑问，说明权益</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="flow-step glass-card p-6 rounded-2xl text-center">
+                        <div class="step-icon w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check-circle text-2xl"></i>
+                        </div>
+                        <div class="text-sm text-blue-400 font-medium mb-2">✅ 订单成交</div>
+                        <h3 class="font-semibold mb-2">签约付款</h3>
+                        <p class="text-sm text-gray-400">对公收款，提交审批</p>
+                    </div>
+                </div>
+
+                <!-- Decision Branch -->
+                <div class="mt-12 glass-card rounded-2xl p-6">
+                    <h3 class="font-semibold text-lg mb-6 flex items-center">
+                        <i class="fas fa-code-branch text-blue-400 mr-2"></i>
+                        客户决策分支
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4">
+                            <div class="flex items-center mb-3">
+                                <span class="badge-correct text-xs px-2 py-1 rounded-full mr-2">立即成交</span>
+                            </div>
+                            <p class="text-sm text-gray-300">客户意向明确，直接进入签约流程</p>
+                        </div>
+                        <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4">
+                            <div class="flex items-center mb-3">
+                                <span class="badge-warning text-xs px-2 py-1 rounded-full mr-2">需要考虑</span>
+                            </div>
+                            <p class="text-sm text-gray-300">进入跟进流程，第二天继续沟通</p>
+                        </div>
+                        <div class="bg-red-500/10 border border-red-500/30 rounded-xl p-4">
+                            <div class="flex items-center mb-3">
+                                <span class="badge-wrong text-xs px-2 py-1 rounded-full mr-2">无回复</span>
+                            </div>
+                            <p class="text-sm text-gray-300">第二天必须跟进，询问疑虑</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="glass-card rounded-3xl p-8">
+                <h3 class="font-semibold text-xl mb-8 flex items-center">
+                    <i class="fas fa-clock text-blue-400 mr-3"></i>
+                    关键时间节点
+                </h3>
+                <div class="space-y-6">
+                    <div class="timeline-item">
+                        <div class="glass-card p-4 rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold">首次跟进</span>
+                                <span class="badge-warning text-xs px-2 py-1 rounded-full">⚠️ 必须执行</span>
+                            </div>
+                            <p class="text-sm text-gray-400">第二天上班查看群聊，无回复则发送跟进话术</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="glass-card p-4 rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold">审批周期</span>
+                                <span class="text-blue-400 font-medium">90-120工作日</span>
+                            </div>
+                            <p class="text-sm text-gray-400">航司按季度审批，告知客户耐心等待</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="glass-card p-4 rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold">超期处理</span>
+                                <span class="badge-tip text-xs px-2 py-1 rounded-full">💡 灵活处理</span>
+                            </div>
+                            <p class="text-sm text-gray-400">超过合同日期可申请退款或继续等待</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">产品话术库</h2>
+                <p class="text-gray-400">6大航空公司产品对比与专业话术</p>
+            </div>
+
+            <!-- Price Quick Reference -->
+            <div class="glass-card rounded-3xl p-8 mb-12">
+                <h3 class="font-semibold text-xl mb-6 flex items-center">
+                    <i class="fas fa-tags text-green-400 mr-3"></i>
+                    价格体系速查
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-white/10">
+                                <th class="text-left py-4 px-4">产品</th>
+                                <th class="text-left py-4 px-4">价格</th>
+                                <th class="text-left py-4 px-4">周期</th>
+                                <th class="text-left py-4 px-4">特色权益</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-white/5 hover:bg-white/5">
+                                <td class="py-4 px-4 font-medium">国航终白</td>
+                                <td class="py-4 px-4 price-highlight rounded-lg">3W</td>
+                                <td class="py-4 px-4"><span class="text-green-400">终身</span></td>
+                                <td class="py-4 px-4">季度下卡</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5">
+                                <td class="py-4 px-4 font-medium">东航白金</td>
+                                <td class="py-4 px-4 price-highlight rounded-lg">3W/3年</td>
+                                <td class="py-4 px-4">3年</td>
+                                <td class="py-4 px-4">含72张升舱券</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5">
+                                <td class="py-4 px-4 font-medium">国泰钻石</td>
+                                <td class="py-4 px-4 price-highlight rounded-lg">3W/2年 或 8W/5年</td>
+                                <td class="py-4 px-4">2年/5年</td>
+                                <td class="py-4 px-4">4个月绿宝石体验</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5">
+                                <td class="py-4 px-4 font-medium">南航铂金</td>
+                                <td class="py-4 px-4 price-highlight rounded-lg">3W/3年</td>
+                                <td class="py-4 px-4">3年</td>
+                                <td class="py-4 px-4">季度下卡</td>
+                            </tr>
+                            <tr class="border-b border-white/5 hover:bg-white/5">
+                                <td class="py-4 px-4 font-medium">汉莎金卡</td>
+                                <td class="py-4 px-4 price-highlight rounded-lg">7.5W</td>
+                                <td class="py-4 px-4"><span class="text-green-400">终身</span></td>
+                                <td class="py-4 px-4">赠130w里程</td>
+                            </tr>
+                            <tr class="hover:bg-white/5">
+                                <td class="py-4 px-4 font-medium">美航白金</td>
+                                <td class="py-4 px-4 price-highlight rounded-lg">3W</td>
+                                <td class="py-4 px-4"><span class="text-green-400">终身</span></td>
+                                <td class="py-4 px-4">4个月绿宝石体验</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Airline Cards -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- 国航 -->
+                <div class="airline-card glass-card rounded-2xl p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-plane text-red-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">国航终身白金卡</h3>
+                                <span class="text-green-400 font-semibold">3W · 终身</span>
+                            </div>
+                        </div>
+                        <span class="badge-tip text-xs px-2 py-1 rounded-full">💡 强推</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-bullhorn text-blue-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">运营话术：</span>
+                                <p class="text-gray-300">国航终身白金卡业务3W，航司会籍业务签协议交付，季度下卡。对公账户收款，会有专员详细介绍</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-comment-dots text-purple-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">客服话术：</span>
+                                <p class="text-gray-300">中国国航航空终白业务办理，终身3W，办理期间正常飞行，90-120工作日下卡，签约交付，对公收款</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">强调"终身"价值</span>
+                            <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded">突出对公收款安全</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 东航 -->
+                <div class="airline-card glass-card rounded-2xl p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-plane text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">东航白金卡</h3>
+                                <span class="text-blue-400 font-semibold">3W/3年</span>
+                            </div>
+                        </div>
+                        <span class="badge-tip text-xs px-2 py-1 rounded-full">💡 对比</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-bullhorn text-blue-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">运营话术：</span>
+                                <p class="text-gray-300">中国东方航空白金卡三年3W业务办理，含72张升舱券。不含积分和升舱券的，只享受会员和休息室权益的小几千块一年</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-comment-dots text-purple-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">客服话术：</span>
+                                <p class="text-gray-300">东方航空白金卡业务办理，含积分和升舱券，3年3W元，办理期间正常飞行，90-120工作日下卡</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded">对比两种方案</span>
+                            <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded">⚠️ 不要混淆联盟</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 国泰 -->
+                <div class="airline-card glass-card rounded-2xl p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-plane text-green-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">国泰钻石卡</h3>
+                                <span class="text-green-400 font-semibold">3W/2年 或 8W/5年</span>
+                            </div>
+                        </div>
+                        <span class="badge-tip text-xs px-2 py-1 rounded-full">💡 体验卡</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-bullhorn text-blue-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">运营话术：</span>
+                                <p class="text-gray-300">国泰航空钻石卡业务办理，两年3W元，五年8W元，办理期间可以体验4个月绿宝石企业体验卡，90-120工作日下卡</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-comment-dots text-purple-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">客服话术：</span>
+                                <p class="text-gray-300">国泰航空钻石卡业务办理，含升舱券，2年3W元，5年8W元，办理期间可以体验4个月绿宝石企业体验卡</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">强调体验卡权益</span>
+                            <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded">两种周期选择</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 南航 -->
+                <div class="airline-card glass-card rounded-2xl p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-plane text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">南航铂金卡</h3>
+                                <span class="text-cyan-400 font-semibold">3W/3年</span>
+                            </div>
+                        </div>
+                        <span class="badge-tip text-xs px-2 py-1 rounded-full">💡 突出等级</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-bullhorn text-blue-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">运营话术：</span>
+                                <p class="text-gray-300">南方航空铂金卡业务办理，三年3W元。航司会籍业务签协议交付，季度下卡。对公账户收款，会有专员详细介绍</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-comment-dots text-purple-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">客服话术：</span>
+                                <p class="text-gray-300">南方航空铂金卡业务办理，3年3W元，办理期间正常飞行，90-120工作日下卡，签约交付，对公收款</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded">突出铂金等级</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">强调季度下卡</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 汉莎 -->
+                <div class="airline-card glass-card rounded-2xl p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-xl bg-yellow-500/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-plane text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">汉莎终身金卡</h3>
+                                <span class="text-green-400 font-semibold">7.5W · 终身</span>
+                            </div>
+                        </div>
+                        <span class="badge-warning text-xs px-2 py-1 rounded-full">⚠️ 高价</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-bullhorn text-blue-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">运营话术：</span>
+                                <p class="text-gray-300">汉莎航空终身金卡业务办理，7.5W元，90-120工作日下卡，赠送130w里程对公账户收款，签协议交付</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-comment-dots text-purple-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">客服话术：</span>
+                                <p class="text-gray-300">汉莎航空终身金卡业务办理，7.5W元，赠送130w里程，90-120工作日下卡，签约交付，对公收款</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded">强调130w里程价值</span>
+                            <span class="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded">价格较高需铺垫</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 美航 -->
+                <div class="airline-card glass-card rounded-2xl p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-xl bg-indigo-500/20 flex items-center justify-center mr-4">
+                                <i class="fas fa-plane text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">美航终身白金卡</h3>
+                                <span class="text-green-400 font-semibold">3W · 终身</span>
+                            </div>
+                        </div>
+                        <span class="badge-tip text-xs px-2 py-1 rounded-full">💡 双重</span>
+                    </div>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <i class="fas fa-bullhorn text-blue-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">运营话术：</span>
+                                <p class="text-gray-300">美航终身白金卡业务办理，3W元，90-120工作日下卡，办卡期间体验4个月绿宝石权益，对公账户收款</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-comment-dots text-purple-400 mt-1 mr-2"></i>
+                            <div>
+                                <span class="text-gray-400">客服话术：</span>
+                                <p class="text-gray-300">美航终身白金卡业务办理，3W元，办理期间体验4个月绿宝石权益，90-120工作日下卡，签约交付</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded">终身+体验卡</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">双重吸引力</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q&A Section -->
+    <section id="qa" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">常见问题应对</h2>
+                <p class="text-gray-400">10+高频问题标准回复话术</p>
+            </div>
+
+            <div class="glass-card rounded-3xl p-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Question 1 -->
+                    <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-red-500/20 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-question text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">为什么跟帖子说得不一样？</h4>
+                                <span class="badge-warning text-xs px-2 py-1 rounded-full">质疑类</span>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <p class="text-sm">不好意思，这边运营是新来的，对我们的业务还不太熟悉，对您造成不好的体验，我们深感抱歉。您看这样如何，之后您在我们这边预订酒店机票的话我们给您做更有优惠的价格？</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded">💡 安抚+转化</span>
+                            <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded">主动提供补偿</span>
+                        </div>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-question text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">是什么渠道？什么方式？</h4>
+                                <span class="badge-tip text-xs px-2 py-1 rounded-full">渠道类</span>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <p class="text-sm">航司大客户企业提名直升</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">✓ 标准回复</span>
+                            <span class="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded">✗ 不要说"买卡"</span>
+                        </div>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-question text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">办理期间可以正常飞吗？</h4>
+                                <span class="badge-tip text-xs px-2 py-1 rounded-full">流程类</span>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <p class="text-sm">办理期间是正常飞行的</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">✓ 明确答复</span>
+                            <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded">⚠️ 不要含糊</span>
+                        </div>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-yellow-500/20 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-question text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">为什么要预付款？</h4>
+                                <span class="badge-warning text-xs px-2 py-1 rounded-full">付款类</span>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <p class="text-sm">因为名额提交上去不可取消，所以我们只能预付，如果未在规定时间内批复，我们的协议条款里面有退款期限和赔付条款</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded">💡 解释+保障</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">增强信任感</span>
+                        </div>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-question text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">怎么收款？</h4>
+                                <span class="badge-tip text-xs px-2 py-1 rounded-full">付款类</span>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <p class="text-sm">对公收款，付款看您。我们也可以企业支付宝收款的</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded">提供灵活选择</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">对公优先</span>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="glass-card rounded-2xl p-6 hover:bg-white/10 transition">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-question text-orange-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">飞行记录会有冲突吗？</h4>
+                                <span class="badge-warning text-xs px-2 py-1 rounded-full">顾虑类</span>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-check-circle text-green-400 mt-1 mr-2"></i>
+                                <p class="text-sm">不会的，正常飞行记录的</p>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex gap-2">
+                            <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">✓ 消除顾虑</span>
+                            <span class="text-xs bg-red-500/20 text-red-400 px-2 py-1 rounded">✗ 不要解释太多</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Questions Toggle -->
+                <div class="mt-8 text-center">
+                    <button onclick="toggleMoreQA()" class="glass-card px-6 py-3 rounded-xl hover:bg-white/10 transition flex items-center mx-auto">
+                        <span id="moreQaText">查看更多问题</span>
+                        <i class="fas fa-chevron-down ml-2" id="moreQaIcon"></i>
+                    </button>
+                </div>
+
+                <!-- Hidden More Questions -->
+                <div id="moreQA" class="hidden mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="glass-card rounded-2xl p-6">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-question text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">流程是怎么样的？</h4>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4">
+                            <p class="text-sm">签合同-打款-提交航司审批</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 rounded-lg bg-pink-500/20 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-question text-pink-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">卓白什么价格？</h4>
+                            </div>
+                        </div>
+                        <div class="bg-green-500/10 border border-green-500/30 rounded-xl p-4">
+                            <p class="text-sm">卓越目前没有名额了，只有终白</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Follow-up Section -->
+    <section id="followup" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">跟进转化</h2>
+                <p class="text-gray-400">第二天跟进策略与话术</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- No Reply -->
+                <div class="glass-card rounded-2xl p-6 border-l-4 border-red-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-comment-slash text-red-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">无回复跟进</h3>
+                            <span class="text-xs text-red-400">⚠️ 必须执行</span>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4 mb-4">
+                        <p class="text-sm text-gray-300">"您好，这边没有收到您的反馈，您是还有什么疑虑和不明白的吗？"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded">主动询问疑虑</span>
+                        <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded">语气要柔和</span>
+                    </div>
+                </div>
+
+                <!-- Hesitating -->
+                <div class="glass-card rounded-2xl p-6 border-l-4 border-yellow-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-user-clock text-yellow-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">犹豫转化</h3>
+                            <span class="text-xs text-yellow-400">转化到其他业务</span>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4 mb-4">
+                        <p class="text-sm text-gray-300">"如果您经常有差旅需求，可以找我们优惠预订豪华连锁品牌酒店和国际商务舱机票，可以和平台对比下价格和待遇的"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-purple-500/20 text-purple-400 px-2 py-1 rounded">💡 转化意识</span>
+                        <span class="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded">提供价值对比</span>
+                    </div>
+                </div>
+
+                <!-- Payment Reminder -->
+                <div class="glass-card rounded-2xl p-6 border-l-4 border-blue-500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-money-bill-wave text-blue-400 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold">未打款催促</h3>
+                            <span class="text-xs text-blue-400">财务角度施压</span>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4 mb-4">
+                        <p class="text-sm text-gray-300">"对于还未打款的客户，我们这边财务反馈，请添加一下收款信息和业务的相关备注信息以及业务"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded">⚠️ 用财务角度</span>
+                        <span class="text-xs bg-orange-500/20 text-orange-400 px-2 py-1 rounded">制造紧迫感</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- After-sales -->
+            <div class="mt-12 glass-card rounded-3xl p-8">
+                <h3 class="font-semibold text-xl mb-6 flex items-center">
+                    <i class="fas fa-headset text-green-400 mr-3"></i>
+                    售后跟进
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="glass-card p-4 rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-medium">进度查询</span>
+                                <span class="badge-correct text-xs px-2 py-1 rounded-full">✓ 标准回复</span>
+                            </div>
+                            <p class="text-sm text-gray-400">"一般都90-120工作日，航司都是按季度审批的"</p>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-medium">体验卡问题</span>
+                                <span class="badge-warning text-xs px-2 py-1 rounded-full">⚠️ 解释原因</span>
+                            </div>
+                            <p class="text-sm text-gray-400">"因为2025年末期间美国航空批量赠送绿宝石，导致正常的绿宝石匹配机制受到了严重的冲击..."</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="glass-card p-4 rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-medium">合同超期</span>
+                                <span class="badge-tip text-xs px-2 py-1 rounded-full">💡 自动排期</span>
+                            </div>
+                            <p class="text-sm text-gray-400">"已经超出合同日，审核没过呢～航司那边名额满了都是自动给您排到下一个季度去的～"</p>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-medium">申请退款</span>
+                                <span class="badge-correct text-xs px-2 py-1 rounded-full">✓ 提供选项</span>
+                            </div>
+                            <p class="text-sm text-gray-400">"如果说确实已经超过了咱们合同规定日期的，且您也不愿意再等待的，您也是可以向我们提出退款申请的"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Section -->
+    <section id="hotel" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Amex酒店计划</h2>
+                <p class="text-gray-400">FHR / THC / 礼遇小程序 三计划对比</p>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="glass-card rounded-3xl p-8 mb-8">
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-white/10">
+                                <th class="text-left py-4 px-4">对比维度</th>
+                                <th class="text-left py-4 px-4 text-blue-400">FHR</th>
+                                <th class="text-left py-4 px-4 text-purple-400">THC</th>
+                                <th class="text-left py-4 px-4 text-green-400">礼遇小程序</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-white/5">
+                                <td class="py-4 px-4 font-medium">核心礼遇</td>
+                                <td class="py-4 px-4 text-sm">
+                                    <div class="space-y-1">
+                                        <div class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-xs"></i>房型升级</div>
+                                        <div class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-xs"></i>每日双人早餐</div>
+                                        <div class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-xs"></i>保证下午4点延迟退房</div>
+                                        <div class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-xs"></i>100美元额度</div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-4 text-sm">
+                                    <div class="space-y-1">
+                                        <div class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-xs"></i>连住2晚得100美元额度</div>
+                                        <div class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-xs"></i>房型升级(视房态)</div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-4 text-sm">
+                                    <div class="space-y-1">
+                                        <div class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-xs"></i>房型升级</div>
+                                        <div class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-xs"></i>每日双人早餐</div>
+                                        <div class="flex items-center"><i class="fas fa-check text-green-400 mr-2 text-xs"></i>50-100美元额度</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-4 px-4 font-medium">适用场景</td>
+                                <td class="py-4 px-4 text-sm text-gray-300">奢华度假<br>重要纪念日</td>
+                                <td class="py-4 px-4 text-sm text-gray-300">城市短途<br>周末度假</td>
+                                <td class="py-4 px-4 text-sm text-gray-300">中国内地酒店<br>微信小程序便捷预订</td>
+                            </tr>
+                            <tr class="border-b border-white/5">
+                                <td class="py-4 px-4 font-medium">预订要求</td>
+                                <td class="py-4 px-4 text-sm text-gray-300">AmexTravel预订<br>白金卡支付</td>
+                                <td class="py-4 px-4 text-sm text-gray-300">AmexTravel预订<br>连住2晚以上</td>
+                                <td class="py-4 px-4 text-sm text-gray-300">美国运通小程序<br>出示符合条件的Amex卡</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-4 font-medium">⚠️ 注意事项</td>
+                                <td class="py-4 px-4 text-sm text-yellow-400">升级视房态<br>部分房型不参与</td>
+                                <td class="py-4 px-4 text-sm text-yellow-400">必须连住2晚</td>
+                                <td class="py-4 px-4 text-sm text-yellow-400">礼遇不可叠加<br>通常需预付且不可取消</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Hotel Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card rounded-2xl p-6 text-center hover:bg-white/10 transition">
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-crown text-blue-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">FHR</h3>
+                    <p class="text-blue-400 text-sm mb-4">Fine Hotels & Resorts</p>
+                    <p class="text-gray-400 text-sm">奢华全套体验，适合重要纪念日和奢华度假</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 text-center hover:bg-white/10 transition">
+                    <div class="w-16 h-16 rounded-2xl bg-purple-500/20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-building text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">THC</h3>
+                    <p class="text-purple-400 text-sm mb-4">The Hotel Collection</p>
+                    <p class="text-gray-400 text-sm">城市短途连住，适合周末度假和城市旅行</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 text-center hover:bg-white/10 transition">
+                    <div class="w-16 h-16 rounded-2xl bg-green-500/20 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-mobile-alt text-green-400 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">礼遇小程序</h3>
+                    <p class="text-green-400 text-sm mb-4">美国运通小程序</p>
+                    <p class="text-gray-400 text-sm">境内酒店便捷预订，微信小程序操作</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-plane-departure text-white"></i>
+                    </div>
+                    <span class="font-bold text-lg">航空会籍业务系统</span>
+                </div>
+                <div class="text-sm text-gray-400">
+                    V2.0 可视化流程系统 · 基于客服话术老版本整理
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-white/5 text-center text-sm text-gray-500">
+                <p>沟通原则：真人感 · 主动沟通 · 转化意识 · 耐心跟进 · 合规表达</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Indicator
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollIndicator').style.width = scrolled + '%';
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Scroll to Section
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Toggle More Q&A
+        function toggleMoreQA() {
+            const moreQA = document.getElementById('moreQA');
+            const text = document.getElementById('moreQaText');
+            const icon = document.getElementById('moreQaIcon');
+            
+            if (moreQA.classList.contains('hidden')) {
+                moreQA.classList.remove('hidden');
+                text.textContent = '收起更多问题';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                moreQA.classList.add('hidden');
+                text.textContent = '查看更多问题';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                // Close mobile menu if open
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Active nav item on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
